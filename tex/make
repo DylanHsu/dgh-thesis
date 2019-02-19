@@ -1,0 +1,4 @@
+latexmk -pdf main -f &> the.log
+#latexmk -pdf -pdflatex="yes '' | pdflatex -interaction=nonstopmode" -use-make -f main.tex
+latexmk -c &> /dev/null
+less +G the.log

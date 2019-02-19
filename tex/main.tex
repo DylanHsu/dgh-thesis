@@ -1,0 +1,81 @@
+% -*- Mode:TeX -*-
+
+%% IMPORTANT: The official thesis specifications are available at:
+%%            http://libraries.mit.edu/archives/thesis-specs/
+%%
+%%            Please verify your thesis' formatting and copyright
+%%            assignment before submission.  If you notice any
+%%            discrepancies between these templates and the 
+%%            MIT Libraries' specs, please let us know
+%%            by e-mailing thesis@mit.edu
+
+%% The documentclass options along with the pagestyle can be used to generate
+%% a technical report, a draft copy, or a regular thesis.  You may need to
+%% re-specify the pagestyle after you \include  cover.tex.  For more
+%% information, see the first few lines of mitthesis.cls. 
+
+%\documentclass[12pt,vi,twoside]{mitthesis}
+%%
+%%  If you want your thesis copyright to you instead of MIT, use the
+%%  ``vi'' option, as above.
+%%
+%\documentclass[12pt,twoside,leftblank]{mitthesis}
+%%
+%% If you want blank pages before new chapters to be labelled ``This
+%% Page Intentionally Left Blank'', use the ``leftblank'' option, as
+%% above. 
+
+\documentclass[12pt,twoside,singlespace]{mitthesis}
+\usepackage{lgrind}
+%% These have been added at the request of the MIT Libraries, because
+%% some PDF conversions mess up the ligatures.  -LB, 1/22/2014
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\usepackage{multirow}
+\usepackage{textcomp}
+\usepackage{siunitx}
+\pagestyle{plain}
+\input{commands.tex}
+
+%% This bit allows you to either specify only the files which you wish to
+%% process, or `all' to process all files which you \include.
+%% Krishna Sethuraman (1990).
+
+%\typein [\files]{Enter file names to process, (chap1,chap2 ...), or `all' to
+%process all files:}
+%\def\all{all}
+%\ifx\files\all \typeout{Including all files.} \else \typeout{Including only \files.} \includeonly{\files} \fi
+\def\files{all}
+
+\begin{document}
+
+\include{cover}
+% Some departments (e.g. 5) require an additional signature page.  See
+% signature.tex for more information and uncomment the following line if
+% applicable.
+% \include{signature}
+\pagestyle{plain}
+\include{contents}
+\include{detector}
+\include{samples}
+
+%\include{chap1}
+%\include{chap2}
+%\section{Preamble}\label{sec:preamble}
+%\section{Reconstructing proton-proton collision with the CMS detector}\label{sec:detector}
+%\section{Data samples}\label{sec:samples}
+%\section{Efficiency of lepton trigger, reconstruction, and identification}\label{sec:lepeff}
+%\section{Diboson and nonresonant background control samples}\label{sec:dmbkg}
+%\section{Search for dark matter in events with high missing transverse energy}\label{sec:zlldm}
+%\section{Z boson transverse momentum spectrum, charged lepton decay mode}\label{sec:zllpt}
+%\section{Z boson transverse momentum spectrum, neutrino decay mode}\label{sec:zvvpt}
+%\section{Combined measurement of the Z boson transverse momentum spectrum}\label{sec:zptcombo}
+\appendix
+\include{appa}
+\include{appb}
+\include{biblio}
+\end{document}
+

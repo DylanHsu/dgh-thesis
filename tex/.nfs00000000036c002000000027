@@ -1,0 +1,331 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017) (preloaded format=pdflatex 2017.10.27)  15 JAN 2019 17:22
+entering extended mode
+ %&-line parsing enabled.
+**main.tex
+(./main.tex
+LaTeX2e <2017-04-15>
+Babel <3.14> and hyphenation patterns for 84 language(s) loaded.
+(./mitthesis.cls
+Document Class: mitthesis 1999/10/20
+\vithesis=\count79
+Single spaced
+
+(/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/tex/latex/base/report.
+cls
+Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
+
+(/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/tex/latex/base/size12.
+clo
+File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count80
+\c@chapter=\count81
+\c@section=\count82
+\c@subsection=\count83
+\c@subsubsection=\count84
+\c@paragraph=\count85
+\c@subparagraph=\count86
+\c@figure=\count87
+\c@table=\count88
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+(/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/tex/latex/setspace/set
+space.sty
+Package: setspace 2011/12/19 v6.7a set line spacing
+)
+Thesis document copyright MIT unless otherwise (manually) specified
+\@titlesupervisor=\box26
+\@abstractsupervisor=\box27
+\c@savepage=\count89
+) (./lgrind.sty
+Package: lgrind 1997/01/30 v3.4 LGrind environment and supporting stuff
+\lc@unt=\count90
+\ln@xt=\count91
+\LGnuminterval=\count92
+\LGindent=\skip43
+\LGsloppy=\skip44
+\procbox=\box28
+\ls@far=\box29
+\tb@x=\box30
+\TBw@d=\dimen103
+\@ts=\dimen104
+)
+(/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/tex/latex/graphics/gra
+phicx.sty
+Package: graphicx 2017/06/01 v1.1a Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/tex/latex/graphics/key
+val.sty
+Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+\KV@toks@=\toks14
+)
+(/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/tex/latex/graphics/gra
+phics.sty
+Package: graphics 2017/06/25 v1.2c Standard LaTeX Graphics (DPC,SPQR)
+
+(/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/tex/latex/graphics/tri
+g.sty
+Package: trig 2016/01/03 v1.10 sin cos tan (DPC)
+)
+(/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/tex/latex/graphics-cfg
+/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 99.
+
+(/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/tex/latex/graphics-def
+/pdftex.def
+File: pdftex.def 2017/06/24 v1.0g Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen105
+\Gin@req@width=\dimen106
+)
+(/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/tex/latex/tools/xspace
+.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/tex/latex/cmap/cmap.st
+y
+Package: cmap 2008/03/06 v1.0h CMap support: searchable PDF
+)
+(/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/tex/latex/base/fontenc
+.sty
+Package: fontenc 2017/04/05 v2.0i Standard LaTeX package
+
+(/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/tex/latex/base/t1enc.d
+ef
+File: t1enc.def 2017/04/05 v2.0i Standard LaTeX file
+LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
+)<<t1.cmap>>)
+(/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/tex/latex/multirow/mul
+tirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip45
+\multirow@cntb=\count93
+\multirow@dima=\skip46
+\bigstrutjot=\dimen107
+) (./commands.tex)
+Enter file names to process, (chap1,chap2 ...), or `all' to process all files:
+
+\files=all
+Including all files.
+(./main.aux (./cover.aux) (./contents.aux) (./detector.aux) (./appa.aux)
+(./appb.aux) (./biblio.aux))
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
+LaTeX Font Info:    ... okay on input line 49.
+
+(/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/tex/context/base/mkii/
+supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count94
+\scratchdimen=\dimen108
+\scratchbox=\box31
+\nofMPsegments=\count95
+\nofMParguments=\count96
+\everyMPshowfont=\toks15
+\MPscratchCnt=\count97
+\MPscratchDim=\dimen109
+\MPnumerator=\count98
+\makeMPintoPDFobject=\count99
+\everyMPtoPDFconversion=\toks16
+)
+\openout2 = `cover.aux'.
+
+ (./cover.tex
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 91.
+
+(/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/tex/latex/base/omscmr.
+fd
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <14.4> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 91.
+<<oms.cmap>> [1
+
+
+
+{/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-var/fonts/map/pdftex/updmap
+/pdftex.map}] [2
+
+] (./abstract.tex<<ot1.cmap>><<oml.cmap>>
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <12> on input line 18.
+<<omx.cmap>>
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <8> on input line 18.
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <6> on input line 18.
+) [3
+
+] [4
+
+]) [5]
+\openout2 = `contents.aux'.
+
+ (./contents.tex [6
+
+
+
+] (./main.toc)
+\tf@toc=\write3
+\openout3 = `main.toc'.
+
+ [7] [8
+
+] (./main.lof)
+\tf@lof=\write4
+\openout4 = `main.lof'.
+
+
+[9] [10
+
+] (./main.lot)
+\tf@lot=\write5
+\openout5 = `main.lot'.
+
+) [11]
+\openout2 = `detector.aux'.
+
+ (./detector.tex [12
+
+
+
+]
+Chapter 1.
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 10.
+[13]
+
+LaTeX Warning: Citation `Khachatryan:2016bia' on page 14 undefined on input lin
+e 28.
+
+Missing character: There is no â in font cmr8!
+Missing character: There is no ˆ in font cmr8!
+Missing character: There is no ’ in font cmr8!
+Missing character: There is no â in font cmr8!
+Missing character: There is no ˆ in font cmr8!
+Missing character: There is no ’ in font cmr8!
+
+Overfull \hbox (0.48677pt too wide) in paragraph at lines 57--66
+\T1/cmr/m/n/12 The elec-tro-mag-netic calorime-ter of CMS (ECAL) is a her-metic
+ ho-mo-ge-neous calorime-
+ []
+
+[14] [15] [16]
+LaTeX Font Info:    External font `cmex10' loaded for size
+(Font)              <10.95> on input line 168.
+
+
+LaTeX Warning: Citation `Chatrchyan:2012jua' on page 17 undefined on input line
+ 186.
+
+
+LaTeX Warning: Citation `CMS-PAS-BTV-15-001' on page 17 undefined on input line
+ 186.
+
+
+LaTeX Warning: Citation `CMS:EGM-14-001' on page 17 undefined on input line 192
+.
+
+
+Overfull \hbox (10.78528pt too wide) in paragraph at lines 204--218
+ [] 
+ []
+
+[17]
+
+LaTeX Warning: Citation `CMS-PAS-JME-16-004' on page 18 undefined on input line
+ 238.
+
+) [18]
+\openout2 = `appa.aux'.
+
+ (./appa.tex
+Appendix A.
+[19
+
+
+
+])
+\openout2 = `appb.aux'.
+
+ (./appb.tex [20
+
+
+
+
+]
+Appendix B.
+[21] [22])
+\openout2 = `biblio.aux'.
+
+ (./biblio.tex (./main.bbl
+Underfull \hbox (badness 1005) in paragraph at lines 21--25
+[]\T1/cmr/m/n/12 CMS Col-lab-o-ra-tion.  Com-mis-sion-ing of the particle-flow 
+re-con-struc-tion in
+ []
+
+)) [23
+
+
+
+
+
+] (./main.aux (./cover.aux) (./contents.aux) (./detector.aux) (./appa.aux) (./a
+ppb.aux) (./biblio.aux))
+
+LaTeX Warning: There were undefined references.
+
+ ) 
+Here is how much of TeX's memory you used:
+ 1712 strings out of 492990
+ 20715 string characters out of 6123785
+ 78889 words of memory out of 5000000
+ 5188 multiletter control sequences out of 15000+600000
+ 15176 words of font info for 37 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 28i,10n,21p,434b,285s stack positions out of 5000i,500n,10000p,200000b,80000s
+{/cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/fonts/enc/dvips/cm-s
+uper/cm-super-t1.enc}</cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmmi10.pfb></cvmfs/cms.cern.ch/external/tex/texli
+ve/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></cvmfs/cms.cern.c
+h/external/tex/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb
+></cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmr10.pfb></cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr12.pfb></cvmfs/cms.cern.ch/external/tex/texlive
+/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></cvmfs/cms.cern.ch/ex
+ternal/tex/texlive/2017/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></
+cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/fonts/type1/public/amsfo
+nts/cm/cmsy8.pfb></cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/fonts
+/type1/public/cm-super/sfbx1200.pfb></cvmfs/cms.cern.ch/external/tex/texlive/20
+17/texmf-dist/fonts/type1/public/cm-super/sfbx1440.pfb></cvmfs/cms.cern.ch/exte
+rnal/tex/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfbx1728.pfb></cvm
+fs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/fonts/type1/public/cm-super
+/sfbx2488.pfb></cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/fonts/ty
+pe1/public/cm-super/sfrm1095.pfb></cvmfs/cms.cern.ch/external/tex/texlive/2017/
+texmf-dist/fonts/type1/public/cm-super/sfrm1200.pfb></cvmfs/cms.cern.ch/externa
+l/tex/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sfrm1440.pfb></cvmfs/
+cms.cern.ch/external/tex/texlive/2017/texmf-dist/fonts/type1/public/cm-super/sf
+rm1728.pfb></cvmfs/cms.cern.ch/external/tex/texlive/2017/texmf-dist/fonts/type1
+/public/cm-super/sfti1200.pfb>
+Output written on main.pdf (23 pages, 281161 bytes).
+PDF statistics:
+ 153 PDF objects out of 1000 (max. 8388607)
+ 104 compressed objects within 2 object streams
+ 0 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+
