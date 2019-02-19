@@ -1,3 +1,136 @@
 \chapter{Data samples}
-\section{The LHC and its proton injection system}
+\section{Experimental data}
+This analysis uses a sample of pp collisions collected in 2016 with the CMS 
+experiment at the LHC at $\sqrt{s} = 13~\rm{TeV}$. Five primary datasets  
+are used to ensure a very high trigger efficiency: MuEG, DoubleMuon, 
+DoubleElectron, SingleMuon, and SingleElectron. All data are analyzed using the
+\\
+\centerline{\small Cert\_271036-284044\_13TeV\_23Sep2016ReReco\_Collisions16\_JSON.txt}
+\\
+file in order to select the good luminosity sections. 
+The total integrated luminosity with the associated uncertainty is $\usedLumiWithSyst$.
 
+\section{Simulated samples}
+Several Monte Carlo (MC) event generators are used to simulate the signal and
+background processes. For all processes, the detector response is simulated using a detailed
+description of the CMS detector, based on the \textsc{GEANT4} 
+package~\cite{Agostinelli:2002hh}, and event reconstruction is performed with
+the same algorithms as used for data.
+The simulated samples include additional interactions per bunch crossing (pileup).
+The simulated events are weighted so that the pileup distribution matches the data,
+with an average pileup of about 25 interactions per bunch crossing.
+
+\subsection{Standard Model processes}
+Resonant Z boson background processes ($\W\Z$, $\Z\Z$, tribosons, etc.) are
+estimated using Monte Carlo (MC) samples. Nonresonant background processes
+($\ttbar$, $\tw$, $\W\W$, $\dytt$, etc.) are estimated using $\Pe\mu$ data events.
+
+The $\W\Z$ and $\Z\Z$ processes, via $\Pq\Paq$ annihilation, 
+are generated at next-to-leading-order (NLO) with 
+\textsc{POWHEG2.0}~\cite{Alioli:2008gx,Nason:2004rx,Frixione:2007vw,powheg:2010}. 
+The $\Pg\Pg \to \Z\Z$ process is simulated with MCFM~\cite{MCFM}. 
+The $\Z\gamma$, $\ttbar \Z$, $\W\W\Z$, $\W\Z\Z$, and $\Z\Z\Z$ 
+processes are generated with \textsc{MadGraph5\_aMC@NLO}~\cite{Alwall:2014hca}.
+The signal samples are simulated using \textsc{MadGraph5\_aMC@NLO} at next-to-leading-order (NLO), 
+\textsc{MadGraph5} at leading-order (LO), and \textsc{POWHEG} at NLO. The 
+default MC generator is \textsc{MadGraph5\_aMC@NLO}. 
+The \textsc{PYTHIA8}~\cite{Sjostrand:2006za,Sjostrand:2015} package is used 
+for parton showering, hadronization, and the underlying event simulation,
+with tune CUETP8M1.
+The NNPDF 3.0~\cite{nnpdf} set is used as the default set of parton distribution 
+functions (PDFs). 
+The processed dataset names and cross sections for the Standard Model processes considered 
+in the analysis are shown in Table~\ref{tab:mcprocess}.
+Simulated datasets from the RunIISummer16MiniAODv2 campaign are used.
+\clearpage
+\begin{sidewaystable}[hbtp]
+  \caption{Processed dataset names and cross sections for the Standard Model processes considered in the analysis.
+           The processes are grouped in the following way: Resonant Diboson, Triboson, Nonresonant, and Drell-Yan.\label{tab:mcprocess}}
+    \begin{center}
+    {\scriptsize
+      \begin{tabular}{|p{3.0cm}|p{13cm}|p{3.5cm}|}
+      \hline 
+       \bf{Process} & \bf{Simulated sample name} & \bf{Cross section [pb]}\\
+       %\multicolumn{3}{|c|}{Background} \\
+       \hline 
+       $\W\Z\to 3\ell\nu$               & WZTo3LNu\_TuneCUETP8M1\_13TeV-powheg-pythia8 & 4.42965 $\times$ 1.109 \\ 
+       $\W\Z\to 2\ell 2q$               & WZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8 & 5.595 $\times$ 1.109 \\ 
+       $\Z\Z\to 4\ell$                  & ZZTo4L\_13TeV\_powheg\_pythia8 & 1.256 \\ 
+       $gg \to \Z\Z \to 4\mu$           & GluGluToContinToZZTo4mu\_13TeV\_MCFM701\_pythia8     & 0.001586 $\times$ 2.3  \\
+       $gg \to \Z\Z \to 4e$             & GluGluToContinToZZTo4e\_13TeV\_MCFM701\_pythia8      & 0.001586 $\times$ 2.3  \\
+       $gg \to \Z\Z \to 4\tau$          & GluGluToContinToZZTo4tau\_13TeV\_MCFM701\_pythia8    & 0.001586 $\times$ 2.3  \\
+       $gg \to \Z\Z \to 2\mu 2e$        & GluGluToContinToZZTo2e2mu\_13TeV\_MCFM701\_pythia8   & 0.003194 $\times$ 2.3  \\
+       $gg \to \Z\Z \to 2\mu 2\tau$     & GluGluToContinToZZTo2mu2tau\_13TeV\_MCFM701\_pythia8 & 0.003194 $\times$ 2.3  \\
+       $gg \to \Z\Z \to 2e 2\tau$       & GluGluToContinToZZTo2e2tau\_13TeV\_MCFM701\_pythia8  & 0.003194 $\times$ 2.3  \\
+       $gg \to \Z\Z \to 2e 2\nu$        & GluGluToContinToZZTo2mu2nu\_13TeV\_MCFM701\_pythia8  & 0.001720 $\times$ 2.3  \\
+       $gg \to \Z\Z \to 2\mu 2\nu$       & GluGluToContinToZZTo2e2nu\_13TeV\_MCFM701\_pythia8   & 0.001720 $\times$ 2.3  \\
+       $\Z\Z\to 2\ell 2\nu$             & ZZTo2L2Nu\_13TeV\_powheg\_pythia8 & 0.564 \\ 
+       $\Z\Z\to 2\ell 2q$               & ZZTo2L2Q\_13TeV\_amcatnloFXFX\_madspin\_pythia8 & 3.220 \\ 
+       $\Z+\gamma$                      & ZGTo2LG\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8 &  117.864 \\
+       \hline 
+       $\W\Z\Z$                         & WZZ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.05565 \\ 
+       $\W\W\Z$                         & WWZ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.16510 \\ 
+       $\Z\Z\Z$                         & ZZZ\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.01398 \\ 
+       \hline 
+       $\Z \to \tau\tau \to e\mu$       & DYJetsToTauTau\_ForcedMuEleDecay\_M-50\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8 & $1921.8 * (0.1741 + 0.1783)^2$ \\
+       $qq \to \W\W\to 2\ell 2\nu$      & WWTo2L2Nu\_13TeV-powheg & (118.7-3.974) $\times$ 0.1086 $\times$ 0.1086 $\times$ 9 \\ 
+       $gg \to \W\W\to 2\ell 2\nu$      & GluGluWWTo2L2Nu\_MCFM\_13TeV & (3.974 $\times$ 0.1086 $\times$ 0.1086 $\times$ 9 $\times$ 1.4 \\ 
+       $\ttbar\Z(\ell\ell+\nu\nu)$      & TTZToLLNuNu\_M-10\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.2529 \\ 
+       $\ttbar\Z(qq)$                   & TTZToLLNuNu\_M-10\_TuneCUETP8M1\_13TeV-amcatnlo-pythia8 & 0.5297 \\ 
+       $\ttbar\W(\ell\nu)$              & TTWJetsToLNu\_TuneCUETP8M1\_13TeV-amcatnloFXFX-madspin-pythia8 & 0.2043 \\ 
+       $\ttbar\W(qq)$                   & TTWJetsToQQ\_TuneCUETP8M1\_13TeV-amcatnloFXFX-madspin-pythia8 & 0.4062 \\ 
+       $\ttbar \to 2\ell 2\nu 2b$       & TTTo2L2Nu\_13TeV-powheg & 831.76 $\times$ 0.1086 $\times$ 0.1086 $\times$ 9 \\ 
+       $\tw$                            & ST\_tW\_top\_5f\_inclusiveDecays\_13TeV-powheg-pythia8 & 35.6 \\ 
+       $\ensuremath{\bar{\mathrm{t}}\mathrm{W}}$          & ST\_tW\_antitop\_5f\_inclusiveDecays\_13TeV-powheg-pythia8 & 35.6 \\ 
+       \hline 
+       %\multicolumn{3}{c}{Signal} \\
+       %\hline 
+       \multirow{9}{*}{$\dyll$}
+       %$\dyll$  \textsc{MadGraph5\_aMC@NLO} & DYJetsToLL\_M-50\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8   & 2008.4 $\times$ 3 \\ 
+       %$\dyll$ \textsc{MadGraph5}          & DYJetsToLL\_M-50\_TuneCUETP8M1\_13TeV-madgraphMLM            & 2008.4 $\times$ 3 \\ 
+       %$\dyll$ \textsc{powheg}             & ZToLL\_NNPDF30\_13TeV-powheg\_M\_50\_120                     & 1975.0 $\times$ 2 \\ 
+       & DYJetsToLL\_M-50\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8         & 2008 $\times$ 3 \\ 
+       & DYJetsToLL\_M-10to50\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8 & 2008.4 $\times$ 3 $\times$ 3.78 \\ 
+       & DYJetsToLL\_M-50\_TuneCUETP8M1\_13TeV-madgraphMLM                  & 2008 $\times$ 3 \\ 
+       & ZToLL\_NNPDF30\_13TeV-powheg\_M\_50\_120                           & 1975 $\times$ 2 \\ 
+       & DYJetsToLL\_Pt-50To100\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8   & 375             \\ 
+       & DYJetsToLL\_Pt-100To250\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8  & 86.5            \\ 
+       & DYJetsToLL\_Pt-250To400\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8  & 3.32            \\ 
+       & DYJetsToLL\_Pt-400To650\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8  & 0.449           \\ 
+       & DYJetsToLL\_Pt-650ToInf\_TuneCUETP8M1\_13TeV-amcatnloFXFX-pythia8  & 0.0422          \\ 
+       \hline 
+
+         \end{tabular}
+         }
+           \end{center}
+           \end{sidewaystable}
+
+\subsection{Dark matter hypotheses}
+Samples of simulated DM particle events in the simplified model are generated using \textsc{MadGraph5\_aMC@NLO 2.2.2}~\cite{Alwall:2014hca} at leading order (LO) and matched to
+\PYTHIA8.205~\cite{Sjostrand:2007gs} using tune CUETP8M1 for parton showering and hadronization~\cite{Khachatryan:2015pea,Skands:2014pea}.
+The factorization and re\-nor\-ma\-li\-zat\-ion scales are set to the geometric mean of $\sqrt{\pt^2+m^2}$ for all final-state particles~\cite{Alwall:2014hca,Abercrombie:2015wmb}, where $\pt$ and $m$ are the transverse momentum and mass of each particle.
+
+For the simplified model of DM production, couplings are chosen according to the recommendations in Ref.~\cite{Boveia:2016mrp}.
+The coupling $g_{\chi}$ is set to one. For $g_{\Pq}$, values of $1.0$ and $0.25$ are considered. The width of the mediator is assumed to be determined exclusively by the contributions from the couplings to quarks and the DM particle $\chi$. Under this assumption, the width ranges 1--5\% (30--50\%) of the mediator mass for $g_{\Pq}=0.25$ ($g_{\Pq}=1.00$).
+The signal simulation samples with $g_{\Pq}=1.0$ are processed using the detector simulation described below.
+Signal predictions for $g_{\Pq}=0.25$ are obtained by applying event weights based on the \ETm distribution at the generator level to the fully simulated samples with $g_{\Pq}=1.0$.
+This procedure takes into account the nontrivial dependence of the mediator width on the coupling choice~\cite{Boveia:2016mrp}.  The exact dependence of the width on the model parameters is reported in~\cite{Boveia:2016mrp}.
+
+Events for the ADD extra-dimension scenario are generated at LO using an effective field theory (EFT) implementation in \PYTHIA8~\cite{Ask:2008fh,Ask:2009pv}. Event samples are produced for $M_{D} = 1$, 2 and 3 \TeV, each with $n =$ 2, 3, 4, 5, 6, 7.
+The signal is truncated for $\hat{s} > M_{D}^2$ in order to ensure the validity of the EFT.
+
+The events for the unparticle model are generated at leading-order with \PYTHIA8~\cite{Ask:2008fh,Ask:2009pv}
+assuming a cutoff scale $\Lambda_{\textsf{U}}=15\TeV$, 
+using tune CUETP8M1 for parton showering and hadronization. 
+We evaluate other values of $\Lambda_{\textsf{U}}$ by rescaling the cross sections as needed.
+The parameter $\Lambda_{\textsf{U}}$ acts solely as a scaling factor
+for the cross section and does not influence the kinematic distributions of unparticle production~\cite{Ask:2009pv}.
+
+The $\Z\Hi$ production modes via $\Pq\Paq$ annihilation and gluon-gluon fusion are modeled the same way as for the $\W\Z$ and $\Z\Z$ processes.
+
+A comparison of kinematic spectra for various signal models is shown in Figs.~\ref{fig:signals} and~\ref{fig:moreSignals}.
+
+\section{Corrections to the simulated samples}
+\subsection{Pileup reweighting}
+\subsection{Lepton selection efficiencies}
+\subsection{Lepton momentum scale and resolution}
