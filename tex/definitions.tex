@@ -1,0 +1,186 @@
+
+\makeatletter
+\def\hlinewd#1{%
+	\noalign{\ifnum0=`} \fi \hrule \@height #1 \futurelet % 
+   \reserved@a\@xhline}
+\makeatother
+
+\newcommand{\Z}{\mbox{Z}}
+\newcommand{\W}{\mbox{W}}
+%\newcommand{\met}{\ensuremath{\mspace{3mu}/\mspace{-12.0mu}E_{T}}}
+%\newcommand{\metvector}{\ensuremath{\mspace{3mu}/\mspace{-12.0mu}\vec{E}_{T}}}
+\newcommand{\mc}{Monte Carlo}
+\newcommand{\MC}{\ensuremath{\textrm{MC}}\xspace}
+\newcommand{\SM}{\mbox{SM}}
+\newcommand{\lumiunc}{2.5\%}
+%\newcommand{\lumi}{1.XXX\fbinv}%{1048~\pbinv}}
+\newcommand{\invpb}{\ensuremath{\textrm{pb}^{\scriptscriptstyle -1}}}
+\newcommand{\invfb}{\ensuremath{\textrm{fb}^{\scriptscriptstyle -1}}}
+%\newcommand{\mev}{\ensuremath{\,\textrm{MeV}}}
+%\newcommand{\gev}{\ensuremath{\,\textrm{GeV}}}
+\newcommand{\tev}{\ensuremath{\,\textrm{TeV}}}
+\newcommand{\Red}{\color{red}}
+\newcommand{\Zmumu}{\ensuremath{Z\rightarrow \mu\mu}}
+\newcommand{\Znunu}{\ensuremath{Z\rightarrow \nu\bar{\nu}}}
+\newcommand{\Zboson}{\ensuremath{Z^0}}
+\newcommand{\Zee}{\ensuremath{Z\rightarrow ee}}
+\newcommand{\Zll}{\ensuremath{Z\rightarrow \ell\ell}\mbox{ with }\ensuremath{\ell=e,\mu}\xspace}
+\newcommand{\rapidity}{\ensuremath{y}}
+\newcommand{\pseudorapidity}{\ensuremath{\eta}}
+\newcommand{\lepton}{\ensuremath{\ell}}
+\newcommand{\TL}{{\bf Top-Left}}
+\newcommand{\TR}{{\bf Top-Right}}
+\newcommand{\BL}{{\bf Bottom-Left}}
+\newcommand{\BR}{{\bf Bottom-Right}}
+%\newcommand{\CL}{{\bf Center-Left}}
+\newcommand{\CR}{{\bf Center-Right}}
+\newcommand{\T}{{\bf Top}}
+\newcommand{\B}{{\bf Bottom}}
+\newcommand{\Right}{{\bf Right}}
+\newcommand{\Left}{{\bf Left}}
+\newcommand{\Center}{{\bf Center}}
+\newcommand{\pythia}{{\tt \scshape pythia8}}
+\newcommand{\geant}{{\tt \scshape geant}}
+\newcommand{\madgraph}{\mbox{\tt \scshape MadGraph5}}
+\newcommand{\powheg}{{\tt \scshape powheg}}
+\newcommand{\sherpa}{{\tt \scshape sherpa}}
+\newcommand{\herwigpp}{{\tt \scshape herwig++}}
+\newcommand{\blackhat}{{\tt \scshape BlackHat}}
+\newcommand{\amcatnlo}{\mbox{\tt \scshape MadGraph5\_aMC@NLO}}
+\newcommand{\fewz}{\mbox{\tt FEWZ}}
+\newcommand{\CMS}{{\tt CMS}\xspace}
+\newcommand{\QCD}{{\tt QCD}\xspace}
+\newcommand{\ptZ}{\ensuremath{p_T^{Z}}}
+\newcommand{\ptG}{\ensuremath{p_T^{\gamma}}}
+\newcommand{\phiso}{\ensuremath{PFIso_\textrm{photon}}}
+\newcommand{\njets}{\ensuremath{n_\textrm{jets}}}
+\newcommand{\phiStar}{\ensuremath{\phi^{\scriptscriptstyle *}_\eta}}
+\newcommand{\RooUnfold}{{\scshape RooUnfold}}
+
+%%% shortcut
+\newcolumntype{d}[1]{D{.}{.}{#1}}
+
+\newcommand{\tw}{\ensuremath{\mathrm{tW}}}
+\newcommand{\dyee}{\ensuremath{Z/\gamma^*\to e^+e^-}}
+\newcommand{\dymm}{\ensuremath{Z/\gamma^*\to\mu^+\mu^-}}
+\newcommand{\dytt}{\ensuremath{Z/\gamma^*\to\tau^+\tau^-}}
+\newcommand{\dyll}{\ensuremath{Z/\gamma^*\to\ell^+\ell^-}}
+\newcommand{\WW}{\ensuremath{\W^+\W^-}}
+\newcommand{\Lep}{\ensuremath{\ell}}
+\newcommand{\mll}{\ensuremath{m_{\Lep\Lep}}}
+\newcommand{\CLb}{\ensuremath{CL_\mathrm{b}}}
+
+\newcommand{\nanob}{\mbox{{\rm ~nb}~}}
+\newcommand{\fb}{\ensuremath{\mathrm{fb}}}
+\newcommand{\pb}{\ensuremath{\mathrm{pb}}}
+\newcommand{\ifb}{\ensuremath{\mathrm{fb^{-1}}}}
+\newcommand{\ipb}{\ensuremath{\mathrm{pb^{-1}}}}
+\newcommand{\grad}{\ensuremath{^{\circ}}}
+%
+% Special user made math symbols
+%
+\newcommand{\lsim}{\raisebox{-1.5mm}{$\:\stackrel{\textstyle{<}}{\textstyle{\sim}}\:$}}
+\newcommand{\gsim}{\raisebox{-1.5mm}{$\:\stackrel{\textstyle{>}}{\textstyle{\sim}}\:$}}
+
+% particles
+
+\newcommand{\pipm}{\ensuremath{\pi^{\pm}}}
+\newcommand{\pizero}{\ensuremath{\pi^{0}}}
+\newcommand{\Hi}{\ensuremath{\mathrm{H}}}
+\newcommand{\V}{\ensuremath{\mathrm{V}}}
+\newcommand{\Wjets}{\ensuremath{\mathrm{W+jets}}}
+\newcommand{\Zjets}{\ensuremath{\mathrm{Z+jets}}}
+\newcommand{\Wt}{\ensuremath{\mathrm{Wt}}}
+\newcommand{\Wstar}{\ensuremath{\mathrm{W}^{*}}}
+\newcommand{\Wparenthesisstar}{\ensuremath{\mathrm{W}^{(*)}}}
+\newcommand{\Zstar}{\ensuremath{\mathrm{Z}^{*}}}
+%\newcommand{\Wpm}{\ensuremath{\W^{\pm}}}
+\newcommand{\ZZ}{\ensuremath{\Z\Z}}
+\newcommand{\WZ}{\ensuremath{\W\Z}}
+\newcommand{\El}{\ensuremath{\mathrm{e}}}
+\newcommand{\Elp}{\ensuremath{\mathrm{e}^{+}}}
+\newcommand{\Elm}{\ensuremath{\mathrm{e}^{-}}}
+\newcommand{\Elpm}{\ensuremath{\mathrm{e}^{\pm}}}
+\newcommand{\Elmp}{\ensuremath{\mathrm{e}^{\mp}}}
+\newcommand{\M}{\ensuremath{\mu}}
+\newcommand{\Mp}{\ensuremath{\mu^{+}}}
+\newcommand{\Mm}{\ensuremath{\mu^{-}}}
+\newcommand{\Mpm}{\ensuremath{\mu^{\pm}}}
+\newcommand{\Mmp}{\ensuremath{\mu^{\mp}}}
+\newcommand{\Tau}{\ensuremath{\tau}}
+\newcommand{\Nu}{\ensuremath{\nu}}
+\newcommand{\Nubar}{\ensuremath{\bar{\nu}}}
+\newcommand{\Lepp}{\ensuremath{\ell^{+}}}
+\newcommand{\Lepm}{\ensuremath{\ell^{-}}}
+\newcommand{\Lprime}{\ensuremath{\Lep^{\prime}}}
+\newcommand{\Prot}{\ensuremath{\mathrm{p}}}
+\newcommand{\Pbar}{\ensuremath{\bar{\mathrm{p}}}}
+\newcommand{\PP}{\Prot\Prot}
+\newcommand{\PPbar}{\Prot\Pbar}
+\newcommand{\qq}{\ensuremath{\mathrm{q}\mathrm{q}}}
+%\newcommand{\bbbar}{\ensuremath{\mathrm{b}\bar{\mathrm{b}}}}
+\newcommand{\Wtb}{\ensuremath{\W\mathrm{t}\mathrm{b}}}
+\newcommand{\Top}{\ensuremath{\mathrm{t}}}
+\newcommand{\Bot}{\ensuremath{\mathrm{b}}}
+\newcommand{\Atop}{\ensuremath{\bar{\mathrm{t}}}}
+\newcommand{\Abot}{\ensuremath{\bar{\mathrm{b}}}}
+\newcommand{\WH}{\ensuremath{\W\Hi}}
+\newcommand{\ZH}{\ensuremath{\Z\Hi}}
+% arrow
+\newcommand{\To}{\ensuremath{\rightarrow}}
+
+% masses
+\newcommand{\mHi}{\ensuremath{m_{\mathrm{H}}}}
+\newcommand{\mW}{\ensuremath{m_{\mathrm{W}}}}
+\newcommand{\mZ}{\ensuremath{m_{\mathrm{Z}}}}
+\newcommand{\mt}{\ensuremath{m_{T}}}
+
+% kinematics
+\newcommand{\ptveto}{\ensuremath{\pt^\mathrm{veto}}}
+\newcommand{\ptl}{\ensuremath{p_\perp^{\Lep}}}
+\newcommand{\ptlmax}{\ensuremath{p_{\mathrm{T}}^{\Lep,\mathrm{max}}}}
+\newcommand{\ptlmin}{\ensuremath{p_{\mathrm{T}}^{\Lep,\mathrm{min}}}}
+\newcommand{\Et}{\ensuremath{E_\mathrm{T}}}
+\newcommand{\met}{\ensuremath{\Et^{\mathrm{miss}}}}
+\newcommand{\delphill}{\ensuremath{\Delta\phi_{\Lep\Lep}}}
+\newcommand{\deletall}{\ensuremath{\Delta\eta_{\Lep\Lep}}}
+\newcommand{\delphimetl}{\ensuremath{\Delta\phi_{\met\Lep}}}
+\newcommand{\delR}{\ensuremath{\Delta R}}
+\newcommand{\Eta}{\ensuremath{\eta}}
+\newcommand{\mT}{\ensuremath{m_{\mathrm{T}}^{\ell\ell\met}}}
+\newcommand{\vmet}{\ensuremath{\vec{E}_\mathrm{T}}^{\text{miss}}}
+\newcommand{\vg}{\ensuremath{\vec{\gamma}_\mathrm{T}}}
+\newcommand{\delphillmetg}{\ensuremath{\Delta\phi(\Lep\Lep,\vmet+\vg})}
+
+\newcommand{\pfmet}{\ensuremath{E_\mathrm{T,PF}^{\mathrm{miss}}}}
+%efficiencies
+\newcommand{\effsig}{\ensuremath{\varepsilon_{\mathrm{bkg}}^{\mathrm{S}}}}
+\newcommand{\effnorm}{\ensuremath{\varepsilon_{\mathrm{bkg}}^{\mathrm{N}}}}
+\newcommand{\Nsig}{\ensuremath{N_{\mathrm{bkg}}^{\mathrm{S}}}}
+\newcommand{\Nnorm}{\ensuremath{N_{\mathrm{bkg}}^{\mathrm{N}}}}
+
+% processes
+\newcommand{\zee}{\ensuremath{Z\to e^+e^-}}
+\newcommand{\zmm}{\ensuremath{Z\to\mu^+\mu^-}}
+\newcommand{\ztt}{\ensuremath{Z\to\tau^+\tau^-}}
+\newcommand{\zll}{\ensuremath{Z\to\ell^+\ell^-}}
+%\newcommand{\ttbar}{\ensuremath{t\bar{t}}}
+\newcommand{\ppww}{\ensuremath{pp \to W^+W^-}}
+\newcommand{\wwll}{\ensuremath{WW\to \ell^+\ell^-}}
+\newcommand{\wwlnln}{\ensuremath{W^+W^-\to \ell^+\nu \ell^-\bar{\nu}}}
+\newcommand{\hww}{\ensuremath{\Hi \to \WW}}
+\newcommand{\wz}{\ensuremath{WZ}}
+\newcommand{\zz}{\ensuremath{ZZ}}
+\newcommand{\wgamma}{\ensuremath{W\gamma}}
+\newcommand{\wjets}{\ensuremath{W+}jets}
+\newcommand{\singletopt}{\ensuremath{t} ($t$-chan)}
+\newcommand{\singletops}{\ensuremath{t} ($s$-chan)}
+
+%other
+\def\fixme{({\bf \color{red}FIXME})}
+\newcommand{\ee}{\ensuremath{ee}}
+\newcommand{\emu}{\ensuremath{e\mu}}
+
+% integrated luminosity
+\newcommand{\usedLumiWithSyst}{35.9~\pm~0.9~\ifb}
+\newcommand{\usedLumi}{35.9~\ifb}

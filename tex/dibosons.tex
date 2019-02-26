@@ -1,0 +1,46 @@
+\chapter{Diboson studies}
+\label{chap:dibosons}
+
+The resonant diboson processes $\Z\Z$ and $\W\Z$ are an irreducible background of the
+dark matter searches involving any Z boson in the final state.
+In final states with little hadronic activity e.g. this work, 
+the other background processes which contribute substantially are easy to reject and pare down.
+Then, the diboson becomes the main problem due to our limited theoretical understanding, and nothing beside remains.
+
+Below, I survey the progress of theoretical calculations for dibosons. 
+Then, I discuss a strategy which makes use of independent control samples from the experimental data,
+to improve upon inaccuracies arising from those calculations.
+
+%\feynmandiagram [horizontal=a to b] {
+%i1 -- [fermion, thick] a -- [fermion, thick] i2,
+%a -- [photon, thick] b,
+%f1 -- [fermion, thick] b -- [fermion, thick] f2,
+%};
+%
+%\feynmandiagram [horizontal=a to b] {
+%i1 [particle=\(\Pq\)] -- [fermion, very thick] a -- [fermion, very thick] i2 [particle=\(\Paq\)],
+%a -- [red, boson, edge label=\(\Z*\)] b,
+%f1 [particle=\(\mu^{+}\)] -- [fermion, very thick] b -- [fermion, very thick] f2 [particle=\(\mu^{-}\)],
+%};
+\begin{tikzpicture}
+\begin{feynman}
+\vertex (a) {\(\mu^{-}\)};
+\vertex [below right=of a] (b);
+\vertex [above right=of b] (f1) {\(\nu_{\mu}\)};
+%\vertex [below right=of b] (c);
+%\vertex [above right=of c] (f2) {\(\overline \nu_{e}\)};
+%\vertex [below right=of c] (f3) {\(e^{-}\)};
+\diagram* {
+(a) -- [fermion] (b) -- [fermion] (f1),
+%(b) -- [boson, edge label'=\(W^{-}\)] (c),
+%(c) -- [anti fermion] (f2),
+%(c) -- [fermion] (f3),
+};
+\end{feynman}
+\end{tikzpicture}
+\section{Limitations of simulating diboson processes}
+As previously outlined in \ref{sec:higher-order-corrections}, an attempt is made to obtain simulated samples for $\Z\Z$ and $\W\Z$ at NNLO in QCD and NLO in electroweak. 
+\section{Three-lepton control sample}
+\section{Four-lepton control sample}
+\section{Emulation of the missing energy}
+

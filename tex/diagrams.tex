@@ -1,0 +1,362 @@
+\documentclass[12pt,twoside,singlespace]{mitthesis}
+%\usepackage{lgrind}
+%% These have been added at the request of the MIT Libraries, because
+%% some PDF conversions mess up the ligatures.  -LB, 1/22/2014
+\usepackage{tikz-feynman}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{xcolor}
+\usepackage{cmap}
+\usepackage[T1]{fontenc}
+\usepackage{multirow}
+\usepackage{textcomp}
+\usepackage{siunitx}
+\usepackage{rotating}
+\pagestyle{plain}
+\input{commands.tex}
+\input{definitions.tex}
+\input{pennames.sty}
+\input{ptdr-definitions.sty}
+\begin{document}
+
+\begin{figure} % ZZ
+ \centering
+ \begin{tikzpicture} % ZZ to 4l LO
+  \begin{feynman}
+   \vertex (q1) {\(\pmb{\Pq}\)};
+   \vertex [below= 2cm of q1] (q2) {\(\pmb{\Paq}\)};
+   \vertex [right= 2cm of q1] (a);
+   \vertex [right= 2cm of q2] (b);
+   \vertex [right= 2cm of a] (c);
+   \vertex [right= 2cm of b] (d);
+   \vertex [right= 1.5cm of c] (e);
+   \vertex [right= 1.5cm of d] (f);
+   \vertex [above= 0.3cm of e] (f1) {\(\pmb{\ell}\)};
+   \vertex [below= 0.3cm of e] (f2) {\(\pmb{\bar{\ell}}\)};
+   \vertex [above= 0.3cm of f] (f3) {\(\pmb{\ell}\)};
+   \vertex [below= 0.3cm of f] (f4) {\(\pmb{\bar{\ell}}\)};
+   
+   \diagram* {
+    (q1) -- [fermion, very thick] (a),
+    (q2) -- [anti fermion, very thick] (b),
+    (a) -- [fermion, very thick] (b),
+    (a) -- [boson, very thick, edge label'=\(\pmb{\Z}\)] (c),
+    (b) -- [boson, very thick, edge label'=\(\pmb{\Z}\)] (d),
+    (c) -- [fermion, very thick] (f1),
+    (c) -- [anti fermion, very thick] (f2),
+    (d) -- [fermion, very thick] (f3),
+    (d) -- [anti fermion, very thick] (f4),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{1cm}
+ \begin{tikzpicture} %% ZZ to 4l NLO QCD
+  \begin{feynman}
+   \vertex (q1) {\(\pmb{\Pq}\)};
+   \vertex [below= 2cm of q1] (q2) {\(\pmb{\Paq}\)};
+   \vertex [right= 2cm of q1] (a);
+   \vertex [right= 2cm of q2] (b);
+   \vertex [right= 2cm of a] (c);
+   \vertex [right= 2cm of b] (d);
+   \vertex [right= 1.5cm of c] (e);
+   \vertex [right= 1.5cm of d] (f);
+   \vertex [above= 0.3cm of e] (f1) {\(\pmb{\ell}\)};
+   \vertex [below= 0.3cm of e] (f2) {\(\pmb{\bar{\ell}}\)};
+   \vertex [above= 0.3cm of f] (f3) {\(\pmb{\ell}\)};
+   \vertex [below= 0.3cm of f] (f4) {\(\pmb{\bar{\ell}}\)};
+   \vertex [right= 0.8cm of q1] (g1);
+   \vertex [below= 0.7cm of a] (g2);
+   
+   \diagram* {
+    (q1) -- [fermion, very thick] (a),
+    (q2) -- [anti fermion, very thick] (b),
+    (a) -- [fermion, very thick] (b),
+    (a) -- [boson, very thick, edge label'=\(\pmb{\Z}\)] (c),
+    (b) -- [boson, very thick, edge label'=\(\pmb{\Z}\)] (d),
+    (c) -- [fermion, very thick] (f1),
+    (c) -- [anti fermion, very thick] (f2),
+    (d) -- [fermion, very thick] (f3),
+    (d) -- [anti fermion, very thick] (f4),
+    (g1) -- [gluon, very thick, bend right, edge label'=\(\pmb{g}\)] (g2),
+   };
+  \end{feynman}
+ \end{tikzpicture}  \vspace{1cm}
+ 
+ \begin{tikzpicture} %% ZZ to 4l NLO only EW
+  \begin{feynman}
+   \vertex (q1) {\(\pmb{\Pq}\)};
+   \vertex [below= 2cm of q1] (q2) {\(\pmb{\Paq}\)};
+   \vertex [right= 2cm of q1] (a);
+   \vertex [right= 2cm of q2] (b);
+   \vertex [right= 2cm of a] (c);
+   \vertex [right= 2cm of b] (d);
+   \vertex [right= 1.5cm of c] (e);
+   \vertex [right= 1.5cm of d] (f);
+   \vertex [above= 0.3cm of e] (f1) {\(\pmb{\ell}\)};
+   \vertex [below= 0.3cm of e] (f2) {\(\pmb{\bar{\ell}}\)};
+   \vertex [above= 0.3cm of f] (f3) {\(\pmb{\ell}\)};
+   \vertex [below= 0.3cm of f] (f4) {\(\pmb{\bar{\ell}}\)};
+   \vertex [right= 0.8cm of q2] (V1);
+   \vertex [above= 0.7cm of b] (V2);
+   
+   \diagram* {
+    (q1) -- [fermion, very thick] (a),
+    (q2) -- [anti fermion, very thick] (b),
+    (a) -- [fermion, very thick] (b),
+    (a) -- [boson, very thick, edge label'=\(\pmb{\Z}\)] (c),
+    (b) -- [boson, very thick, edge label'=\(\pmb{\Z}\)] (d),
+    (c) -- [fermion, very thick] (f1),
+    (c) -- [anti fermion, very thick] (f2),
+    (d) -- [fermion, very thick] (f3),
+    (d) -- [anti fermion, very thick] (f4),
+    (V1) -- [boson, very thick, bend left, edge label=\(\pmb{\Z/\W/\gamma}\)] (V2),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{1cm}
+ \begin{tikzpicture} %% ZZ to 4l NLO EW and QCD
+  \begin{feynman}
+   \vertex (q1) {\(\pmb{\Pq}\)};
+   \vertex [below= 2cm of q1] (q2) {\(\pmb{\Paq}\)};
+   \vertex [right= 2cm of q1] (a);
+   \vertex [right= 2cm of q2] (b);
+   \vertex [right= 2cm of a] (c);
+   \vertex [right= 2cm of b] (d);
+   \vertex [right= 1.5cm of c] (e);
+   \vertex [right= 1.5cm of d] (f);
+   \vertex [above= 0.3cm of e] (f1) {\(\pmb{\ell}\)};
+   \vertex [below= 0.3cm of e] (f2) {\(\pmb{\bar{\ell}}\)};
+   \vertex [above= 0.3cm of f] (f3) {\(\pmb{\ell}\)};
+   \vertex [below= 0.3cm of f] (f4) {\(\pmb{\bar{\ell}}\)};
+   \vertex [right= 0.8cm of q1] (V1);
+   \vertex [below= 0.7cm of a] (V2);
+   \vertex [right= 1.2cm of q2] (g1);
+   \vertex [below= 1cm of g1] (g2);
+   \vertex [right= 1.3cm of g2] (g3);
+   
+   \diagram* {
+    (q1) -- [fermion, very thick] (a),
+    (q2) -- [anti fermion, very thick] (b),
+    (a) -- [fermion, very thick] (b),
+    (a) -- [boson, very thick, edge label'=\(\pmb{\Z}\)] (c),
+    (b) -- [boson, very thick, edge label'=\(\pmb{\Z}\)] (d),
+    (c) -- [fermion, very thick] (f1),
+    (c) -- [anti fermion, very thick] (f2),
+    (d) -- [fermion, very thick] (f3),
+    (d) -- [anti fermion, very thick] (f4),
+    (V1) -- [boson, very thick, bend right, edge label'=\(\pmb{\Z/\W/\gamma}\)] (V2),
+    (g1) -- [gluon, very thick, edge label'=\(\pmb{g}\)] (g3),
+   };
+  \end{feynman}
+ \end{tikzpicture}
+
+ \caption{Clockwise from upper left: ZZ production at leading order; ZZ production at NLO in QCD; ZZ production at NLO in both QCD and EW; ZZ production at NLO only in EW.} \label{fig:ZZto4l}
+\end{figure}
+
+\begin{figure} % WZ
+ \centering
+ \begin{tikzpicture} % WZ at LO (s-channel)
+  \begin{feynman}
+   \vertex (q1) {\(\pmb{\Pq}\)};
+   \vertex [below= 3cm of q1] (q2) {\(\pmb{\Paq'}\)};
+   \vertex [right= 1.6cm of q1] (a1);
+   \vertex [below= 1.5cm of a1] (a2);
+   \vertex [right= 1.6cm of a2] (b1);
+   \vertex [right= 1.6cm of b1] (c1);
+   \vertex [above= 1.3cm of c1] (c2);
+   \vertex [below= 1.3cm of c1] (c3);
+   \vertex [right= 1cm of c2] (d1);
+   \vertex [right= 1cm of c3] (d2);
+   \vertex [above= 0.3cm of d1] (f1) {\(\pmb{\ell}\)};
+   \vertex [below= 0.3cm of d1] (f2) {\(\pmb{\bar{\ell}}\)};
+   \vertex [above= 0.3cm of d2] (f3) {\(\pmb{\ell^-}\)};
+   \vertex [below= 0.3cm of d2] (f4) {\(\pmb{\bar{\nu_\ell}}\)};
+   
+   \diagram* {
+    (q1) -- [fermion, very thick] (a2),
+    (q2) -- [anti fermion, very thick] (a2),
+    (a2) -- [boson, very thick, edge label'=\(\pmb{\W^-}\)] (b1),
+    (b1) -- [boson, very thick, edge label=\(\pmb{\Z}\)] (c2),
+    (b1) -- [boson, very thick, edge label=\(\pmb{\W^-}\)] (c3),
+    (c2) -- [fermion, very thick] (f1),
+    (c2) -- [anti fermion, very thick] (f2),
+    (c3) -- [fermion, very thick] (f3),
+    (c3) -- [anti fermion, very thick] (f4),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{1cm}
+ \begin{tikzpicture} % WZ at LO (t-channel)
+  \begin{feynman}
+   \vertex (q1) {\(\pmb{\Pq}\)};
+   \vertex [below= 2cm of q1] (q2) {\(\pmb{\Paq'}\)};
+   \vertex [right= 2cm of q1] (a);
+   \vertex [right= 2cm of q2] (b);
+   \vertex [right= 2cm of a] (c);
+   \vertex [right= 2cm of b] (d);
+   \vertex [right= 1.5cm of c] (e);
+   \vertex [right= 1.5cm of d] (f);
+   \vertex [above= 0.3cm of e] (f1) {\(\pmb{\ell}\)};
+   \vertex [below= 0.3cm of e] (f2) {\(\pmb{\bar{\ell}}\)};
+   \vertex [above= 0.3cm of f] (f3) {\(\pmb{\nu_\ell}\)};
+   \vertex [below= 0.3cm of f] (f4) {\(\pmb{\bar{\ell}^+}\)};
+   
+   \diagram* {
+    (q1) -- [fermion, very thick] (a),
+    (q2) -- [anti fermion, very thick] (b),
+    (a) -- [fermion, very thick] (b),
+    (a) -- [boson, very thick, edge label'=\(\pmb{\Z}\)] (c),
+    (b) -- [boson, very thick, edge label'=\(\pmb{\W^+}\)] (d),
+    (c) -- [fermion, very thick] (f1),
+    (c) -- [anti fermion, very thick] (f2),
+    (d) -- [fermion, very thick] (f3),
+    (d) -- [anti fermion, very thick] (f4),
+   };
+  \end{feynman}
+ \end{tikzpicture}  
+ \caption{Leading order WZ production mechanisms in the $s$-channel and the $t$-channel.} \label{fig:WZLO}
+\end{figure}
+
+\begin{figure} % WZ NLO EW
+ \centering
+ \begin{tikzpicture} % WZ at NLO EW (s-channel) internal loop
+  \begin{feynman}
+   \vertex (q1) {\(\pmb{\Pq}\)};
+   \vertex [below= 3cm of q1] (q2) {\(\pmb{\Paq'}\)};
+   \vertex [right= 1.5cm of q1] (a1);
+   \vertex [below= 1.5cm of a1] (a2);
+   \vertex [right= 1.6cm of a2] (b1);
+   \vertex [right= 1.6cm of b1] (c1);
+   \vertex [above= 1.3cm of c1] (c2);
+   \vertex [below= 1.3cm of c1] (c3);
+   \vertex [right= 1cm of c2] (d1);
+   \vertex [right= 1cm of c3] (d2);
+   \vertex [above= 0.3cm of d1] (f1) {\(\pmb{\ell}\)};
+   \vertex [below= 0.3cm of d1] (f2) {\(\pmb{\bar{\ell}}\)};
+   \vertex [above= 0.3cm of d2] (f3) {\(\pmb{\ell^-}\)};
+   \vertex [below= 0.3cm of d2] (f4) {\(\pmb{\bar{\nu_\ell}}\)};
+   \vertex [below right= 0.9cm of q1] (V1);
+   \vertex [above right= 0.9cm of q2] (V2);
+   
+   \diagram* {
+    (q1) -- [fermion, very thick] (a2),
+    (q2) -- [anti fermion, very thick] (a2),
+    (a2) -- [boson, very thick, edge label'=\(\pmb{\W^-}\)] (b1),
+    (b1) -- [boson, very thick, edge label=\(\pmb{\Z}\)] (c2),
+    (b1) -- [boson, very thick, edge label=\(\pmb{\W^-}\)] (c3),
+    (c2) -- [fermion, very thick] (f1),
+    (c2) -- [anti fermion, very thick] (f2),
+    (c3) -- [fermion, very thick] (f3),
+    (c3) -- [anti fermion, very thick] (f4),
+    (V1) -- [boson, very thick, edge label'=\(\pmb{\Z/\W/\gamma}\)] (V2),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{1cm}
+ \begin{tikzpicture} % WZ at NLO (t-channel) internal loop
+  \begin{feynman}
+   \vertex (q1) {\(\pmb{\Pq}\)};
+   \vertex [below= 2cm of q1] (q2) {\(\pmb{\Paq'}\)};
+   \vertex [right= 2cm of q1] (a);
+   \vertex [right= 2cm of q2] (b);
+   \vertex [right= 2cm of a] (c);
+   \vertex [right= 2cm of b] (d);
+   \vertex [right= 1.5cm of c] (e);
+   \vertex [right= 1.5cm of d] (f);
+   \vertex [above= 0.3cm of e] (f1) {\(\pmb{\ell}\)};
+   \vertex [below= 0.3cm of e] (f2) {\(\pmb{\bar{\ell}}\)};
+   \vertex [above= 0.3cm of f] (f3) {\(\pmb{\nu_\ell}\)};
+   \vertex [below= 0.3cm of f] (f4) {\(\pmb{\bar{\ell}^+}\)};
+   \vertex [right= 0.8cm of q2] (V1);
+   \vertex [above= 0.7cm of b] (V2);
+   
+   \diagram* {
+    (q1) -- [fermion, very thick] (a),
+    (q2) -- [anti fermion, very thick] (b),
+    (a) -- [fermion, very thick] (b),
+    (a) -- [boson, very thick, edge label'=\(\pmb{\Z}\)] (c),
+    (b) -- [boson, very thick, edge label'=\(\pmb{\W^+}\)] (d),
+    (c) -- [fermion, very thick] (f1),
+    (c) -- [anti fermion, very thick] (f2),
+    (d) -- [fermion, very thick] (f3),
+    (d) -- [anti fermion, very thick] (f4),
+    (V1) -- [boson, very thick, bend left, edge label=\(\pmb{\Z/\W/\gamma}\)] (V2),
+   };
+  \end{feynman}
+ \end{tikzpicture} \vspace{1cm}
+
+ \begin{tikzpicture} % WZ at NLO EW (s-channel) y-induced
+  \begin{feynman}
+   \vertex (y1) {\(\pmb{\gamma}\)};
+   \vertex [below= 3cm of y1] (q2) {\(\pmb{\Pq}\)};
+   \vertex [right= 1.5cm of q1] (a1);
+   \vertex [below= 1.5cm of a1] (a2);
+   \vertex [right= 1.6cm of a2] (b1);
+   \vertex [right= 1.6cm of b1] (c1);
+   \vertex [above= 1.3cm of c1] (c2);
+   \vertex [below= 1.3cm of c1] (c3);
+   \vertex [right= 1cm of c2] (d1);
+   \vertex [right= 1cm of c3] (d2);
+   \vertex [above= 0.3cm of d1] (f1) {\(\pmb{\ell}\)};
+   \vertex [below= 0.3cm of d1] (f2) {\(\pmb{\bar{\ell}}\)};
+   \vertex [above= 0.3cm of d2] (f3) {\(\pmb{\ell^-}\)};
+   \vertex [below= 0.3cm of d2] (f4) {\(\pmb{\bar{\nu_\ell}}\)};
+   \vertex [below right= 1.2cm of y1] (y2);
+   \vertex [right= 1cm of y2] (fsrq1);
+   \vertex [above= 0.6cm of fsrq1] (fsrq2) {\(\pmb{\Pq'}\)};
+   
+   \diagram* {
+    (y1) -- [boson, very thick] (y2),
+    (y2) -- [anti fermion, very thick] (a2),
+    (q2) -- [fermion, very thick] (a2),
+    (a2) -- [boson, very thick, edge label'=\(\pmb{\W^-}\)] (b1),
+    (b1) -- [boson, very thick, edge label=\(\pmb{\Z}\)] (c2),
+    (b1) -- [boson, very thick, edge label=\(\pmb{\W^-}\)] (c3),
+    (c2) -- [fermion, very thick] (f1),
+    (c2) -- [anti fermion, very thick] (f2),
+    (c3) -- [fermion, very thick] (f3),
+    (c3) -- [anti fermion, very thick] (f4),
+    (y2) -- [fermion, very thick] (fsrq2),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{1cm}
+ \begin{tikzpicture} % WZ at NLO EW (t-channel) y-induced
+  \begin{feynman}
+   \vertex (y1) {\(\pmb{\gamma}\)};
+   \vertex [right= 1cm of y1] (y2);
+   \vertex [below= 0.3cm of y2] (y3);
+   \vertex [right= 1.8cm of y3] (fsrq1);
+   \vertex [above= 0.2cm of fsrq1] (fsrq2) {\(\pmb{\Pq'}\)};
+   \vertex [below= 3.6cm of y1] (q2) {\(\pmb{\Pq}\)};
+   \vertex [right= 1cm of y3] (a1);
+   \vertex [below= 0.5cm of a1] (a2);
+   \vertex [right= 2cm of q2] (a3);
+   \vertex [above= 0.8cm of a3] (a4);
+   \vertex [right= 2cm of a2] (c);
+   \vertex [right= 2cm of a4] (d);
+   \vertex [right= 1.5cm of c] (e);
+   \vertex [right= 1.5cm of d] (f);
+   \vertex [above= 0.3cm of e] (f1) {\(\pmb{\ell}\)};
+   \vertex [below= 0.3cm of e] (f2) {\(\pmb{\bar{\ell}}\)};
+   \vertex [above= 0.3cm of f] (f3) {\(\pmb{\nu_\ell}\)};
+   \vertex [below= 0.3cm of f] (f4) {\(\pmb{\bar{\ell}^+}\)};
+   
+   \diagram* {
+    (y1) -- [boson, very thick] (y3),
+    (y3) -- [anti fermion, very thick] (a2),
+    (q2) -- [fermion, very thick] (a4),
+    (a2) -- [anti fermion, very thick] (a4),
+    (a2) -- [boson, very thick, edge label'=\(\pmb{\Z}\)] (c),
+    (a4) -- [boson, very thick, edge label'=\(\pmb{\W^+}\)] (d),
+    (c) -- [fermion, very thick] (f1),
+    (c) -- [anti fermion, very thick] (f2),
+    (d) -- [fermion, very thick] (f3),
+    (d) -- [anti fermion, very thick] (f4),
+    (y3) -- [fermion, very thick] (fsrq2),
+   };
+  \end{feynman}
+ \end{tikzpicture}  
+ 
+
+ \caption{WZ production at NLO in EW by internal loop processes (upper row) and photon-quark induced processes (lower row).} \label{fig:ZZto4l}
+\end{figure}
+
+
+\end{document}
