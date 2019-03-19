@@ -2,35 +2,257 @@
   \newcommand{\singleletter}[1]{#1} \newcommand{\switchargs}[2]{#2#1}
 \begin{thebibliography}{10}
 
+\bibitem{PhysRevD.98.030001}
+M.~et~al Tanabashi.
+\newblock Review of particle physics.
+\newblock {\em Phys. Rev. D}, 98:030001, Aug 2018.
+
+\bibitem{Bierweiler:2013dja}
+Anastasiya Bierweiler, Tobias Kasprzik, and Johann~H. Kahn.
+\newblock {Vector-boson pair production at the LHC to $\mathcal{O}(\alpha^3)$
+  accuracy}.
+\newblock 2013.
+
+\bibitem{Thomson1897}
+J.~J. Thomson.
+\newblock {Cathode rays}.
+\newblock {\em Phil. Mag. Ser.5}, 44:293--316, 1897.
+
+\bibitem{Rutherford1911}
+E.~Rutherford.
+\newblock {The scattering of alpha and beta particles by matter and the
+  structure of the atom}.
+\newblock {\em Phil. Mag. Ser.6}, 21:669--688, 1911.
+
+\bibitem{Bohr1913}
+N.~Bohr~Dr. phil.
+\newblock I. on the constitution of atoms and molecules.
+\newblock {\em The London, Edinburgh, and Dublin Philosophical Magazine and
+  Journal of Science}, 26(151):1--25, 1913.
+
+\bibitem{Chadwick1932}
+J.~Chadwick.
+\newblock {Possible Existence of a Neutron}.
+\newblock {\em Nature}, 129:312, 1932.
+
+\bibitem{Planck1901}
+Max Planck.
+\newblock Ueber das gesetz der energieverteilung im normalspectrum.
+\newblock {\em Annalen der Physik}, 309(3):553--563, 1901.
+
+\bibitem{Einstein1905}
+A.~Einstein.
+\newblock Über einen die erzeugung und verwandlung des lichtes betreffenden
+  heuristischen gesichtspunkt.
+\newblock {\em Annalen der Physik}, 322(6):132--148, 1905.
+
+\bibitem{Compton1923}
+Arthur~H. Compton.
+\newblock A quantum theory of the scattering of x-rays by light elements.
+\newblock {\em Phys. Rev.}, 21:483--502, May 1923.
+
+\bibitem{Yukawa1935}
+Hideki YUKAWA.
+\newblock On the interaction of elementary particles. i.
+\newblock {\em Nippon Sugaku-Buturigakkwai Kizi Dai 3 Ki}, 17:48--57, 1935.
+
+\bibitem{Stevenson1937}
+J.~C. Street and E.~C. Stevenson.
+\newblock New evidence for the existence of a particle of mass intermediate
+  between the proton and electron.
+\newblock {\em Phys. Rev.}, 52:1003--1004, Nov 1937.
+
+\bibitem{Anderson1937}
+Seth~H. Neddermeyer and Carl~D. Anderson.
+\newblock Note on the nature of cosmic-ray particles.
+\newblock {\em Phys. Rev.}, 51:884--886, May 1937.
+
+\bibitem{Lattes1947}
+C.~M.~G. Lattes, H.~Muirhead, G.~P.~S. Occhialini, and C.~F. Powell.
+\newblock {PROCESSES INVOLVING CHARGED MESONS}.
+\newblock {\em Nature}, 159:694--697, 1947.
+\newblock [,42(1947)].
+
+\bibitem{Fermi1934}
+E.~Fermi.
+\newblock Versuch einer theorie der $\beta$-strahlen. i.
+\newblock {\em Zeitschrift f{\"u}r Physik}, 88(3):161--177, Mar 1934.
+
+\bibitem{Cowan1956}
+C.~L. Cowan, F.~Reines, F.~B. Harrison, H.~W. Kruse, and A.~D. McGuire.
+\newblock Detection of the free neutrino: a confirmation.
+\newblock {\em Science}, 124(3212):103--104, 1956.
+
+\bibitem{Lederman1962}
+G.~Danby, J-M. Gaillard, K.~Goulianos, L.~M. Lederman, N.~Mistry, M.~Schwartz,
+  and J.~Steinberger.
+\newblock Observation of high-energy neutrino reactions and the existence of
+  two kinds of neutrinos.
+\newblock {\em Phys. Rev. Lett.}, 9:36--44, Jul 1962.
+
+\bibitem{Perl1975}
+M.~L. Perl, G.~S. Abrams, A.~M. Boyarski, M.~Breidenbach, D.~D. Briggs,
+  F.~Bulos, W.~Chinowsky, J.~T. Dakin, G.~J. Feldman, C.~E. Friedberg,
+  D.~Fryberger, G.~Goldhaber, G.~Hanson, F.~B. Heile, B.~Jean-Marie, J.~A.
+  Kadyk, R.~R. Larsen, A.~M. Litke, D.~L\"uke, B.~A. Lulu, V.~L\"uth, D.~Lyon,
+  C.~C. Morehouse, J.~M. Paterson, F.~M. Pierre, T.~P. Pun, P.~A. Rapidis,
+  B.~Richter, B.~Sadoulet, R.~F. Schwitters, W.~Tanenbaum, G.~H. Trilling,
+  F.~Vannucci, J.~S. Whitaker, F.~C. Winkelmann, and J.~E. Wiss.
+\newblock Evidence for anomalous lepton production in
+  ${e}^{+}\ensuremath{-}{e}^{\ensuremath{-}}$ annihilation.
+\newblock {\em Phys. Rev. Lett.}, 35:1489--1492, Dec 1975.
+
+\bibitem{Donut2001}
+K.~Kodama, N.~Ushida, C.~Andreopoulos, N.~Saoulidou, G.~Tzanakos, P.~Yager,
+  B.~Baller, D.~Boehnlein, W.~Freeman, B.~Lundberg, J.~Morfin, R.~Rameika, J.C.
+  Yun, J.S. Song, C.S. Yoon, S.H. Chung, P.~Berghaus, M.~Kubantsev, N.W. Reay,
+  R.~Sidwell, N.~Stanton, S.~Yoshida, S.~Aoki, T.~Hara, J.T. Rhee, D.~Ciampa,
+  C.~Erickson, M.~Graham, K.~Heller, R.~Rusack, R.~Schwienhorst, J.~Sielaff,
+  J.~Trammell, J.~Wilcox, K.~Hoshino, H.~Jiko, M.~Miyanishi, M.~Komatsu,
+  M.~Nakamura, T.~Nakano, K.~Niwa, N.~Nonaka, K.~Okada, O.~Sato, T.~Akdogan,
+  V.~Paolone, C.~Rosenfeld, A.~Kulik, T.~Kafka, W.~Oliver, T.~Patzak, and
+  J.~Schneps.
+\newblock Observation of tau neutrino interactions.
+\newblock {\em Physics Letters B}, 504(3):218 -- 224, 2001.
+
+\bibitem{GellMann:1964nj}
+Murray Gell-Mann.
+\newblock {A Schematic Model of Baryons and Mesons}.
+\newblock {\em Phys. Lett.}, 8:214--215, 1964.
+
+\bibitem{Zweig:570209}
+G~Zweig.
+\newblock {An SU$_3$ model for strong interaction symmetry and its breaking;
+  Version 2}.
+\newblock (CERN-TH-412):80 p, Feb 1964.
+
+\bibitem{PhysRevLett.23.930}
+E.~D. Bloom, D.~H. Coward, H.~DeStaebler, J.~Drees, G.~Miller, L.~W. Mo, R.~E.
+  Taylor, M.~Breidenbach, J.~I. Friedman, G.~C. Hartmann, and H.~W. Kendall.
+\newblock High-energy inelastic $e\ensuremath{-}p$ scattering at
+  6\ifmmode^\circ\else\textdegree\fi{} and
+  10\ifmmode^\circ\else\textdegree\fi{}.
+\newblock {\em Phys. Rev. Lett.}, 23:930--934, Oct 1969.
+
+\bibitem{PhysRevLett.23.935}
+M.~Breidenbach, J.~I. Friedman, H.~W. Kendall, E.~D. Bloom, D.~H. Coward,
+  H.~DeStaebler, J.~Drees, L.~W. Mo, and R.~E. Taylor.
+\newblock Observed behavior of highly inelastic electron-proton scattering.
+\newblock {\em Phys. Rev. Lett.}, 23:935--939, Oct 1969.
+
+\bibitem{Ting1974}
+J.~J. Aubert, U.~Becker, P.~J. Biggs, J.~Burger, M.~Chen, G.~Everhart,
+  P.~Goldhagen, J.~Leong, T.~McCorriston, T.~G. Rhoades, M.~Rohde, Samuel C.~C.
+  Ting, Sau~Lan Wu, and Y.~Y. Lee.
+\newblock Experimental observation of a heavy particle $j$.
+\newblock {\em Phys. Rev. Lett.}, 33:1404--1406, Dec 1974.
+
+\bibitem{Richter1974}
+J.~E. Augustin, A.~M. Boyarski, M.~Breidenbach, F.~Bulos, J.~T. Dakin, G.~J.
+  Feldman, G.~E. Fischer, D.~Fryberger, G.~Hanson, B.~Jean-Marie, R.~R. Larsen,
+  V.~L\"uth, H.~L. Lynch, D.~Lyon, C.~C. Morehouse, J.~M. Paterson, M.~L. Perl,
+  B.~Richter, P.~Rapidis, R.~F. Schwitters, W.~M. Tanenbaum, F.~Vannucci, G.~S.
+  Abrams, D.~Briggs, W.~Chinowsky, C.~E. Friedberg, G.~Goldhaber, R.~J.
+  Hollebeek, J.~A. Kadyk, B.~Lulu, F.~Pierre, G.~H. Trilling, J.~S. Whitaker,
+  J.~Wiss, and J.~E. Zipse.
+\newblock Discovery of a narrow resonance in ${e}^{+}{e}^{\ensuremath{-}}$
+  annihilation.
+\newblock {\em Phys. Rev. Lett.}, 33:1406--1408, Dec 1974.
+
+\bibitem{Lederman1977}
+S.~W. Herb, D.~C. Hom, L.~M. Lederman, J.~C. Sens, H.~D. Snyder, J.~K. Yoh,
+  J.~A. Appel, B.~C. Brown, C.~N. Brown, W.~R. Innes, K.~Ueno, T.~Yamanouchi,
+  A.~S. Ito, H.~J\"ostlein, D.~M. Kaplan, and R.~D. Kephart.
+\newblock Observation of a dimuon resonance at 9.5 gev in 400-gev
+  proton-nucleus collisions.
+\newblock {\em Phys. Rev. Lett.}, 39:252--255, Aug 1977.
+
+\bibitem{Stella2011}
+Bruno~R. Stella and Hans-J{\"u}rgen Meyer.
+\newblock ϒ (9.46 gev) and the gluon discovery (a critical recollection of
+  pluto results).
+\newblock {\em The European Physical Journal H}, 36(2):203, Oct 2011.
+
+\bibitem{CDFTop1995}
+F.~et~al Abe.
+\newblock Observation of top quark production in
+  $\overline{\mathit{p}}\mathit{p}$ collisions with the collider detector at
+  fermilab.
+\newblock {\em Phys. Rev. Lett.}, 74:2626--2631, Apr 1995.
+
+\bibitem{D0Top1995}
+S.~et~al Abachi.
+\newblock Search for high mass top quark production in $\mathit{p}\overline{p}$
+  collisions at
+  $\sqrt{\mathit{s}}\phantom{\rule{0ex}{0ex}}=\phantom{\rule{0ex}{0ex}}$ 1.8
+  tev.
+\newblock {\em Phys. Rev. Lett.}, 74:2422--2426, Mar 1995.
+
+\bibitem{Arnison:1983mk}
+G.~Arnison et~al.
+\newblock {Experimental Observation of Lepton Pairs of Invariant Mass Around
+  95-GeV/c**2 at the CERN SPS Collider}.
+\newblock {\em Phys. Lett.}, B126:398--410, 1983.
+\newblock [,7.55(1983)].
+
+\bibitem{Arnison:1983rp}
+G.~Arnison et~al.
+\newblock {Experimental Observation of Isolated Large Transverse Energy
+  Electrons with Associated Missing Energy at s**(1/2) = 540-GeV}.
+\newblock {\em Phys. Lett.}, B122:103--116, 1983.
+\newblock [,611(1983)].
+
+\bibitem{Bagnaia:1983zx}
+P.~Bagnaia et~al.
+\newblock {Evidence for Z0 ---> e+ e- at the CERN anti-p p Collider}.
+\newblock {\em Phys. Lett.}, B129:130--140, 1983.
+\newblock [,7.69(1983)].
+
+\bibitem{Banner:1983jy}
+M.~Banner et~al.
+\newblock {Observation of Single Isolated Electrons of High Transverse Momentum
+  in Events with Missing Transverse Energy at the CERN anti-p p Collider}.
+\newblock {\em Phys. Lett.}, B122:476--485, 1983.
+\newblock [,7.45(1983)].
+
+\bibitem{Chatrchyan:2012xdj}
+Serguei Chatrchyan et~al.
+\newblock {Observation of a new boson at a mass of 125 GeV with the CMS
+  experiment at the LHC}.
+\newblock {\em Phys. Lett.}, B716:30--61, 2012.
+
+\bibitem{Aad:2012tfa}
+Georges Aad et~al.
+\newblock {Observation of a new particle in the search for the Standard Model
+  Higgs boson with the ATLAS detector at the LHC}.
+\newblock {\em Phys. Lett.}, B716:1--29, 2012.
+
+\bibitem{Weinberg1967}
+Steven Weinberg.
+\newblock A model of leptons.
+\newblock {\em Phys. Rev. Lett.}, 19:1264--1266, Nov 1967.
+
+\bibitem{Abercrombie:2015wmb}
+Daniel Abercrombie et~al.
+\newblock Dark matter benchmark models for early {LHC Run-2} searches: Report
+  of the {ATLAS/CMS} dark matter forum.
+\newblock 2015.
+
+\bibitem{Khachatryan:2016bia}
+Vardan Khachatryan et~al.
+\newblock {The CMS trigger system}.
+\newblock {\em JINST}, 12:P01020, 2017.
+
 \bibitem{CMSTDR}
 {\em {Technical proposal}}.
 \newblock LHC Tech. Proposal. CERN, Geneva, 1994.
 \newblock Cover title : CMS, the Compact Muon Solenoid : technical proposal.
 
-\bibitem{CMS-PAS-JME-16-004}
-{Performance of missing energy reconstruction in 13 TeV pp collision data using
-  the CMS detector}.
-\newblock Technical Report CMS-PAS-JME-16-004, CERN, Geneva, 2016.
-
-\bibitem{Cacciari:2006gp}
-M.~Cacciari and G.~P. Salam.
-\newblock {Dispelling the $N^{3}$ myth for the $k_{t}$ jet-finder}.
-\newblock {\em Phys. Lett. B}, 641:57, 2006.
-
-\bibitem{Cacciari:2008gp}
-M.~Cacciari, G.~P. Salam, and G.~Soyez.
-\newblock {The Anti-k(t) jet clustering algorithm}.
-\newblock {\em JHEP}, 04:063, 2008.
-
-\bibitem{Cacciari:2011ma}
-Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
-\newblock {FastJet} user manual.
-\newblock {\em Eur. Phys. J. C}, 72:1896, 2012.
-
-\bibitem{Chatrchyan:2012jua}
-Serguei Chatrchyan et~al.
-\newblock {Identification of b-quark jets with the CMS experiment}.
-\newblock 2012.
+\bibitem{ElectronReco2015}
+{CMS Collaboration}.
+\newblock Performance of electron reconstruction and selection with the cms
+  detector in proton-proton collisions at sqrt(s) = 8 tev.
+\newblock {\em JINST 10 (2015) P06005}, page~6, 2015.
 
 \bibitem{CMS-PAS-PFT-10-002}
 {CMS Collaboration}.
@@ -43,11 +265,25 @@ Serguei Chatrchyan et~al.
 \newblock Performance of muon identification in 2010 data.
 \newblock {\em CMS Physics Analysis Summary}, CMS-PAS-MUO-10-004, 2010.
 
-\bibitem{ElectronReco2015}
-{CMS Collaboration}.
-\newblock Performance of electron reconstruction and selection with the cms
-  detector in proton-proton collisions at sqrt(s) = 8 tev.
-\newblock {\em JINST 10 (2015) P06005}, page~6, 2015.
+\bibitem{Cacciari:2008gp}
+M.~Cacciari, G.~P. Salam, and G.~Soyez.
+\newblock {The Anti-k(t) jet clustering algorithm}.
+\newblock {\em JHEP}, 04:063, 2008.
+
+\bibitem{Cacciari:2011ma}
+Matteo Cacciari, Gavin~P. Salam, and Gregory Soyez.
+\newblock {FastJet} user manual.
+\newblock {\em Eur. Phys. J. C}, 72:1896, 2012.
+
+\bibitem{Cacciari:2006gp}
+M.~Cacciari and G.~P. Salam.
+\newblock {Dispelling the $N^{3}$ myth for the $k_{t}$ jet-finder}.
+\newblock {\em Phys. Lett. B}, 641:57, 2006.
+
+\bibitem{Chatrchyan:2012jua}
+Serguei Chatrchyan et~al.
+\newblock {Identification of b-quark jets with the CMS experiment}.
+\newblock 2012.
 
 \bibitem{CMS:EGM-14-001}
 Vardan Khachatryan et~al.
@@ -55,15 +291,138 @@ Vardan Khachatryan et~al.
   detector in proton-proton collisions at $\sqrt{s} = 8$\TeV}.
 \newblock {\em JINST}, 10:P08010, 2015.
 
-\bibitem{Khachatryan:2016bia}
-Vardan Khachatryan et~al.
-\newblock {The CMS trigger system}.
-\newblock {\em JINST}, 12:P01020, 2017.
-
 \bibitem{CMS-PRF-14-001}
 Albert~M Sirunyan et~al.
 \newblock Particle-flow reconstruction and global event description with the
   {CMS} detector.
 \newblock {\em JINST}, 12:P10003, 2017.
+
+\bibitem{CMS-PAS-JME-16-004}
+{Performance of missing energy reconstruction in 13 TeV pp collision data using
+  the CMS detector}.
+\newblock Technical Report CMS-PAS-JME-16-004, CERN, Geneva, 2016.
+
+\bibitem{Agostinelli:2002hh}
+S.~Agostinelli et~al.
+\newblock {GEANT4: A Simulation toolkit}.
+\newblock {\em Nucl.Instrum.Meth.}, A506:250--303, 2003.
+
+\bibitem{Alioli:2008gx}
+Simone Alioli, Paolo Nason, Carlo Oleari, and Emanuele Re.
+\newblock {NLO} vector-boson production matched with shower in {POWHEG}.
+\newblock {\em JHEP}, 07:060, 2008.
+
+\bibitem{Nason:2004rx}
+Paolo Nason.
+\newblock {A new method for combining NLO QCD with shower Monte Carlo
+  algorithms}.
+\newblock {\em JHEP}, 11:040, 2004.
+
+\bibitem{Frixione:2007vw}
+Stefano Frixione, Paolo Nason, and Carlo Oleari.
+\newblock {Matching NLO QCD computations with parton shower simulations: the
+  POWHEG method}.
+\newblock {\em JHEP}, 11:070, 2007.
+
+\bibitem{powheg:2010}
+S.~Alioli, P.~Nason, C.~Oleari, and E.~Re.
+\newblock {A General Framework for Implementing NLO Calculations in Shower
+  Monte Carlo Programs: the POWHEG BOX}.
+\newblock {\em JHEP}, 06:043, 2010.
+
+\bibitem{MCFM}
+J.~M. Campbell and R.~K. Ellis.
+\newblock {MCFM} for the {Tevatron} and the {LHC}.
+\newblock {\em Nucl. Phys. Proc. Suppl.}, 205-206:10--15, 2010.
+
+\bibitem{Alwall:2014hca}
+J.~Alwall, R.~Frederix, S.~Frixione, V.~Hirschi, F.~Maltoni, O.~Mattelaer,
+  H.~S. Shao, T.~Stelzer, P.~Torrielli, and M.~Zaro.
+\newblock {The automated computation of tree-level and next-to-leading order
+  differential cross sections, and their matching to parton shower
+  simulations}.
+\newblock {\em JHEP}, 07:079, 2014.
+
+\bibitem{Sjostrand:2006za}
+Torbj{\"o}rn Sj{\"o}strand, Stephen Mrenna, and Peter Skands.
+\newblock {PYTHIA} 6.4 physics and manual.
+\newblock {\em JHEP}, 05:026, 2006.
+
+\bibitem{Sjostrand:2015}
+Torbjorn Sj{\"o}strand et~al.
+\newblock An introduction to {PYTHIA} 8.2.
+\newblock {\em Comput. Phys. Commun.}, 191:159--177, 2015.
+
+\bibitem{nnpdf}
+{Parton distributions for the LHC Run II}.
+\newblock {\em JHEP}, 04:040, 2015.
+
+\bibitem{Sjostrand:2007gs}
+Torbjorn Sjostrand, Stephen Mrenna, and Peter~Z. Skands.
+\newblock {A Brief Introduction to PYTHIA 8.1}.
+\newblock {\em Comput.Phys.Commun.}, 178:852--867, 2008.
+
+\bibitem{Khachatryan:2015pea}
+Vardan Khachatryan et~al.
+\newblock {Event generator tunes obtained from underlying event and multiparton
+  scattering measurements}.
+\newblock {\em Eur. Phys. J. C}, 76:155, 2016.
+
+\bibitem{Skands:2014pea}
+Peter Skands, Stefano Carrazza, and Juan Rojo.
+\newblock {Tuning PYTHIA 8.1: the Monash 2013 Tune}.
+\newblock {\em Eur. Phys. J.}, C74(8):3024, 2014.
+
+\bibitem{Boveia:2016mrp}
+Giorgio Busoni et~al.
+\newblock {Recommendations on presenting LHC searches for missing transverse
+  energy signals using simplified $s$-channel models of dark matter}.
+\newblock 2016.
+
+\bibitem{Ask:2008fh}
+Stefan Ask.
+\newblock Simulation of {$Z$} plus graviton/unparticle production at the {LHC}.
+\newblock {\em Eur. Phys. J. C}, 60:509, 2009.
+
+\bibitem{Ask:2009pv}
+S.~Ask, I.~V. Akin, L.~Benucci, A.~De~Roeck, M.~Goebel, and J.~Haller.
+\newblock Real emission and virtual exchange of gravitons and unparticles in
+  {PYTHIA8}.
+\newblock {\em Comput. Phys. Commun.}, 181:1593, 2010.
+
+\bibitem{Bodek:2012id}
+A.~Bodek, A.~van Dyne, J.~Y. Han, W.~Sakumoto, and A.~Strelnikov.
+\newblock {Extracting Muon Momentum Scale Corrections for Hadron Collider
+  Experiments}.
+\newblock {\em Eur. Phys. J.}, C72:2194, 2012.
+
+\bibitem{Gieseke:2014gka}
+Stefan Gieseke, Tobias Kasprzik, and Johann~H. Kahn.
+\newblock {Vector-boson pair production and electroweak corrections in
+  HERWIG++}.
+\newblock {\em Eur. Phys. J.}, C74(8):2988, 2014.
+
+\bibitem{Grazzini:2015hta}
+Massimiliano Grazzini, Stefan Kallweit, and Dirk Rathlev.
+\newblock {ZZ production at the LHC: fiducial cross sections and distributions
+  in NNLO QCD}.
+\newblock {\em Phys. Lett.}, B750:407--410, 2015.
+
+\bibitem{Grazzini:2016swo}
+Massimiliano Grazzini, Stefan Kallweit, Dirk Rathlev, and Marius Wiesemann.
+\newblock {$W^{\pm}Z$ production at hadron colliders in NNLO QCD}.
+\newblock {\em Phys. Lett.}, B761:179--183, 2016.
+
+\bibitem{Baglio:113005}
+Julien Baglio, Le~Duc Ninh, and Marcus~M. Weber.
+\newblock {Massive gauge boson pair production at the LHC: a next-to-leading
+  order story}.
+\newblock {\em Phys.Rev.}, D88:113005, 2013.
+
+\bibitem{Khachatryan:2016tgp}
+Vardan Khachatryan et~al.
+\newblock {Measurement of the WZ production cross section in pp collisions at
+  $\sqrt(s) =$ 13 TeV}.
+\newblock {\em Phys. Lett.}, B766:268--290, 2017.
 
 \end{thebibliography}
