@@ -355,7 +355,7 @@
  \end{tikzpicture}  
  
 
- \caption{WZ production at NLO in EW by internal loop processes (upper row) and photon-quark induced processes (lower row).} \label{fig:ZZto4l}
+ \caption{WZ production at NLO in EW by internal loop processes (upper row) and photon-quark induced processes (lower row).} \label{fig:WZNLO}
 \end{figure}
 
 \begin{figure} % BSM models
@@ -492,4 +492,185 @@
  \end{tikzpicture}
  \caption{Some diagrams beyond the Standard Model in which are produced two charged leptons and missing energy. Clockwise from upper left: associated production of an invisible Higgs boson; gluon-induced production of a Z boson and a massive spin-0 dark matter mediator via top-quark loop; production of a Z boson and a massive spin-1 dark matter mediator; production of a Z boson in association with gravitons (ADD model) or unparticles.} \label{fig:BSMdiagrams}
  \end{figure}
+
+\begin{figure} % 3GC
+ \centering
+ \begin{tikzpicture} % WWZ
+  \begin{feynman}
+   \vertex (a2) {\(\boldsymbol{\W^\pm}\)};
+   \vertex [right= 1.5cm of a2] (b1);
+   \vertex [right= 1.1cm of b1] (c1);
+   \vertex [above= 0.9cm of c1] (c2) {\(\boldsymbol{\Z}\)};
+   \vertex [below= 0.9cm of c1] (c3) {\(\boldsymbol{\W^\pm}\)};
+   
+   \diagram* {
+    (a2) -- [boson, very thick] (b1),
+    (b1) -- [boson, very thick] (c2),
+    (b1) -- [boson, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{0.5cm}
+ \begin{tikzpicture} % WWy
+  \begin{feynman}
+   \vertex (a2) {\(\boldsymbol{\W^\pm}\)};
+   \vertex [right= 1.5cm of a2] (b1);
+   \vertex [right= 1.1cm of b1] (c1);
+   \vertex [above= 0.9cm of c1] (c2) {\(\boldsymbol{\gamma}\)};
+   \vertex [below= 0.9cm of c1] (c3) {\(\boldsymbol{\W^\pm}\)};
+   
+   \diagram* {
+    (a2) -- [boson, very thick] (b1),
+    (b1) -- [boson, very thick] (c2),
+    (b1) -- [boson, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture} 
+ \caption{Triple gauge boson vertices in the electroweak theory.} \label{fig:3GC}
+\end{figure}
+
+\begin{figure} % 4GC
+ \centering
+ \begin{tikzpicture} % WWWW
+  \begin{feynman}
+   \vertex (a1);
+   \vertex [above= 0.8cm of a1] (a2) {\(\boldsymbol{\W}\)};
+   \vertex [below= 0.8cm of a1] (a3) {\(\boldsymbol{\W}\)};
+   \vertex [right= 1.2cm of a1] (b1);
+   \vertex [right= 1.2cm of b1] (c1);
+   \vertex [above= 0.8cm of c1] (c2) {\(\boldsymbol{\W}\)};
+   \vertex [below= 0.8cm of c1] (c3) {\(\boldsymbol{\W}\)};
+   
+   \diagram* {
+    (a2) -- [boson, very thick] (b1),
+    (a3) -- [boson, very thick] (b1),
+    (b1) -- [boson, very thick] (c2),
+    (b1) -- [boson, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{0.5cm}
+ \begin{tikzpicture} % WWyy
+  \begin{feynman}
+   \vertex (a1);
+   \vertex [above= 0.8cm of a1] (a2) {\(\boldsymbol{\W}\)};
+   \vertex [below= 0.8cm of a1] (a3) {\(\boldsymbol{\W}\)};
+   \vertex [right= 1.2cm of a1] (b1);
+   \vertex [right= 1.2cm of b1] (c1);
+   \vertex [above= 0.8cm of c1] (c2) {\(\boldsymbol{\gamma}\)};
+   \vertex [below= 0.8cm of c1] (c3) {\(\boldsymbol{\gamma}\)};
+   
+   \diagram* {
+    (a2) -- [boson, very thick] (b1),
+    (a3) -- [boson, very thick] (b1),
+    (b1) -- [boson, very thick] (c2),
+    (b1) -- [boson, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{0.5cm}
+ \begin{tikzpicture} % WWyZ
+  \begin{feynman}
+   \vertex (a1);
+   \vertex [above= 0.8cm of a1] (a2) {\(\boldsymbol{\W}\)};
+   \vertex [below= 0.8cm of a1] (a3) {\(\boldsymbol{\W}\)};
+   \vertex [right= 1.2cm of a1] (b1);
+   \vertex [right= 1.2cm of b1] (c1);
+   \vertex [above= 0.8cm of c1] (c2) {\(\boldsymbol{\gamma}\)};
+   \vertex [below= 0.8cm of c1] (c3) {\(\boldsymbol{\Z}\)};
+   
+   \diagram* {
+    (a2) -- [boson, very thick] (b1),
+    (a3) -- [boson, very thick] (b1),
+    (b1) -- [boson, very thick] (c2),
+    (b1) -- [boson, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{0.5cm}
+ \begin{tikzpicture} % WWZZ
+  \begin{feynman}
+   \vertex (a1);
+   \vertex [above= 0.8cm of a1] (a2) {\(\boldsymbol{\W}\)};
+   \vertex [below= 0.8cm of a1] (a3) {\(\boldsymbol{\W}\)};
+   \vertex [right= 1.2cm of a1] (b1);
+   \vertex [right= 1.2cm of b1] (c1);
+   \vertex [above= 0.8cm of c1] (c2) {\(\boldsymbol{\Z}\)};
+   \vertex [below= 0.8cm of c1] (c3) {\(\boldsymbol{\Z}\)};
+   
+   \diagram* {
+    (a2) -- [boson, very thick] (b1),
+    (a3) -- [boson, very thick] (b1),
+    (b1) -- [boson, very thick] (c2),
+    (b1) -- [boson, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture}
+ \caption{Non-Abelian quartic gauge couplings in the electroweak theory.} \label{fig:4GC}
+\end{figure}
+
+\begin{figure} % Higgs couplings
+ \centering
+\begin{tikzpicture} % VVH
+  \begin{feynman}
+   \vertex (a2) {\(\boldsymbol{\mathrm{V}}\)};
+   \vertex [right= 1.3cm of a2] (b1);
+   \vertex [right= 1.1cm of b1] (c1);
+   \vertex [above= 0.9cm of c1] (c2) {\(\boldsymbol{\Hi}\)};
+   \vertex [below= 0.9cm of c1] (c3) {\(\boldsymbol{\mathrm{V}}\)};
+   
+   \diagram* {
+    (a2) -- [boson, very thick] (b1),
+    (b1) -- [scalar, very thick] (c2),
+    (b1) -- [boson, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{0.5cm}
+ \begin{tikzpicture} % Hff
+  \begin{feynman}
+   \vertex (a2) {\(\boldsymbol{f}\)};
+   \vertex [right= 1.3cm of a2] (b1);
+   \vertex [right= 1.1cm of b1] (c1);
+   \vertex [above= 0.9cm of c1] (c2) {\(\boldsymbol{\Hi}\)};
+   \vertex [below= 0.9cm of c1] (c3) {\(\boldsymbol{f}\)};
+   
+   \diagram* {
+    (a2) -- [fermion, very thick] (b1),
+    (b1) -- [scalar, very thick] (c2),
+    (b1) -- [fermion, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{0.5cm}
+ \begin{tikzpicture} % HHH
+  \begin{feynman}
+   \vertex (a2) {\(\boldsymbol{\Hi}\)};
+   \vertex [right= 1.3cm of a2] (b1);
+   \vertex [right= 1.1cm of b1] (c1);
+   \vertex [above= 0.9cm of c1] (c2) {\(\boldsymbol{\Hi}\)};
+   \vertex [below= 0.9cm of c1] (c3) {\(\boldsymbol{\Hi}\)};
+   
+   \diagram* {
+    (a2) -- [scalar, very thick] (b1),
+    (b1) -- [scalar, very thick] (c2),
+    (b1) -- [scalar, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{0.5cm}
+ \begin{tikzpicture} % HHHH
+  \begin{feynman}
+   \vertex (a1);
+   \vertex [above= 0.8cm of a1] (a2) {\(\boldsymbol{\Hi}\)};
+   \vertex [below= 0.8cm of a1] (a3) {\(\boldsymbol{\Hi}\)};
+   \vertex [right= 1.2cm of a1] (b1);
+   \vertex [right= 1.2cm of b1] (c1);
+   \vertex [above= 0.8cm of c1] (c2) {\(\boldsymbol{\Hi}\)};
+   \vertex [below= 0.8cm of c1] (c3) {\(\boldsymbol{\Hi}\)};
+   
+   \diagram* {
+    (a2) -- [scalar, very thick] (b1),
+    (a3) -- [scalar, very thick] (b1),
+    (b1) -- [scalar, very thick] (c2),
+    (b1) -- [scalar, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture}
+ \caption{Higgs boson couplings. V is a $\W^\pm$ or $\Z$ boson. $f$ are fermions.}
+\end{figure}
+
 \end{document}

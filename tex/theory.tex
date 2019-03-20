@@ -57,6 +57,7 @@ Finally, the last missing component of the Standard Model, the Higgs boson, was 
 The Standard Model of particle physics was built up over a century of arduous and incremental observations. Thus, the remainder of this work is written standing on the shoulders of giants.
 
 \section{Standard Model}
+%\setlength{\mathindent}{12pt}
 Now I will present the individual interactions and their unification in the theory.
 Beyond the scope of this work are discussions of gravitation, general relativity, and
 previous theories of yore.
@@ -103,104 +104,367 @@ It has been subsumed into the electroweak theory, which will be described next.
 
 \subsection{Electroweak unification}
 \label{electroweak}
-The electromagnetic and weak nuclear forces are unified in the theory of electroweak (EW) interactions.
+The weak interaction describes the interactions between fermions.
+The conserved quantum number is the weak isospin ($T^3$).
+The classic example is beta decay, where a down quark ($T^3={-}1/2$) changes into an up quark ($T^3=+1/2$),
+producing an additional electron and electron antineutrino (both $T^3={-}1/2$). 
+In such a process, the weak isospin, electron number, and charge are all conserved.
 A historical discussion of the weak interaction alone is omitted.
-Above unification energy circa 250 \GeV, or temperature $10^{15}$ Kelvins, these forces are merged into a combined force.
 
+The electromagnetic and weak nuclear forces are unified in the theory of electroweak (EW) interactions,
+wrought by Sheldon Glashow, Steven Weinberg, and Abdus Salam (GWS).
+Above unification energy circa 250 \GeV, or temperature $10^{15}$ Kelvins, these forces are merged into a combined force.
 EW is a Yang-Mills theory based on the gauge group $\mathrm{SU}(2) \times \mathrm{U}(1)$.
 The $\mathrm{SU}(2)$ group represents the three gauge bosons of weak isospin, 
-$\mathrm{W}_1$, $\mathrm{W}_2$, and $\mathrm{W}_3$.
+$\mathrm{A}_1$, $\mathrm{A}_2$, and $\mathrm{A}_3$.
 The $\mathrm{U}(1)$ group represents the gauge boson $\mathrm{B}$ of weak hypercharge.
 All of these gauge bosons are massless. 
 The coupling constants are $g$ for $\mathrm{SU}(2)$ and $g'$ for $\mathrm{U}(1)$.
 
 The left-handed fermion fields transform as doublets under SU(2).
-The lepton doublets are $L_i \begin{pmatrix}\nu_i \\ \ell_i^{-} \end{pmatrix}$ where $\nu_i$ are the three neutrinos and $\ell_i^{-}$ are the three charged leptons.
-The quark doublets are $Q_i \begin{pmatrix} u_i \\ V_{ij} d_j \end{pmatrix}$, 
+The lepton doublets are $L_i = \begin{pmatrix}\nu_i \\ \ell_i^{-} \end{pmatrix}$ where $\nu_i$ are the three neutrinos and $\ell_i^{-}$ are the three charged leptons.
+The quark doublets are $Q_i = \begin{pmatrix} u_i \\ V_{ij} d_j \end{pmatrix}$, 
 where $u_i$ are the three up-type quarks, $d_j$ are the three down-type quarks,
 and $V_{ij}$ is the Cabibbo-Kobayashi-Maskawa (CKM) matrix describing the weak mixing among the quark generations.
 
 The Lagrangian density for the pure, unadulterated electroweak interaction is
-
 \begin{equation}
 \begin{split}
 \label{eq:EWpreSSB}
-\mathcal{L}_\mathrm{EW} & = \mathcal{L}_\mathrm{Gauge} + \mathcal{L}_\mathrm{Fermion} + \mathcal{L}_\mathrm{Higgs} + \mathcal{L}_\mathrm{Yukawa} \:\:\mathrm{where} \\
-\mathcal{L}_\mathrm{Gauge}   & = -\frac{1}{4}W^{\mu\nu}_a W^a_{\mu\nu} - \frac{1}{4} B^{\mu\nu} B_{\mu\nu} \\
+\mathcal{L}_\mathrm{EW} & = \mathcal{L}_\mathrm{Gauge} + \mathcal{L}_\mathrm{Fermion} + \mathcal{L}_\mathrm{\phi} + \mathcal{L}_\mathrm{Yukawa} \:\:\mathrm{where} \\
+\mathcal{L}_\mathrm{Gauge}   & = -\frac{1}{4}A^{\mu\nu}_a A^a_{\mu\nu} - \frac{1}{4} B^{\mu\nu} B_{\mu\nu} \\
 \mathcal{L}_\mathrm{Fermion} & = \sum_{f \in \{Q,u,d,L,i\}} \bar{f}_i i \gamma_\mu D^\mu f_i \\ 
-\mathcal{L}_\mathrm{Higgs}   & = |D_\mu \phi|^2 - \lambda \left( |\phi|^2 - \frac{1}{2} v^2 \right)^2 \\
+\mathcal{L}_\mathrm{\phi}   & = |D_\mu \phi|^2 - \lambda \left( |\phi|^2 - \frac{1}{2} v^2 \right)^2 \\
 %\mathcal{L}_\mathrm{Yukawa}  & = -y_u^{ij} \epsilon^{ab} \phi_b^\dagger \bar{Q}_{ia} u^c_j - y_d^{ij} \phi \bar{Q}_i d^c_j - y_e^{ij} \phi \bar{L}_i e^c_j + \mathrm{h.c.}
 \mathcal{L}_\mathrm{Yukawa}  & = \sum_f -G_f (\bar{f}_\mathrm{L.H.} \phi f_\mathrm{R.H.} + \bar{f}_\mathrm{R.H.} \phi^\dagger f_\mathrm{L.H.} )
 \end{split}
 \end{equation}
-
 Breaking it down piece by piece, 
-
 \begin{itemize}
   \setlength\itemsep{0em}
-  \item $\mathcal{L}_\mathrm{Gauge}$ is the interaction among the gauge fields, described by the field strength tensors $W_{1,2,3}^{\mu\nu}$ and $B^{\mu\nu}$ for the weak isospin and weak hypercharge gauge fields.
+  \item $\mathcal{L}_\mathrm{Gauge}$ is the interaction among the gauge fields, described by the field strength tensors $A_{1,2,3}^{\mu\nu}$ and $B^{\mu\nu}$ for the weak isospin and weak hypercharge gauge fields.
   \item $\mathcal{L}_\mathrm{Fermion}$ is the interaction of the gauge bosons and the fermions. $f$ represents the left-handed doublet quark fields, the right-handed singlet up-type quark fields, the right-handed singlet down-type quark fields, the left-handed doublet lepton fields, and the right-handed singlet lepton fields. 
   \item $D_\mu$ is the electroweak gauge covariant derivative, defined as 
-    $\partial_\mu - i\frac{g}{2}\sigma_j W^{j=1,2,3}_{\mu} - i\frac{g'}{2} Y B_\mu $.
-  \item $\mathcal{L}_\mathrm{Higgs}$ is the Higgs field's interaction with itself and the gauge bosons.
-  \item $\mathcal{L}_\mathrm{Yukawa}$ is the Yukawa interaction of the Higgs field with the fermions $f$, where $f_\mathrm{L.H.}, f_\mathrm{R.H.}$ are the left-handed and right-handed fermion fields.
+    $\partial_\mu - i\frac{g}{2} \hat{T}^j A^{j}_{\mu} - i \frac{g'}{2} Y B_\mu $ where $\hat{T}^{j=1,2,3}$ are the weak isospin operators and $\hat{Y}$ is the weak hypercharge operator. 
+  \item $\mathcal{L}_\mathrm{\phi}$ is the scalar field's interaction with itself and the gauge bosons.
+  \item $\mathcal{L}_\mathrm{Yukawa}$ is the Yukawa interaction of the scalar field with the fermions $f$, where $f_\mathrm{L.H.}, f_\mathrm{R.H.}$ are the left-handed and right-handed fermion fields.
 \end{itemize}
 
-\subsection{Spontaneous symmetry breaking and Higgs mechanism}
+\subsection{Spontaneous symmetry breaking}
 \label{higgs}
 
-The Higgs mechanism is motivated by the necessity to generate the masses.
-A complex scalar Higgs doublet, $\phi \equiv \begin{pmatrix} \phi^+ \\ \phi^0 \end{pmatrix}$,
-is added for this purpose. $\phi^+$, $\phi^0$ are complex numbers.
-It lives in a potential given by 
+Motivated by the necessity to generate the masses, a complex scalar doublet field is added for this purpose:
+\begin{equation}
+\phi \equiv \begin{pmatrix} \phi^+ \\ \phi^0 \end{pmatrix}, \:\:\mathrm{where~} \phi^+, \phi^0 \:\mathrm{are~complex~numbers}
+\end{equation}
+This $\phi$ field lives in a potential given by 
 \begin{equation}
 V(\phi) = \mu^2 \phi^\dagger \phi + \lambda (\phi^\dagger \phi)^2 \label{eq:higgsV}
 \end{equation}
 $\lambda$ must be positive in order for the potential $V$ to have a minimum.
-For negative values of the constant $\mu$, the Higgs doublet develops a vacuum expectation value $v/\sqrt{2}$.
-The value of $v$ is approximately 246 \GeV, providing a basis for the earlier statement about the unification energy.
-
-This partially breaks the electroweak gauge symmetry.  
-The potential $V$ is minimized at a non-zero expectation of $\phi$.
+For negative values of the constant $\mu$, $V$ could be visualized as a sombrero or similar hat with a rounded brim.
+Since the lowest point is somewhere in the brim, 
+the $\phi$ doublet develops a vacuum expectation value $v/\sqrt{2}$.
 This breaks the SU(2) symmetry, but a new U(1) symmetry is maintained.
+The value of $v$ is experimentally found to be around 246 \GeV,
+providing a basis for the earlier statement about the unification energy.
 
 Undertaking a unitary gauge transformation in SU(2), $\phi^+$ vanishes and $\phi^0$ remains as a physical scalar field.
-Expanding this scalar field around the minimum of the scalar potential in Equation~\ref{eq:higgsV}, $\phi^0 \rightarrow \frac{v+H(x)}{\sqrt{2}}$, where $H(x)$ is a scalar at spacetime position $x$.
+Expanding this scalar field around the minimum of the potential in Equation~\ref{eq:higgsV}, $\phi^0 \rightarrow \frac{v+H(x)}{\sqrt{2}}$,
+where $H(x)$ is a scalar at spacetime position $x$ with expected value 0.
 
-Symmetry breaking alters the terms $\mathcal{L}_\mathrm{Higgs}$ and $\mathcal{L}_\mathrm{Yukawa}$ in Equation~\ref{eq:EWpreSSB}, leaving the others unchanged. In a Lagrangian density, the kinetic and potential terms for such a scalar field $\phi$ are
+Symmetry breaking alters the terms $\mathcal{L}_\mathrm{\phi}$ and $\mathcal{L}_\mathrm{Yukawa}$ in Equation~\ref{eq:EWpreSSB}, leaving the others unchanged. In a Lagrangian density, the kinetic and potential terms for such a scalar field $\phi$ are
 \begin{equation}
 \mathcal{L}_\phi = (D_\mu\phi)^\dagger(D^\mu\phi) - V(\phi) \label{eq:Lphi}
 \end{equation}
-Expanding Equation~\ref{eq:Lphi} for the Higgs field using the previously defined $D_\mu$,
-we arrive at
+Let us expand Equation~\ref{eq:Lphi} for the $\phi$-field using the previously defined $D_\mu$:
 \begin{equation}
 \begin{split}
-\mathcal{L}_\mathrm{Higgs} & = \frac{1}{2} (\partial^\mu H) (\partial_\mu H) - \lambda\left[ v^2H^2 + vH^3 + \frac{1}{4}H^4\right] \\
-& + \frac{(v+H)^2}{8} \left[ g^2(W^1_\mu)^2 + g^2(W^2_\mu)^2  + \left( gW^3_\mu + g' Y B_\mu \right)^2 \right]  \\
-\mathcal{L}_\mathrm{Yukawa}  & = \sum_f -G_f \bar{f} f (v+H)
+%\mathcal{L}_\mathrm{Yukawa}  & = \sum_f -G_f \bar{f} f (v+H) \\
+\mathcal{L}_\mathrm{\phi} & = \frac{1}{2} (\partial^\mu H) (\partial_\mu H) - \lambda\left[ v^2H^2 + vH^3 + \frac{1}{4}H^4\right] \\
+& + \frac{1}{8} \left| g \hat{T}^1 A^1_\mu + g \hat{T}^2 A^2_\mu + g \hat{T}^3 A^3_\mu + g' Y B_\mu \right|^2 (v+H)^2
 \end{split}
 \end{equation}
-If we define a weak angle $\theta_W = \mathrm{arctan}\frac{g'}{g}$, 
-we view $gW^3_\mu + g' Y B_\mu$ as the $W^3$ and B bosons being rotated into two other bosons. 
-These will be the massive Z boson and the massless $\gamma$ boson, also known as the photon \cite{Weinberg1967}.
-Meanwhile, we can view the $W^1$ and $W^2$ bosons combining to give the charged $W^\pm$ bosons:
+Noting that $(\hat{T}^1 \pm i \hat{T}^2)/2 \equiv \hat{T}^\pm$ are the raising and lowering operators 
+for the third component of weak isospin in the SU(2) symmetry,
+and the charge operator $\hat{Q} = \hat{T}^3 - \hat{Y}$,
+the last term in $\mathcal{L}_\mathrm{\phi}$ simplifies:
 \begin{equation}
-W^\pm = \frac{W^1 \mp iW^2}{\sqrt{2}} \label{eq:WpmW12}
+\mathcal{L}_\mathrm{\phi} = ... + \frac{1}{8}\left[ g^2(A^1_\mu)^2 + g^2(A^2_\mu)^2  + \left( gA^3_\mu + g' B_\mu \right)^2 \right] (v+H)^2
 \end{equation}
-In doing so, we can rewrite $\mathcal{L}_\mathrm{Higgs}$ as
+If we define a weak angle $\theta_W = \mathrm{arctan}\frac{g'}{g}$, 
+we view $gA^3_\mu + g' B_\mu$ as the $A^3$ and B bosons being rotated into two other bosons. 
+These will be the massive Z boson and the massless $\gamma$ boson, also known as the photon \cite{Weinberg1967}.
+Meanwhile, we can view the $A^1$ and $A^2$ bosons combining to give the charged $W^\pm$ bosons:
+\begin{equation}
+W^\pm = \frac{A^1 \mp iA^2}{\sqrt{2}} \label{eq:WpmA12}
+\end{equation}
+For completeness, let us rewrite the electroweak gauge covariant derivative in terms of the physical bosons.
+The Z boson is represented by the gauge field $Z_\mu$ and the photon is represented by the gauge field $A_\mu$ without a superscript.
+\begin{equation}
+\label{eq:covariant_derivative}
+D_\mu^\mathrm{EW} = \partial_\mu - \frac{ig}{\sqrt{2}} (W_\mu^+ \hat{T}^+ + W_\mu^- \hat{T}^-) - \frac{ig}{\mathrm{cos}\:\theta_W} Z_\mu( \hat{T}^3 - \mathrm{sin}^2 \: \theta_W \: \hat{Q}) - ie A_\mu \hat{Q}
+\end{equation}
+We can now rewrite $\mathcal{L}_\mathrm{\phi}$ from before, in terms of the physical W and Z bosons:
 \begin{equation}
 \label{eq:LhiggsWZ}
 \begin{split}
-\mathcal{L}_\mathrm{Higgs} & = \frac{1}{2} (\partial^\mu H) (\partial_\mu H) - \lambda\left[ v^2H^2 + vH^3 + \frac{1}{4}H^4\right] \\
-& + (v+H)^2 \left[ \frac{g^2}{4} W^\dagger_\mu W^\mu  + \frac{g^2}{8\:\mathrm{cos}^2\:\theta_W} Z_\mu Z^\mu \right]  \\
+\mathcal{L}_\mathrm{\phi} & = \frac{1}{2} (\partial^\mu H) (\partial_\mu H) - \lambda\left[ v^2H^2 + vH^3 + \frac{1}{4}H^4\right] \\
+& + \left[ \frac{g^2}{4} W^+_\mu W^{{-}\mu}  + \frac{g^2}{8\:\mathrm{cos}^2\:\theta_W} Z_\mu Z^\mu \right](v+H)^2   \\
 \end{split}
 \end{equation}
-From this expression, we can extract expressions for the W and Z bosons' masses:
-
+From this expression, we can extract expressions for the W and Z bosons' masses at leading-order:
 \begin{equation}
 \label{eq:WZmass}
-m_W^2 = \frac{v^2 g^2}{4},\:\:\:\:\frac{1}{2}m_Z^2 = \frac{v^2g^2}{8\:\mathrm{cos}^2\:\theta_W}
+m_W = \frac{v g}{2},\:\:\:\:m_Z = \frac{vg}{2\:\mathrm{cos}\:\theta_W}
 \end{equation}
+Lastly, why don't we reframe Equation~\ref{eq:EWpreSSB} in terms of the physical gauge bosons.
+The photon, Z, and W field strength tensors $A_{\mu\nu}$, $A_{\mu\nu}$, $A_{\mu\nu}$, $A_{\mu\nu}$ are provided as
+\begin{equation}
+\begin{split}
+blah
+\end{split}
+\end{equation}
+Finally, we can write down the full EW Lagrangian density after symmetry breaking. 
+As before, $\mathcal{L}_\mathrm{EW} = \mathcal{L}_\mathrm{Gauge} + \mathcal{L}_\mathrm{Fermion} + \mathcal{L}_\mathrm{\phi} + \mathcal{L}_\mathrm{Yukawa}$. 
+
+The $\mathcal{L}_\mathrm{Gauge}$ term contains the gauge field tensor dynamic terms, the triple-gauge couplings, and the quartic-gauge couplings:
+\begin{equation} 
+\begin{split}
+\label{eq:L_Gauge}
+\mathcal{L}_\mathrm{Gauge} & = -\frac{1}{4} \termLB A^{\mu\nu} A_{\mu\nu} - 2  W^+_{\mu\nu} W^{{-}\mu\nu} - Z_{\mu\nu} Z^{\mu\nu} \termRB  \\ 
+ & - ig \termLB (W^+_{\mu\nu} W^{{-}\mu} - W^{+\mu} W^{{-}}_{\mu\nu})(A^\nu\mathrm{sin}\:\theta_W - Z^\nu \mathrm{cos}\:\theta_W)  \\
+ & \qquad\qquad\qquad\qquad\qquad\qquad + W^{{-}}_{\nu} W^+_{\mu} (A^{\mu\nu} \mathrm{sin}\:\theta_W - Z^{\mu\nu} \mathrm{cos} \theta_W ) \termRB  \\
+ & + \frac{g^2}{4} \termLB {-}\big( 2 W^+_\mu W^{{-}\mu} + (A_\mu \mathrm{sin}\:\theta_W - Z_\mu \mathrm{cos}\:\theta_W)^2 \big)^2 \\
+ & \:\: + \big( W_\mu^+ W_\nu^{{-}} + W_\nu^+ W_\mu^{{-}} + (A_\mu \mathrm{sin}\:\theta_W - Z_\mu \mathrm{cos}\:\theta_W)(A_\nu\mathrm{sin}\:\theta_W - Z_\nu \mathrm{cos}\:\theta_W)\big)^2 \termRB
+\end{split}
+\end{equation}
+The allowed gauge self-coupling vertices are pictured in Figures~\ref{fig:3GC} and~\ref{fig:4GC}.
+
+The $\mathcal{L}_\mathrm{Fermion}$ term contains the interaction between the gauge bosons and the fermions, in the neutral current and the charged current:
+\begin{equation}
+\begin{split}
+\label{eq:L_Fermion}
+\mathcal{L}_\mathrm{Fermion} & = \termLB \frac{g}{\mathrm{cos}\:\theta_W} \big(J_\mu^\mathrm{3} - \mathrm{sin}^2\:\theta_W J_\mu^\mathrm{EM} \big) Z^\mu + eJ_\mu^\mathrm{EM} A^\mu \termRB \\
+& - \frac{g}{\sqrt{2}} \termLB \big( \bar{u}_i \gamma^\mu \frac{1-\gamma^5}{2} V_{ij} d_j + \bar{\nu}_i \gamma^\mu \frac{1-\gamma^5}{2} e_i \big) W_\mu^+ + \mathrm{h.c.} \termRB
+\end{split}
+\end{equation}
+
+The electromagnetic current is defined as $J^\mathrm{EM}_\mu \equiv \sum_f q_f \bar{f} \gamma_\mu f$ , with the bilinear covariant $\gamma_\mu$ representing the vector spin-1 coupling.
+The weak neutral current is defined as $J^\mathrm{3}_\mu \equiv \sum_f T^3_f \bar{f} \gamma_\mu \frac{1-\gamma^5}{2} f$,
+with the bilinear covariant representing the infamous "vector minus axial" spin-1 coupling.
+The matrix $V_{ij}$ is the CKM matrix.
+
+%\mathcal{L}_\mathrm{Fermion} & = \termLB \big( e A^\mu \sum_f q_f \bar{f} \gamma_\mu f \big) + \big( \frac{gZ^\mu}{\mathrm{cos}\:\theta_W}( \big)\termRB
+%\mathcal{L}_\mathrm{Fermion} & = \sum_{f} \bar{f} i \gamma^\mu \partial_\mu - m_f) f \nonumber \\ 
+%\mathcal{L}_\mathrm{\phi}    & = |D_\mu \phi|^2 - \lambda \left( |\phi|^2 - \frac{1}{2} v^2 \right)^2 \nonumber \\
+%\mathcal{L}_\mathrm{Yukawa}  & = {-} \sum_f \frac{gm_f}{2m_W} \bar{f} f H \nonumber
+%\end{align}
+\begin{figure}[h] % 3GC
+ \centering
+ \begin{tikzpicture} % WWZ
+  \begin{feynman}
+   \vertex (a2) {\(\boldsymbol{\W^\pm}\)};
+   \vertex [right= 1.5cm of a2] (b1);
+   \vertex [right= 1.1cm of b1] (c1);
+   \vertex [above= 0.9cm of c1] (c2) {\(\boldsymbol{\Z}\)};
+   \vertex [below= 0.9cm of c1] (c3) {\(\boldsymbol{\W^\pm}\)};
+   
+   \diagram* {
+    (a2) -- [boson, very thick] (b1),
+    (b1) -- [boson, very thick] (c2),
+    (b1) -- [boson, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{0.5cm}
+ \begin{tikzpicture} % WWy
+  \begin{feynman}
+   \vertex (a2) {\(\boldsymbol{\W^\pm}\)};
+   \vertex [right= 1.5cm of a2] (b1);
+   \vertex [right= 1.1cm of b1] (c1);
+   \vertex [above= 0.9cm of c1] (c2) {\(\boldsymbol{\gamma}\)};
+   \vertex [below= 0.9cm of c1] (c3) {\(\boldsymbol{\W^\pm}\)};
+   
+   \diagram* {
+    (a2) -- [boson, very thick] (b1),
+    (b1) -- [boson, very thick] (c2),
+    (b1) -- [boson, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture} 
+ \caption{Triple gauge boson vertices in the electroweak theory.} \label{fig:3GC}
+\end{figure}
+
+\begin{figure}[h] % 4GC
+ \centering
+ \begin{tikzpicture} % WWWW
+  \begin{feynman}
+   \vertex (a1);
+   \vertex [above= 0.8cm of a1] (a2) {\(\boldsymbol{\W}\)};
+   \vertex [below= 0.8cm of a1] (a3) {\(\boldsymbol{\W}\)};
+   \vertex [right= 1.2cm of a1] (b1);
+   \vertex [right= 1.2cm of b1] (c1);
+   \vertex [above= 0.8cm of c1] (c2) {\(\boldsymbol{\W}\)};
+   \vertex [below= 0.8cm of c1] (c3) {\(\boldsymbol{\W}\)};
+   
+   \diagram* {
+    (a2) -- [boson, very thick] (b1),
+    (a3) -- [boson, very thick] (b1),
+    (b1) -- [boson, very thick] (c2),
+    (b1) -- [boson, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{0.5cm}
+ \begin{tikzpicture} % WWyy
+  \begin{feynman}
+   \vertex (a1);
+   \vertex [above= 0.8cm of a1] (a2) {\(\boldsymbol{\W}\)};
+   \vertex [below= 0.8cm of a1] (a3) {\(\boldsymbol{\W}\)};
+   \vertex [right= 1.2cm of a1] (b1);
+   \vertex [right= 1.2cm of b1] (c1);
+   \vertex [above= 0.8cm of c1] (c2) {\(\boldsymbol{\gamma}\)};
+   \vertex [below= 0.8cm of c1] (c3) {\(\boldsymbol{\gamma}\)};
+   
+   \diagram* {
+    (a2) -- [boson, very thick] (b1),
+    (a3) -- [boson, very thick] (b1),
+    (b1) -- [boson, very thick] (c2),
+    (b1) -- [boson, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{0.5cm}
+ \begin{tikzpicture} % WWyZ
+  \begin{feynman}
+   \vertex (a1);
+   \vertex [above= 0.8cm of a1] (a2) {\(\boldsymbol{\W}\)};
+   \vertex [below= 0.8cm of a1] (a3) {\(\boldsymbol{\W}\)};
+   \vertex [right= 1.2cm of a1] (b1);
+   \vertex [right= 1.2cm of b1] (c1);
+   \vertex [above= 0.8cm of c1] (c2) {\(\boldsymbol{\gamma}\)};
+   \vertex [below= 0.8cm of c1] (c3) {\(\boldsymbol{\Z}\)};
+   
+   \diagram* {
+    (a2) -- [boson, very thick] (b1),
+    (a3) -- [boson, very thick] (b1),
+    (b1) -- [boson, very thick] (c2),
+    (b1) -- [boson, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{0.5cm}
+ \begin{tikzpicture} % WWZZ
+  \begin{feynman}
+   \vertex (a1);
+   \vertex [above= 0.8cm of a1] (a2) {\(\boldsymbol{\W}\)};
+   \vertex [below= 0.8cm of a1] (a3) {\(\boldsymbol{\W}\)};
+   \vertex [right= 1.2cm of a1] (b1);
+   \vertex [right= 1.2cm of b1] (c1);
+   \vertex [above= 0.8cm of c1] (c2) {\(\boldsymbol{\Z}\)};
+   \vertex [below= 0.8cm of c1] (c3) {\(\boldsymbol{\Z}\)};
+   
+   \diagram* {
+    (a2) -- [boson, very thick] (b1),
+    (a3) -- [boson, very thick] (b1),
+    (b1) -- [boson, very thick] (c2),
+    (b1) -- [boson, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture}
+ \caption{Non-Abelian quartic gauge couplings in the electroweak theory.} \label{fig:4GC}
+\end{figure}
+
+\subsection{The Higgs boson}
+
+Let us look at the second term of Equation~\ref{eq:LhiggsWZ}.
+The portion $-\lambda v^2 H^2 $ suggests to us we can identify the quantum of the $H$-field as a physical boson with mass $m_H = \sqrt{2v^2\lambda}$.
+Finally, I will drop the act and call a spade a spade:
+This quantum is none other than the Higgs boson, and we can call the field is the Higgs field.
+
+The $\mathcal{L}_\mathrm{\phi}$ term from the electroweak Lagrangian density can be expanded to find the Higgs couplings to itself and the other gauge bosons, in particular to the Z boson which is relevant to this work:
+
+\begin{equation}
+\begin{split}
+\label{eq:L_phi}
+\mathcal{L}_\mathrm{\phi} & = \termLB \frac{1}{2} (\partial^\mu H) (\partial_\mu H) - \frac{1}{2}m_H^2 H^2 \termRB - \termLB \frac{gm_H^2}{4m_W} H^3 + \frac{g^2m_H^2}{32m_W^2}H^4 \termRB \\
+& + \termLB \left( W_\mu^+ W^{{-}\mu} + \frac{1}{2\mathrm{cos}^2\:\theta_W} Z_\mu Z^\mu \right) \left( gm_WH+\frac{g^2}{4}H^2 \right) \termRB
+\end{split}
+\end{equation}
+
+Meanwhile, the $\mathcal{L}_\mathrm{Yukawa}$ term from the Lagrangian density becomes
+\begin{equation}
+\label{L_Yukawa}
+\mathcal{L}_\mathrm{Yukawa} = {-} \sum_f \frac{gm_f}{2m_W} \bar{f}fH
+\end{equation}
+It provides for the Higgs boson to interact with and decay into fermions,
+more likely for massive fermions.
+The fermion mass $m_f$ truly arises from the coupling to the Higgs field, and not vice versa.
+
+\begin{figure}[h] % Higgs couplings
+ \centering
+\begin{tikzpicture} % VVH
+  \begin{feynman}
+   \vertex (a2) {\(\boldsymbol{\mathrm{V}}\)};
+   \vertex [right= 1.3cm of a2] (b1);
+   \vertex [right= 1.1cm of b1] (c1);
+   \vertex [above= 0.9cm of c1] (c2) {\(\boldsymbol{\Hi}\)};
+   \vertex [below= 0.9cm of c1] (c3) {\(\boldsymbol{\mathrm{V}}\)};
+   
+   \diagram* {
+    (a2) -- [boson, very thick] (b1),
+    (b1) -- [scalar, very thick] (c2),
+    (b1) -- [boson, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{0.5cm}
+ \begin{tikzpicture} % Hff
+  \begin{feynman}
+   \vertex (a2) {\(\boldsymbol{f}\)};
+   \vertex [right= 1.3cm of a2] (b1);
+   \vertex [right= 1.1cm of b1] (c1);
+   \vertex [above= 0.9cm of c1] (c2) {\(\boldsymbol{\Hi}\)};
+   \vertex [below= 0.9cm of c1] (c3) {\(\boldsymbol{f}\)};
+   
+   \diagram* {
+    (a2) -- [fermion, very thick] (b1),
+    (b1) -- [scalar, very thick] (c2),
+    (b1) -- [fermion, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{0.5cm}
+ \begin{tikzpicture} % HHH
+  \begin{feynman}
+   \vertex (a2) {\(\boldsymbol{\Hi}\)};
+   \vertex [right= 1.3cm of a2] (b1);
+   \vertex [right= 1.1cm of b1] (c1);
+   \vertex [above= 0.9cm of c1] (c2) {\(\boldsymbol{\Hi}\)};
+   \vertex [below= 0.9cm of c1] (c3) {\(\boldsymbol{\Hi}\)};
+   
+   \diagram* {
+    (a2) -- [scalar, very thick] (b1),
+    (b1) -- [scalar, very thick] (c2),
+    (b1) -- [scalar, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{0.5cm}
+ \begin{tikzpicture} % HHHH
+  \begin{feynman}
+   \vertex (a1);
+   \vertex [above= 0.8cm of a1] (a2) {\(\boldsymbol{\Hi}\)};
+   \vertex [below= 0.8cm of a1] (a3) {\(\boldsymbol{\Hi}\)};
+   \vertex [right= 1.2cm of a1] (b1);
+   \vertex [right= 1.2cm of b1] (c1);
+   \vertex [above= 0.8cm of c1] (c2) {\(\boldsymbol{\Hi}\)};
+   \vertex [below= 0.8cm of c1] (c3) {\(\boldsymbol{\Hi}\)};
+   
+   \diagram* {
+    (a2) -- [scalar, very thick] (b1),
+    (a3) -- [scalar, very thick] (b1),
+    (b1) -- [scalar, very thick] (c2),
+    (b1) -- [scalar, very thick] (c3),
+   };
+  \end{feynman}
+ \end{tikzpicture}
+ \caption{Higgs boson couplings. V is a $\W^\pm$ or $\Z$ boson. $f$ are fermions.}
+\end{figure}
 
 
 \subsection{Strong nuclear force}
