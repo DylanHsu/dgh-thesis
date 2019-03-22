@@ -514,21 +514,17 @@ The Dirac Lagrangian density which defines the interactions between quarks and g
   \item The index $a$ represents the eight gluons.
   \item The index $i$ represents the three colors.
   \item The indices $\mu,\nu$ represent spacetime.
-  \item $g_s$ is the strong coupling constant, which varies as a function of energy scale (see Figure~\ref{fig:alphaS}.
+  \item $g_s$ is the strong coupling constant, sometimes expressed as $\sqrt{4\pi\alpha_s}$ which varies as a function of energy scale (see Figure~\ref{fig:alphaS}.
   \item $\psi_i$ is a Dirac bi-spinor representing the field for a quark and its antiquark at spacetime point $x$. $\bar{\psi}_i$ is the adjoint as in section~\ref{qed}.
   \item $G^a_\mu$ is the $\mathrm{SU}(3)$ gauge field.
   \item $T^a_{ij}$ are the eight generators of the $\mathrm{SU}(3)$ group, also known as Gell-Mann matrices.
   \item Lastly, the symbol $G^a_{\mu\nu}$ is the gluon field strength tensor...
 \end{itemize}
-
 The gluon field strength tensor comes from the gluon fields, $\mathcal{A}^a_\mu(x)$, as such:
-
 \begin{equation}
 G^a_{\mu\nu} = \partial_\mu \mathcal{A}^a_\nu - \partial_\nu \mathcal{A}^a_\mu + g\:f^{abc} \mathcal{A}^b_\mu \mathcal{A}^c_\nu
 \end{equation}
-
 This quantum field theory permits the quark-quark-gluon vertex, the three-gluon vertex, and the four-gluon vertex.
-
 \begin{figure}[!hbtp]
   \centering
     \includegraphics[width=0.80\textwidth]{figures/alphaS_running.pdf}
@@ -537,7 +533,6 @@ This quantum field theory permits the quark-quark-gluon vertex, the three-gluon 
 \end{figure}
 
 % Diagram
-
 For experimental physics at the LHC, QCD is important even for studying electroweak processes.
 Since we collide protons, the internal dynamics of the proton are an essential ingredient of Monte Carlo simulations.
 The momentum fractions carried by the quarks and gluons are determined empirically, giving us the proton parton distribution functions.
@@ -545,32 +540,207 @@ Internal gluon loop corrections and the possibility of emitting extra gluons bef
 QCD activity resulting in charged hadrons may interfere with the ability to identify charged leptons in physics events of interest.
 Lastly, the hadronic radiation from the interaction point irradiates the detector components. This changes their material properties over time.
 
+\section{Proton parton distribution functions}
+
+The quarks and gluons inside a proton are collectively called partons.
+The parton distribution functions (PDFs) $f_i(x,Q^2)$ give the probability of finding inside the proton a quark or gluon with momentum fraction $x$, in a hard process with momentum transfer $Q$.
+The PDF shapes are not calculated theoretically and are instead determined empirically by experimental data.
+
+\begin{figure}[hb]
+  \centering
+    \includegraphics[width=0.50\textwidth]{figures/dis.pdf}
+  \caption{Probing the PDFs with deep inelastic scattering. From \cite{Placakyte:2011az}.} 
+  \label{fig:dis}
+\end{figure}
+
+The HERA experiment provided important data for the PDF determination by performing
+deep inelastic scattering of electrons or positrons with protons, 
+at center of mass energies of a few hundred \GeV.
+Two different scattering processes can occur, the neutral current and charged current.
+See Figure~\ref{fig:dis}.
+In the charged current interaction, the cross sections of electron and positron on proton are sensitive to different quark PDFs.
+%The neutral current $ep$ cross section can be expressed in terms of the structure functions $\tilde{F}$:
+%\begin{equation}
+%\frac{d^2 \sigma^{e^\pm p}_\mathrm{N.C.}}{dx\:dQ^2} = \frac{2 \pi \alpha^2}{xQ^4}\termLB Y_+ \tilde{F}^\pm_2 \mp Y_{-} x \tilde{F}^\pm_3 - y^2 \tilde{F}^\pm_L \termRB
+%\end{equation}
+%where $Y_\pm = 1 \pm (1-y^2)$ as a function of the inelasticity $y$.
+%In general, $\tilde{F}_2$ dominates, $x\tilde{F^3}$ becomes important at higher $Q^2$,
+%and $\tilde{F}_L$ only matters for significant $y$.
+%The PDFs are directly related to these structure functions.
+%Neglecting higher-order terms for the gluon density: $F_2$ is approximately the momentum sum of the 
+%distributions of quarks and antiquarks ($F_2 \approx x\sum e_q^2 (q+\bar{q})$) 
+%and $F_3$ is approximately their momentum difference ($xF_3 \approx x\sum 2e_qa_q(q-\bar{q}))$.
+%
+%The charged current $ep$ cross section can also be expressed in terms of structure functions.
+
+In $p\bar{p}$ and $pp$ collisions at the Tevatron and LHC,
+we can learn more about the proton PDFs through Standard Model precision measurements.
+In particular, the Z boson differential cross section studied in this work contributes to the global fit of the quark distributions.
+Meanwhile, ultraperipheral lead-lead heavy ion collisions are also an unconventional source of high energy photon probes which help us study the gluon distribution down to very small values of $x$ (see~\cite{Baltz:2007kq}).
+Overall, the PDFs are an important quantity for simulating the Standard Model background in a search for new physics.
+An example of the PDF set provided by the NNPDF collaboration at $Q=50 \GeV$ is shown in Figure~\ref{fig:pdfq50}.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[width=0.90\textwidth]{figures/nnpdf30_115_Q50_v4.pdf}
+  \caption{NNPDF 3.0 set at momentum transfer 50 \GeV. Presented in~\cite{nnpdf}.} 
+  \label{fig:pdfq50}
+\end{figure}
+
+\newpage
+
 \section{New physics}
 In the pursuit of new physics at the CERN LHC, many scenarios have been proposed in which production of
-particles that leave no trace in collider detectors
-is accompanied also by production of a standard model (SM) particle, which balances the transverse momentum in an event.
-The final state considered in this analysis is the production of a pair of leptons ($\ell^{+}\ell^{-}$, where $\ell=\Pe$ or $\Pgm$),
-consistent with originating from a $\PZ$ boson, together with large missing transverse momentum ($\met$).
-This final state is well-suited to probe such beyond the SM (BSM) scenarios, as
-it has relatively small and precisely known SM backgrounds.
+particles that leave no trace in collider detectors is accompanied by production of a Standard Model particle, 
+which balances the transverse momentum in an event.
+In this work, we consider such a scenario in which are produced a pair of charged leptons ($\ell^{+}\ell^{-}$, where $\ell=\Pe$ or $\Pgm$),
+consistent with the decay of a $\PZ$ boson, together with large missing transverse momentum ($\met$).
+This final state is well-suited to probe such beyond-the-Standard Model scenarios, as
+it has relatively small and precisely known Standard Model backgrounds.
 
-One of the most significant puzzles in modern physics is the nature of dark matter (DM).
-In the culmination of over a century of observations, the ``$\Lambda_{\mathrm{CDM}}$'' standard model of cosmology
-has established that, in the total cosmic energy budget,
-known matter only accounts for about 5\%, DM corresponds to 27\%, and the rest is dark energy~\cite{2013ApJS..208...19H}.
-Although several astrophysical observations indicate that DM exists and interacts gravitationally with known matter,
-there is no evidence yet for nongravitational interactions between DM and SM particles.
-While the nature of DM remains a mystery, there are a number of models that predict a particle physics origin. 
-If DM particles exist, they can possibly be produced directly from, annihilate into, or scatter off SM particles.
-Recent DM searches have exploited various methods including direct~\cite{Cushman:2013zza} and indirect~\cite{Buckley:2013bha} detection.
-If DM can be observed in direct detection experiments,
-it must have substantial couplings to quarks and/or gluons, and could also be produced at the LHC~\cite{Beltran:2010ww,Goodman:2010yf,Bai:2010hh,Goodman:2010ku,Fox:2011pm,Rajaraman:2011wf}.
+The study presented here considers one possible mechanism for producing weakly interacting massive particles at the LHC~\cite{Abercrombie:2015wmb}.
+In this scenario, a $\PZ$ boson, produced in $pp$ collisions, recoils against a pair of DM particles, $\chi\overline\chi$.
+The $\PZ$ boson subsequently decays into two charged leptons, 
+producing a low-background dilepton signature, 
+together with $\met$ due to the undetected DM particles. 
+In this work, the DM particle $\chi$ is assumed to be a Dirac fermion.
 
-A promising possibility is that DM may take the form of weakly interacting massive particles.
-The study presented here considers one possible mechanism for producing such particles at the LHC~\cite{Abercrombie:2015wmb}.
-In this scenario, a $\PZ$ boson, produced in proton-proton (pp) collisions, recoils against a pair of DM particles, $\chi\overline\chi$. The $\PZ$ boson subsequently decays into
-two charged leptons, producing a low-background dilepton signature, together with $\met$
-due to the undetected DM particles. In this analysis, the DM particle $\chi$ is assumed to be a Dirac fermion.
+\begin{figure} % BSM models
+ \centering
+ \begin{tikzpicture} % ZH(inv)
+  \begin{feynman}
+   \vertex (q1) {\(\boldsymbol{\Pq}\)};
+   \vertex [below= 3cm of q1] (q2) {\(\boldsymbol{\Paq}\)};
+   \vertex [right= 1.6cm of q1] (a1);
+   \vertex [below= 1.5cm of a1] (a2);
+   \vertex [right= 1.6cm of a2] (b1);
+   \vertex [right= 1.6cm of b1] (c1);
+   \vertex [above= 1.3cm of c1] (c2);
+   \vertex [below= 1.3cm of c1] (c3);
+   \vertex [right= 1cm of c2] (d1);
+   \vertex [right= 1cm of c3] (d2);
+   \vertex [above= 0.3cm of d1] (f1) {\(\boldsymbol{\ell}\)};
+   \vertex [below= 0.3cm of d1] (f2) {\(\boldsymbol{\bar{\ell}}\)};
+   \vertex [above= 0.3cm of d2] (f3) {\(\boldsymbol{\chi}\)};
+   \vertex [below= 0.3cm of d2] (f4) {\(\boldsymbol{\bar{\chi}}\)};
+   
+   \diagram* {
+    (q1) -- [fermion, very thick] (a2),
+    (q2) -- [anti fermion, very thick] (a2),
+    (a2) -- [boson, very thick, edge label'=\(\boldsymbol{\Z^*}\)] (b1),
+    (b1) -- [boson, very thick, edge label=\(\boldsymbol{\Z}\)] (c2),
+    (b1) -- [scalar, very thick, edge label=\(\boldsymbol{\Hi}\)] (c3),
+    (c2) -- [fermion, very thick] (f1),
+    (c2) -- [anti fermion, very thick] (f2),
+    (c3) -- [fermion, very thick] (f3),
+    (c3) -- [anti fermion, very thick] (f4),
+   };
+  \end{feynman}
+ \end{tikzpicture} \hspace{1cm}
+ \begin{tikzpicture} % Simplified model spin-0 mediator
+  \begin{feynman}
+   \vertex (g1) {\(\boldsymbol{}\)};
+   \vertex [below= 3.6cm of g1] (g2) {\(\boldsymbol{}\)};
+   \vertex [right= 1.4cm of g1] (a1);
+   \vertex [right= 1.4cm of g2] (a2);
+   \vertex [below= 0.8cm of a1] (a3);
+   \vertex [above= 0.8cm of a2] (a4);
+   \vertex [right= 1.4cm of a3] (b1);
+   \vertex [right= 1.4cm of a4] (b2);
+   \vertex [right= 1.4cm of b1] (c1);
+   \vertex [right= 1.4cm of b2] (c2);
+   \vertex [right= 1cm of c1] (d1);
+   \vertex [right= 1cm of c2] (d2);
+   \vertex [above= 0.3cm of d1] (f1) {\(\boldsymbol{\ell}\)};
+   \vertex [below= 0.3cm of d1] (f2) {\(\boldsymbol{\bar{\ell}}\)};
+   \vertex [above= 0.3cm of d2] (f3) {\(\boldsymbol{\chi}\)};
+   \vertex [below= 0.3cm of d2] (f4) {\(\boldsymbol{\bar{\chi}}\)};
+   \vertex [below = 0.2cm of b2] (dm1) {\(\boldsymbol{g_\Pq}\)};
+   \vertex [below = 0.2cm of c2] (dm2) {\(\boldsymbol{g_\mathrm{DM}}\)};
+   
+   \diagram* {
+    (g1) -- [gluon, very thick] (a3),
+    (g2) -- [gluon, very thick] (a4),
+    (a3) -- [fermion, very thick, edge label'=\(\boldsymbol{\bar{\Top}}\)] (a4) -- [fermion, very thick, edge label=\(\boldsymbol{\Top}\)] (b2) -- [fermion, very thick, edge label=\(\boldsymbol{\bar{\Top}}\)] (b1) -- [fermion, very thick, edge label'=\(\boldsymbol{\Top}\)] (a3),
+    (b1) -- [boson, very thick, edge label=\(\boldsymbol{\Z}\)] (c1),
+    (b2) -- [scalar, very thick, edge label=\(\boldsymbol{\phi}\)] (c2),
+    (c1) -- [fermion, very thick] (f1),
+    (c1) -- [anti fermion, very thick] (f2),
+    (c2) -- [fermion, very thick] (f3),
+    (c2) -- [anti fermion, very thick] (f4),
+   };
+  \draw[fill=blue,line width=0pt] (b2) circle(1.5mm);
+  \draw[fill=violet,line width=0pt] (c2) circle(1.5mm);
+  \end{feynman}
+ \end{tikzpicture} \vspace{1cm}
+ 
+ \begin{tikzpicture} % Simplified model spin-1 mediator
+  \begin{feynman}
+   \vertex (q1) {\(\boldsymbol{\Pq}\)};
+   \vertex [below= 3.6cm of q1] (q2) {\(\boldsymbol{\Paq}\)};
+   \vertex [right= 2cm of q1] (a1);
+   \vertex [right= 2cm of q2] (a2);
+   \vertex [below= 0.8cm of a1] (a3);
+   \vertex [above= 0.8cm of a2] (a4);
+   \vertex [right= 2cm of a3] (b1);
+   \vertex [right= 2cm of a4] (b2);
+   \vertex [right= 1.5cm of b1] (c1);
+   \vertex [right= 1.5cm of b2] (c2);
+   \vertex [above= 0.3cm of c1] (f1) {\(\boldsymbol{\ell}\)};
+   \vertex [below= 0.3cm of c1] (f2) {\(\boldsymbol{\bar{\ell}}\)};
+   \vertex [below= 0.2cm of c2] (U) {\(\boldsymbol{\mathcal{U}/\mathcal{G}}\)};
+   
+   \diagram* {
+    (q1) -- [fermion, very thick] (a3),
+    (a3) -- [fermion, very thick] (a4),
+    (q2) -- [anti fermion, very thick] (a4),
+    (a3) -- [boson, very thick, edge label=\(\boldsymbol{\Z}\)] (b1),
+    (a4) -- [ghost, very thick] (U),
+    (b1) -- [fermion, very thick] (f1),
+    (b1) -- [anti fermion, very thick] (f2),
+   };
+  \draw[fill=black,line width=0pt] (a4) circle(2.2mm);
+  \draw[pattern=north east lines, pattern color=white] (a4) circle(2.2mm);
+  \end{feynman}
+ \end{tikzpicture} \hspace{1cm}  
+ \begin{tikzpicture} % ADD/unparticles
+  \begin{feynman}
+   \vertex (q1) {\(\boldsymbol{\Pq}\)};
+   \vertex [below= 3.6cm of q1] (q2) {\(\boldsymbol{\Paq}\)};
+   \vertex [right= 2cm of q1] (a1);
+   \vertex [right= 2cm of q2] (a2);
+   \vertex [below= 0.8cm of a1] (a3);
+   \vertex [above= 0.8cm of a2] (a4);
+   \vertex [right= 2cm of a3] (b1);
+   \vertex [right= 2cm of a4] (b2);
+   \vertex [right= 1.5cm of b1] (c1);
+   \vertex [right= 1.5cm of b2] (c2);
+   \vertex [above= 0.3cm of c1] (f1) {\(\boldsymbol{\ell}\)};
+   \vertex [below= 0.3cm of c1] (f2) {\(\boldsymbol{\bar{\ell}}\)};
+   \vertex [above= 0.3cm of c2] (f3) {\(\boldsymbol{\chi}\)};
+   \vertex [below= 0.3cm of c2] (f4) {\(\boldsymbol{\bar{\chi}}\)};
+   \vertex [below = 0.2cm of a4] (dm1) {\(\boldsymbol{g_\Pq}\)};
+   \vertex [below = 0.2cm of b2] (dm2) {\(\boldsymbol{g_\mathrm{DM}}\)};
+   
+   \diagram* {
+    (q1) -- [fermion, very thick] (a3),
+    (a3) -- [fermion, very thick] (a4),
+    (q2) -- [anti fermion, very thick] (a4),
+    (a3) -- [boson, very thick, edge label=\(\boldsymbol{\Z}\)] (b1),
+    (a4) -- [boson, very thick, edge label=\(\boldsymbol{\mathcal{A}}\)] (b2),
+    (b1) -- [fermion, very thick] (f1),
+    (b1) -- [anti fermion, very thick] (f2),
+    (b2) -- [fermion, very thick] (f3),
+    (b2) -- [anti fermion, very thick] (f4),
+   };
+  \draw[fill=blue,line width=0pt] (a4) circle(1.5mm);
+  \draw[fill=violet,line width=0pt] (b2) circle(1.5mm);
+  \end{feynman}
+ \end{tikzpicture}
+ \caption{Some diagrams beyond the Standard Model in which are produced two charged leptons and missing energy. Clockwise from upper left: associated production of an invisible Higgs boson; gluon-induced production of a Z boson and a massive spin-0 dark matter mediator via top-quark loop; production of a Z boson and a massive spin-1 dark matter mediator; production of a Z boson in association with gravitons (ADD model) or unparticles.} \label{fig:BSMdiagrams}
+\end{figure}
+
+\subsection{Simplified models}
 Four simplified models of DM production via an $s$-channel mediator exchange are considered.
 In these models, the mediator has a spin of 1 (0) and vector or axial-vector (scalar or pseudoscalar) couplings to quarks and DM particles.
 The free parameters of each model are the masses $m_{\rm med}$ and $m_{\rm DM}$ of the mediator and DM particle, respectively, as well as the coupling
@@ -591,24 +761,26 @@ leading to the Lagrangian:
 \mathcal{L}_{\text{scalar}} = g_{\rm DM} {\phi}\overline{\chi}\chi  + g_{\Pq} \frac{\phi}{\sqrt{2}}\sum_{\Pq} y_{\Pq} \overline{\Pq}\Pq.
 \end{equation*}
 
-\noindent The Lagrangian with pseudoscalar couplings is obtained by inserting a factor of $i\gamma^5$ into each of the two terms (i.e., $\bar\chi\chi \to i\bar\chi\gamma^5\chi$ and $\bar \Pq \Pq \to i\bar \Pq\gamma^5 \Pq$). Example diagrams of DM production via spin-1 and spin-0 mediators are shown in Fig.~\ref{fig:Feynman} (upper left and right, respectively).
+\noindent The Lagrangian with pseudoscalar couplings is obtained by inserting a factor of $i\gamma^5$ into each of the two terms (i.e., $\bar\chi\chi \to i\bar\chi\gamma^5\chi$ and $\bar \Pq \Pq \to i\bar \Pq\gamma^5 \Pq$). Example diagrams of DM production via spin-0 and spin-1 mediators are shown in Fig.~\ref{fig:BSMdiagrams} (upper right and lower right, respectively).
 
-\begin{figure}[!hbtp]
-  \centering
-    \includegraphics[width=0.45\textwidth]{figures/dmSimpFeynman.pdf}
-    \includegraphics[width=0.45\textwidth]{figures/dmSimpFeynman_spin0.pdf}
-    \includegraphics[width=0.45\textwidth]{figures/higgsInvisibleFeynman.pdf}
-    \includegraphics[width=0.45\textwidth]{figures/graph_UG.pdf}
-  \caption{Feynman diagrams illustrative of the processes beyond the SM considered in this paper:
-    (upper left)~DM production in a simplified model with a spin-1 mediator $\PZ'$;
-    (upper right)~DM production in a simplified model with a spin-0 mediator $\phi$;
-    (lower left)~production of a Higgs boson in association with Z boson with subsequent decay of the Higgs boson into invisible particles;
-    (lower right)~unparticle or graviton production. The diagrams were drawn using the {\sc TikZ-Feynman} package~\cite{Ellis:2016jkw}.
-  } 
-      \label{fig:Feynman}
-\end{figure}
+%\begin{figure}[!hbtp]
+%  \centering
+%    \includegraphics[width=0.45\textwidth]{figures/dmSimpFeynman.pdf}
+%    \includegraphics[width=0.45\textwidth]{figures/dmSimpFeynman_spin0.pdf}
+%    \includegraphics[width=0.45\textwidth]{figures/higgsInvisibleFeynman.pdf}
+%    \includegraphics[width=0.45\textwidth]{figures/graph_UG.pdf}
+%  \caption{Feynman diagrams illustrative of the processes beyond the SM considered in this paper:
+%    (upper left)~DM production in a simplified model with a spin-1 mediator $\PZ'$;
+%    (upper right)~DM production in a simplified model with a spin-0 mediator $\phi$;
+%    (lower left)~production of a Higgs boson in association with Z boson with subsequent decay of the Higgs boson into invisible particles;
+%    (lower right)~unparticle or graviton production. The diagrams were drawn using the {\sc TikZ-Feynman} package~\cite{Ellis:2016jkw}.
+%  } 
+%      \label{fig:Feynman}
+%\end{figure}
 
-A primary focus of the LHC physics program after the discovery of a Higgs boson (H)~\cite{AtlasPaperCombination,CMSPaperCombination,Chatrchyan:2013lba} by
+\subsection{Invisible Higgs bosons}
+
+A primary focus of the LHC physics program after the discovery of the Higgs boson ~\cite{AtlasPaperCombination,CMSPaperCombination} by
 the ATLAS and CMS Collaborations is the study of the properties of this new particle. The observation of a sizable branching
 fraction of the Higgs boson to invisible states~\cite{Ghosh:2012ep,Martin:1999qf,Bai:2011wz} would be a strong sign
 of BSM physics.  Supersymmetric (SUSY) models embodying R-parity conservation contain a stable neutral lightest SUSY
@@ -618,14 +790,17 @@ Higgs boson~\cite{Giudice:2000av}.  As a consequence, the Higgs boson could osci
 to a graviscalar and disappear from the SM brane. The signature would be
 equivalent to an invisible decay of the Higgs boson. There could also be contributions
 from Higgs boson decays into graviscalars~\cite{Battaglia:2004js}.
-Similar to the simplified DM models presented earlier, ``Higgs portal'' models~\cite{Baek:2012se,Djouadi:2011aa,Djouadi:2012zc} construct a generic connection between SM and DM particles via a Higgs boson mediator.
-This analysis considers decays into invisible particles of an SM-like Higgs boson produced in association with a $\PZ$ boson, as shown in Fig.~\ref{fig:Feynman} (lower left).
+Other ``Higgs portal'' models~\cite{Baek:2012se,Djouadi:2011aa,Djouadi:2012zc} construct
+a generic connection between SM and DM particles via a Higgs boson mediator.
+This work considers decays into invisible particles of an SM-like Higgs boson produced in association with a $\PZ$ boson, as shown in Fig.~\ref{fig:BSMdiagrams} (upper left).
 
-Another popular BSM paradigm considered here is the Arkani-Hamed--Dimopoulos--Dvali (ADD) model with large extra spatial dimensions~\cite{ArkaniHamed:1998rs,ArkaniHamed:1998nn,Han:1998sg}, which
+\subsection{Extra dimensions}
+
+A popular BSM paradigm considered here is the Arkani-Hamed--Dimopoulos--Dvali (ADD) model with large extra spatial dimensions~\cite{arkani98:hlz,arkani99:hlz,han99:hlz}, which
 is motivated by the hierarchy problem, i.e., the disparity between the electroweak unification
 scale ($M_\mathrm{EW} \sim 1\TeV$) and the Planck scale ($M_\mathrm{Pl} \sim 10^{16}\TeV$).
 This model predicts graviton (\cPG) production via the process $\PQq\PAQq \rightarrow \PZ + \cPG$. The graviton escapes
-detection, leading to a mono-$\PZ$ signature (Fig.~\ref{fig:Feynman}, lower right).
+detection, leading to a mono-$\PZ$ signature (Fig.~\ref{fig:BSMdiagrams}, lower right).
 In the ADD model, the apparent Planck scale in four space-time dimensions
 is given by $M_\mathrm{Pl}^2 \approx M_\mathrm{D}^{n+2}R^n$, where $M_\mathrm{D}$ is the true Planck scale of
 the full $n$+4 dimensional space-time and $R$ is the compactification radius of the extra
@@ -634,11 +809,14 @@ of $M_\mathrm{Pl}$ points to an $R$ of order 1 mm to 1 fm for 2 to 7 extra dimen
 the large compactification scale is that the mass spectrum of the Kaluza--Klein graviton states
 becomes nearly continuous, resulting in a broad $\PZ$ boson transverse momentum (\PT) spectrum.
 
-The final BSM model considered in this analysis is the phenomenologically interesting concept of unparticles, which appear in the low-energy limit of conformal field theories.
+\subsection{Unparticles}
+
+The final BSM model considered in this work is the phenomenologically interesting concept of unparticles, which appear in the low-energy limit of conformal field theories.
 In the high-energy regime, a new, scale invariant Banks--Zaks field with a nontrivial infrared fixed point is introduced~\cite{Banks:1981nn}.
 The interaction between the SM and Banks--Zaks sectors is mediated by particles of large mass scale $M_{\textsf{U}}$, below which the interaction is suppressed and can be treated
 via an effective field theory (EFT). The low-energy regime will include unparticles, which have phase space factors equivalent to those of a noninteger
-number of ordinary particles~\cite{Kang:2014cia,Rinaldi:2014gha,Cheng:1988zx}. In this analysis, the emission of spin-0 unparticles from SM quarks is considered.
+number of ordinary particles~\cite{Kang:2014cia,Rinaldi:2014gha,Cheng:1988zx}. 
+In this work, the emission of spin-0 unparticles from SM quarks is considered.
 Because of the weakness of the unparticle interactions with the SM fields, the unparticle evades detection.
 The EFT Lagrangian used to interpret the results is defined as follows:
 
@@ -648,6 +826,6 @@ The EFT Lagrangian used to interpret the results is defined as follows:
 
 \noindent where $\lambda$ represents the coupling between the SM and unparticle fields, \LU is the cutoff scale of the EFT, and \dU is the characteristic scaling dimension of the theory.
 The unparticle operator is denoted as $\mathcal{O}_{\textsf{U}}$.
-A representative Feynman diagram of the interaction is shown in Fig.~\ref{fig:Feynman} (lower right).
+A representative Feynman diagram of the interaction is shown in Fig.~\ref{fig:BSMdiagrams} (lower right).
 
 

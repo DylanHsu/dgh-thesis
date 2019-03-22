@@ -10,6 +10,40 @@ DoubleElectron, SingleMuon, and SingleElectron. All data are analyzed using the
 file in order to select the good luminosity sections. 
 The total integrated luminosity with the associated uncertainty is $\usedLumiWithSyst$.
 
+\subsection{Silicon strip hit efficiency loss}
+\label{ss:hips}
+During 2015, a reduced silicon strip hit efficiency and a reduced tracking efficiency were observed.
+It was found to be correlated with the increase of the LHC instantaneous luminosity.
+This is due to the effect of highly ionizing particles (HIPs) which were studied in the test beams
+before the tracker construction. A HIP saturates the readout chips, or APVs, of the hit strips.
+The baseline is shifted toward negative vlues, and several of the strips from the hit cluster saturate.
+The chips are fully blinded in the next few bunch crossings, and remain partially blind for some time after, until they fully recover.
+
+In total, as the instantaneous luminosity continued to increase, we observed a lower cluster charge, lower signal-to-noise ratio, lower hit efficiency, shorter tracks, and lower track efficiency.
+The tracker modules most affected were wider and of higher occupancy. %mainly TOB L1 and L2. 
+Any particles identified using tracks were affected by the so-called "HIP effect."
+In particular, the electrons and muons are reconstructed from tracks and they are a crucial part of this work.
+
+The solution was found in the electronics parameters of the silicon strip readout chips.
+In particular, the preamplifier feedback voltage bias (VFP) affects the duration
+of the signal at the output of the preamplifier.
+Reducing the VFP from 0.3 Volts to 0 Volts was found to mitigate the HIP effect. 
+
+The data taken in 2016 suffered from the HIP effect until a task force was
+convened to mitigate the decline in tracking performance.
+These 2016 data were subdivided into Run Eras labeled alphabetically.
+The Run Eras used in this work are B through H. 
+
+The HIP mitigation fix was deployed close to the demarcation of Run Eras F and G,
+in the data run numbered 278803.
+Run Era F comprised runs numbered (277772, 278808) and Run Era G comprised runs numbered (278820, 280385).
+Due to the era-dependent nature of the HIP effect, which had a significant effect on the lepton identification, 
+separate empirical corrections for leptons were derived.
+They are discussed later in Chapter~\ref{chap:efficiency}.
+For brevity, the corrections intended to represent the data before the fix are denoted as
+"B-F" or "BCDEF", despite the fact that the mitigation did not occur precisely at the Run Era changeover.
+Similarly, the corrections representing the data after the fix are denoted as "G-H" or "GH." 
+
 \section{Simulated samples}
 Several Monte Carlo (MC) event generators are used to simulate the signal and
 background processes. For all processes, the detector response is simulated using a detailed
@@ -175,12 +209,19 @@ is shown in Figure~\ref{fig:pileup_distribution}.
   }
   \label{fig:pileup_distribution}
 \end{figure}
+
+The lepton efficiency studies shown in Chapter~\ref{chap:efficiency} split the data sample in two,
+at the point where the HIP effect discussed in Section~\ref{ss:hips} was mitigated.
+For these studies, the pileup profile of the relevant simulated samples was reweighted to
+the pileup profiles of the two subsets of the data samples, which were substantially different.
+
 \subsection{Lepton selection efficiencies}
 One of the crucial elements in the analysis is the determination of the lepton efficiency scale factors.
 Algorithms for selecting good leptons can have different efficiencies in data and simulation.
 The ratio of the selection efficiencies in data and simulation constitutes the scale factor.
 The scale factors are computed in many bins of electron and muon kinematics to account for relevant dependent effects.
-A detailed discussion of the methodology to determine these efficiencies is given in Section ???.
+Then, the simulated event weights are multiplied once by the appropriate scale factor for every
+lepton identified in that event. A detailed discussion of the methodology to determine these efficiencies is given in Chapter~\ref{chap:efficiency}.
 
 \subsection{Lepton momentum scale and resolution}
 \label{subsec:lepres}
@@ -206,7 +247,7 @@ Overall, the $\met$ spectrum becomes softer, with a correction of down to $-40\%
 Moreover, for the $\Pq\Pq \to \Z\Z$ process, a QCD NLO to NNLO (next-to-next-to-leading order) correction factor 
 is applied as a function of generator-level invariant mass of the two $\Z$ bosons.
 The correction is obtained using settings similar to the CMS simulation (dilepton mass requirements, parton distribution function sets) to ensure its accuracy.
-For further details, see chapter \autoref{chap:dibosons} and consult reference~\cite{Grazzini:2015hta}. 
+For further details, see \autoref{chap:dibosons} and consult reference~\cite{Grazzini:2015hta}. 
 
 In the case of the $\W\Z$ process, a flat correction factor from QCD NLO to NNLO is applied. Its value is 1.109. See reference~\cite{Grazzini:2016swo}.
 Following~\cite{Baglio:113005}, the corresponding NLO EWK correction to WZ production is small, and neglected as a systematic uncertainty.`

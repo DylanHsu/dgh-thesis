@@ -119,9 +119,9 @@ is calculated as the total number of data events $N_{total}^{i}$ (Poisson distri
 minus the estimated background yield $N_{bkg}^{i}$
 (with statistical uncertainty from the negative likelihood minimization procedure).
 Then, in each phase space bin, the efficiency is determined as
-\begin{align*}
-  \varepsilon = \frac{N_{sig}^{pass}}{N_{sig}^{pass}+N_{sig}^{fail}}
-\end{align*}
+\begin{equation}
+  \varepsilon = \frac{N_{\mathrm{Signal}}^{\mathrm{pass}}}{N_{\mathrm{Signal}}^{\mathrm{pass}}+N_{\mathrm{Signal}}^{\mathrm{fail}}}
+\end{equation}
 and the statistical errors are propagated conservatively assuming zero, not negative
 correlation between the passing and failing signal yields.
 
@@ -169,101 +169,12 @@ The MC efficiency is determined by counting the normalized yields of the passing
 \label{fig:ZeeNominalFits2}
 \end{figure}
 
-\section{Lepton efficiencies and scale factors}
-\textcolor{red}{\bf{MOVE THIS TO APPENDICES?}}
-\subsection{Medium muon efficiencies and scale factors}
-The extracted data efficiencies are shown in Figure~\ref{fig:ZmmDataEff}.
-The MC efficiencies from counting are shown in Figure~\ref{fig:ZmmMCEff}.
-The Data/MC efficiency scale factors are shown in Figure~\ref{fig:ZmmScaleFactors}, with
-propagated statistical errors in Figures~\ref{fig:ZmmScaleFactorsErrorHi} and~\ref{fig:ZmmScaleFactorsErrorLo}.
-The main feature is a drop in the efficiency for low-energy muons in the central detector region.
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/eff_data_Medium2016MuonBCDEF_0.0-0.0_10.0-120.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/eff_data_Medium2016MuonGH_0.0-0.0_10.0-120.0}.pdf}
-\caption{Efficiencies extracted from data for the Medium muon working point in 2016 run eras B to F, and G to H.}
-\label{fig:ZmmDataEff}
-\end{figure}
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/eff_mc_Medium2016MuonBCDEF_0.0-0.0_10.0-120.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/eff_mc_Medium2016MuonGH_0.0-0.0_10.0-120.0}.pdf}
-\caption{Efficiencies extracted from MC for the Medium muon working point after reweighting to the pileup profile in 2016 run eras B to F, and G to H.}
-\label{fig:ZmmMCEff}
-\end{figure}
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_Medium2016MuonBCDEF_0.0-0.0_10.0-120.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_Medium2016MuonGH_0.0-0.0_10.0-120.0}.pdf}
-\caption{Scale factors derived from Data/MC efficiencies for the Medium muon working point in 2016 run eras B to F, and G to H.}
-\label{fig:ZmmScaleFactors}
-\end{figure}
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_Medium2016MuonBCDEF_statErrorLow_0.0-0.0_10.0-120.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_Medium2016MuonGH_statErrorLow_0.0-0.0_10.0-120.0}.pdf}
-\caption{Statistical uncertainties on the Medium muon scale factors (negative error) in 2016 run eras B to F, and G to H.}
-\label{fig:ZmmScaleFactorsErrorHi}
-\end{figure}
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_Medium2016MuonBCDEF_statErrorHigh_0.0-0.0_10.0-120.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_Medium2016MuonGH_statErrorHigh_0.0-0.0_10.0-120.0}.pdf}
-\caption{Statistical uncertainties on the Medium muon scale factors (positive error) in 2016 run eras B to F, and G to H.}
-\label{fig:ZmmScaleFactorsErrorLo}
-\end{figure}
-
-\clearpage
-\subsection{Medium electron efficiencies and scale factors}
-The extracted data efficiencies are shown in Figure~\ref{fig:ZeeDataEff}.
-The MC efficiencies from counting are shown in Figure~\ref{fig:ZeeMCEff}.
-The Data/MC efficiency scale factors are shown in Figure~\ref{fig:ZeeScaleFactors}, with
-propagated statistical errors in Figures~\ref{fig:ZeeScaleFactorsErrorHi} and~\ref{fig:ZeeScaleFactorsErrorLo}.
-In general, the efficiencies are lower at lower energies or in the detector endcap ($\abs{\eta}>1.566$).
-The scale factors reflect significant asymmetry in positive and negative values of $\eta$ and have a 
-nonlinear structure in the endcap.
-
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/eff_data_MediumElectronBCDEF_0.0-0.0_10.0-100.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/eff_data_MediumElectronGH_0.0-0.0_10.0-100.0}.pdf}
-\caption{Efficiencies extracted from data for the Medium electron working point in 2016 run eras B to F, and G to H.}
-\label{fig:ZeeDataEff}
-\end{figure}
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/eff_mc_MediumElectronBCDEF_0.0-0.0_10.0-100.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/eff_mc_MediumElectronGH_0.0-0.0_10.0-100.0}.pdf} 
-\caption{Efficiencies extracted from MC for the Medium electron working point after reweighting to the pileup profile in 2016 run eras B to F, and G to H.}
-\label{fig:ZeeMCEff}
-\end{figure}
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_MediumElectronBCDEF_0.0-0.0_10.0-100.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_MediumElectronGH_0.0-0.0_10.0-100.0}.pdf} 
-\caption{Scale factors derived from Data/MC efficiencies for the Medium electron working point in 2016 run eras B to F, and G to H.}
-\label{fig:ZeeScaleFactors}
-\end{figure}
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_MediumElectronBCDEF_statErrorLow_0.0-0.0_10.0-100.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_MediumElectronGH_statErrorLow_0.0-0.0_10.0-100.0}.pdf} 
-\caption{Statistical uncertainties on the Medium electron scale factors (negative error) in 2016 run eras B to F, and G to H.}
-\label{fig:ZeeScaleFactorsErrorHi}
-\end{figure}
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_MediumElectronBCDEF_statErrorHigh_0.0-0.0_10.0-100.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_MediumElectronGH_statErrorHigh_0.0-0.0_10.0-100.0}.pdf} 
-\caption{Statistical uncertainties on the Medium electron scale factors (positive error) in 2016 run eras B to F, and G to H.}
-\label{fig:ZeeScaleFactorsErrorLo}
-\end{figure}
-
 \section{Assessment of systematic uncertainty}
 \label{sec:tnpsyst}
 In this section, we quantify the systematic uncertainty arising from five distinct sources related to our ignorance
 of the true signal and background shapes, the generator-related uncertainty, and possible selection bias.
 In each case, the absolute difference between two alternative methods is taken as the systematic uncertainty.
+
 \subsection{Background shape modeling}
 To quantify the uncertainty in deriving the background shape from the data-driven method,
 we use an analytic function as an alternative background shape.
@@ -321,21 +232,6 @@ see Figures~\ref{fig:ZmmSystBkgModel} and~\ref{fig:ZeeSystBkgModel}.
 \label{fig:ZeeAltBkgFits2}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_Medium2016MuonBCDEF_AltBkg_0.0-0.0_10.0-120.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_Medium2016MuonGH_AltBkg_0.0-0.0_10.0-120.0}.pdf} 
-\caption{Systematic uncertainties from choice of background model for the Medium muon scale factors in 2016 run eras B to F (top), and G to H (bottom).}
-\label{fig:ZmmSystBkgModel}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_MediumElectronBCDEF_AltBkg_0.0-0.0_10.0-100.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_MediumElectronGH_AltBkg_0.0-0.0_10.0-100.0}.pdf} 
-\caption{Systematic uncertainties from choice of background model for the Medium electron scale factors in 2016 run eras B to F (top), and G to H (bottom).}
-\label{fig:ZeeSystBkgModel}
-\end{figure}
 \clearpage
 \subsection{Signal resolution modeling}
 We consider the uncertainty from using the simulation of the reconstructed Z resonance signal shape
@@ -392,26 +288,9 @@ see Figures~\ref{fig:ZmmSystSigRes} and~\ref{fig:ZeeSystSigRes}.
 \label{fig:ZeeAltSigResFits2}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_Medium2016MuonBCDEF_ResFunc_0.0-0.0_10.0-120.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_Medium2016MuonGH_ResFunc_0.0-0.0_10.0-120.0}.pdf} 
-\caption{Systematic uncertainties from signal resolution modeling for the Medium muon scale factors in 2016 run eras B to F (top), and G to H (bottom).}
-\label{fig:ZmmSystSigRes}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_MediumElectronBCDEF_ResFunc_0.0-0.0_10.0-100.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_MediumElectronGH_ResFunc_0.0-0.0_10.0-100.0}.pdf} 
-\caption{Systematic uncertainties from signal resolution modeling for the Medium electron scale factors in 2016 run eras B to F (top), and G to H (bottom).}
-\label{fig:ZeeSystSigRes}
-\end{figure}
 
 \clearpage
 \subsection{Signal final state radiation modeling}
-\textcolor{red}{\bf{WE ARE CURRENTLY REDOING THIS WITH PHOTOS}}
-
 The reconstructed dilepton mass shape has a fat tail on the left side because of the effect of final state radiation (FSR).
 In these tail events, at least one of the final state leptons radiates a photon,
 reducing the energy of the dilepton system and changing the momentum of the emitting lepton.
@@ -419,157 +298,125 @@ It is more prevalent for electrons than for muons since bremsstrahlung is suppre
 
 Simulation addresses the phenomenon of FSR well in Z boson reconstruction, but we must assess the uncertainty on
 how FSR is modeled in the MC generator, which is only an approximation.
-We make the unsupported claim that the generator cannot be more incorrect than treating the final state radiation
-of electrons as if they were muons and vice versa.
+To do this, we consider an alternative showering program called PHOTOS. See Ref.~\cite{Golonka:2005pn}.
+The goal is to compare the efficiencies obtained from fitting templates with different showering algorithm provenances.
+Due to technical reasons, our NLO QCD generator of choice for the nominal fit model (aMC@NLO) could not be made to work with the PHOTOS showering algorithm.
+Instead, we decided to use POWHEG then pursue a reweighting procedure to capture the effect.
 
-\begin{figure}
-\centering
-\includegraphics[width=0.49\textwidth]{figures/genTemplatesPlot.pdf}
-\includegraphics[width=0.49\textwidth]{figures/genTemplatesPlot2.pdf}
-\caption{Left: Difference between the dimuon and dielectron generator-level mass distribution, compared to the reconstructed dielectron mass distribution. Right: Example of how the FSR tail is wagged up and down for a Z(ee) mass distribution.}
-\label{fig:ExampleFsrWagging}
-\end{figure}
+First, we generated Monte Carlo events using POWHEG+PYTHIA8 (the nominal showering algorithm) and POWHEG+PHOTOS (the alternative showering algorithm).
+In carrying out a private production only up to the GEN-SIM data tier, we were able to generate order of 10 million events for each showering choice.
+Next, the events constituting the templates from the nominal generator were reweighted as a function of their generator-level mass 
+to the corresponding distribution in the POWHEG+X samples, where X represents PYTHIA8 or PHOTOS. 
+The generator-level mass is an appropriate variable for this procedure because radiated photons carrying off substantial energy, as modeled by the generator, will reduce the generator mass.
+The altered weights were propagated to the histograms used as fitting templates, and fits were performed using the alternative POWHEG+X shapes.
 
-In order to propagate the effect of incorrect FSR simulation to the data efficiency extraction fits
-in each phase space bin, we first observe the generator-level final state
-dilepton mass distributions for dielectrons and dimuons.
-After normalizing both distributions to 1, the ratio of the dielectron to dimuon mass distribution 
-is taken as the "wagging" function:
-
-\begin{align*}
-  W(M) = \frac{dN}{dM_{\mathrm{Gen}}(ee)} / \frac{dN}{dM_{\mathrm{Gen}}(\mu\mu)}
-\end{align*}
-
-The wagging function $W(M)$ is bounded between 0.5 and 2.
-We then multiply and divide the reconstructed, simulated, truth-matched mass distribution
-by the wagging function to wag the FSR tail up and down, respectively.
-See Figure~\ref{fig:ExampleFsrWagging} for an example of this procedure.
-
-These distributions with the FSR tail wagged up and down are used as alternative signal templates
-for the data efficiency extraction fits. Examples for 2016 run eras B to F are shown for dimuons in
+Examples of these fits for 2016 run eras B to F are shown for dimuons in
 Figures ~\ref{fig:ZmmAltSigFSRFits1},~\ref{fig:ZmmAltSigFSRFits2},~\ref{fig:ZmmAltSigFSRFits3}, and~\ref{fig:ZmmAltSigFSRFits4};
 and for dielectrons in Figures~\ref{fig:ZeeAltSigFSRFits1},~\ref{fig:ZeeAltSigFSRFits2},~\ref{fig:ZeeAltSigFSRFits3}, and~\ref{fig:ZeeAltSigFSRFits4}.
-These may be compared with the fits using the nominally simulated FSR tail
-in section \ref{sec:tnpfits}.
-The maximum difference in the Data/MC scale factors from wagging the FSR tail up or down compared to the nominal value
-is taken as the symmetric systematic uncertainty due to FSR modeling;
-see Figures~\ref{fig:ZmmSystSigFSR} and~\ref{fig:ZeeSystSigFSR}.
+These may be compared with the fits using the nominally simulated FSR tail.
+
+To get alternative scale factors, the efficiencies extracted from data are divided by the respective cut-and-count Monte Carlo efficiency derived from the reweighted templates.
+In other words, the data efficiency obtained by fitting with reweighted POWHEG+PYTHIA8 is divided by the cut-and-count MC efficiency from reweighted POWHEG+PYTHIA8, to get a scale factor.
+Then, the systematic uncertainty in a kinematic bin is defined as the absolute difference between the POWHEG+X scale factors, in that bin:
+
+\begin{equation}
+%\begin{align*}
+\delta_{\mathrm{FSR}} = \left| \frac{\varepsilon^{\mathrm{PYTHIA8}}_{\mathrm{Data}}}{\varepsilon^{\mathrm{PYTHIA8}}_{\mathrm{MC}}} - \frac{\varepsilon^{\mathrm{PHOTOS}}_{\mathrm{Data}}}{\varepsilon^{\mathrm{PHOTOS}}_{\mathrm{MC}}} \right|
+%\end{align*}
+\end{equation}
+
+For 2D maps of the systematic uncertainty that results from this method, see Figures~\ref{fig:ZmmSystSigFSR} and~\ref{fig:ZeeSystSigFSR}.
 
 \begin{figure}
 \centering
-\includegraphics[width=0.49\textwidth]{figures/Zmm_WagFsrUp_BkgLPi_pass_ptBin0_etaBin1.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zmm_WagFsrUp_BkgLPi_fail_ptBin0_etaBin1.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zmm_WagFsrUp_BkgLPi_pass_ptBin1_etaBin9.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zmm_WagFsrUp_BkgLPi_fail_ptBin1_etaBin9.pdf}
-\caption{Efficiency extraction fits for the Medium muon working point wagging the FSR tail up, at low muon transverse momentum.}
+\includegraphics[width=0.49\textwidth]{figures/Zmm_PowhegPythia_BkgLPi_pass_ptBin0_etaBin1.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zmm_PowhegPythia_BkgLPi_fail_ptBin0_etaBin1.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zmm_PowhegPythia_BkgLPi_pass_ptBin1_etaBin9.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zmm_PowhegPythia_BkgLPi_fail_ptBin1_etaBin9.pdf}
+\caption{Efficiency extraction fits for the Medium muon working point using POWHEG and PYTHIA8, at low muon transverse momentum.}
 \label{fig:ZmmAltSigFSRFits1}
 \end{figure}
 \begin{figure}
 \centering
-\includegraphics[width=0.49\textwidth]{figures/Zmm_WagFsrUp_BkgLPi_pass_ptBin7_etaBin0.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zmm_WagFsrUp_BkgLPi_fail_ptBin7_etaBin0.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zmm_WagFsrUp_BkgLPi_pass_ptBin10_etaBin6.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zmm_WagFsrUp_BkgLPi_fail_ptBin10_etaBin6.pdf}
-\caption{Efficiency extraction fits for the Medium muon working point wagging the FSR tail up, at higher values of muon transverse momentum.}
+\includegraphics[width=0.49\textwidth]{figures/Zmm_PowhegPythia_BkgLPi_pass_ptBin7_etaBin0.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zmm_PowhegPythia_BkgLPi_fail_ptBin7_etaBin0.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zmm_PowhegPythia_BkgLPi_pass_ptBin10_etaBin6.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zmm_PowhegPythia_BkgLPi_fail_ptBin10_etaBin6.pdf}
+\caption{Efficiency extraction fits for the Medium muon working point using POWHEG and PYTHIA8, at higher values of muon transverse momentum.}
 \label{fig:ZmmAltSigFSRFits2}
 \end{figure}
 \begin{figure}
 \centering
-\includegraphics[width=0.49\textwidth]{figures/Zmm_WagFsrDown_BkgLPi_pass_ptBin0_etaBin1.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zmm_WagFsrDown_BkgLPi_fail_ptBin0_etaBin1.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zmm_WagFsrDown_BkgLPi_pass_ptBin1_etaBin9.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zmm_WagFsrDown_BkgLPi_fail_ptBin1_etaBin9.pdf}
-\caption{Efficiency extraction fits for the Medium muon working point wagging the FSR tail down, at low muon transverse momentum.}
+\includegraphics[width=0.49\textwidth]{figures/Zmm_PowhegPhotos_BkgLPi_pass_ptBin0_etaBin1.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zmm_PowhegPhotos_BkgLPi_fail_ptBin0_etaBin1.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zmm_PowhegPhotos_BkgLPi_pass_ptBin1_etaBin9.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zmm_PowhegPhotos_BkgLPi_fail_ptBin1_etaBin9.pdf}
+\caption{Efficiency extraction fits for the Medium muon working point using POWHEG and PHOTOS, at low muon transverse momentum.}
 \label{fig:ZmmAltSigFSRFits3}
 \end{figure}
 \begin{figure}
 \centering
-\includegraphics[width=0.49\textwidth]{figures/Zmm_WagFsrDown_BkgLPi_pass_ptBin7_etaBin0.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zmm_WagFsrDown_BkgLPi_fail_ptBin7_etaBin0.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zmm_WagFsrDown_BkgLPi_pass_ptBin10_etaBin6.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zmm_WagFsrDown_BkgLPi_fail_ptBin10_etaBin6.pdf}
-\caption{Efficiency extraction fits for the Medium muon working point wagging the FSR tail down, at higher values of muon transverse momentum.}
+\includegraphics[width=0.49\textwidth]{figures/Zmm_PowhegPhotos_BkgLPi_pass_ptBin7_etaBin0.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zmm_PowhegPhotos_BkgLPi_fail_ptBin7_etaBin0.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zmm_PowhegPhotos_BkgLPi_pass_ptBin10_etaBin6.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zmm_PowhegPhotos_BkgLPi_fail_ptBin10_etaBin6.pdf}
+\caption{Efficiency extraction fits for the Medium muon working point using POWHEG and PHOTOS, at higher values of muon transverse momentum.}
 \label{fig:ZmmAltSigFSRFits4}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=0.49\textwidth]{figures/Zee_WagFsrUp_BkgLPiEMu_pass_ptBin0_etaBin0.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zee_WagFsrUp_BkgLPiEMu_fail_ptBin0_etaBin0.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zee_WagFsrUp_BkgLPiEMu_pass_ptBin1_etaBin19.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zee_WagFsrUp_BkgLPiEMu_fail_ptBin1_etaBin19.pdf}
-\caption{Efficiency extraction fits for the Medium electron working point wagging the FSR tail up, at low electron transverse momentum.}
+\includegraphics[width=0.49\textwidth]{figures/Zee_PowhegPythia_BkgLPiEMu_pass_ptBin0_etaBin0.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zee_PowhegPythia_BkgLPiEMu_fail_ptBin0_etaBin0.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zee_PowhegPythia_BkgLPiEMu_pass_ptBin1_etaBin19.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zee_PowhegPythia_BkgLPiEMu_fail_ptBin1_etaBin19.pdf}
+\caption{Efficiency extraction fits for the Medium electron working point using POWHEG and PYTHIA8, at low electron transverse momentum.}
 \label{fig:ZeeAltSigFSRFits1}
 \end{figure}
 \begin{figure}
 \centering
-\includegraphics[width=0.49\textwidth]{figures/Zee_WagFsrUp_BkgLPiEMu_pass_ptBin3_etaBin23.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zee_WagFsrUp_BkgLPiEMu_fail_ptBin3_etaBin23.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zee_WagFsrUp_BkgLPiEMu_pass_ptBin14_etaBin17.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zee_WagFsrUp_BkgLPiEMu_fail_ptBin14_etaBin17.pdf}
-\caption{Efficiency extraction fits for the Medium electron working point wagging the FSR tail up, at higher values of electron transverse momentum.}
+\includegraphics[width=0.49\textwidth]{figures/Zee_PowhegPythia_BkgLPiEMu_pass_ptBin3_etaBin23.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zee_PowhegPythia_BkgLPiEMu_fail_ptBin3_etaBin23.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zee_PowhegPythia_BkgLPiEMu_pass_ptBin14_etaBin17.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zee_PowhegPythia_BkgLPiEMu_fail_ptBin14_etaBin17.pdf}
+\caption{Efficiency extraction fits for the Medium electron working point using POWHEG and PYTHIA8, at higher values of electron transverse momentum.}
 \label{fig:ZeeAltSigFSRFits2}
 \end{figure}
 \begin{figure}
 \centering
-\includegraphics[width=0.49\textwidth]{figures/Zee_WagFsrDown_BkgLPiEMu_pass_ptBin0_etaBin0.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zee_WagFsrDown_BkgLPiEMu_fail_ptBin0_etaBin0.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zee_WagFsrDown_BkgLPiEMu_pass_ptBin1_etaBin19.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zee_WagFsrDown_BkgLPiEMu_fail_ptBin1_etaBin19.pdf}
-\caption{Efficiency extraction fits for the Medium electron working point wagging the FSR tail down, at low electron transverse momentum.}
+\includegraphics[width=0.49\textwidth]{figures/Zee_PowhegPhotos_BkgLPiEMu_pass_ptBin0_etaBin0.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zee_PowhegPhotos_BkgLPiEMu_fail_ptBin0_etaBin0.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zee_PowhegPhotos_BkgLPiEMu_pass_ptBin1_etaBin19.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zee_PowhegPhotos_BkgLPiEMu_fail_ptBin1_etaBin19.pdf}
+\caption{Efficiency extraction fits for the Medium electron working point using POWHEG and PHOTOS, at low electron transverse momentum.}
 \label{fig:ZeeAltSigFSRFits3}
 \end{figure}
 
 \begin{figure}
 \centering
-\includegraphics[width=0.49\textwidth]{figures/Zee_WagFsrDown_BkgLPiEMu_pass_ptBin3_etaBin23.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zee_WagFsrDown_BkgLPiEMu_fail_ptBin3_etaBin23.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zee_WagFsrDown_BkgLPiEMu_pass_ptBin14_etaBin17.pdf}
-\includegraphics[width=0.49\textwidth]{figures/Zee_WagFsrDown_BkgLPiEMu_fail_ptBin14_etaBin17.pdf}
-\caption{Efficiency extraction fits for the Medium electron working point wagging the FSR tail down, at higher values of electron transverse momentum.}
+\includegraphics[width=0.49\textwidth]{figures/Zee_PowhegPhotos_BkgLPiEMu_pass_ptBin3_etaBin23.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zee_PowhegPhotos_BkgLPiEMu_fail_ptBin3_etaBin23.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zee_PowhegPhotos_BkgLPiEMu_pass_ptBin14_etaBin17.pdf}
+\includegraphics[width=0.49\textwidth]{figures/Zee_PowhegPhotos_BkgLPiEMu_fail_ptBin14_etaBin17.pdf}
+\caption{Efficiency extraction fits for the Medium electron working point using POWHEG and PHOTOS, at higher values of electron transverse momentum.}
 \label{fig:ZeeAltSigFSRFits4}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_Medium2016MuonBCDEF_FsrModeling_0.0-0.0_10.0-120.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_Medium2016MuonGH_FsrModeling_0.0-0.0_10.0-120.0}.pdf} 
-\caption{Systematic uncertainties from signal FSR modeling for the Medium muon scale factors in 2016 run eras B to F (top), and G to H (bottom).}
-\label{fig:ZmmSystSigFSR}
-\end{figure}
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_MediumElectronBCDEF_FsrModeling_0.0-0.0_10.0-100.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_MediumElectronGH_FsrModeling_0.0-0.0_10.0-100.0}.pdf} 
-\caption{Systematic uncertainties from signal FSR modeling for the Medium electron scale factors in 2016 run eras B to F (top), and G to H (bottom).}
-\label{fig:ZeeSystSigFSR}
-\end{figure}
+
 \clearpage
 \subsection{Choice of generator}
-The choice of generator used to determine the MC can affect the scale factor determination.
+The choice of generator used to determine the MC before the showering can affect the scale factor determination.
 The differences in generator implementations, including leading-order versus next-to-leading order simulation,
 can affect the fraction of passing and failing probes, and the truth-matching efficiency.
-Therefore we use a different implementation (\textsc{MadGraph5} at leading-order)
-instead of the nominal (\textsc{MadGraph5\_aMC@NLO}) to determine the MC efficiency and the signal PDF,
-and take the size of the change in the scale factors as the symmetric systematic uncertainty
-from the choice of generator.
+Therefore, we use a different implementation (\textsc{MadGraph5} at leading-order)
+instead of the nominal (\textsc{MadGraph5\_aMC@NLO}) to extract the efficiency from data.
+This data efficiency is divided by the nominal NLO MC efficiency to give an alternative scale factor. 
+We do not substitute the leading-order MC efficiency here because, 
+for the purposes of a precision measurement, the difference in the data efficiency is the real effect.
+We take the size of the difference in the scale factors as the symmetric systematic uncertainty from the choice of generator.
 See Figures~\ref{fig:ZmmSystMCGen} and~\ref{fig:ZeeSystMCGen}.
 
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_Medium2016MuonBCDEF_AltGen_0.0-0.0_10.0-120.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_Medium2016MuonGH_AltGen_0.0-0.0_10.0-120.0}.pdf} 
-\caption{Systematic uncertainties from generator choice for the Medium muon scale factors in 2016 run eras B to F (top), and G to H (bottom).}
-\label{fig:ZmmSystMCGen}
-\end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_MediumElectronBCDEF_AltGen_0.0-0.0_10.0-100.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_MediumElectronGH_AltGen_0.0-0.0_10.0-100.0}.pdf} 
-\caption{Systematic uncertainties from generator choice for the Medium electron scale factors in 2016 run eras B to F (top), and G to H (bottom).}
-\label{fig:ZeeSystMCGen}
-\end{figure}
 \clearpage
 \subsection{Bias from choice of tag selection}
 The choice of tag selection cuts is motivated by the realities of the experiment, such as
@@ -625,28 +472,11 @@ see Figures~\ref{fig:ZmmSystAltTag} and~\ref{fig:ZeeSystAltTag}.
 \label{fig:ZeeAltAltTagFits2}
 \end{figure}
 
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_Medium2016MuonBCDEF_AltTag_0.0-0.0_10.0-120.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_Medium2016MuonGH_AltTag_0.0-0.0_10.0-120.0}.pdf} 
-\caption{Systematic uncertainties from choice of tag selection for the Medium muon scale factors in 2016 run eras B to F (top), and G to H (bottom).}
-\label{fig:ZmmSystAltTag}
-\end{figure}
-
-\begin{figure}
-\centering
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_MediumElectronBCDEF_AltTag_0.0-0.0_10.0-100.0}.pdf}
-\includegraphics[width=1.00\textwidth]{{figures/scalefactors_MediumElectronGH_AltTag_0.0-0.0_10.0-100.0}.pdf} 
-\caption{Systematic uncertainties from choice of tag selection for the Medium electron scale factors in 2016 run eras B to F (top), and G to H (bottom).}
-\label{fig:ZeeSystAltTag}
-\end{figure}
 \clearpage
+
 \subsection{Total impact of systematic uncertainties}
 The percent impacts of each source of uncertainty on the inclusive Z(ll) cross section
-are shown in Table~\ref{tab:ZYieldImpacts}.
-This uncertainty essentially defines the sensitivity of the momentum spectra measurement.
-On the other hand, for the dark matter search against the diboson final states, it is nearly irrelevant.
-There, it is sufficient to apply a flat uncertainty of this size, independent of kinematics.
+are shown in Table~\ref{tab:ZYieldImpacts}. Pre-HIP mitigation scenario in 2016 is assumed.
 
 \begin{table}[htbp]
   \begin{center}
@@ -656,13 +486,13 @@ There, it is sufficient to apply a flat uncertainty of this size, independent of
   \multirow{2}{*}{Source of Uncertainty} & Z(ee) Yield& Z($\mu\mu$) Yield \\
                                          & \% Impact  & \% Impact         \\
   \hline
-  Background shape                       & 0.58       & 0.61              \\
-  Signal resolution                      & 0.06       & 0.32              \\
-  Signal FSR model                       & 0.80       & 0.48              \\
-  Generator choice                       & 0.88       & 0.31              \\
-  Tag selection                          & 0.51       & 0.32              \\
+  Background shape                       & 0.48       & 0.57              \\
+  Signal resolution                      & 0.04       & 0.26              \\
+  Signal FSR model                       & 0.09       & 0.07              \\
+  Generator choice                       & 0.34       & 0.19              \\
+  Tag selection                          & 0.44       & 0.26              \\
   \hline                                                           
-  Total scale factor impact              & 1.4        & 0.95              \\
+  Total scale factor impact              & 0.74       & 0.71              \\
   \hline
   \end{tabular}
 }
@@ -670,6 +500,5 @@ There, it is sufficient to apply a flat uncertainty of this size, independent of
   \label{tab:ZYieldImpacts}
   \end{center}
 \end{table}
-
 
 
