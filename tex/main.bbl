@@ -1,17 +1,81 @@
 \newcommand{\noopsort}[1]{} \newcommand{\printfirst}[2]{#1}
   \newcommand{\singleletter}[1]{#1} \newcommand{\switchargs}[2]{#2#1}
-\begin{thebibliography}{10}
+\begin{thebibliography}{100}
 
 \bibitem{PhysRevD.98.030001}
 M.~et~al Tanabashi.
 \newblock Review of particle physics.
 \newblock {\em Phys. Rev. D}, 98:030001, Aug 2018.
 
+\bibitem{Placakyte:2011az}
+Ringaile Placakyte.
+\newblock {Parton Distribution Functions}.
+\newblock In {\em {Proceedings, 31st International Conference on Physics in
+  collisions (PIC 2011): Vancouver, Canada, August 28-September 1, 2011}},
+  2011.
+
+\bibitem{nnpdf}
+{Parton distributions for the LHC Run II}.
+\newblock {\em JHEP}, 04:040, 2015.
+
 \bibitem{Bierweiler:2013dja}
 Anastasiya Bierweiler, Tobias Kasprzik, and Johann~H. Kahn.
 \newblock {Vector-boson pair production at the LHC to $\mathcal{O}(\alpha^3)$
   accuracy}.
 \newblock 2013.
+
+\bibitem{Hinshaw_2013}
+G.~Hinshaw, D.~Larson, E.~Komatsu, D.~N. Spergel, C.~L. Bennett, J.~Dunkley,
+  M.~R. Nolta, M.~Halpern, R.~S. Hill, N.~Odegard, L.~Page, K.~M. Smith, J.~L.
+  Weiland, B.~Gold, N.~Jarosik, A.~Kogut, M.~Limon, S.~S. Meyer, G.~S. Tucker,
+  E.~Wollack, and E.~L. Wright.
+\newblock {NINE}-{YEARWILKINSON} {MICROWAVE} {ANISOTROPY} {PROBE}({WMAP})
+  {OBSERVATIONS}: {COSMOLOGICAL} {PARAMETER} {RESULTS}.
+\newblock {\em The Astrophysical Journal Supplement Series}, 208(2):19, sep
+  2013.
+
+\bibitem{Cushman:2013zza}
+P.~Cushman et~al.
+\newblock Snowmass {CF1} summary: {WIMP} dark matter direct detection.
+\newblock 2013.
+
+\bibitem{Buckley:2013bha}
+J.~Buckley et~al.
+\newblock Indirect dark matter detection {CF2} working group summary.
+\newblock 2013.
+
+\bibitem{Beltran:2010ww}
+Maria Beltran, Dan Hooper, Edward~W. Kolb, Zosia A.~C. Krusberg, and Tim M.~P.
+  Tait.
+\newblock {Maverick dark matter at colliders}.
+\newblock {\em JHEP}, 09:037, 2010.
+
+\bibitem{Goodman:2010yf}
+Jessica Goodman, Masahiro Ibe, Arvind Rajaraman, William Shepherd, Tim M.~P.
+  Tait, and Hai-Bo Yu.
+\newblock Constraints on light {Majorana} dark matter from colliders.
+\newblock {\em Phys. Lett. B}, 695:185, 2011.
+
+\bibitem{Bai:2010hh}
+Yang Bai, Patrick~J. Fox, and Roni Harnik.
+\newblock The {Tevatron} at the frontier of dark matter direct detection.
+\newblock {\em JHEP}, 12:048, 2010.
+
+\bibitem{Goodman:2010ku}
+Jessica Goodman, Masahiro Ibe, Arvind Rajaraman, William Shepherd, Tim M.~P.
+  Tait, and Hai-Bo Yu.
+\newblock Constraints on dark matter from colliders.
+\newblock {\em Phys. Rev. D}, 82:116010, 2010.
+
+\bibitem{Fox:2011pm}
+Patrick~J. Fox, Roni Harnik, Joachim Kopp, and Yuhsin Tsai.
+\newblock Missing energy signatures of dark matter at the {LHC}.
+\newblock {\em Phys. Rev. D}, 85:056011, 2012.
+
+\bibitem{Rajaraman:2011wf}
+Arvind Rajaraman, William Shepherd, Tim M.~P. Tait, and Alexander~M. Wijangco.
+\newblock {LHC} bounds on interactions of dark matter.
+\newblock {\em Phys. Rev. D}, 84:095013, 2011.
 
 \bibitem{Thomson1897}
 J.~J. Thomson.
@@ -232,11 +296,113 @@ Steven Weinberg.
 \newblock A model of leptons.
 \newblock {\em Phys. Rev. Lett.}, 19:1264--1266, Nov 1967.
 
+\bibitem{Baltz:2007kq}
+A.~J. Baltz.
+\newblock {The Physics of Ultraperipheral Collisions at the LHC}.
+\newblock {\em Phys. Rept.}, 458:1--171, 2008.
+
 \bibitem{Abercrombie:2015wmb}
 Daniel Abercrombie et~al.
 \newblock Dark matter benchmark models for early {LHC Run-2} searches: Report
   of the {ATLAS/CMS} dark matter forum.
 \newblock 2015.
+
+\bibitem{AtlasPaperCombination}
+ATLAS Collaboration.
+\newblock {Observation of a new particle in the search for the Standard Model
+  Higgs boson with the ATLAS detector at the LHC}.
+\newblock {\em Phys.Lett.}, B716:1--29, 2012.
+
+\bibitem{CMSPaperCombination}
+CMS Collaboration.
+\newblock {Observation of a new boson at a mass of 125 GeV with the CMS
+  experiment at the LHC}.
+\newblock {\em Phys.Lett.}, B716:30--61, 2012.
+
+\bibitem{Ghosh:2012ep}
+{D.~Ghosh {\it et al.}}
+\newblock {Looking for an Invisible Higgs Signal at the LHC}.
+\newblock 2012.
+
+\bibitem{Martin:1999qf}
+Stephen~P. Martin and James~D. Wells.
+\newblock {Motivation and detectability of an invisibly decaying Higgs boson at
+  the Fermilab Tevatron}.
+\newblock {\em Phys.Rev.}, D60:035006, 1999.
+
+\bibitem{Bai:2011wz}
+Yang Bai, Patrick Draper, and Jessie Shelton.
+\newblock {Measuring the Invisible Higgs Width at the 7 and 8 TeV LHC}.
+\newblock {\em JHEP}, 07:192, 2012.
+
+\bibitem{Belanger:2001am}
+G.~Belanger, F.~Boudjema, A.~Cottrant, R.M. Godbole, and A.~Semenov.
+\newblock {The MSSM invisible Higgs in the light of dark matter and g-2}.
+\newblock {\em Phys.Lett.}, B519:93--102, 2001.
+
+\bibitem{Giudice:2000av}
+Gian~F. Giudice, Riccardo Rattazzi, and James~D. Wells.
+\newblock {Graviscalars from higher dimensional metrics and curvature Higgs
+  mixing}.
+\newblock {\em Nucl.Phys.}, B595:250--276, 2001.
+
+\bibitem{Battaglia:2004js}
+M.~Battaglia, D.~Dominici, J.F. Gunion, and J.D. Wells.
+\newblock {The Invisible Higgs decay width in the add model at the LHC}.
+\newblock 2004.
+
+\bibitem{Baek:2012se}
+Seungwon Baek, P.~Ko, Wan-Il Park, and Eibun Senaha.
+\newblock {Higgs Portal Vector Dark Matter : Revisited}.
+\newblock {\em JHEP}, 05:036, 2013.
+
+\bibitem{Djouadi:2011aa}
+Abdelhak Djouadi, Oleg Lebedev, Yann Mambrini, and Jeremie Quevillon.
+\newblock {Implications of LHC searches for Higgs--portal dark matter}.
+\newblock {\em Phys. Lett.}, B709:65--69, 2012.
+
+\bibitem{Djouadi:2012zc}
+Abdelhak Djouadi, Adam Falkowski, Yann Mambrini, and Jeremie Quevillon.
+\newblock {Direct Detection of Higgs-Portal Dark Matter at the LHC}.
+\newblock {\em Eur. Phys. J.}, C73(6):2455, 2013.
+
+\bibitem{arkani98:hlz}
+N.~Arkani-Hamed, S.~Dimopoulos, and G.~Dvali.
+\newblock The hierarchy problem and new dimensions at a millimeter.
+\newblock {\em Phys. Lett. B}, 429:263, 1998.
+
+\bibitem{arkani99:hlz}
+N.~Arkani-Hamed, S.~Dimopoulos, and G.~Dvali.
+\newblock Phenomenology, astrophysics and cosmology of theories with
+  sub-millimeter dimensions and {TeV} scale quantum gravity.
+\newblock {\em Phys. Rev. D}, 59:086004, 1999.
+
+\bibitem{han99:hlz}
+T.~Han, J.~D. Lykken, and R.~Zhang.
+\newblock On {K}aluza-{K}lein states from large extra dimensions.
+\newblock {\em Phys. Rev. D}, 59:105006, 1999.
+
+\bibitem{Banks:1981nn}
+Tom Banks and A.~Zaks.
+\newblock On the phase structure of vector-like gauge theories with massless
+  fermions.
+\newblock {\em Nucl. Phys. B}, 196:189, 1982.
+
+\bibitem{Kang:2014cia}
+Zhaofeng Kang.
+\newblock Upgrading sterile neutrion dark matter to {FImP} using scale
+  invariance.
+\newblock 2014.
+
+\bibitem{Rinaldi:2014gha}
+Massimiliano Rinaldi, Guido Cognola, Luciano Vanzo, and Sergio Zerbini.
+\newblock {Inflation in scale-invariant theories of gravity}.
+\newblock {\em Phys. Rev. D}, 91:123527, 2015.
+
+\bibitem{Cheng:1988zx}
+Hung Cheng.
+\newblock The possible existence of {Weyl's} vector meson.
+\newblock {\em Phys. Rev. Lett.}, 61:2182, 1988.
 
 \bibitem{Khachatryan:2016bia}
 Vardan Khachatryan et~al.
@@ -353,10 +519,6 @@ Torbjorn Sj{\"o}strand et~al.
 \newblock An introduction to {PYTHIA} 8.2.
 \newblock {\em Comput. Phys. Commun.}, 191:159--177, 2015.
 
-\bibitem{nnpdf}
-{Parton distributions for the LHC Run II}.
-\newblock {\em JHEP}, 04:040, 2015.
-
 \bibitem{Sjostrand:2007gs}
 Torbjorn Sjostrand, Stephen Mrenna, and Peter~Z. Skands.
 \newblock {A Brief Introduction to PYTHIA 8.1}.
@@ -418,6 +580,12 @@ Julien Baglio, Le~Duc Ninh, and Marcus~M. Weber.
 \newblock {Massive gauge boson pair production at the LHC: a next-to-leading
   order story}.
 \newblock {\em Phys.Rev.}, D88:113005, 2013.
+
+\bibitem{Golonka:2005pn}
+Piotr Golonka and Zbigniew Was.
+\newblock {PHOTOS Monte Carlo: A Precision tool for QED corrections in $Z$ and
+  $W$ decays}.
+\newblock {\em Eur. Phys. J.}, C45:97--107, 2006.
 
 \bibitem{Khachatryan:2016tgp}
 Vardan Khachatryan et~al.
