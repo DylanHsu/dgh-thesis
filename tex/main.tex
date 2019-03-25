@@ -30,8 +30,10 @@
 %% These have been added at the request of the MIT Libraries, because
 %% some PDF conversions mess up the ligatures.  -LB, 1/22/2014
 \usepackage{tikz-feynman}
+\tikzfeynmanset{/tikzfeynman/warn luatex = false}
 \usepackage{hyperref}
 \usepackage{graphicx}
+\usepackage{floatrow}
 \usepackage{xspace}
 \usepackage{xcolor}
 \usepackage{cmap}
@@ -42,6 +44,8 @@
 \usepackage{rotating}
 \usepackage[fleqn]{amsmath}
 \usepackage{amssymb}
+\usepackage{nonfloat}
+\usepackage{titlesec}
 \pagestyle{plain}
 %\input{commands.tex}
 \input{colors.tex}
@@ -75,8 +79,14 @@
 \include{efficiency}
 \include{dibosons}
 \include{dm}
+\include{zpt}
+\include{conclusion}
 \appendix
 \include{efficiency_appendix}
+\include{mva_appendix}
+\include{zzqcd_appendix}
+\include{interpolation_appendix}
+\include{add_xs_appendix}
 \include{biblio}
 \end{document}
 
