@@ -1,6 +1,5 @@
-\chapter{Reconstructing proton-proton collisions with the CMS detector}
-\section{The LHC and its proton injection system}
-\section{The CMS detector}
+\chapter{The CMS detector at the LHC}
+
 The Compact Muon Solenoid (CMS) detector is a multi-purpose apparatus which operates at the LHC. 
 It is installed about 100 metres underground close to the French village of Cessy, between
 Lake Geneva and the Jura mountains.
@@ -28,7 +27,16 @@ Muons are detected in gas-ionization chambers embedded in the steel flux-return 
 Events of interest are selected using a two-tiered trigger system~\cite{Khachatryan:2016bia}.
 The first level, composed of custom hardware processors, uses information from the calorimeters and muon detectors to select events at a rate of around 100 kHz within a time interval of less than 4 $\mu$s.
 The second level, known as the high-level trigger, consists of a farm of processors running a version of the full event reconstruction software optimized for fast processing, and reduces the event rate to around 1 kHz before data storage.
-\subsection{Trackers}
+
+\begin{figure}[hb]
+\centering
+\includegraphics[width=0.5\textwidth]{figures/cms_detector.pdf}
+\caption{Schematic of the CMS detector.}
+\label{fig:cmsdetector}
+\end{figure}
+\section{The LHC and its proton injection system}
+
+\section{Trackers}
 
 The inner tracking system of CMS is designed to provide a precise and efficient measurement
 of the trajectories of charged particles emerging from the LHC collisions, as well as a precise
@@ -54,7 +62,7 @@ the pixel detector and 3 plus 9 disks in the strip tracker on each side of the b
 acceptance of the tracker up to a pseudorapidity of $|\eta| < 2.5$. With about 200 m\textsuperscript{2} of active silicon
 area the CMS tracker is the largest silicon tracker ever built.
 
-\subsection{Electromagnetic calorimeter}
+\section{Electromagnetic calorimeter}
 The electromagnetic calorimeter of CMS (ECAL) is a hermetic homogeneous calorimeter made of
 61 200 lead tungstate ($\textrm{PbWO}_{\textrm{4}}$) crystals mounted in the central barrel part, closed by 7 324 crys-
 tals in each of the two endcaps. A preshower detector is placed in front of the endcap crystals.
@@ -65,7 +73,7 @@ environment. One of the driving criteria in the design was the capability to det
 photons of the postulated Higgs boson. This capability is enhanced by the good energy resolution
 provided by a homogeneous crystal calorimeter.
 
-\subsection{Hadron calorimeters}
+\section{Hadron calorimeters}
 The hadron calorimeters (HCALs) are particularly important for the measurement of hadron jets and neutrinos or exotic particles resulting in apparent missing transverse energy \cite{CMSTDR}.
 Figure~\ref{fig:hcalslice} shows the longitudinal view of the CMS detector. The dashed lines are at fixed $\eta$ values. 
 The hadron calorimeter barrel and endcaps sit behind the tracker and the electromagnetic
@@ -86,7 +94,7 @@ readout being available in~\cite{CMSTDR}.
 \label{fig:hcalslice}
 \end{figure}
 
-\subsubsection{HCAL barrel}
+\subsection{HCAL barrel}
 The HCAL barrel (HB) is a sampling calorimeter and covers the pseudorapidity range $|\eta| < 1.3$.
 It consists of 36 identical azimuthal wedges which form two half-barrels. 
 The wedges are constructed out of flat brass absorber plates which are parallel
@@ -109,7 +117,7 @@ Its purpose is to sample hadronic showers developing in the inert material betwe
 the ECAL barrel and the HCAL barrel.
 The plastic scintillator is divided into 16 $\eta$ sectors, resulting in a segmentation of $(\Delta\eta, \Delta\phi) = (0.087, 0.087)$. 
 
-\subsubsection{HCAL endcaps}
+\subsection{HCAL endcaps}
 
 The hadron calorimeter endcaps (HE) cover the rapidity range $1.3 < |\eta| < 3$. 
 It is designed for high radiation tolerance, in order to survive 10 MRad after 10 years of operation.
@@ -124,7 +132,7 @@ The first layer are made of 9 mm thick Bicron BC408. All the rest are made of 3.
 The scintillation light is read out via wavelength shifting fibers. 
 The granularity of the calorimeters is $(\Delta\eta, \Delta\phi) = (0.087, 0.087)$ for $|\eta| < 1.6$ and $(\Delta\eta, \Delta\phi) = (0.170, 0.170)$ for $|\eta| \geq 1.6$.
 
-\subsubsection{HCAL outer}
+\subsection{HCAL outer}
 The combined stopping power of the ECAL and HCAL barrels does not provide adequate stopping
 power in the central region $|\eta| < 1.3$. This is problematic for the missing energy resolution.
 To further measure and contain these showers, the hadron calorimeter is extended outside the solenoid with a tail catcher called the HO. Only 40 mm of space in the radial direction is available, 
@@ -141,7 +149,7 @@ The others have scintillators only outside their yoke rings.
 All told, the total depth of the calorimeter system is extended to a minimum of
 $11.8\:\lambda_I$ except at the barrel-endcap boundary region.
 
-\subsubsection{HCAL forward}
+\subsection{HCAL forward}
 The forward calorimeter, or HF, exists in an extremely hostile environment. 
 At $|\eta|=5$ we expect to have delivered 10 MGy after 10 years of operation.
 The active material is fused-silica core, polymer hard-cladded quartz fibers, which have sufficient radiation hardness.
@@ -164,214 +172,154 @@ This calorimeter is mostly sensitive to the electromagnetic component of hadroni
 Only light that hits the core-cladding interface at an angle larger than the critical angle (71\textdegree) contributes to the calorimeter signal in the form of Cherenkov light. 
 After the quoted 10 MGy dose has accumulated over the HF lifetime, the optical transmission of the fibers is reduced just by a factor of 2.
 
-\subsection{Muon systems}
+\section{Muon system}
+The CMS muon system is capable of reconstructing the momentum and charge of muons over the entire
+kinematic range of the LHC. 
+Due to the shape of the CMS solenoid magnet, the muon system has a barrel section and 2 endcap sections.
+Three types of gaseous particle detectors are used.
+Since the total area of the muon detection planes is around 25,000 $\textrm{m}^2$, the 
+detectors were chosen to be inexpensive but reliable.
 
-\begin{figure}
+In the barrel region, rectangular drift tubes (DT) are used, 
+since there is little neutron-induced muon background, the magnetic field is uniform,
+and the real muon rate is relatively low.
+In the endcap regions, there is a high muon rate, high muon background, and a
+very nonuniform magnetic field, so cathode strip chambers (CSC) are used there.
+The third subsystem is the resistive plate chambers (RPC). Their spatial resolution is relatively poor.
+But their fast response and good time resolution are useful for the trigger.
+They also help resolve ambiguity in the standalone muon reconstruction,
+which only uses information from the muon system.
+
+The DTs and CSCs are each capable of triggering on muon $p_T$ independently of the other detector subsystems.
+The $p_T$ resolution of this triggering muon object is 15\% in the barrel and 25\% in the endcap.
+For muon $p_T$ up to $200 \GeV$, the DTs and CSCs together can give a standalone momentum resolution of 9\%.
+Approaching muon momenta of $1 \TeV$, the standalone momentum resolution is 5\%.
+The muon resolution is improved when combined with the tracker information in the Particle Flow algorithm.
+
+Lastly, an alignment system measures the relative positions of the muon detectors amidst the inner tracker to optimize the momentum resolution of muons.
+
+\begin{figure}[hbtp]
 \centering
-\includegraphics[width=0.5\textwidth]{figures/cms_drifttubes_slice.pdf}
+\includegraphics[width=0.8\textwidth]{figures/cms_muon_systems.pdf}
 \caption{
-Layout of the CMS barrel muon DT chambers in one of the 5 wheels. The chambers in
-each wheel are identical with the exception of wheels –1 and +1 where the presence of cryogenic
-chimneys for the magnet shortens the chambers in 2 sectors.
+Quarter-view of the CMS detector showing the muon system components. 
+From \cite{Chatrchyan:2008aa}.
 }
-\label{fig:dtslice}
+\label{fig:muonsystem}
 \end{figure}
 
-\begin{figure}
+\subsection{Drift tubes}
+The DTs cover the pseudorapidity region $|\eta|<1.2$.
+There are 4 stations forming concentric cylinders around the beam line.
+The 3 inner cylinders have 60 drift chambers each and the outer cylinder has 70.
+There are about 172,000 sensitive wires of about 2.4m in length.
+The maximum drift path length is 21 mm. In a gaseous admixture of 85\% Ar and 15\% $\mathrm{CO}_2$ the maximum drift time is 380 ns.
+This produces a negligible occupancy and permits the use of single-hit electronics.
+Meanwhile, the cell size is sufficiently large to keep the number of electronic channels low and affordable.
+
+Each DT chamber is made of 2 or 3 superlayers (SL).
+Each SL is made of layers of rectangular drift cells staggered by half a cell.
+The wires in the 2 outer SLs are parallel to the beam line and provide a track measurement
+in the magnetic bending plane. 
+The wires in the inner SL are orthogonal to the beam line and measure the $z$ position.
+This innermost SL is not present in the fourth DT station
+Thus, a muon first encounters a $\phi$-measuring SL, passes through a honeycomb spacer plate,
+then crosses the $z$-measuring SL and the second $\phi$-measuring SL.
+Due to discontinuities in the design,
+a muon could end up crossing only two stations instead of the maximum four.
+
+One superlayer has time resolution on the order of nanoseconds.
+The time measurement is delayed by the drift-time, determined by the design parameters of the drift tubes.
+Using the SL information, pattern recognition circuits deliver the position and angle 
+of the track segment's center of gravity with precision of 1.5 mm and 20 mrad, respectively.
+
+\begin{figure}[hbtp]
 \centering
-\includegraphics[width=0.5\textwidth]{figures/cms_quarter_csc_red.pdf}
+\includegraphics[width=0.80\textwidth]{figures/cms_muonsystem_honeycomb.pdf}
+\caption{Chambers of the CMS DT system including the honeycomb support. From \cite{Chatrchyan:2008aa}.}
+\label{fig:dt_chambers}
+\end{figure}
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/cms_drifttubes_slice.pdf}
+\caption{ Layout of the CMS barrel muon DT chambers in one of the 5 wheels. From \cite{Chatrchyan:2008aa}.}
+\label{fig:dt_barrel}
+\end{figure}
+
+\subsection{Cathode strip chambers}
+The CSCs cover the pseudorapidity region $0.9<|\eta|<2.4$.
+There are 4 stations of CSCs in each endcap.
+The chambers are perpendicular to the beamline and interspersed between the magnetic flux return plates.
+The cathode strips point radially outward from the beamline and provide a precision measurement in the $r-\phi$ bending plane.
+
+The CSCs are multiwire proportional chambers comprised of 6 anode wire planes interleaved
+among 7 cathode panels. Wires run azimuthally and define a track’s radial coordinate.
+Strips are milled on cathode panels and run lengthwise at constant $\Delta\phi$ width. 
+The muon coordinate along the wires is obtained by interpolating between charges induced on strips.
+The largest chambers, ME2/2 and ME3/2, are about 3.4 × 1.5 m\textsuperscript{2} in size.
+The overall area covered by the sensitive planes of all chambers is about 5,000 m\textsuperscript{2},
+the gas volume is over 50 m\textsuperscript{3}, and there are about 2 million wires.
+There are about 9000 high-voltage channels in the system, 
+about 220,000 cathode strip read-out channels with 12-bit signal digitization,
+and about 180 000 anode wire read-out channels.
+
+An avalanche on a wire induces charge on a cathode plane.
+The charge shape can be approximately parameterized by the Gatti function~\cite{GATTI197983}.
+Given the CSC geometry, most of the induced charge is shared among three or four strips.
+A strip signal waveform is sampled and digitized every 50 ns.
+The overal pulse duration is about 300 ns.
+The charge cluster is fit to obtain the spatial coordinate, time, and cluster charge.
+Using this method, the spatial resolution for a 6-plane chamber is 80 $\mathrm{\mu m}$.
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/cms_quarter_csc_red.pdf}
 \caption{
 Quarter-view of the CMS detector. Cathode strip chambers of the Endcap Muon
 system are highlighted.
+From \cite{Chatrchyan:2008aa}.
 }
 \label{fig:cms_quarter_csc_red}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[hbtp]
 \centering
-\includegraphics[width=0.5\textwidth]{figures/cms_cscs_me2.pdf}
+\includegraphics[width=0.8\textwidth]{figures/cms_cscs_me2.pdf}
 \caption{
 The ME2 station of CSCs. The outer ring consists of 36 ME2/2 chambers, each
-spanning 10\degree in \phi, and the inner ring of eighteen 20\degree ME2/1 chambers.
-The chambers overlap to provide contiguous coverage in \phi.
+spanning 10\degree in $\phi$, and the inner ring of eighteen 20\degree ME2/1 chambers.
+The chambers overlap to provide contiguous coverage in $\phi$.
+From \cite{Chatrchyan:2008aa}.
 }
 \label{fig:cms_cscs_me2}
 \end{figure}
 
+\subsection{Resistive plate chambers}
 
+The RPCs are gaseous parallel-plate detectors with adequate spatial resolution and scintillator-level time resolution.
+They are much faster than the 25 ns proton bunch crossing period at the LHC.
+Using the RPC information, there is no ambiguity in the association of muon tracks and bunch crossings.
 
-\section{Object reconstruction}
-\subsection{Electrons}
-Electrons in the CMS detector are reconstructed through association of a track from the silicon detector with a cluster of energy in the ECAL.
-Electron tracks are formed from initial seeds likely to correspond to initial electron trajectories, which are then used to build tracks by collecting hits in the silicon tracker using the combinatorial Kalman filter procedure.
-Next, a track fitting procedure is undertaken using a Gaussian Sum Filter (GSF), in which the energy loss in each tracker layer is approximated by a mixture of Gaussian distributions.
-Meanwhile, the electron energy has been collected in several crystals of the ECAL. 
-These depositions undergo two steps of clustering.
-The first step finds clusters from crystal arrays of $5 \times 1$ in $\eta \times \phi$ for the ECAL barrel, and $5 \times 5$ crystals for the ECAL endcaps.
-The second step forms a supercluster (SC) comprising the energy of constituent clusters.
-The supercluster position and energy, along with the GSF track, reconstruct the electron in the detector.\cite{ElectronReco2015}
-The reconstruction procedure is also informed by the Particle-Flow algorithm, described later in Section ???.
+The CMS RPC basic double-gap module consists of two gaps operated in avalanche mode with common
+pickup readout strips between them.
+The total induced signal is the sum of the two single-gap signals.
+Thus, the single-gaps can operate at a lower voltage gap,
+with better effective efficiency than a single gap.
 
-The final electron momentum is found using a multivariate regression tuned on simulation to give better energy resolution.
-A residual energy scale correction is applied to the reconstructed electrons based on time, electron $\eta$, and shower shape variables
-such that the Z mass peak resolution is enhanced.  In addition, a smearing is applied to simulation such that the energy resolution in data and simulation match.
+In the barrel iron return yoke, the RPC chambers form 6 coaxial sensitive cylinders
+that are approximated with concentric dodecagon arrays arranged into 4 stations. See Figure~\ref{fig:cms_rpc_barrel}.
 
-The isolation of the lepton candidates is computed from the flux of particle flow candidates
-found within a cone of $\Delta R = 0.4$ built around the lepton direction~\cite{CMS-PAS-PFT-10-002}.
-The flux of particles is computed independently for the charged hadrons, neutral hadrons and photon candidates.
-The contribution from neutral hadron candidates is corrected for the influence of PU by using the \textit{effective area} approach.  The average energy density per area due to PU ($\rho$) is multiplied with an effective area ($A_{\rm eff}$) and subtracted from the isolation sum. $A_{\rm eff}$ is chosen in such a way that the isolation is independent of the number of pileup interactions.
-The relative electron isolation sum is defined as: 
-
-\begin{equation}
-I^{e}_{\rm rel}=\frac{1}{p_{\rm T}}  \left[ I_{\rm ch}+\max(I_{\rm nh}+I_{\rm g}-A_{\rm eff}\cdot\rho,0) \right]
-\label{eq:eleisol}
-\end{equation}
-
-\subsection{Muons}
-Muon tracks are reconstructed in the CMS detector in both the silicon tracker and the muon spectrometer,
-resulting respectively in tracker tracks and standalone-muon tracks.
-Subsequently, these tracks inform two reconstruction approaches:
-\begin{enumerate}
-  \item {\em Global Muon reconstruction (outside-in):} starting from a standalone
-    muon in the muon system, a matching tracker track is found and a
-    {\em global-muon track} is fitted combining hits from the tracker track
-    and standalone-muon track. At large transverse momenta ($\pt \gsim 200$~GeV/$c$),
-    the global-muon fit can improve the momentum resolution compared
-    to the tracker-only fit. 
-  \item {\em Tracker Muon reconstruction (inside-out):} in this approach, all
-    tracker tracks with $\pt >$ 0.5~GeV/$c$ and $p >$ 2.5~GeV/$c$ are
-    considered as possible muon candidates and are extrapolated to the muon system, taking into
-    account the expected energy loss and the uncertainty due to multiple
-    scattering. If at least one muon segment (i.e. a short track stub made of DT or CSC hits)
-    matches the extrapolated track,
-    the corresponding tracker track qualifies as a {\em tracker-muon track}.
-    The extrapolated track and the segment are considered to be matched if the distance
-    between them in local $x$ is less than 3~cm or if the value of the pull
-    for local $x$ is less than 4.
-    At low momentum (roughly $p < 5$~GeV/$c$) this approach is more
-    efficient than the global muon 
-    reconstruction, since it requires only a single muon segment in
-    the muon system, whereas global muon reconstruction is designed to have
-    high efficiency for muons penetrating through more than one muon station.
-\end{enumerate}
-
-The majority of muons from collisions (with sufficient momentum) are reconstructed either 
-as a Global Muon or a Tracker Muon, or very often as both.
-A third, rare case is excluded from this note, where both approaches fail and only a {\em standalone-muon track} is found~\cite{CMS-PAS-MUO-10-004}.
-
-For the muon isolation, in the same manner as for electrons, a cone of $\Delta R = 0.4$ is built to compute the flux of particle flow candidates,
-the ``delta-beta'' correction is applied to correct for pileup contamination. This correction is achieved by
-subtracting half the sum of the \pt of the charged particles in the cone of interest but with particles not originating from the primary vertex.
-The muon isolation is therefore defined as:
-
-\begin{equation}
-I^{\mu}_{\rm rel}=\frac{1}{p_{\rm T}}  \left[ I_{\rm ch}+\max(I_{\rm nh}+I_{\rm g}-0.5\cdot I_{\rm chPU} ,0) \right]
-\label{eq:muisol}
-\end{equation}
-
-The factor $0.5$ corresponds to a approximate average of neutral to charged particles and has been measured in jets in~\cite{CMS-PAS-PFT-10-002}.
-
-\subsection{Jets}
-\label{ss:jets}
-Jets are reconstructed from all the particle flow candidates using the anti-$k_{\rm t}$ clustering algorithm~\cite{Cacciari:2008gp}
-with a distance parameter of 0.4, as implemented in the FASTJET package~\cite{Cacciari:2011ma,Cacciari:2006gp}.
-The reconstruction may be seeded using all reconstructed particle flow candidates
-after having removed the charged hadron candidates which are not associated to the primary vertex of the event
-(charge hadron subtracted AK4PFchs).
-The energy of the reconstructed jets is corrected in 3 steps: L1FastJet (for pileup/underlying event subtraction),
-L2 (for relative corrections), and L3 (for absolute scale corrections).
-For data, an extra residual correction is included in the absolute scale correction,
-derived by the JetMET working group within the CMS collaboration.
-
-An extra correction is applied for the simulated jets in order to reproduce the measured jet energy resolution.
-For each jet the transverse momentum is smeared using using the transverse momentum of
-the generator level matched jet and the measured Data/MC resolution ratio. The correction transformation is given by: 
-
-\begin{equation}
-p_{\rm T} \rightarrow \max \left[0 , p_{T}^{\rm gen} + c\cdot (p_{\rm T}-p_{\rm T}^{\rm gen}) \right]
-\label{eq:jersmear}
-\end{equation}
-in which $c = \sigma_{\mathrm{data}} / \sigma_{\mathrm{MC}}$ are the data-to-MC resolution scale factors.
-
-We consider for analysis all jets with \pt$>$20~GeV and $|\eta|<5$ passing a set of loose identification requirements given in Table~\ref{tab:loose_jet_id}.
-Jets that are within $\Delta R < 0.4$ of one of the identified leptons are disregarded, this is referred to as "jet cleaning".
-The number of jets is used as a selection variable.
-Here, we define it as how many of these nominal jets have \pt$>$30~GeV and $|\eta|<2.4$.
-\begin{table}[htbp]
-  \begin{center}
- {\small
-  \begin{tabular} {ll}
-\hline
-  Quantity                  & Requirement \\
-  \hline
-    Neutral Hadron Fraction   & < 0.99      \\
-    Neutral EM Fraction       & < 0.99      \\
-    Number of Constituents    & > 1         \\
-    Charged Hadron Fraction   & > 0         \\
-    Charged Multiplicity      & > 0         \\
-    Charged EM Fraction       & < 0.99      \\
-  \hline
-  \end{tabular}
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.8\textwidth]{figures/cms_rpc_barrel.pdf}
+\caption{
+Schematic layout of one of the 5 RPC barrel wheels. Each wheel is divided into 12 sectors.
+From \cite{Chatrchyan:2008aa}.
 }
-  \caption{Loose jet identification criteria for jets having $|\eta|<2.4$. \label{tab:loose_jet_id}}
-  \end{center}
-\end{table}
+\label{fig:cms_rpc_barrel}
+\end{figure}
 
-For the purpose of rejecting events involving top quark production, jets originating from b quark fragmentation (b jets) are identified by ``b tagging.''
-The b tagging technique employed is based on the ``combined secondary vertex'' CSVv2 algorithm~\cite{Chatrchyan:2012jua}.
-%The b tagging technique employed is based on the ``combined secondary vertex'' CSVv2 algorithm~\cite{Chatrchyan:2012jua,CMS-PAS-BTV-15-001}.
-The algorithm is calibrated to provide, on average, 80\% efficiency for tagging jets originating from b quarks,
-and 10\% probability of light-flavor jet misidentification.
+\clearpage
 
-\subsection{Photons}
-Photon candidates are reconstructed from energy deposits in the ECAL using algorithms
-that constrain the clusters to the size and shape expected from a photon~\cite{CMS:EGM-14-001} .
-The identification of the candidates is based on shower-shape and isolation variables, and depends on
-whether the energy deposit was in the ECAL Barrel or Endcap.
-For isolated photons, scalar sums of the \pt of PF candidates within a cone of $\Delta R < 0.3$
-around the photon candidate are required to be below the bounds defined. Only the PF candidates
-that do not overlap with the EM shower of the candidate photon are included in the isolation sums.
-The photon candidates used in this analysis are required to have a minimum \pt~of 15~\GeV and to  
-be within $|\eta| < 2.5$ passing the loose identification criteria given in Table~\ref{tab:PhotonIDLoose}.
-
-\begin{table}[htbp]
-  \begin{center}
- {\small
-  \begin{tabular} {lll}
-\hline
-Quantity                                   &  ECAL Barrel Req. & ECAL Endcap Req.  \\
-\hline
-Full 5x5 $\sigma_{i\eta i\eta}$            & $< 0.0103$ & $< 0.0301$     \\ \hline 
-H/E                                        & $< 0.0597$ & $< 0.0481$     \\ \hline 
-charged hadron isolation                   & $< 1.295$  & $< 1.011$      \\ \hline 
-\multirow{2}{*}{neutral hadron isolation}  & $< 10.92 + (0.0148\,{\GeV}^{-1})p_T$          & $< 5.931 + (0.0163\,{\GeV}^{-1})p_T$        \\  
-                                           & $+ (1.7\times 10^{-5}\,{\GeV}^{-2}){p_T}^2$   & $+(1.4\times 10^{-5}\,{\GeV}^{-2}){p_T}^2$  \\ \hline
-photon isolation                           & $< 3.630 + (0.0047\,{\GeV}^{-1})p_T$          & $< 6.641 + (0.0034\,{\GeV}^{-1})p_T$        \\ \hline 
-Conversion safe electron veto              & Yes & Yes           \\
-\hline
-\end{tabular}
-}
-\caption{Loose photon identification criteria.}
-\label{tab:PhotonIDLoose}
-  \end{center}
-\end{table}
-
-
-\subsection{Particle-flow reconstruction}
-The particle-flow (PF) event reconstruction algorithm~\cite{CMS-PRF-14-001} is used.
-It is designed to leverage information from all CMS detector components to reconstruct
-and identify individual particles, namely: electrons, muons, photons, and charged and neutral hadrons.
-The reconstructed vertex with the largest value of summed physics-object $\pt^2$ is taken to be the primary proton-proton interaction vertex.
-The physics objects are the track-jets, clustered using the jet finding algorithm~\cite{Cacciari:2008gp,Cacciari:2011ma} with the 
-tracks assigned to the vertex as inputs, and the associated missing transverse momentum, taken as the negative vector sum of the $\pt$ of those jets.
-
-\subsection{Missing transverse energy}
-The missing transverse momentum vector, $\ptvecmiss$, is defined as the projection
-of the negative vector sum of the momenta of all reconstructed PF candidates in an event
-onto the plane perpendicular to the beams.
-Its magnitude is referred to as $\met$.  Several event-level filters are applied
-to discard events with anomalous $\met$ arising from specific well-understood issues 
-with the detector components or event reconstruction~\cite{CMS-PAS-JME-16-004}.
-Jet energy corrections are propagated to the missing transverse momentum by
-adjusting the momentum vector of the PF candidate constituents of each reconstructed jet.
 

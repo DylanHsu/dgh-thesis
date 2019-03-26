@@ -1,4 +1,35 @@
 \chapter{Measurements of differential Z boson production cross sections}
+
+The rapidity of the $\cPZ$ boson in $\Pp\Pp$ collisions is strongly correlated 
+with the Bjorken-x of the initial partons and provides constraints on the PDFs 
+of the proton. The precision of the $\cPZ$ boson $\pt$ measurements is 
+limited by by the uncertainties in the measurements of the transverse momenta of 
+charged leptons from $\cPZ$ boson decays. The observable $\phi^*$~\cite{Banfi:2010cf,Banfi:2012du,Marzani:2013nza}, defined by the expression
+\begin{align}
+\label{eq0}
+\phi^*  &= \tan \left( \frac{\pi -\Delta\phi}{2} \right) \, \sin(\theta^*_\eta) \\
+\nonumber
+\cos(\theta^*_\eta)&=\tanh(\frac{\eta^- - \eta^+}{2}),
+\end{align}
+where $\Delta\phi$ is the opening angle between the leptons in the plane 
+transverse to the beam, and $\eta^\pm$ refers to the pseudorapidity of the 
+two leptons, is proportional to the ratio of $\cPZ$ boson $\pt$ to dilepton 
+invariant mass. 
+The variable $\theta^*_\eta$ indicates the scattering angle of the dileptons 
+with respect to the beam in the boosted frame where the leptons are aligned. 
+The observable $\phi^*$ follows the approximate relationship 
+$\phi^* \sim \pt^{\PZ} / m_{\ell\ell}$ that the range $\phi^* \le 1$ 
+corresponds to $\pt^{\PZ}$ up to about 100\GeV for a lepton-pair mass close 
+to the nominal \cPZ{} boson mass. The measurement resolution of $\phi^*$ is 
+better than that of $\pt$ since it depends only on the angular variables of 
+the leptons and benefits from the  excellent spatial resolution of the CMS 
+inner tracking system. The $\cPZ$ boson $\phi^*$ distribution has been 
+previously measured by the D0, ATLAS, CMS, and LHCb 
+collaborations~\cite{TevatronWZ:D0PhysRevLett2011_106,Aad:2015auj,Sirunyan:2017igm,Aaij:2016mgv}.     
+Next I will show inclusive fiducial and differential production cross sections of 
+the $\cPZ$ boson as functions of $\pt$, $\phi^*$, and rapidity. 
+%$\cPZ$ bosons are identified via their decays to pairs of electrons and muons.
+
 \section{Event selection}
 The leptonic final state in the $\dyll$ channel consists of two opposite 
 charged same-flavor high $\pt$ isolated leptons, muons or electrons, 
@@ -78,13 +109,13 @@ $\Delta R = \sqrt{ \Delta\phi^{2} + \Delta\eta^{2} }$.
 \section{Background estimation}
 After the full selection, the amount of background processes in the data sample is 
 rather small thanks to the clean signature and the relatively tight selection. 
-As mentioned in Section ~\ref{sec:simbkg}, the background processes can be split in 
-two components: the resonant background and the nonresonant background. 
+The background processes can be split in two components:
+the resonant background and the nonresonant background. 
 The resonant background comes from events with a real $\Z$ boson in the final state, 
 e.g. $\W\Z$ diboson production; while the nonresonant background comes from events 
-which do not have a $\Z$ boson in the final state. 
+which do not have a $\Z$ boson in the final state.
 The first set of backgrounds in estimated using a simulated events, as described in 
-Section ~\ref{sec:simbkg}. 
+Section ~\ref{sec:mcsamples}. 
 
 Nonresonant backgrounds (NRB) consist mainly 
  of leptonic $\PW$ decays in $\ttbar$, $\cPqt\PW$ decays and $\PW\PW$ events. 
@@ -264,7 +295,7 @@ symmetrizing the uncertainties.
 The computation of the statistical uncertainty estimation after unfolding is 
 complicated by the bias introduced by the unfolding itself. A ``proper'' way 
 of doing this step is not fully established from the statistical point of view, 
-making this an active field of research \cite{Lyons:unfolding,kuusela}.
+making this an active field of research \cite{Prosper:2011zz,kuusela}.
 Different toys and resampling techniques are available in order to perform such 
 operation, that usually provide a better coverage with respect to the analytical 
 error propagation. The toy generation is performed by \RooUnfold{} smearing the 
@@ -372,3 +403,230 @@ completely cancel out. Those uncertainties are summarized in Figure~\ref{fig:zpt
 	for the differential cross section measurements with respect to the inclusive cross section.}
 	\label{fig:zpt_syst_xratio}
 \end{figure}
+
+\section{Results}
+%\subsection{Inclusive fiducial cross section measurements}
+The inclusive fiducial cross section is measured in the muon-pair and 
+electron-pair final states. The combined cross section is obtained by treating 
+the systematic uncertainties, except the uncertainties due to the integrated 
+luminosity and background estimation, as uncorrelated between the two final states. The luminosity and background estimation uncertainties are treated as fully correlated in the combined measurement. The uncertainties are dominated by the uncertainty in the integrated luminosity and the lepton  efficiency. A summary of the systematic uncertainties is shown in Table~\ref{tab:syst_xs}. The measured cross sections are shown in 
+Table~\ref{tab:totCross}. 
+
+\begin{table}[hbtp]
+  \begin{center}
+\caption{Summary of the systematic uncertainties for the 
+inclusive fiducial cross section measurements.\label{tab:syst_xs}}
+\begin{tabular}{ccc}
+\hline
+Source      & $\PZ \to \mu\mu$ (\%) & $\PZ \to \Pe\Pe$ (\%) \\
+\hline
+Luminosity                         & 2.5     & 2.5     \\
+\hline
+Muon reconstruction efficiency     & 0.4     &  -      \\
+Muon selection efficiency          & 0.7     &  -      \\
+Muon momentum scale                & 0.1     &  -      \\
+Electron reconstruction efficiency &  -      & 0.9     \\
+Electron selection efficiency      &  -      & 0.9     \\
+Electron momentum scale            &  -      & 0.2     \\
+Background estimation              & $<$ 0.1 & $<$ 0.1 \\
+\hline
+Total (excluding luminosity)       & 0.8     & 1.3     \\
+\hline
+  \end{tabular}
+  \end{center}
+\end{table}
+
+
+\begin{table}[htb]
+\topcaption{
+The measured inclusive fiducial cross sections in the muon-pair and electron-pair final states. The combined measurement is also shown.
+}
+\begin{center}
+\begin{tabular}{c|c}
+\hline
+Cross section                             & $\sigma \, \mathcal{B}$ [pb] \\
+\hline
+$\sigma_{\PZ \to \mu\mu}$        & $694\pm6\syst\pm17\lum$ \\
+$\sigma_{\PZ \to \Pe\Pe}$  & $711\pm9\syst\pm18\lum$\\
+$\sigma_{\PZ \to \ell\ell}$       & $699\pm5\syst\pm17\lum$ \\
+\hline
+\end{tabular}
+\label{tab:totCross}
+\end{center}
+\end{table}
+
+
+%The measured values are the following
+%with respect to the
+%theoretical prediction given by \textsc{MadGraph5\_aMC@NLO} are the following
+%\begin{itemize}
+%  \item[$\sigma_{\PZ \to \mu\mu} =$]   682 $\pm$ 7 (syst.) $\pm$ 17 (lumi.) pb,
+%  \item[$\sigma_{\PZ \to \Pe\Pe} =$]   696 $\pm$ 10 (syst.) $\pm$ 17 (lumi.) pb%,
+%  \item[$\sigma_{\PZ \to \ell\ell} =$] 686 $\pm$ 5 (syst.) $\pm$ 17 (lumi.) pb.
+%\end{itemize}
+
+The measured cross section values agree with the theoretical predictions. The 
+predicted values are $\sigma_{\PZ \to \ell\ell} = 682 \pm 55$ pb 
+with \textsc{MadGraph5\_aMC@NLO} using the NNPDF 3.0~\cite{nnpdf} NLO PDF set, 
+and $\sigma_{\PZ \to \ell\ell} = 719 \pm 8$ pb with fixed order 
+FEWZ~\cite{FEWZ, Gavin:2010az, Gavin:2012sy, Li:2012wna} at NNLO accuracy in 
+QCD using the NNPDF 3.1~\cite{Ball:2017nwa} NNLO PDF set. The theoretical 
+uncertainties for \textsc{MadGraph5\_aMC@NLO} and FEWZ include statistical, 
+PDF, and scale uncertainties. The scale uncertainties are estimated by varying 
+the renormalization and factorization scales independently up and down by a 
+factor of two from their nominal values (removing combinations where both 
+variations differ by a factor of four) and taking the largest variations as 
+the uncertainty.     
+
+%\subsection{Differential cross section measurements}
+The measured differential cross sections corrected for detector effects are 
+compared to various theoretical predictions. The measured absolute 
+cross sections in bins of $|\rapidity^{\PZ}|$ are shown in 
+Figure~\ref{fig:unf_rap}. The measurement is compared to predictions using 
+parton shower modeling with both \textsc{MadGraph5\_aMC@NLO} and \textsc{POWHEG} at 
+NLO accuracy in QCD using the NNPDF 3.0 PDF set. A comparison with fixed order 
+prediction at NNLO accuracy with FEWZ using the NNPDF 3.1 NNLO PDF set is also 
+shown. The \textsc{MadGraph5\_aMC@NLO} and \textsc{POWHEG} predictions are 
+consistent with the data within the theoretical uncertainties. The FEWZ 
+prediction with the NNPDF 3.1 PDF set is within 5\% of the measurement over 
+the entire $|\rapidity^{\PZ}|$ range.
+
+\begin{figure}
+	\centering
+        \includegraphics[width=0.45\textwidth]{figures/zpt/zmm_rap.pdf}
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zmm_rap_ratio.pdf}
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zee_rap.pdf}
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zee_rap_ratio.pdf}
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zll_rap.pdf}     
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zll_rap_ratio.pdf}
+	\caption{The measured absolute cross sections (left) in bins of $|\rapidity^{\PZ}|$ for the muon-pair (top) and electron-pair (middle) final states, and for the combination (bottom).  The ratios of the predictions to the data are also shown (right). The shaded band around the data points (black) correspond to the total experimental uncertainty. The measurement is compared to predictions with \textsc{MadGraph5\_aMC@NLO} (square red markers), \textsc{POWHEG} (green triangles), and FEWZ (blue circles). The error bands around the predictions correspond to the statistical, PDF, and scale uncertainties.}
+	\label{fig:unf_rap}
+\end{figure}
+
+Figure~\ref{fig:unf_pt_shower} shows the measured absolute cross sections in 
+bins of $ \pt^{\PZ}$. The measurement is compared to predictions using parton shower modeling with \textsc{MadGraph5\_aMC@NLO} and \textsc{POWHEG}. A comparison 
+with \textsc{POWHEG} using the \textsc{MiNLO} procedure and using the 
+NNPDF 3.1 NLO PDF set is also shown. The predictions are consistent with the 
+data within the theoretical uncertainties. The \textsc{POWHEG} predictions at 
+high-$\pt$ (above $100~\GeV$) disagree with the data. The higher order 
+accuracy of the \textsc{MadGraph5\_aMC@NLO} and \textsc{POWHEG-MiNLO} 
+predictions at high-$\pt$ lead to an improved agreement with the data.    
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zmm_shower.pdf}
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zmm_shower_ratio.pdf}
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zee_shower.pdf}
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zee_shower_ratio.pdf}
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zll_shower.pdf}
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zll_shower_ratio.pdf}
+	\caption{The measured absolute cross sections (left) in bins of $\pt^{\PZ}$ for the muon-pair (top) and electron-pair (bottom) final states, and for the combination (bottom). The ratios of the predictions to the data are also shown (right). The shaded band around the data points (black) correspond to the total experimental uncertainty. The measurement is compared to predictions with \textsc{MadGraph5\_aMC@NLO} (square red markers), \textsc{POWHEG} (green triangles), and \textsc{POWHEG-MiNLO} (blue circles). The error bands around the predictions correspond to the statistical, PDF, and scale uncertainties.}
+	\label{fig:unf_pt_shower}
+\end{figure}
+
+Figure~\ref{fig:unf_pt_fixed} (left) shows comparisons to resummed calculations 
+with \textsc{RESBOS}~\cite{Ladinsky:1993zn, Balazs:1997xd, Landry:2002ix} 
+and GENEVA~\cite{Alioli:2015toa}. A comparison to 
+the \textsc{MadGraph5\_aMC@NLO} prediction is also included as a reference. 
+The \textsc{RESBOS} predictions are obtained using the $CP$ version at 
+NNLL accuracy with CT14 NNLO PDF set and are consistent with the data within 
+the theoretical uncertainties at low-$\pt$ but disagree with the measurements 
+at high-$\pt$. The GENEVA predictions include resummation to NNLL accuracy 
+where the resulting parton-level events are further combined with parton 
+showering and hadronization provided by \textsc{PYTHIA8}. The GENEVA 
+predictions are generally consistent with the data within the theoretical 
+uncertainties but disagree with the data at low $\pt$ (below $30~\GeV$). 
+The CUETP8M1 tune is used for the underlying-event modeling for the shown 
+GENEVA predictions. A dedicated tune for the underlying-event modeling will 
+lead to improved agreement with the data.  
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.49\textwidth]{figures/zpt/zll_ressum_ratio.pdf}
+	\includegraphics[width=0.49\textwidth]{figures/zpt/zll_fixed_ratio.pdf}
+	\caption{The ratios of the predictions to the data in bins of $\pt^{\PZ}$ for the combination of the muon-pair and electron-pair final states. The shaded band around the data points (black) correspond to the total experimental uncertainty. The left plot shows comparisons to predictions with \textsc{MadGraph5\_aMC@NLO} (square red markers),  Resbos (green triangles), and GENEVA (blue circles). The right plot shows the  $\pt^{\PZ}$ distribution for $\pt>30~\GeV$ compared to predictions with \textsc{MadGraph5\_aMC@NLO} (square red markers),  $\PZ$ + 1 jet at NNLO (green triangles), and FEWZ (blue circles). The error bands around the predictions correspond to the statistical, PDF, and scale uncertainties.}
+	\label{fig:unf_pt_fixed}
+\end{figure}  
+
+The $\pt^{\PZ}$ distribution for $\pt>30~\GeV$ is compared to fixed order 
+predictions as shown in Figure~\ref{fig:unf_pt_fixed} (right). A comparison to 
+the \textsc{MadGraph5\_aMC@NLO} prediction is included as a reference. The 
+data is compared to the FEWZ predictions at NNLO in QCD and to the complete 
+NNLO predictions of vector boson production in association with a 
+jet~\cite{Boughezal:2015ded,Boughezal:2015dva}. The central renormalization 
+and factorization scale values were chosen to be 
+$\mu_{R/F}=\sqrt(P_{TZ}^2+M_{ll}^{2})$ for the FEWZ and $\PZ$+1 jet at NNLO 
+predictions. The scale uncertainties are estimated by varying the 
+renormalization and factorization scales up and down together within a factor 
+of two. The CT14~\cite{Dulat:2015mca} NNLO PDF set is used for the $\PZ$+1 jet 
+at NNLO predictions. The predictions are consistent with the data within the 
+theoretical uncertainties. As can be seen the $\PZ$+1 jet at NNLO calculations 
+significantly reduce the factorization and renormalization scale uncertainties. 
+EW corrections are important at high-$\pt$ with correction factors of up to 
+$~0.9$ at $\pt=500~\GeV$ and $~0.8$ at 
+$\pt=1000~\GeV$~\cite{Dittmaier:2014qza,Lindert:2017olm}. 
+The EW corrections are not included in the predictions shown in 
+Figure~\ref{fig:unf_pt_fixed}.
+
+%\begin{figure}
+%	\centering
+%	\includegraphics[width=0.49\textwidth]{figures/zpt/zmm_ressum_ratio.pdf}
+%	\includegraphics[width=0.49\textwidth]{figures/zpt/zee_ressum_ratio.pdf}
+%	\caption{The ratios of the predictions to the data in bins of $\pt^{\PZ}$ for the muon-pair (left) and electron-pair (right) final states. The shaded band around the data points (black) correspond to the total experimental uncertainty. The measurement is compared to predictions with \textsc{MadGraph5\_aMC@NLO} (square red markers),  Resbos (green triangles), and GENEVA (blue circles). The error bands around the predictions correspond to the statistical, PDF, and scale uncertainties.}
+%	\label{fig:unf_pt_ressum}
+%\end{figure}
+
+Figure~\ref{fig:unf_phi} shows the measured absolute cross sections in bins 
+of $\phi^*$. The measurements is compared to predictions from \textsc{MadGraph5\_aMC@NLO}, \textsc{POWHEG}, and \textsc{POWHEG-MiNLO}. The predictions are consistent with the data within the theoretical uncertainties and describe data well at low $\pt$. 
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zmm_phi.pdf}
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zmm_phi_ratio.pdf}
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zee_phi.pdf}
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zee_phi_ratio.pdf}
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zll_phi.pdf}
+	\includegraphics[width=0.45\textwidth]{figures/zpt/zll_phi_ratio.pdf}
+	\caption{The measured absolute cross sections (left) in bins of $\phi^*$ for the muon-pair (top) and electron-pair (bottom) final states, and for the combination (bottom). The ratios of the predictions to the data are also shown (right). The shaded band around the data points (black) correspond to the total experimental uncertainty. The measurement is compared to predictions with \textsc{MadGraph5\_aMC@NLO} (square red markers), \textsc{POWHEG} (green triangles), and \textsc{POWHEG-MiNLO} (blue circles). The error bands around the predictions correspond to the statistical, PDF, and scale uncertainties.}
+	\label{fig:unf_phi}
+\end{figure}
+
+Summaries of the absolute double-differential cross section measurements in 
+$\pt^{\PZ}$ and $|\rapidity^{\PZ}|$ are shown in Figure~\ref{fig:zll_double}. The normalized cross section measurements in bins of  $\pt^{\PZ}$ and  $\phi^*$ are shown in Figure~\ref{fig:cross_norm}. The measured normalized cross section  uncertainties are smaller than 0.5\% for $\phi^*<0.5$ and for $\pt^{\PZ}<50~\GeV$. Summaries of the normalized double-differential cross section measurements in $\pt^{\PZ}$ and $|\rapidity^{\PZ}|$ are shown in Figure~\ref{fig:zll_double_norm}. The measurements are compared to predictions using parton shower modeling with \textsc{MadGraph5\_aMC@NLO}, \textsc{POWHEG}, and \textsc{POWHEG-MiNLO}. The predictions are consistent with the data within the theoretical uncertainties.     
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.49\textwidth]{figures/zpt/zll_double_ratio_rap0.pdf}
+        \includegraphics[width=0.49\textwidth]{figures/zpt/zll_double_ratio_rap1.pdf}
+        \includegraphics[width=0.49\textwidth]{figures/zpt/zll_double_ratio_rap2.pdf}
+        \includegraphics[width=0.49\textwidth]{figures/zpt/zll_double_ratio_rap3.pdf}
+        \includegraphics[width=0.49\textwidth]{figures/zpt/zll_double_ratio_rap4.pdf}
+	\caption{The ratios of the predictions to the data for the combined measurements of the absolute cross sections in bins of $\pt^{\PZ}$ for the 
+	$0.0 < |\rapidity^{\PZ}| < 0.4$ bin (top left), $0.4 < |\rapidity^{\PZ}| < 0.8$ bin (top right),
+	$0.8 < |\rapidity^{\PZ}| < 1.2$ bin (middle left), $1.2 < |\rapidity^{\PZ}| < 1.6$ bin (middle right), and $1.6 < |\rapidity^{\PZ}| < 2.4$ bin (bottom). The measurement is compared to predictions with \textsc{MadGraph5\_aMC@NLO} (square red markers),  \textsc{POWHEG} (green triangles), and \textsc{POWHEG-MiNLO} (blue circles).}
+	\label{fig:zll_double}
+\end{figure}
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.49\textwidth]{figures/zpt/zll_ratio_norm.pdf}
+	\includegraphics[width=0.49\textwidth]{figures/zpt/zll_phi_ratio_norm.pdf}
+	\caption{The ratios of the predictions to the data in bins of $\pt^{\PZ}$ (left) and  $\phi^*$ (right) for the combined measurements of the normalized cross sections. The shaded band around the data points (black) correspond to the total experimental uncertainty. The measurement is compared to predictions with \textsc{MadGraph5\_aMC@NLO} (square red markers),  \textsc{POWHEG} (green triangles), and \textsc{POWHEG-MiNLO} (blue circles). The error bands around the predictions correspond to the statistical, PDF, and scale uncertainties.}
+	\label{fig:cross_norm}
+\end{figure}
+
+
+\begin{figure}
+	\centering
+	\includegraphics[width=0.49\textwidth]{figures/zpt/zll_double_ratio_normrap0.pdf}
+        \includegraphics[width=0.49\textwidth]{figures/zpt/zll_double_ratio_normrap1.pdf}
+        \includegraphics[width=0.49\textwidth]{figures/zpt/zll_double_ratio_normrap2.pdf}
+        \includegraphics[width=0.49\textwidth]{figures/zpt/zll_double_ratio_normrap3.pdf}
+        \includegraphics[width=0.49\textwidth]{figures/zpt/zll_double_ratio_normrap4.pdf}
+	\caption{The ratios of the predictions to the data for the combined measurements of the normalized cross sections in bins of $\pt^{\PZ}$ for the 
+	$0.0 < |\rapidity^{\PZ}| < 0.4$ bin (top left), $0.4 < |\rapidity^{\PZ}| < 0.8$ bin (top right),
+	$0.8 < |\rapidity^{\PZ}| < 1.2$ bin (middle left), $1.2 < |\rapidity^{\PZ}| < 1.6$ bin (middle right), and $1.6 < |\rapidity^{\PZ}| < 2.4$ bin (bottom). The measurement is compared to predictions with \textsc{MadGraph5\_aMC@NLO} (square red markers),  \textsc{POWHEG} (green triangles), and \textsc{POWHEG-MiNLO} (blue circles).}
+	\label{fig:zll_double_norm}
+\end{figure}
+
+

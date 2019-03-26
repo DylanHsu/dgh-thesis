@@ -1,5 +1,5 @@
 #latexmk -pdf main -f &> the.log
-latexmk -pdf main -f
+latexmk -pdf main -f 2>&1 | tee the.log
 #latexmk -pdflatex=lualatex -pdf main -f
 #latexmk -pdf -pdflatex="yes '' | pdflatex -interaction=nonstopmode" -use-make -f main.tex
 latexmk -c &> /dev/null

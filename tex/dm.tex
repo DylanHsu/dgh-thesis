@@ -1,4 +1,4 @@
-\chapter{Search for dark matter in events with high missing transverse energy}
+\chapter{Search for dark matter produced in association with a boosted Z boson}
 \label{chap:zlldm}
 \section{Event selection}
 The final state in this search consists of limited jet activity, 
@@ -589,6 +589,7 @@ Luminosity                                     & \multicolumn{6}{c}{2.6}        
 \label{fig:impacts}
 \end{figure}
 
+\clearpage
 \section{Maximum likelihood fit}
 \label{sec:likelihood}
 The likelihood $\mathcal{L}$ is constructed as follows:
@@ -658,7 +659,8 @@ We use the following set of twelve variables to train a Boosted Decision Tree (B
 \end{itemize}
 
 %We define the helicity angle $\theta^{*}_{\ell1}$ as the angle between (a) the trajectory of the lepton in the Z mother rest frame, and (b) the trajectory of the Z mother in the rest frame of the grandmother system Z+H. Since the longitudinal missing energy is not known, we can only approximately know the grandmother rest frame using $\met$.
-We define the Collins-Soper angle $\theta^{CS}_{\ell1}$ as the angle between the leading lepton trajectory and the Z mother trajectory, in the rest frame of the Z mother. This allows some access to the spin information of the invisible particle and adds a small amount of discrimination power between the diboson processes and the invisible Higgs(125) hypothesis.
+We define the Collins-Soper angle $\theta^{CS}_{\ell1}$ as the angle between the leading lepton trajectory and the Z mother trajectory, in the rest frame of the Z mother \cite{Collins:1984kg}.
+This allows some access to the spin information of the invisible particle and adds a small amount of discrimination power between the diboson processes and the invisible Higgs(125) hypothesis.
 
 The best performance for this analysis was found in a multiclass BDT with the following parameters: 400 trees, gradient boosting with learning rate 0.5, bagging with fraction 0.5, and tree depth of 4.
 The multiple classes are: invisible Higgs(125) (Signal); ZZ; WZ; Drell-Yan (Z+jets); and flavor-symmetric or non-resonant backgrounds (Non-prompt).

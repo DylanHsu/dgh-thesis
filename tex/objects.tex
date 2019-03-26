@@ -1,0 +1,337 @@
+\chapter{Physics objects}
+\label{chap:objects}
+\section{Electrons}
+\subsection{Electron reconstruction}
+Electrons in the CMS detector are reconstructed through association of a track from the silicon detector with a cluster of energy in the ECAL.
+Electron tracks are formed from initial seeds likely to correspond to initial electron trajectories, which are then used to build tracks by collecting hits in the silicon tracker using the combinatorial Kalman filter procedure.
+Next, a track fitting procedure is undertaken using a Gaussian Sum Filter (GSF), in which the energy loss in each tracker layer is approximated by a mixture of Gaussian distributions.
+Meanwhile, the electron energy has been collected in several crystals of the ECAL. 
+These depositions undergo two steps of clustering.
+The first step finds clusters from crystal arrays of $5 \times 1$ in $\eta \times \phi$ for the ECAL barrel, and $5 \times 5$ crystals for the ECAL endcaps.
+The second step forms a supercluster (SC) comprising the energy of constituent clusters.
+The supercluster position and energy, along with the GSF track, reconstruct the electron in the detector.\cite{ElectronReco2015}
+The reconstruction procedure is also informed by the Particle-Flow algorithm, described later in Section \ref{sec:pf}.
+
+The final electron momentum is found using a multivariate regression tuned on simulation to give better energy resolution.
+A residual energy scale correction is applied to the reconstructed electrons based on time, electron $\eta$, and shower shape variables
+such that the Z mass peak resolution is enhanced.  In addition, a smearing is applied to simulation such that the energy resolution in data and simulation match.
+
+
+\subsection{Electron identification variables}
+
+The shower shape of the hits in the ECAL provides discriminating variables for identifying electrons.
+One such variable used for Electron ID is $\sigma_{i\eta i\eta}$.
+To understand $\sigma_{i\eta i\eta}$, we first discuss its predecessor, $\sigma_{\eta\eta}$,
+which is a weighted second moment of the energies deposited in the 5x5 crystals
+centered on the ECAL supercluster seed crystal. Here, $\eta_i$ is the pseudorapidity
+coordinate of the $i^{\mathrm{th}}$ ECAL crystal. The formula for $\sigma_{\eta\eta}$ is:
+\begin{equation}
+  \sigma_{\eta\eta} = \sqrt{\frac{\sum_{i}^{\mathrm{5x5}}w_{i}(\eta_{i}-\bar{\eta}_{\mathrm{5x5}})^{2}}{\sum_{i}^{\mathrm{5x5}}w_{i}}}
+  \quad\mathrm{with}\quad w_{i} = 4.2 + \mathrm{ln} \frac{E_i}{E_{\mathrm{5x5}}}
+\end{equation}
+
+This variable does not perform well near cracks in the ECAL, so with a simple correction
+to count the $i^{\mathrm{th}}$ crystal ordering in the $\eta$ direction, $N(i)$, we derive the variable $\sigma_{i\eta i\eta}$ (using the same weights $w_{i}$:
+
+\begin{equation}
+  \sigma_{i\eta i\eta} = \sqrt{\frac{\sum_{i}^{\mathrm{5x5}}w_{i}(0.0175 N(i) + \eta_{\mathrm{Seed}} - \bar{\eta}_{\mathrm{5x5}})^{2}}{\sum_{i}^{\mathrm{5x5}}w_{i}}}
+\end{equation}
+
+Other ECAL-related variables are:
+$H/E_{\rm SC}$, the ratio of HCAL to ECAL energy deposition associated
+with a supercluster seed; and $|1/E_{\rm SC} - 1/p|$,
+which is technically computed as $|(1 - E_{SC}/p_{\mathrm{Track}})/E_{\mathrm{ECAL}}|$.
+
+Another class of useful variables are related to matching attributes of the ECAL supercluster
+and the tracker track. $\Delta\eta(SC,trk)$ is the difference in $\eta$ between the 
+supercluster and the track at the track's point-of-closest-approach to the supercluster, 
+extrapolated from the innermost track state. $\Delta\phi(SC,trk)$ is the analagous quantity
+in $\phi$-coordinate.
+
+The reconstructed electron candidate's impact parameter is important for suppressing pileup.
+Thus, we apply cuts on the transverse impact parameter  $d_0(\mathrm{vtx})$ and
+the longitudinal impact parameter $d_z(\mathrm{vtx})$ with respect to the best primary vertex.
+
+The term "missing hits" refers to how many hits we would expect to see in the
+inner tracker due to this particle which were missed. A conversion veto is applied which
+also accounts for missing hits, along with the minimum distance between conversion tracks
+and the difference in $\mathrm{cot} \theta$ between the partner tracks.
+
+Lastly, we apply a combined isolation requirement from the Particle Flow algorithm,
+$I_{rel}^{e}$, relative to the electron transverse momentum and corrected for
+effective area. This bounds the amount of hadronic activity and other EM activity
+arriving near the electron.
+The isolation of the lepton candidates is computed from the flux of particle flow candidates
+found within a cone of $\Delta R = 0.4$ built around the lepton direction~\cite{CMS-PAS-PFT-10-002}.
+The flux of particles is computed independently for the charged hadrons, neutral hadrons and photon candidates.
+The contribution from neutral hadron candidates is corrected for the influence of pileup by using the \textit{effective area} approach.  
+The average energy density per area due to pileup ($\rho$) is multiplied with an effective area ($A_{\rm eff}$) and subtracted from the isolation sum. 
+$A_{\rm eff}$ is chosen in such a way that the isolation is independent of the number of pileup interactions.
+The relative electron isolation sum is defined as: 
+
+\begin{equation}
+I^{e}_{\rm rel}=\frac{1}{p_{\rm T}}  \left[ I_{\rm ch}+\max(I_{\rm nh}+I_{\rm g}-A_{\rm eff}\cdot\rho,0) \right]
+\label{eq:eleisol}
+\end{equation}
+
+\subsection{Electron identification working points}
+For the purpose of vetoing events with more than two leptons, the electrons are required to fulfill the so-called {\em ``Veto''} working point. It consists of a series of requirements
+on the supercluster shape, impact parameter,
+and geometric distance between the electron track and the supercluster.
+The ratio of energy deposits in HCAL and ECAL is also used in the definition of the {\em ``Veto''} ID.
+In this case, no veto for reconstructed photon conversions in the vicinity of the electron is applied.
+
+Only electrons ones passing the {\em ``Medium''} ID are considered for the $Z$ candidate. The {\em ``Medium''} ID
+imposes tighter cuts than the {\em ``Veto''} ID, suppresses potential electrons from conversions, and places a requirement on $|1/E-1/p|$.
+Electrons used to build the $Z$ candidate must have a \pt$>$20~GeV and be reconstructed in the tracker acceptance, i.e. $\abs{\eta}< 2.5$.
+In addition to the ID requirements, there must be no tracker or global muon with at least $10$ tracker
+hits reconstructed inside a cone of $\Delta R = 0.1$ built around the momentum of the electron candidate.
+
+Lastly, the {\em ``Tight''} ID is used to identify Tags for the tag-and-probe method used
+to determine the electron identification efficiencies, seen in Chapter~\ref{chap:efficiency}.
+
+Table~\ref{tab:electronid} summarizes the identification criteria used for electrons.
+
+\begin{table}[hbtp]
+\begin{center} {\scriptsize
+\begin{tabular}{l|lll|lll} \hline\hline
+\multirow{2}{*}{Requirement} & \multicolumn{3}{c}{Barrel}                                                   & \multicolumn{3}{c}{Endcap} \\
+                             & \multicolumn{3}{c}{$\abs{\eta}<1.479$}                                       & \multicolumn{3}{c}{$1.479<\abs{\eta}<2.5$} \\\hline
+                             & {\em ``Veto''}                         & {\em ``Medium''} & {\em ``Tight''}  & {\em ``Veto''}   & {\em ``Medium''} & {\em ``Tight''}   \\\hline
+$\sigma_{i\eta i\eta}$       & $<0.0115$                              & $< 0.00998 $     & $<0.00998 $      & $<0.037$         & $<0.0298$        & $<0.0292$         \\
+$\Delta\eta(SC,trk)$         & $<0.00749$                             & $<0.00311$       & $<0.00308$       & $<0.00895$       & $<0.00609$       & $<0.00605$        \\
+$\Delta\phi(SC,trk)$         & $<0.228 $                              & $<0.103 $        & $<0.0816$        & $<0.213$         & $<0.045$         & $<0.0394$         \\
+$H/E_{\rm SC}$               & $<0.356$                               & $<0.253 $        & $<0.0414$        & $<0.211$         & $<0.0878$        & $<0.0641$         \\
+$I_{rel}^{e}$                & $<0.175$                               & $<0.0695 $       & $<0.0588 $       & $<0.159$         & $<0.0821 $       & $<0.0571$         \\
+$|1/E_{\rm SC} - 1/p|$       & $<0.299$                               & $<0.134$         & $<0.129$         & $<0.15$          & $<0.14$          & $<0.13$           \\
+$d_0(vtx)$ (cm)              & $<0.05$                                & $<0.05$          & $<0.05$          & $<0.1$           & $<0.1$           & $<0.1$            \\
+$d_z(vtx)$ (cm)              & $<0.1$                                 & $<0.1$           & $<0.1$           & $<0.2$           & $<0.2$           & $<0.2$            \\
+Missing hits                 & $\leq$3                                & $\leq$1          & $\leq$1          & $\leq$3          & $\leq$1          & $\leq$1           \\
+pass conversion veto         & no                                     & yes              & yes              & no               & yes              & yes               \\
+\hline\hline
+\end{tabular}
+}
+\end{center}
+\caption{Electron ID requirements.}
+\label{tab:electronid}
+\end{table}
+
+\section{Muons}
+\subsection{Muon reconstruction}
+Muon tracks are reconstructed in the CMS detector in both the silicon tracker and the muon spectrometer,
+resulting respectively in tracker tracks and standalone-muon tracks.
+Subsequently, these tracks inform two reconstruction approaches:
+\begin{enumerate}
+  \item {\em Global Muon reconstruction (outside-in):} starting from a standalone
+    muon in the muon system, a matching tracker track is found and a
+    {\em global-muon track} is fitted combining hits from the tracker track
+    and standalone-muon track. At large transverse momenta ($\pt \gsim 200$~GeV/$c$),
+    the global-muon fit can improve the momentum resolution compared
+    to the tracker-only fit. 
+  \item {\em Tracker Muon reconstruction (inside-out):} in this approach, all
+    tracker tracks with $\pt >$ 0.5~GeV/$c$ and $p >$ 2.5~GeV/$c$ are
+    considered as possible muon candidates and are extrapolated to the muon system, taking into
+    account the expected energy loss and the uncertainty due to multiple
+    scattering. If at least one muon segment (i.e. a short track stub made of DT or CSC hits)
+    matches the extrapolated track,
+    the corresponding tracker track qualifies as a {\em tracker-muon track}.
+    The extrapolated track and the segment are considered to be matched if the distance
+    between them in local $x$ is less than 3~cm or if the value of the pull
+    for local $x$ is less than 4.
+    At low momentum (roughly $p < 5$~GeV/$c$) this approach is more
+    efficient than the global muon 
+    reconstruction, since it requires only a single muon segment in
+    the muon system, whereas global muon reconstruction is designed to have
+    high efficiency for muons penetrating through more than one muon station.
+\end{enumerate}
+
+The majority of muons from collisions (with sufficient momentum) are reconstructed either 
+as a Global Muon or a Tracker Muon, or very often as both.
+A third, rare case is excluded from this note, where both approaches fail and only a {\em standalone-muon track} is found~\cite{CMS-PAS-MUO-10-004}.
+
+\subsection{Muon identification variables}
+
+There are several sources of muons in CMS:
+\begin{enumerate}
+\item Primary Interaction
+\item Decay-in-Flight (Kaon, Pion)
+\item Cosmic Muon
+\item Hadronic Punch-Through
+\end{enumerate}
+The chance that a kaon or pion is reconstructed as a muon increases as the transverse momentum, ranging from
+less than one percent, to ten percent. Cosmic muons come from the atmosphere, not the interaction point,
+and are in general easy to deal with using vertexing. Hadronic punch-through results from imperfect absorption
+of hadronic cascades in the hadron calorimeter, which reach the muon stations.
+
+Track-related quality cuts are effective against these backgrounds. We can place requirements on
+the fraction of valid tracker hits, the number of valid pixel hits, and the number of
+tracker layers with measurement. For Global-reconstructed muons, we can also compute the
+normalized global track $\chi^2$ and compare the position match of the tracker and the standalone muon
+reconstruction algorithms.
+
+Decays in flight can introduce a kink in the muon candidate track.
+We use a kink-finding algorithm to reject such candidates, operating as follows.
+At each tracker layer, the extrapolated states from the two halves of the tracker tracks are compared
+to get a $\chi^2$. The maximum $\chi^2$ across all layers is used as the per-track discriminator.
+This is effective even at low $p_{T}$, allowing rejection of 10-20\% of such background while
+maintaining greater than 98\% efficiency for real muons.
+
+The segment compatibility is another useful discrimination quantity for the muons.
+It is computed by evaluating which crossed stations have matching muon statements,
+and the expected uncertainty of the extrapolated position due to multiple scattering.
+
+Analagous to the electrons, for muons we also compute the transverse and longitudinal impact parameters,
+and a corrected relative isolation quantity, $I_{rel}^{\mu}$.
+For the muon isolation, in the same manner as for electrons, a cone of $\Delta R = 0.4$ is built to compute the flux of particle flow candidates,
+the ``delta-beta'' correction is applied to correct for pileup contamination. This correction is achieved by
+subtracting half the sum of the \pt of the charged particles in the cone of interest but with particles not originating from the primary vertex.
+The muon isolation is therefore defined as:
+
+\begin{equation}
+I^{\mu}_{\rm rel}=\frac{1}{p_{\rm T}}  \left[ I_{\rm ch}+\max(I_{\rm nh}+I_{\rm g}-0.5\cdot I_{\rm chPU} ,0) \right]
+\label{eq:muisol}
+\end{equation}
+
+The factor $0.5$ corresponds to a approximate average of neutral to charged particles and has been measured in jets in~\cite{CMS-PAS-PFT-10-002}.
+
+\subsection{Muon identification working points}
+
+The Medium muon algorithm allows for both global and tracker muons, with different requirements for each.
+It is used in this work for the reconstruction of Z boson candidates decaying to muons.
+The Tight muon algorithm only allows for global muons.
+It is used to identify Tags for measuring muon identification efficiency in the tag-and-probe method of Chapter~\ref{chap:efficiency}.
+The specific cut values for the Medium and Tight algorithms are quoted in Table~\ref{tab:muonid}.
+
+\begin{table}[htp]
+\begin{center} {\scriptsize
+\begin{tabular}{r|l|l|l} \hline\hline
+\multirow{2}{*}{Requirement}      & {\em Medium}      & {\em Medium}      & \multirow{2}{*}{\em Tight}   \\
+                                  & {\em (global)}    & {\em (tracker)}   & \\\hline
+Reconstruction                    & Global muon       & Tracker muon      & Global muon     \\
+Fraction of valid tracker hits    & $>0.49$           & $>0.49$           & -               \\
+Segment compatibility             & $>0.303$          & $>0.451$          & -               \\
+Track kink                        & $<20$             & -                 & -               \\
+Normalized global track $\chi^2$  & $<3$              & -                 & $<10$           \\
+Tracker-standalone position match & $<12$             & -                 & -               \\
+$d_0(\mathrm{vtx})$ (cm)          & -                 & -                 & $<0.2$          \\
+$d_z(\mathrm{vtx})$ (cm)          & -                 & -                 & $<0.5$          \\
+Number of valid pixel hits        & -                 & -                 & $\geq 1$        \\
+Tracker layers with measurement   & -                 & -                 & $\geq 5$        \\
+$I_{rel}^{\mu}$                   & $<0.15$           & $<0.15$           & $<0.15$         \\
+\hline\hline
+\end{tabular}}
+\end{center}
+\caption{Muon ID requirements.}
+\label{tab:muonid}
+\end{table}
+
+\section{Jets}
+\label{sec:jets}
+\subsection{Jet reconstruction}
+Jets are reconstructed from all the particle flow candidates using the anti-$k_{\rm t}$ clustering algorithm~\cite{Cacciari:2008gp}
+with a distance parameter of 0.4, as implemented in the FASTJET package~\cite{Cacciari:2011ma,Cacciari:2006gp}.
+The reconstruction may be seeded using all reconstructed particle flow candidates
+after having removed the charged hadron candidates which are not associated to the primary vertex of the event
+(charge hadron subtracted AK4PFchs).
+The energy of the reconstructed jets is corrected in 3 steps: L1FastJet (for pileup/underlying event subtraction),
+L2 (for relative corrections), and L3 (for absolute scale corrections).
+For data, an extra residual correction is included in the absolute scale correction,
+derived by the JetMET working group within the CMS collaboration.
+
+An extra correction is applied for the simulated jets in order to reproduce the measured jet energy resolution.
+For each jet the transverse momentum is smeared using using the transverse momentum of
+the generator level matched jet and the measured Data/MC resolution ratio. The correction transformation is given by: 
+
+\begin{equation}
+p_{\rm T} \rightarrow \max \left[0 , p_{T}^{\rm gen} + c\cdot (p_{\rm T}-p_{\rm T}^{\rm gen}) \right]
+\label{eq:jersmear}
+\end{equation}
+in which $c = \sigma_{\mathrm{data}} / \sigma_{\mathrm{MC}}$ are the data-to-MC resolution scale factors.
+
+\subsection{Jet identification}
+
+We consider for analysis all jets with \pt$>$20~GeV and $|\eta|<5$ passing a set of loose identification requirements given in Table~\ref{tab:loose_jet_id}.
+Jets that are within $\Delta R < 0.4$ of one of the identified leptons are disregarded, this is referred to as "jet cleaning".
+The number of jets is used as a selection variable.
+Here, we define it as how many of these nominal jets have \pt$>$30~GeV and $|\eta|<2.4$.
+\begin{table}[htbp]
+  \begin{center}
+ {\small
+  \begin{tabular} {ll}
+\hline
+  Quantity                  & Requirement \\
+  \hline
+    Neutral Hadron Fraction   & < 0.99      \\
+    Neutral EM Fraction       & < 0.99      \\
+    Number of Constituents    & > 1         \\
+    Charged Hadron Fraction   & > 0         \\
+    Charged Multiplicity      & > 0         \\
+    Charged EM Fraction       & < 0.99      \\
+  \hline
+  \end{tabular}
+}
+  \caption{Loose jet identification criteria for jets having $|\eta|<2.4$. \label{tab:loose_jet_id}}
+  \end{center}
+\end{table}
+
+\subsection{b-tagging}
+
+For the purpose of rejecting events involving top quark production, jets originating from $b$ quark fragmentation (b-jets) are identified by ``b-tagging.''
+The b-tagging technique employed is based on the ``combined secondary vertex'' CSVv2 algorithm~\cite{Chatrchyan:2012jua}.
+%The b tagging technique employed is based on the ``combined secondary vertex'' CSVv2 algorithm~\cite{Chatrchyan:2012jua,CMS-PAS-BTV-15-001}.
+The algorithm is calibrated to provide, on average, 80\% efficiency for tagging jets originating from b quarks,
+and 10\% probability of light-flavor jet misidentification.
+
+\section{Photons}
+Photon candidates are reconstructed from energy deposits in the ECAL using algorithms
+that constrain the clusters to the size and shape expected from a photon~\cite{CMS:EGM-14-001} .
+The identification of the candidates is based on shower-shape and isolation variables, and depends on
+whether the energy deposit was in the ECAL Barrel or Endcap.
+For isolated photons, scalar sums of the \pt of PF candidates within a cone of $\Delta R < 0.3$
+around the photon candidate are required to be below the bounds defined. Only the PF candidates
+that do not overlap with the EM shower of the candidate photon are included in the isolation sums.
+The photon candidates used in this analysis are required to have a minimum \pt~of 15~\GeV and to  
+be within $|\eta| < 2.5$ passing the loose identification criteria given in Table~\ref{tab:PhotonIDLoose}.
+
+\begin{table}[htbp]
+  \begin{center}
+ {\small
+  \begin{tabular} {lll}
+\hline
+Quantity                                   &  ECAL Barrel Req. & ECAL Endcap Req.  \\
+\hline
+Full 5x5 $\sigma_{i\eta i\eta}$            & $< 0.0103$ & $< 0.0301$     \\ \hline 
+H/E                                        & $< 0.0597$ & $< 0.0481$     \\ \hline 
+charged hadron isolation                   & $< 1.295$  & $< 1.011$      \\ \hline 
+\multirow{2}{*}{neutral hadron isolation}  & $< 10.92 + (0.0148\,{\GeV}^{-1})p_T$          & $< 5.931 + (0.0163\,{\GeV}^{-1})p_T$        \\  
+                                           & $+ (1.7\times 10^{-5}\,{\GeV}^{-2}){p_T}^2$   & $+(1.4\times 10^{-5}\,{\GeV}^{-2}){p_T}^2$  \\ \hline
+photon isolation                           & $< 3.630 + (0.0047\,{\GeV}^{-1})p_T$          & $< 6.641 + (0.0034\,{\GeV}^{-1})p_T$        \\ \hline 
+Conversion safe electron veto              & Yes & Yes           \\
+\hline
+\end{tabular}
+}
+\caption{Loose photon identification criteria.}
+\label{tab:PhotonIDLoose}
+  \end{center}
+\end{table}
+
+
+\section{Particle-flow reconstruction}
+\label{sec:pf}
+The particle-flow (PF) event reconstruction algorithm~\cite{CMS-PRF-14-001} is used.
+It is designed to leverage information from all CMS detector components to reconstruct
+and identify individual particles, namely: electrons, muons, photons, and charged and neutral hadrons.
+The reconstructed vertex with the largest value of summed physics-object $\pt^2$ is taken to be the primary proton-proton interaction vertex.
+The physics objects are the track-jets, clustered using the jet finding algorithm~\cite{Cacciari:2008gp,Cacciari:2011ma} with the 
+tracks assigned to the vertex as inputs, and the associated missing transverse momentum, taken as the negative vector sum of the $\pt$ of those jets.
+
+\section{Missing transverse energy}
+The missing transverse momentum vector, $\ptvecmiss$, is defined as the projection
+of the negative vector sum of the momenta of all reconstructed PF candidates in an event
+onto the plane perpendicular to the beams.
+Its magnitude is referred to as $\met$.  Several event-level filters are applied
+to discard events with anomalous $\met$ arising from specific well-understood issues 
+with the detector components or event reconstruction~\cite{CMS-PAS-JME-16-004}.
+Jet energy corrections are propagated to the missing transverse momentum by
+adjusting the momentum vector of the PF candidate constituents of each reconstructed jet.
+

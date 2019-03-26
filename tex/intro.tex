@@ -1,20 +1,109 @@
 \chapter{Introduction}
+\section{Differential measurements of gauge bosons}
+The production of lepton pairs via the Drell--Yan (DY) process 
+is essential for the physics program of the CERN Large Hadron Collider (LHC).  
+The large cross section and clean experimental signature %,
+%two leptons with large transverse momentum, 
+provide important precision
+tests of the standard model (SM),
+as well as constraints on the 
+%The DY process has high sensitivity to 
+parton distribution functions (PDFs) of the proton. In addition, the study of 
+the DY process allows for stringent constraints on physics beyond the standard 
+model (BSM).
+Moreover, dilepton events are valuable for calibrating the 
+detector and monitoring the stability of the luminosity.
 
-\section{Mass of the W boson}
+%Figure: The Drell-Yan process.
+\begin{figure} % BSM models
+ \centering
+ \begin{tikzpicture} % ZH(inv)
+  \begin{feynman}
+   \vertex (q1) {\(\boldsymbol{\Pq}\)};
+   \vertex [below= 3cm of q1] (q2) {\(\boldsymbol{\Paq}\)};
+   \vertex [right= 1.6cm of q1] (a1);
+   \vertex [below= 1.5cm of a1] (a2);
+   \vertex [right= 1.6cm of a2] (b1);
+   \vertex [right= 1.6cm of b1] (c1);
+   \vertex [above= 1.3cm of c1] (c2) {\(\boldsymbol{\ell}\)};
+   \vertex [below= 1.3cm of c1] (c3) {\(\boldsymbol{\bar{\ell}}\)};
+   %\vertex [right= 1cm of c2] (d1);
+   %\vertex [right= 1cm of c3] (d2);
+   %\vertex [above= 0.3cm of d1] (f1) {\(\boldsymbol{\ell}\)};
+   %\vertex [below= 0.3cm of d1] (f2) {\(\boldsymbol{\bar{\ell}}\)};
+   %\vertex [above= 0.3cm of d2] (f3) {\(\boldsymbol{\chi}\)};
+   %\vertex [below= 0.3cm of d2] (f4) {\(\boldsymbol{\bar{\chi}}\)};
+   
+   \diagram* {
+    (q1) -- [fermion, very thick] (a2),
+    (q2) -- [anti fermion, very thick] (a2),
+    (a2) -- [boson, very thick, edge label'=\(\boldsymbol{\cPZ/\gamma^*}\)] (b1),
+    (b1) -- [fermion, very thick] (c2),
+    (b1) -- [anti fermion, very thick] (c3),
+    %(c2) -- [fermion, very thick] (f1),
+    %(c2) -- [anti fermion, very thick] (f2),
+    %(c3) -- [fermion, very thick] (f3),
+    %(c3) -- [anti fermion, very thick] (f4),
+   };
+  \end{feynman}
+ \end{tikzpicture}
+ \caption{The Drell-Yan process.} \label{fig:DYdiagram}
+\end{figure}
+The intermediate vector bosons $\Wpm$ and $\cPZ/\gamma^*$ (referred to as 
+$\cPZ$ boson) can have non-zero momentum transverse to the beam direction 
+($\pt$). This is due to the intrinsic $\pt$ of the initial-state partons 
+inside the proton as well as the initial-state radiation of gluons and quarks. 
+Measurements of the $\pt$ distributions of the $\Wpm$ and $\cPZ$ bosons probe 
+various aspects of the strong interaction. In addition, accurate theoretical 
+prediction of the $\pt$ distribution is a key ingredient for a precise 
+measurement of the $\Wpm$ boson mass at the Tevatron and the LHC.  
+      
+Theoretical predictions of both the DY production total cross section and 
+differential distributions are available up to next-to-next-to-leading order 
+(NNLO) accuracy in perturbative quantum chromodynamics 
+(QCD)~\cite{Melnikov:2006kv,Catani:2009sm}. The complete NNLO calculations of 
+vector boson production in association with a jet in hadronic collisions have 
+recently become available at $\mathcal{O}(\alpS^3)$ accuracy in the strong 
+coupling constant~\cite{Ridder:2015dxa,Boughezal:2015ded,Boughezal:2015dva}. 
+These calculations significantly reduce the factorization and renormalization scale 
+uncertainties which in turn reduce theoretical uncertainties in the prediction 
+of the $\pt$ distribution in the high-$\pt$ region to the order of one 
+percent. Electroweak (EW) corrections are non-negligible at 
+high-$\pt$~\cite{Dittmaier:2014qza,Lindert:2017olm}.      
+
+The fixed order calculations are unreliable at low-$\pt$ region due to soft 
+and collinear gluon radiation, resulting in the appearance of large logarithmic 
+corrections. Resummation of the logarithmically divergent terms up to 
+next-to-next-to-leading logarithmic (NNLL) accuracy has been matched with the 
+fixed order predictions to achieve accurate predictions for the entire range 
+of $\pt$~\cite{Balazs:1995nz,Catani:2015vma}. Fixed order perturbative 
+calculations can also be combined with parton shower models to obtain 
+fully-exclusive 
+predictions~\cite{MCatNLO,Nason:2004rx,Frixione:2002ik,Alioli:2010xd} with
+no fiducial requirements.      
+
+The $\cPZ$ boson $\pt$ and rapidity distributions have been previously 
+measured, using $\Pe^+\Pe^-$ and $\mu^+\mu^-$ pairs, by the ATLAS, CMS, and 
+LHCb Collaborations for proton-proton ($\Pp\Pp$) collisions at $7$, $8$, 
+and~$13\TeV$ at the LHC~\cite{ATLAS_ZpT7TeV,ATLAS_ZptEta7TeV,Aad:2015auj,Aaboud:2016btc,Sirunyan:2018owv,CMS_ZpT7TeV,CMS_ZpT8TeV,CMS:2014jea,Khachatryan:2016nbe,LHCb_WZ7TeV,LHCb_Zee7TeV,LHCb_ZpT7TeV,LHCb_WZ8TeV,Aaij:2016mgv}, 
+and by the CDF and D0 Collaborations at the Tevatron for $\Pp\bar\Pp$ 
+collisions at $\sqrt{s} = 1.96\TeV$~\cite{Affolder:1999jh,Abbott:1999yd,TevatronWZ:D0PhysRevLett2008_100,TevatronWZ:D0PhysLettB2010_693,TevatronWZ:D0PhysRevLett2011_106}. 
 
 \section{Dark matter searches}
 
-One of the most significant puzzles in modern physics is the nature of dark matter (DM).
+One of the most significant puzzles in modern physics is the nature of dark matter.
 In the culmination of over a century of observations, the ``$\Lambda_{\mathrm{CDM}}$'' standard model of cosmology
 has established that, in the total cosmic energy budget,
-known matter only accounts for about 5\%, DM corresponds to 27\%, and the rest is dark energy~\cite{Hinshaw_2013}.
-Although several astrophysical observations indicate that DM exists and interacts gravitationally with known matter,
-there is no evidence yet for nongravitational interactions between DM and SM particles.
-While the nature of DM remains a mystery, there are a number of models that predict a particle physics origin. 
+known matter only accounts for about 5\%, dark matter corresponds to 27\%, and the rest is dark energy~\cite{Hinshaw_2013}.
+Although several astrophysical observations indicate that dark matter exists and interacts gravitationally with known matter,
+there is no evidence yet for nongravitational interactions between dark matter and Standard Model particles.
+While the nature of dark matter remains a mystery, there are a number of models that predict a particle physics origin. 
 
-A promising possibility is that DM may take the form of weakly interacting massive particles.
-If these particles exist, they can possibly be produced directly from, annihilate into, or scatter off SM particles.
-Recent DM searches have exploited various methods including direct~\cite{Cushman:2013zza} and indirect~\cite{Buckley:2013bha} detection.
-If DM can be observed in direct detection experiments,
+A promising possibility is that dark matter may take the form of weakly interacting massive particles.
+If these particles exist, they can possibly be produced directly from, annihilate into, or scatter off Standard Model particles.
+Recent dark matter searches have exploited various methods including direct~\cite{Cushman:2013zza} and indirect~\cite{Buckley:2013bha} detection.
+If dark matter can be observed in direct detection experiments,
 it must have substantial couplings to quarks and/or gluons, and could also be produced at the LHC~\cite{Beltran:2010ww,Goodman:2010yf,Bai:2010hh,Goodman:2010ku,Fox:2011pm,Rajaraman:2011wf}.
-
+In this work we search for such a mechanism producing a Z boson recoiling against a pair of dark matter particles.
+This final state is well-suited to probe such beyond-the-Standard Model scenarios, as
+it has relatively small and precisely known Standard Model backgrounds.
