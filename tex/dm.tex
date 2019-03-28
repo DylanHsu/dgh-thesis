@@ -409,7 +409,7 @@ NNPDF3.0 parton distribution set~\cite{nnpdf}.
 
 The samples for the signals and leading backgrounds were generated at NLO in QCD,
 and the scale uncertainties are estimated using the weights
-stored in the respective samples. For the \ZZ process, this procedure is rather conservative
+stored in the respective samples. For the ZZ process, this procedure is rather conservative
 in the sense that the prediction is corrected to NNLO in QCD, but the assumed uncertainty reflect
 the NLO generator precision.
 The PDF4LHC pdf sets are used with the MC method. As a start, the
@@ -440,7 +440,7 @@ A significant uncertainty, instead, stems from missing
 QCD-EW combined corrections, \eg involving two-loop terms of order
 $\alpha_{\mathrm{S}}\alpha_{\mathrm{EW}}$.
 
-For \ZZ events with little hadronic activity---\ie most of our selected events---, the
+For ZZ events with little hadronic activity---\ie most of our selected events---, the
 uncertainty from such missing QCD-EW combined corrections is
 estimated from the product of the NLO QCD corrections 
 ($1+\delta_{\mathrm{QCD}}$) and NLO EW corrections
@@ -452,7 +452,7 @@ function of the lower-\Z \pt (cf. Sec.~\ref{sec:higher-order-corrections}), then
 scale the event weight up and down by a factor
 $(1+\delta_{\mathrm{QCD}}\delta_{\mathrm{EW}})$.
 
-Since the EW $k$-factors for the \ZZ are strictly valid only when the hadronic
+Since the EW $k$-factors for the ZZ are strictly valid only when the hadronic
 activity in the event is moderate, we follow the
 indications in Ref.~\cite{Gieseke:2014gka} and build a variable $\rho$
 to estimate the level of hadronic activity in the event.
@@ -466,10 +466,10 @@ transverse momenta of the four leptons due to the presence of jets,
 event---in other words, we replace the factor 
 $(1+\delta_{\mathrm{QCD}}\delta_{\mathrm{EW}})$ with 
 $(1+\delta_{\mathrm{EW}})$ when computing the up and down
-variations. Less than 1\% of the \ZZ\ events in our signal region have
+variations. Less than 1\% of the ZZ events in our signal region have
 $\rho>0.3$.
 
-For the \WZ process, both the correction and uncertainty follows the prescription of~\cite{HZZ2l2v2018}.
+For the WZ process, both the correction and uncertainty follows the prescription of~\cite{HZZ2l2v2018}.
 \fixme{Add more details based on AN-16-325}
 
 The EWK correction is small~\cite{Bierweiler:2013dja,Gieseke:2014gka,Baglio:113005}
@@ -485,7 +485,7 @@ the limit computation.
 All background estimation procedures in this analysis rely on some degree
 of simulation shape information.
 For the DY and NRB processes, the final shape is taken directly from simulation, 
-while the \WZ and \ZZ estimates only depend on the ratio of the MC expectations for the processes.
+while the WZ and ZZ estimates only depend on the ratio of the MC expectations for the processes.
 In any case, the limited number of simulated events in any given bin gives rise to a systematic uncertainty.
 For each bin and process, this uncertainty is treated as fully uncorrelated and taken into account as a shape uncertainty.
 
@@ -512,7 +512,7 @@ The overall signal efficiency uncertainty is estimated to be about 11\%
 and is dominated by the theoretical uncertainty due to missing
 higher-order corrections and PDF uncertainties. The total uncertainty in the 
 background estimations in the signal region is about 10\%, which is 
-dominated by the theoretical uncertainties in the $\Z\Z$ and $\W\Z$ processes.
+dominated by the theoretical uncertainties in the ZZ and WZ processes.
 
 We show the post-fit pulls and the impacts of the top 30 uncertainties, ordered by decreasing importance,
 in Figure~\ref{fig:impacts}.
@@ -531,7 +531,7 @@ The impact on the expected limit, i.e. the relative decrease in the median expec
 \begin{tabular}{lccccccc}
 \hline
 \multirow{2}{*}{Source of uncertainty}         & \multicolumn{6}{c}{Effect (\%)}                                              & Impact on   \\
-                                               & Signal     & \ZZ        & \WZ        & Nonresonant & Drell-Yan  & Minor bkg. & exp. limit  \\
+                                               & Signal     & ZZ         & WZ         & Nonresonant & Drell-Yan  & Minor bkg. & exp. limit  \\
 \hline
 * VV Electroweak Corrections                   & -          & 10         & -4         & -           & -          & -          & 14 \%      \\
 * QCD Scale, VV backgrounds                    & -          & 9          & 4          & -           & -          & -          & \multirow{8}{*}{2 \%} \\
@@ -544,8 +544,8 @@ The impact on the expected limit, i.e. the relative decrease in the median expec
 \hline
 * MC Statistics, Nonresonant                   & -          & -          & -          & 5           & -          & -          & \multirow{5}{*}{1 \%}  \\
 * MC Statistics, Drell-Yan                     & -          & -          & -          & -           & 30         & -          &            \\
-* MC Statistics, \ZZ                           & -          & 0.1        & -          & -           & -          & -          &            \\
-* MC Statistics, \WZ                           & -          & -          & 2          & -           & -          & -          &            \\
+* MC Statistics, ZZ                            & -          & 0.1        & -          & -           & -          & -          &            \\
+* MC Statistics, WZ                            & -          & -          & 2          & -           & -          & -          &            \\
 * MC Statistics, Higgs Signal                  & 1          & -          & -          & -           & -          & -          &            \\
 * MC Statistics, DmSimp Signals                & 3          & -          & -          & -           & -          & -          & -          \\
 \hline
@@ -616,16 +616,20 @@ $N^{4\ell}_{x}$ is the MC prediction for the yield of process $x$ in the ZZ cont
 $N^{e\mu}_{x}$ is the MC prediction for the yield of process $x$ in the NRB control region,
 and $N^{DYsb}_{x}$ is the MC prediction for the yield of process $x$ in the $2\ell$ Drell-Yan sideband ($[50,100]\GeV$) region.
 \subsection{The ZZ/WZ ratio}
-%\subsubsection{Combination procedure}
+
 The ZZ and WZ control samples are included as separate control regions in the maximum-likelihood fit.
-In order to best constrain the shape uncertainty, a separate, freely floating normalization parameter is used for each \met bin.
-These normalization parameters are each correlated among the regions and among both VV processes.
+A freely floating normalization parameter is used which scales both VV processes. It is correlated across the bins of \met and emulated \met.
+Systematic uncertainties from the corrections at higher order in electroweak may not fully cancel between the two processes.
+Thus, a shape uncertainty on the ratio of ZZ to WZ is considered which takes into account the electroweak uncertainty of both processes.
+The nuisance is bin-dependent, but it is correlated between the \met bins and between the signal and control regions.
+%In order to best constrain the shape uncertainty, a separate, freely floating normalization parameter is used for each \met bin.
+%These normalization parameters are each correlated among the regions and among both VV processes.
 % For example, one normalisation parameter controls the normalisation for the bin 100\GeV$<$(emulated) \met$<$125\GeV in all regions at the same time, but leaves all other bins unaffected.
 % If this parameter is set to e.g. $1.5$, both the \WZ and \ZZ expected yields in this bin will be set to $1.5 \times N_{MC}$, where $N_{mc}$ is the yields as predicted in simulation with all corrections applied.
-Since each of these parameters scales \WZ and \ZZ in the same manner, the ratio between the two is left constant.
-However, systematic uncertainties that do not fully cancel between the two processes may change the ratio.
-The nuisance parameters corresponding to these uncertainties are correlated between \met bins and between the signal and control regions.
-A detailed breakdown of the correlation prescription can be seen in~\ref{sec:syst_summary}. 
+%Since each of these parameters scales \WZ and \ZZ in the same manner, the ratio between the two is left constant.
+%However, systematic uncertainties that do not fully cancel between the two processes may change the ratio.
+%The nuisance parameters corresponding to these uncertainties are correlated between \met bins and between the signal and control regions.
+%A detailed breakdown of the correlation prescription can be seen in~\ref{sec:syst_summary}. 
 
 \section{Multivariate analysis}
 
@@ -727,10 +731,16 @@ the corresponding uncertainties on the output distribution of BDT scores in a ro
 For a discussion of it, see Section \ref{sec:bdt_toys}.
 
 \subsection{Improvement in sensitivity} 
-The BDT analysis improves the invisible Higgs(125) sensitivity by 10\%,
+A maximum likelihood fit is performed in the distribution of BDT scores, akin to the \met analysis prescription described in Section~\ref{sec:likelihood}.
+The ZZ/WZ ratio is handled in the same way, but the bin-dependent electroweak uncertainty on the ratio of ZZ/WZ
+is described in bins of BDT score instead of (emulated) \met.
+Altogether, the BDT analysis improves the invisible Higgs(125) sensitivity by 10\%,
 where the metric is the expected limit on the branching ratio of Higgs boson to invisible particles.
+
 Taking this approach is not nearly as rewarding for the higher mass simplified-model DM signals, where \met is a more powerful discriminant variable.
-These cases would require further study before multivariate techniques can be exploited there.
+Furthermore, the multivariate analysis strategy described above is dependent on the mediator mass.
+This would necessitate training and evaluating a different classifier for every mass scenario, which is very cumbersome.
+These cases require further study before multivariate techniques can be exploited there.
 
 \section{Search results}
 \label{sec:dmresults}

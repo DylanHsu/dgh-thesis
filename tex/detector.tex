@@ -1,10 +1,65 @@
-\chapter{The CMS detector at the LHC}
+\chapter{Experimental Apparatus}
 
-The Compact Muon Solenoid (CMS) detector is a multi-purpose apparatus which operates at the LHC. 
-It is installed about 100 metres underground close to the French village of Cessy, between
-Lake Geneva and the Jura mountains.
+The data studied in this work were collected at the Compact Muon Solenoid (CMS) Experiment.
+The CMS detector is a multi-purpose apparatus which operates at the Large Hadron Collider. 
+It is installed about 100 meters underground close to the French village of Cessy,
+between Lake Geneva and the Jura mountains.
 
-The detector requirements for CMS to meet the goals of the LHC physics programme are as follows:
+
+\section{The Large Hadron Collider}
+
+\begin{figure}[hb]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/lhc_protons.pdf}
+\caption{Schematic of the CERN accelerator complex.}
+\label{fig:lhc}
+\end{figure}
+
+The LHC is a two-ring superconducting hadron accelerator \cite{lhcmachine}.
+It is designed to collide counter-rotating proton beams with a center-of-mass energy of 14 TeV
+and instantaneous luminosity of $10^{34}$ cm\textsuperscript{-2}s\textsuperscript{-1}.
+In 2016, protons were collided at at center-of-mass energy of 13 TeV. 
+The LHC has also collided lead ions with an energy of 2.8 TeV per nucleon and xenon ions with 2.72 TeV per nucleon.
+
+First, hydrogen atoms are stripped of their protons with a large electric field.
+They are accelerated to 450 GeV in the CERN LHC injector chain \cite{lhcinjector}.
+The chain is as follows: Linac2 (50 MeV), Proton Synchotron Booster (1.4 GeV), Proton Synchotron (25 GeV), Super Proton Synchotron (450 GeV).
+After the SPS, the protons are injected into the LHC's two separate rings in discrete proton bunches.
+At the designed spacing of 25 nanoseconds between bunches, there are about 2800 proton bunches per beam.
+
+The LHC itself is a synchotron. 
+It achieves the final beam energy with 1232 dipole magnets, each 15 m in length with peak dipole field of 8.3 T.
+The beam is focused using 492 quadrupole magnets of length 5-7 m.
+These magnets are twin bore niobium-titanium superconducting electromagnets which operate at 1.9\textdegree~K.
+The pipes for the counter-rotating beams are magnetically coupled and the magnets share the same cryostat.
+Superfluid helium is used as a coolant.
+
+The physics processes studied at the LHC are rare compared to the total proton-proton collision cross section.
+A high beam intensity is needed to deliver them at a sufficient rate.
+For a Gaussian beam distribution, the machine luminosity is
+\begin{equation}
+L = \frac{N_b^2 n_b f_\mathrm{rev} \gamma_r F}{4\pi\varepsilon_n \beta^*}
+\end{equation}
+where
+\begin{itemize}
+\item $N_b$ is the number of protons per bunch $\approx 10^{11}$
+\item $n_b$ is the number of bunches per beam $\approx 2800$
+\item $f_\mathrm{rev}$ is the revolution frequency 
+\item $\gamma_r$ is the Lorentz factor,
+\item $F$ is the reduction factor due to the geometric crossing angle
+\item $\varepsilon_n$ is the transverse beam emittance normalized to the beam energy, describing the spread in position and momentum space
+\item $\beta^*$ is the beta function at the interaction point, which alongside $\varepsilon_n$ determines the beam envelope
+\end{itemize}
+
+The LHC has 4 interaction points. The two general purpose, high luminosity experiments are ATLAS and CMS.
+The LHCb experiment has only forward coverage and specializes in heavy flavor physics and spectroscopy.
+The ALICE experiment studies heavy ion collisions.
+
+In 2016, the LHC delivered around 36 inverse femtobarns worth of data which was recorded by CMS.
+
+\section{The CMS detector}
+
+CMS was designed with the following requirements in mind:
 \begin{itemize}
 \item Good muon identification and momentum resolution over a wide range of momenta and
 angles, good dimuon mass resolution (1\% at 100 GeV), and the ability to determine unambiguously
@@ -13,11 +68,18 @@ the charge of muons with p < 1 TeV
 tracker. Efficient triggering and offline tagging of $\tau$'s and b-jets, requiring pixel detectors
 close to the interaction region
 \item Good electromagnetic energy resolution, good diphoton and dielectron mass resolution (1\% at 100 GeV),
-wide geometric coverage, ${\pi}^{0}$ rejection, and efficient photon and lepton
+wide geometric coverage, ${\pi}^{0}$ meson rejection, and efficient photon and lepton
 isolation at high luminosities
-\item Good missing-transverse-energy and dijet-mass resolution, requiring hadron calorimeters
+\item Good missing transverse energy and dijet mass resolution, requiring hadron calorimeters
 with a large hermetic geometric coverage and with fine lateral segmentation
 \end{itemize}
+
+\begin{figure}[hb]
+\centering
+\includegraphics[width=0.95\textwidth]{figures/cms_detector.pdf}
+\caption{Schematic of the CMS detector.}
+\label{fig:cmsdetector}
+\end{figure}
 
 The central feature of the CMS apparatus is a superconducting solenoid of 6 m internal diameter, providing a magnetic field of 3.8 T.
 Within the solenoid volume are a silicon pixel and strip tracker, a lead tungstate crystal electromagnetic calorimeter (ECAL), and a brass and scintillator hadron calorimeter (HCAL), each composed of a barrel and two endcap sections. 
@@ -28,15 +90,29 @@ Events of interest are selected using a two-tiered trigger system~\cite{Khachatr
 The first level, composed of custom hardware processors, uses information from the calorimeters and muon detectors to select events at a rate of around 100 kHz within a time interval of less than 4 $\mu$s.
 The second level, known as the high-level trigger, consists of a farm of processors running a version of the full event reconstruction software optimized for fast processing, and reduces the event rate to around 1 kHz before data storage.
 
-\begin{figure}[hb]
-\centering
-\includegraphics[width=0.5\textwidth]{figures/cms_detector.pdf}
-\caption{Schematic of the CMS detector.}
-\label{fig:cmsdetector}
-\end{figure}
-\section{The LHC and its proton injection system}
+\subsubsection{Coordinate system}
+CMS can be described in a standard right-handed Cartesian coordinate system where 
+the $x$ direction points to the center of the LHC ring, 
+the $y$ direction points to the sky,
+and the $z$ direction points in the counterclockwise beam direction at the interaction point.
+This is used for locating interaction vertices and tracks' impact parameters with respect to those vertices.
+However, this work will also frequently use a set of modified spherical coordinates $(r,\phi,\eta)$
+which are conventional in particle physics.
+Here, $r$ is the radial coordinate, $\phi$ is the azimuthal angle, and $\eta$ is the \textit{pseudorapidity}, given by
+\begin{equation}
+\begin{split}
+\eta   & \equiv {-} \mathrm{ln}\:\mathrm{tan}\:\frac{\theta}{2} \\
+\implies \theta & \equiv 2\:\mathrm{arctan} \left(e^{-\eta}\right)
+\label{eq:eta}
+\end{split}
+\end{equation}
+where $\theta$ is the polar angle. 
+In these coordinates, the transverse momentum $p_T$ of a particle can be written in terms of its momentum $|\vec{p}|$ and the hyperbolic secant of pseudorapidity:
+\begin{equation}
+p_T = |\vec{p}|~\mathrm{sech}~\eta
+\end{equation}
 
-\section{Trackers}
+\subsection{Trackers}
 
 The inner tracking system of CMS is designed to provide a precise and efficient measurement
 of the trajectories of charged particles emerging from the LHC collisions, as well as a precise
@@ -62,18 +138,73 @@ the pixel detector and 3 plus 9 disks in the strip tracker on each side of the b
 acceptance of the tracker up to a pseudorapidity of $|\eta| < 2.5$. With about 200 m\textsuperscript{2} of active silicon
 area the CMS tracker is the largest silicon tracker ever built.
 
-\section{Electromagnetic calorimeter}
+\subsection{Electromagnetic calorimeter}
 The electromagnetic calorimeter of CMS (ECAL) is a hermetic homogeneous calorimeter made of
-61 200 lead tungstate ($\textrm{PbWO}_{\textrm{4}}$) crystals mounted in the central barrel part, closed by 7 324 crys-
-tals in each of the two endcaps. A preshower detector is placed in front of the endcap crystals.
+61,200 lead tungstate ($\textrm{PbWO}_{\textrm{4}}$) crystals mounted in the central barrel part,
+and 7,324 crystals in each of the two endcaps. 
+A preshower detector is placed in front of the endcap crystals.
 Avalanche photodiodes (APDs) are used as photodetectors in the barrel and vacuum phototriodes
 (VPTs) in the endcaps. The use of high density crystals has allowed the design of a calorimeter
 which is fast, has fine granularity and is radiation resistant, all important characteristics in the LHC
-environment. One of the driving criteria in the design was the capability to detect the decay to two
-photons of the postulated Higgs boson. This capability is enhanced by the good energy resolution
+environment. 
+One of the driving criteria in the design was the capability to detect the decay to two
+photons of the postulated Higgs boson.
+This capability is enhanced by the good energy resolution
 provided by a homogeneous crystal calorimeter.
 
-\section{Hadron calorimeters}
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{figures/ecal_layout.pdf}
+\caption{Layout of the CMS electromagnetic calorimeter showing the arrangement of crystal
+modules, supermodules and endcaps, with the preshower in front. From \cite{Chatrchyan:2008aa}.}
+\label{fig:ecal_layout}
+\end{figure}
+
+The number of scintillation photons and the electronic amplification thereof both are decreasing with temperature. 
+So the ECAL must be kept at a stable temperature of $18\pm0.05$\textdegree~ C.
+Water cooling and aluminum tubing are used to meet this need.
+
+\subsubsection{ECAL barrel}
+The ECAL barrel (EB) covers the pseudorapidity range $|\eta|<1.479$.
+The granularity is 360 in $\phi$ and 170 in $\eta$, giving 61,200 crystals in all.
+The crystals have a tapered shape.
+They are mounted in a quasi-projective geometry to avoid cracks aligned with particle trajectories.
+In other words, their central axes are not exactly parallel to a path from the interaction point, 
+in either the $\phi$ or $\eta$ projections.
+The crystal cross-section corresponds to approximately $0.0174 \times 0.0174$ in $\eta\times\phi$
+or 22x22 mm\textsuperscript{2} at the front face of the crystal--and 26x26 mm\textsuperscript{2}
+at the rear face.
+The crystals' radial length is 230 mm, corresponding to 25.8 radiation lengths.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.9\textwidth]{figures/ecal_barrel.pdf}
+\caption{Layout of the ECAL barrel. From \cite{Chatrchyan:2008aa}.}
+\label{fig:ecal_barrel}
+\end{figure}
+
+In the barrel, the scintillation photons are collected by Hamamatsu type S8148 reverse structure avalanche photodiodes.
+Their active area is $5\times5$ mm\textsuperscript{2}. Two are mounted on each crystal.
+
+\subsubsection{ECAL endcaps}
+The ECAL endcaps (EE) cover the rapidity range $1.479 < \eta < 2.5$.
+The distance from the interaction point and the endcaps is 315.4 cm with the 4 T magnetic field on.
+Most of each endcap consists of identically shaped crystals grouped in mechanical units of $5\times5$ crystals, called supercrystals.
+As with the EB crystals, the central axes of the EE supercrystals are not exactly parallel to a path from the interaction point. 
+The front face of these crystals has an area of $28.62\times28.62$ mm\textsuperscript{2}.
+The rear face has an area of $30\times30$ mm\textsuperscript{2}.
+The crystals' length is 220 mm or 24.7 radiation lengths.
+
+In the endcaps, the scintillation photons are collected by type PMT188 vacuum phototriodes
+from National Research Institute Electron in St. Petersburg.
+Their active area is 280 mm\textsuperscript{2}. One is mounted on each crystal.
+
+It is relevant to make a note here that the physical cracks between the EB and EEs exist at $1.4442 < |\eta| < 1.566$. 
+This has a negative effect on the electron identification efficiency, to be described in great detail later.
+This motivates the non-intuitive kinematic binnings in $\eta$ which are used later
+in Chapter~\ref{chap:efficiency} and Appendix~\ref{chap:efficiency_appendix}.
+
+\subsection{Hadron calorimeters}
 The hadron calorimeters (HCALs) are particularly important for the measurement of hadron jets and neutrinos or exotic particles resulting in apparent missing transverse energy \cite{CMSTDR}.
 Figure~\ref{fig:hcalslice} shows the longitudinal view of the CMS detector. The dashed lines are at fixed $\eta$ values. 
 The hadron calorimeter barrel and endcaps sit behind the tracker and the electromagnetic
@@ -86,15 +217,16 @@ calorimeters placed at 11.2 m from the interaction point extend the pseudorapidi
 to $|\eta| = 5.2$ using a Cherenkov-based, radiation-hard technology.
 The HCAL subsystems are described briefly below, with more detailed information on the geometry and 
 readout being available in~\cite{CMSTDR}.
+
 \begin{figure}
 \centering
-\includegraphics[width=0.98\textwidth,natwidth=1793,natheight=1074]{figures/hcalslice.png}
+\includegraphics[width=0.98\textwidth]{figures/hcalslice.pdf}
 \caption{Longitudinal slice of the CMS detector showing the locations of the hadron barrel
 (HB), endcap (HE), outer (HO) and forward (HF) calorimeters.}
 \label{fig:hcalslice}
 \end{figure}
 
-\subsection{HCAL barrel}
+\subsubsection{HCAL barrel}
 The HCAL barrel (HB) is a sampling calorimeter and covers the pseudorapidity range $|\eta| < 1.3$.
 It consists of 36 identical azimuthal wedges which form two half-barrels. 
 The wedges are constructed out of flat brass absorber plates which are parallel
@@ -117,7 +249,7 @@ Its purpose is to sample hadronic showers developing in the inert material betwe
 the ECAL barrel and the HCAL barrel.
 The plastic scintillator is divided into 16 $\eta$ sectors, resulting in a segmentation of $(\Delta\eta, \Delta\phi) = (0.087, 0.087)$. 
 
-\subsection{HCAL endcaps}
+\subsubsection{HCAL endcaps}
 
 The hadron calorimeter endcaps (HE) cover the rapidity range $1.3 < |\eta| < 3$. 
 It is designed for high radiation tolerance, in order to survive 10 MRad after 10 years of operation.
@@ -132,7 +264,7 @@ The first layer are made of 9 mm thick Bicron BC408. All the rest are made of 3.
 The scintillation light is read out via wavelength shifting fibers. 
 The granularity of the calorimeters is $(\Delta\eta, \Delta\phi) = (0.087, 0.087)$ for $|\eta| < 1.6$ and $(\Delta\eta, \Delta\phi) = (0.170, 0.170)$ for $|\eta| \geq 1.6$.
 
-\subsection{HCAL outer}
+\subsubsection{HCAL outer}
 The combined stopping power of the ECAL and HCAL barrels does not provide adequate stopping
 power in the central region $|\eta| < 1.3$. This is problematic for the missing energy resolution.
 To further measure and contain these showers, the hadron calorimeter is extended outside the solenoid with a tail catcher called the HO. Only 40 mm of space in the radial direction is available, 
@@ -149,7 +281,7 @@ The others have scintillators only outside their yoke rings.
 All told, the total depth of the calorimeter system is extended to a minimum of
 $11.8\:\lambda_I$ except at the barrel-endcap boundary region.
 
-\subsection{HCAL forward}
+\subsubsection{HCAL forward}
 The forward calorimeter, or HF, exists in an extremely hostile environment. 
 At $|\eta|=5$ we expect to have delivered 10 MGy after 10 years of operation.
 The active material is fused-silica core, polymer hard-cladded quartz fibers, which have sufficient radiation hardness.
@@ -172,7 +304,7 @@ This calorimeter is mostly sensitive to the electromagnetic component of hadroni
 Only light that hits the core-cladding interface at an angle larger than the critical angle (71\textdegree) contributes to the calorimeter signal in the form of Cherenkov light. 
 After the quoted 10 MGy dose has accumulated over the HF lifetime, the optical transmission of the fibers is reduced just by a factor of 2.
 
-\section{Muon system}
+\subsection{Muon system}
 The CMS muon system is capable of reconstructing the momentum and charge of muons over the entire
 kinematic range of the LHC. 
 Due to the shape of the CMS solenoid magnet, the muon system has a barrel section and 2 endcap sections.
@@ -208,7 +340,7 @@ From \cite{Chatrchyan:2008aa}.
 \label{fig:muonsystem}
 \end{figure}
 
-\subsection{Drift tubes}
+\subsubsection{Drift tubes}
 The DTs cover the pseudorapidity region $|\eta|<1.2$.
 There are 4 stations forming concentric cylinders around the beam line.
 The 3 inner cylinders have 60 drift chambers each and the outer cylinder has 70.
@@ -247,7 +379,7 @@ of the track segment's center of gravity with precision of 1.5 mm and 20 mrad, r
 \label{fig:dt_barrel}
 \end{figure}
 
-\subsection{Cathode strip chambers}
+\subsubsection{Cathode strip chambers}
 The CSCs cover the pseudorapidity region $0.9<|\eta|<2.4$.
 There are 4 stations of CSCs in each endcap.
 The chambers are perpendicular to the beamline and interspersed between the magnetic flux return plates.
@@ -295,7 +427,7 @@ From \cite{Chatrchyan:2008aa}.
 \label{fig:cms_cscs_me2}
 \end{figure}
 
-\subsection{Resistive plate chambers}
+\subsubsection{Resistive plate chambers}
 
 The RPCs are gaseous parallel-plate detectors with adequate spatial resolution and scintillator-level time resolution.
 They are much faster than the 25 ns proton bunch crossing period at the LHC.
