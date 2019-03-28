@@ -270,7 +270,7 @@ By defining control regions where $\met$ mismodeling issues are expected to have
 estimate from simulation for these regions still holds within the uncertainties, it is shown in Fig.~\ref{fig:met_control} that $\met$ mismodeling is under control.
 For example, it is possible to calculate missing energy multiple ways and assess how well they corroborate one another.
 The nominal \met quantity used in this work uses all the information from the Particle Flow reconstruction, and is called PF \met.
-The so-called "Calo \met" is the calculation of missing energy only using the calorimeter deposits.
+The so-called ``Calo \met'' is the calculation of missing energy only using the calorimeter deposits.
 A large difference between the two indicates fake missing energy e.g. from mismeasurement of a jet.
 The focus is how well the simulation describes the distribution in data of that disagreement, especially at high values.
 
@@ -523,7 +523,7 @@ in Figure~\ref{fig:impacts}.
 Summary of systematic uncertainties.
 Each uncertainty represents the variation of the relative yields of the processes in the signal region.
 A particular uncertainty is fully correlated across processes for which it contributes, including those processes which are also present in control regions.
-The symbol "-" indicates that the systematic uncertainty does not contribute or is deemed negligible.
+The symbol ``-'' indicates that the systematic uncertainty does not contribute or is deemed negligible.
 For shape uncertainties (indicated with a *), the numbers correspond to the overall effect of the shape variation on yield or acceptance.
 The impact on the expected limit, i.e. the relative decrease in the median expected upper limit on signal strength upon removing the nuisance, is also evaluated with respect to the SM Higgs signal.
 } 
@@ -632,7 +632,7 @@ The nuisance is bin-dependent, but it is correlated between the \met bins and be
 %A detailed breakdown of the correlation prescription can be seen in~\ref{sec:syst_summary}. 
 
 \section{Multivariate analysis}
-
+\label{sec:dmmva}
 As previously described, the analysis contains several theoretical interpretations, some of which act as representatives for a whole class of models.
 However, in the case of the invisible Higgs model with Standard Model mass hypothesis of 125 GeV, we have a well defined model
 that permits exploration of multivariate analysis techniques without reducing the discovery potential of the analysis.
@@ -655,10 +655,7 @@ We use the following set of twelve variables to train a Boosted Decision Tree (B
 \item $m_{T}(\pt^{\ell 1}, $\met$)$ (leading lepton transverse mass)
 \item $m_{T}(\pt^{\ell 2}, $\met$)$ (subleading lepton transverse mass)
 \item $\Delta \phi_{\ell\ell,\met}$ (azimuthal separation between dilepton and missing energy) 
-%\item $|\met-\pt^{\ell\ell}|/\pt^{\ell\ell}$ (the "balance") 
-%\item $|\pt^{\ell 1}-\pt^{\ell 2}|/\pt^{\ell\ell}$  ("lepton balance")
 \item $\Delta R_{\ell\ell}$ (separation between leptons)
-%\item $\cos \theta^{*}_{\ell1} $ (cosine of helicity angle approx. for leading lepton)
 \item $| \cos \theta^{CS}_{\ell1} |$ (cosine of Collins-Soper angle for leading lepton)
 \end{itemize}
 

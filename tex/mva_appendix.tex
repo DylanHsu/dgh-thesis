@@ -1,7 +1,69 @@
-\chapter{Multivariate analysis validation studies}
+\chapter{Dark matter multivariate analysis}
 \label{app:mva}
 
-\section{Gradient boosting}
+\section{Boosted decision trees}
+
+The multivariate analysis makes use of the implementation of boosted decision trees (BDTs) in the TMVA software package within the ROOT framework \cite{Hocker:2007ht}.
+
+A decision tree is a binary tree structured classifier.
+Repeated yes/no decisions are taken on a single variable at a time until a stop criterion is fulfilled.
+The phase space is split this way into many regions that are eventually classified as signal or background, depending on the majority of training events that end up in the final leaf node.
+
+The boosting of a decision tree extends this concept from one tree to several trees which form a forest. 
+The trees are derived from the same training ensemble by reweighting events, and are finally combined into a single classifier which is given by a weighted average of the individual decision trees. 
+Boosting stabilizes the response of the decision trees with respect to fluctuations in the training sample and is able to considerably enhance the performance with respect to a single tree. 
+
+\subsection{Gradient boosting}
+The idea of function estimation through boosting can be understood by considering a simple additive expansion approach.
+Consider a particular point $\vec{\mathbf{x}}$ in the space of variables describing the dataset.
+The function $F(\vec{\mathbf{x}})$ under consideration is assumed to be a weighted sum
+of parameterized base functions or \textit{weak learners} $f(\vec{\mathbf{x}};\:a_m)$.
+Each base function corresponds to a decision tree
+\begin{equation}
+F(\vec{\mathbf{x}}) = \sum_{m=0}^{M} \beta_m f(\vec{\mathbf{x}};\:a_m)\qquad P\in\{\beta_m;\:a_m\}^M_0
+\end{equation}
+where $M$ is the number of trees in the forest, $m$ represents a particular decision tree,
+and $P$ is the parameter space of tree weights $\beta_m$ and tree decisions $a_m$.
+
+The boosting procedure adjusts the parameters $P$ so that the deviation between the model response
+$F(\vec{\mathbf{x}})$ and the true value $y$ obtained from the training input data is minimized.
+For the BDT classifier, the binomial log-likelihood loss function is used for the gradient boosting algorithm:
+\begin{equation}
+L(F,y) = \mathrm{ln}\left(1+e^{-2F(\vec{\mathbf{x}}) y}\right)
+\end{equation}
+The minimization is achbieved using an iterative gradient-descent approach.
+The gradient of the loss function for the current forest, $F_{m-1}(\vec{\mathbf{x}})$, is calculated.
+Then, a new decision tree $h_m(\vec{\mathbf{x}})$ is grown to match
+the mean value of the gradient in each region defined by the tree structure.
+A coefficient $\gamma_m$ is found via line search to get the new forest $F_m(\vec{\mathbf{x}})$
+that minimizes the loss function:
+\begin{equation}
+F_m(\vec{\mathbf{x}}) = F_{m-1}(\vec{\mathbf{x}}) + \gamma_m \cdot h_m(\vec{\mathbf{x}})
+\end{equation}
+Iterating this procedure over several hundred trees yields the desired set of
+decision trees which minimizes the loss function.
+
+In general, gradient boosting is performed using regularization techniques 
+to avoid overfitting the training data. Here, shrinkage and bagging are used.
+These are described below.
+The BDT seen in Chapter~\ref{chap:zlldm}, Section~\ref{sec:dmmva}
+was grown with 400 trees, shrinkage parameter $\nu=0.5$, and bagging fraction 0.5.
+
+\subsubsection{Shrinkage}
+In the above description, the $m^{th}$ tree used to correct the classifier is directly added to the existing forest with coefficient $\gamma_m$.
+That coefficient can be shrunk by a constant factor $\nu$ at each step of the iteration to slow the so-called ``learning rate.''
+The update rule can be modified to reduce the weight of this addition:
+\begin{equation}
+F_m(\vec{\mathbf{x}}) = F_{m-1}(\vec{\mathbf{x}}) + \nu \cdot \gamma_m \cdot h_m(\vec{\mathbf{x}})
+\end{equation}
+
+With shrinkage, a more generalized model is attained.
+But more trees are needed to solve the problem,
+increasing the computational expense of training as well as evaluating the BDT.
+
+\subsubsection{Bagging}
+Random subsamples of the training data can be used for growing the trees. This is called bagging.
+The bagging fraction is the fraction of training data randomly chosen for the iterations.
 
 \section{Choice of input variables}
 
