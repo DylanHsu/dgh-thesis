@@ -3,11 +3,16 @@
 This analysis uses a sample of pp collisions collected in 2016 with the CMS 
 experiment at the LHC at $\sqrt{s} = 13~\rm{TeV}$. Five primary datasets  
 are used to ensure a very high trigger efficiency: MuEG, DoubleMuon, 
-DoubleElectron, SingleMuon, and SingleElectron. All data are analyzed using the
-\\
-\centerline{\small Cert\_271036-284044\_13TeV\_23Sep2016ReReco\_Collisions16\_JSON.txt}
-\\
-file in order to select the good luminosity sections. 
+DoubleElectron, SingleMuon, and SingleElectron.
+Only the luminosity sections are used in which all detector subsystems reported accurately.
+This is furnished by the data certification working group.
+
+%All data are analyzed using the
+%\\
+%\centerline{\small Cert\_271036-284044\_13TeV\_23Sep2016ReReco\_Collisions16\_JSON.txt}
+%\\
+%file in order to select the good luminosity sections. 
+
 The total integrated luminosity with the associated uncertainty is $\usedLumiWithSyst$.
 
 \subsection{Silicon strip hit efficiency loss}
@@ -139,7 +144,7 @@ Simulated datasets from the RunIISummer16MiniAODv2 campaign are used.
          }
            \end{center}
            \end{sidewaystable}
-
+\clearpage
 \subsection{Dark matter hypotheses}
 Samples of simulated DM particle events in the simplified model are generated using \textsc{MadGraph5\_aMC@NLO 2.2.2}~\cite{Alwall:2014hca} at leading order (LO) and matched to
 \PYTHIA8.205~\cite{Sjostrand:2007gs} using tune CUETP8M1 for parton showering and hadronization~\cite{Khachatryan:2015pea,Skands:2014pea}.
@@ -192,6 +197,33 @@ A comparison of kinematic spectra for various signal models is shown in Figs.~\r
   \label{fig:moreSignals}
 \end{figure}
 
+\section{Triggers}
+The triggers used in this work are the so-called ``single and double lepton triggers.''
+In general, they are designed to pick out events with one or two electrons or muons,
+with momentum of 20 \GeV or more.
+The overall trigger efficiency is larger than 99\% and consistent with 1 
+after all other selection requirements are applied.
+
+Electron triggers start from Level-1 ECAL primitive objects,
+also known as the Level-1 $e/\gamma$ seeds \cite{Khachatryan:2016bia}.
+In the ECAL barrel, five strips of five crystals (along the azimuthal direction)
+are combined into trigger towers forming a $5\times5$ array of crystals.
+The transverse energy detected by the crystals in a single trigger tower is summed
+into a trigger primitive by the front-end electronics and sent to off-detector
+trigger concentrator cards via optical fibers. 
+In the ECAL endcaps, each front-end board computes 5 partial sums of 5 crystals called pseudo-strips,
+then sends them to the trigger concentrator card which completes the primitive calculation.
+Then, events selected with the Level-1 seed are subject to additional requirements in
+the High-Level Trigger including calorimetric isolation requirements.
+
+The Level-1 muon trigger system is informed by all three muon detector subsystems (DTs, CSCs, and RPCs) described in Section~\ref{ss:muonsystem}.
+Local track segments are formed within the DTs and CSCs.
+Detector hits on the RPCs are used directly for recognition of muon trigger primitive candidates.
+The global muon trigger synchronizes and reconciles these pieces of information
+from the regional muon primitives to assign momenta, track quality, et cetera to the muon candidates.
+Similar to electron primitives, muon primitives passing the L1T also must pass
+additional requirements such as isolation in the HLT.
+
 \section{Corrections to the simulated samples}
 \subsection{Pileup reweighting}
 \label{subsec:puweights}
@@ -215,6 +247,22 @@ The lepton efficiency studies shown in Chapter~\ref{chap:efficiency} split the d
 at the point where the HIP effect discussed in Section~\ref{ss:hips} was mitigated.
 For these studies, the pileup profile of the relevant simulated samples was reweighted to
 the pileup profiles of the two subsets of the data samples, which were substantially different.
+
+\subsection{Trigger efficiencies}
+\label{subsec:trigeff}
+The efficiency of each of the single and double lepton triggers can be determined 
+by measuring the fraction of events which pass the trigger in an unbiased control sample.
+Such an unbiased sample may be obtained by using missing transverse energy triggers, as
+has been previously done in \cite{Khachatryan:2015oqa}. 
+Provided sufficient statistics, the trigger efficiency is parameterized as a function of the 
+transverse momentum and pseudorapidity of the lepton or leptons.
+
+The so-called ``trigger soup'' of all of these triggers put together has an efficiency
+consistent with 1.
+The ratio of trigger efficiency in data versus simulation is also consistent with 1.
+For sake of brevity, the exact numbers are omitted.
+Any systematic uncertainty from the determination of the trigger efficiency is negligible in
+all of the studies presented in this work.
 
 \subsection{Lepton selection efficiencies}
 One of the crucial elements in the analysis is the determination of the lepton efficiency scale factors.
@@ -248,13 +296,14 @@ Overall, the $\met$ spectrum becomes softer, with a correction of down to $-40\%
 Moreover, for the $\Pq\Pq \to \Z\Z$ process, a QCD NLO to NNLO (next-to-next-to-leading order) correction factor 
 is applied as a function of generator-level invariant mass of the two $\Z$ bosons.
 The correction is obtained using settings similar to the CMS simulation (dilepton mass requirements, parton distribution function sets) to ensure its accuracy.
-For further details, see \autoref{chap:dibosons} and consult reference~\cite{Grazzini:2015hta}. 
+For further details, see Chapter~\ref{chap:dibosons} and consult reference~\cite{Grazzini:2015hta}. 
 
 In the case of the $\W\Z$ process, a flat correction factor from QCD NLO to NNLO is applied. Its value is 1.109. See reference~\cite{Grazzini:2016swo}.
 Following~\cite{Baglio:113005}, the corresponding NLO EWK correction to WZ production is small, and neglected as a systematic uncertainty.`
 
 Finally, for the invisible Higgs boson signal, we apply a differential NLO electroweak correction as a function of the transverse momentum of the $\Z$ boson.
-This correction only concerns the Drell-Yan-like $\Z\Hi$ production via $\Pq\Paq$ annihilation.
+This correction only concerns the Drell-Yan-like $\Z\Hi$ production via $\Pq\Paq$ annihilation
+as pictured in the upper left of Figure~\ref{fig:BSMdiagrams}.
 The small contributions to the overall $\Z\Hi$ cross section from the gluon-induced, photon-induced, and top-loop production are not corrected in this way.
 
 \begin{figure}[htbp]

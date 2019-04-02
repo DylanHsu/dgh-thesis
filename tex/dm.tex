@@ -1,12 +1,14 @@
 \chapter{Search for dark matter produced in association with a boosted Z boson}
 \label{chap:zlldm}
 \section{Event selection}
+\label{sec:zlldmsel}
+\fixme{MISSING THE ACTUAL CUTS}
 The final state in this search consists of limited jet activity, 
 two oppositely charged same-flavor high transverse momentum ($\pt$) isolated leptons
 compatible with a $\Z$ boson decay, and large missing energy from the undetectable
 particles recoiling against the two leptons.
 The signal cross section is several orders of magnitude lower than the major reducible
-background processes. We thus perform several steps to select and extract the
+background processes. Several steps are taken to select and extract the
 possible signal from data:
 \begin{enumerate}
   \setlength\itemsep{0em}
@@ -115,6 +117,7 @@ estimate background contributions.
 %%%%%%%%%%%
 
 \subsection{Diboson processes}
+\label{sec:vvbkg}
 Contributions from the ZZ and WZ processes are estimated from control regions in data.
 These processes contribute to the signal region via the
 $\ZZ\rightarrow\Lep\Lep\nu\nu$ and $\WZ\rightarrow\Lep\Lep\Lep\nu$ decay modes, respectively.
@@ -122,49 +125,39 @@ In both cases, the observed $\met$ corresponds to the \pt of one of the bosons.
 The processes are estimated from the control samples described in Chapter~\ref{chap:dibosons}, Sections~\ref{sec:wz3l} and~\ref{sec:zz4l}. 
 The alternative decay modes allow us to probe the boson \pt distribution, which is expected to be independent of the decay mode.
 
-%\subsubsection{\WZ control region}
-%The \WZ process is estimated from events with three well-reconstructed leptons.
-%In this case, the control region is populated by events from the same decay mode as the signal region, but no leptons are lost to identification and acceptance.
-%A \Z candidate is selected in the same manner as for the signal region.
-%An additional electron or muon fulfilling the respective POG tight ID requirement is required.
-%To enhance the purity of the \WZ selection, $\met$ of at least 30\GeV is required
-%the invariant mass of all three leptons $m_{3\Lep}$ is required to be larger than $100\GeV$
-%and the invariant mass between all opposite sign-same flavour lepton pairs ($m_{2\Lep}$) is required to be larger than $4\GeV$.
-%These requirements follow the procedure used in the CMS measurement of the \WZ production cross-section~\cite{smp16002}.
-%
-%The \W boson $\pt$ (``emulated \met'') is estimated by calculating the vectorial sum of the $\met$ vector and the transverse momentum vector of the third lepton.
-%Using the emulated \met and the dilepton candidate, the same topological selection is applied as for the signal region.
-%Since there is no danger of contamination, no veto on additional $\tau$ leptons is applied, and the b jet veto is relaxed to only reject events where a jet passes the tight working point of the b jet ID.
-%
-%The resulting emulated \met spectrum is shown in fig.~\ref{fig:histo_fakemet} (left).
-%
-%\subsubsection{\ZZ control region}
-%The \ZZ process is estimated from events with four well-reconstructed leptons.
-%In addition to a signal-like \Z candidate, a second candidate is required, the constituents of which only need to pass loose ID requirement.
-%This choice reflects the very high purity of the four-lepton selection. For both candidates, a signal-like \Z mass requirement is enforced.
-%
-%Similar to the \WZ case, the emulated \met is calculated as the vectorial sum of the real \met and the \Z boson with the larger mass difference to the nominal value of $m_Z$
-%\footnote{The choice of which \Z candidate to use for the emulated \MET estimate has been shown to cause very little difference in the resulting distribution.}.
-%Again, a signal-like topology selection is applied using the emulated \met and the remaining \Z candidate with relaxed $\tau$ and b jet vetoes.
-%
-%The resulting emulated \met spectrum is shown in fig.~\ref{fig:histo_fakemet} (right).
+Using the pure control samples with three or four leptons, an extrapolation is performed
+to the missing energy spectra for $\Z\Z$ and $\W\Z$ events 
+with only two reconstructed leptons and missing energy in the final state
+\footnote{The $\W\Z$ process can appear this way due to a lost lepton, either from inefficiency in the reconstruction and identification or the non-hermetic tracking acceptance}.
+Extrapolation to the $2\ell+\met$ final state is accomplished by furnishing a quantity
+known as the emulated $\met$ or so-called ``fake $\met$.''
+For the $\WZ$ process, the fake $\met$ is the true $\W$ boson $\pt$.
+It is estimated by calculating the vectorial sum of the $\met$ vector and the transverse momentum vector of the third lepton.
+For the $\Z\Z$ process, the fake $\met$ comes from taking the sum of any nominal true $\met$ and one of the leptonically-decaying $\Z$ bosons.
+The $\Z$ boson which is made to vanish is chosen to be the one whose reconstructed invariant
+mass is further from the nominal Z boson mass, previously denoted
+as $\mathrm{Z}_2$ in Section~\ref{sec:zz4l}.
+The choice of which Z candidate to use for the fake $\met$ is arbitrary,
+and has almost no effect on the resulting distribution.
 
+After the emulated \met procedure, the selection in Section~\ref{sec:zlldmsel} is applied.
+The resulting emulated \met spectra are shown in Fig.~\ref{fig:histo_fakemet}.
 
-%\begin{figure}[hbtp]
-%\centering
-%\includegraphics[width=0.48\textwidth]{figures/wz_fakemet_allcuts_postfit.pdf}
-%\includegraphics[width=0.48\textwidth]{figures/zz_fakemet_allcuts_postfit.pdf}
-%\includegraphics[width=0.48\textwidth]{figures/ratio_zzvswz.pdf}
-%\caption{Emulated $\met$ 
-%distribution for  the $\W\Z \to 3\Lep\nu$(top left) and $\Z\Z \to 4\Lep$ (top right) 
-%control regions, and the ratio between both distributions in data and simulation (bottom).
-% Uncertainty bands correspond to both statistical and systematic uncertainty.} 
-%\label{fig:histo_fakemet}
-%\end{figure}
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.48\textwidth]{figures/wz_fakemet_allcuts_postfit.pdf}
+\includegraphics[width=0.48\textwidth]{figures/zz_fakemet_allcuts_postfit.pdf}
+\includegraphics[width=0.48\textwidth]{figures/ratio_zzvswz.pdf}
+\caption{Emulated $\met$
+distribution for  the $\W\Z \to 3\Lep\nu$(top left) and $\Z\Z \to 4\Lep$ (top right)
+control regions, and the ratio between both distributions in data and simulation (bottom).
+ Uncertainty bands correspond to both statistical and systematic uncertainty.}
+\label{fig:histo_fakemet}
+\end{figure}
 
 \subsection{Nonresonant backgrounds}
 \label{ss:dm_nrb}
-The contribution of the non-resonant flavor symmetric backgrounds is  estimated from a control
+The contribution of the non-resonant flavor symmetric backgrounds is estimated from a control
 sample of events with dilepton of different flavor
 ($\Pe^{\pm}\Pgm^{\mp}$) that pass all analysis selections.
 Nonresonant backgrounds (NRB) consists mainly of leptonic \PW\ decays in
@@ -282,7 +275,8 @@ Spurious muons and mismeasured electrons were observed in the re-reconstruction 
 described earlier in Section~\ref{ss:hips}. 
 A re-analysis of the data was performed to identify and clean or correct the data for these objects.
 These issues are not expected to affect our analysis in a significant manner, mainly due to our third lepton veto.
-Nevertheless, we checked that the effect is negligible in our signal region, and a correlation plot showing the effect of this cleaning is shown in Fig.~\ref{fig:met_control}.
+Nevertheless, the effect is negligible in our signal region. 
+A correlation plot showing the effect of this cleaning is shown in Fig.~\ref{fig:met_control}.
 
 \begin{figure}[hbtp]
   \centering
@@ -311,7 +305,7 @@ Nevertheless, we checked that the effect is negligible in our signal region, and
 \label{sec:dmsyst}
 Systematic uncertainties in the data-based background estimates are described 
 in Section~\ref{sec:dmbkg}.
-In the following, we list all of the uncertainties which are taken into
+Here I will list all of the uncertainties which are taken into
 account in the fit to the $\met$ shapes. 
 Uncertainties which do not only influence the overall normalization
 (\eg the uncertainty in the luminosity measurement), but also the
@@ -350,8 +344,8 @@ the uncertainty in the trigger efficiency.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The lepton momentum scale uncertainty is computed by varying the
-momentum of the leptons by their uncertainties. We assume 
-the uncertainty on the muon and electron transverse momenta to be 1\%.
+momentum of the leptons by their uncertainties. 
+The uncertainty on the muon and electron transverse momenta is assumed to be 1\%.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Jet energy scale (JES) and resolution (JER)}
@@ -386,7 +380,8 @@ This comes with an associated uncertainty.
 
 As discussed in Sec.~\ref{subsec:puweights}, MC samples are re-weighted to
 reproduce the pileup conditions observed in data.
-To compute the uncertainty related to this re-weighting procedure, we compute the PU distribution not only for the nominal value of the minimum bias cross-section,
+To compute the uncertainty related to this re-weighting procedure, the pileup distribution is 
+computed not only for the nominal value of the minimum bias cross-section,
 but also for $\pm5\%$ variations of it.
 The resulting variations in weights are propagated through the analysis chain, 
 and the varied \met spectra are used to as input to the maximum likelihood fit.
@@ -431,7 +426,7 @@ whereby the mean value of the cross section $\sigma$ is given by
 \end{equation}
 %%%%%%%%%%%%%%%%%%
 
-Now, we return to the discussion of diboson theory introduced in Chapter~\ref{chap:dibosons}, Section~\ref{sec:vvtheo}.
+Now, let us return to the discussion of diboson theory introduced in Chapter~\ref{chap:dibosons}, Section~\ref{sec:vvtheo}.
 Another source of uncertainty is constituted by the missing
 higher-order EW terms in the event generation for the VV processes.
 As discussed in Refs.~\cite{Bierweiler:2013dja,Gieseke:2014gka}, terms purely of higher
@@ -446,25 +441,24 @@ estimated from the product of the NLO QCD corrections
 ($1+\delta_{\mathrm{QCD}}$) and NLO EW corrections
 ($1+\delta_{\mathrm{EW}}$), as
 $\delta_{\mathrm{QCD}}\delta_{\mathrm{EW}}$. To compute this 
-uncertainty, we consider a flat $\delta_{\mathrm{QCD}}$ value of
-$0.6$, while we compute $\delta_{\mathrm{EW}}$ event by event as a
+uncertainty, a flat $\delta_{\mathrm{QCD}}$ value of
+$0.6$ is considered , while $\delta_{\mathrm{EW}}$ is computed event-by-event as a
 function of the lower-\Z \pt (cf. Sec.~\ref{sec:higher-order-corrections}), then we
 scale the event weight up and down by a factor
 $(1+\delta_{\mathrm{QCD}}\delta_{\mathrm{EW}})$.
 
 Since the EW $k$-factors for the ZZ are strictly valid only when the hadronic
-activity in the event is moderate, we follow the
-indications in Ref.~\cite{Gieseke:2014gka} and build a variable $\rho$
-to estimate the level of hadronic activity in the event.
-We calculate $\rho$ by considering the balance of the generated leptons' transverse momenta: 
+activity in the event is moderate, a variable $\rho$ is built to estimate the level of
+hadronic activity in the event, following Ref.~\cite{Gieseke:2014gka}.
+$\rho$ is calculated by considering the balance of the generated leptons' transverse momenta: 
 \begin{equation}
 \rho = \frac{\left|\vec{\pt}(\Pl_1)+\vec{\pt}(\Pl_2)+\vec{\pt}(\PGn_1)+\vec{\pt}(\PGn_2)\right|}{\left|\vec{\pt}(\Pl_1)\right|+\left|\vec{\pt}(\Pl_2)\right|+\left|\vec{\pt}(\PGn_1)\right|+\left|\vec{\pt}(\PGn_2)\right|}\,. 
 \end{equation} 
 For events with $\rho>0.3$, \ie with a significant imbalance in the
 transverse momenta of the four leptons due to the presence of jets,
- we assign an increased uncertainty of 100\% on the EW correction for that given
-event---in other words, we replace the factor 
-$(1+\delta_{\mathrm{QCD}}\delta_{\mathrm{EW}})$ with 
+an increased uncertainty of 100\% on the EW correction for that given
+event is assigned---in other words, the factor 
+$(1+\delta_{\mathrm{QCD}}\delta_{\mathrm{EW}})$ is replaced with 
 $(1+\delta_{\mathrm{EW}})$ when computing the up and down
 variations. Less than 1\% of the ZZ events in our signal region have
 $\rho>0.3$.
@@ -514,24 +508,26 @@ higher-order corrections and PDF uncertainties. The total uncertainty in the
 background estimations in the signal region is about 10\%, which is 
 dominated by the theoretical uncertainties in the ZZ and WZ processes.
 
-We show the post-fit pulls and the impacts of the top 30 uncertainties, ordered by decreasing importance,
-in Figure~\ref{fig:impacts}.
+The post-fit pulls and the impacts of the top 30 uncertainties, ordered by decreasing importance,
+are shown in Figure~\ref{fig:impacts}.
 
-\begin{table*}[htb]
-\centering
-\topcaption{
+\begin{table}[htb]
+\caption{
 Summary of systematic uncertainties.
 Each uncertainty represents the variation of the relative yields of the processes in the signal region.
 A particular uncertainty is fully correlated across processes for which it contributes, including those processes which are also present in control regions.
 The symbol ``-'' indicates that the systematic uncertainty does not contribute or is deemed negligible.
 For shape uncertainties (indicated with a *), the numbers correspond to the overall effect of the shape variation on yield or acceptance.
 The impact on the expected limit, i.e. the relative decrease in the median expected upper limit on signal strength upon removing the nuisance, is also evaluated with respect to the SM Higgs signal.
+\label{tab:syst}
 } 
+\centering
 {\scriptsize
+\setlength{\tabcolsep}{3pt} % Default value: 6pt
 \begin{tabular}{lccccccc}
 \hline
 \multirow{2}{*}{Source of uncertainty}         & \multicolumn{6}{c}{Effect (\%)}                                              & Impact on   \\
-                                               & Signal     & ZZ         & WZ         & Nonresonant & Drell-Yan  & Minor bkg. & exp. limit  \\
+                                               & Signal     & ZZ         & WZ         & NRB         & DY         & Other      & exp. limit  \\
 \hline
 * VV Electroweak Corrections                   & -          & 10         & -4         & -           & -          & -          & 14 \%      \\
 * QCD Scale, VV backgrounds                    & -          & 9          & 4          & -           & -          & -          & \multirow{8}{*}{2 \%} \\
@@ -568,8 +564,7 @@ Luminosity                                     & \multicolumn{6}{c}{2.6}        
 \hline
 \end{tabular}
 }
-\label{tab:syst}
-\end{table*}
+\end{table}
 
 \begin{figure}[hbtp]
  \begin{center}
@@ -634,16 +629,17 @@ The nuisance is bin-dependent, but it is correlated between the \met bins and be
 \section{Multivariate analysis}
 \label{sec:dmmva}
 As previously described, the analysis contains several theoretical interpretations, some of which act as representatives for a whole class of models.
-However, in the case of the invisible Higgs model with Standard Model mass hypothesis of 125 GeV, we have a well defined model
-that permits exploration of multivariate analysis techniques without reducing the discovery potential of the analysis.
+However, in the case of the invisible Higgs model with Standard Model mass hypothesis of 125 GeV,
+the well-defined nature of the model permits exploration of multivariate analysis techniques without reducing the discovery potential of the analysis.
 The main irreducible backgrounds of this analysis consist of an invisible vector boson of mass 80 or 91 GeV recoiling against a leptonic Z, resulting in very similar 
-$\met$ shapes of the invisible Higgs(125) signal hypothesis and the background processes. Thus, we are motivated to look for information in reconstructed objects
+$\met$ shapes of the invisible Higgs(125) signal hypothesis and the background processes.
+Thus, it is essential to look for information in reconstructed objects
 which is related to the spin state of the invisible particle, so as to discriminate the spin-0 Higgs from these spin-1 vector boson backgrounds.
 Furthermore, any information that is not mutual to important analysis variables such as the $\met$ and the dilepton mass could be capitalized upon using a multivariate approach.
 
 \subsection{Classifier variables and training} 
 
-We use the following set of twelve variables to train a Boosted Decision Tree (BDT) classifier: 
+The following set of twelve variables is used to train a Boosted Decision Tree (BDT) classifier: 
 \begin{itemize}
 \item  $\left|\mll-m_{\Z}\right|$ (dilepton mass) 
 \item $\pt^{\ell 1}$ (leading lepton transverse momentum) 
@@ -660,10 +656,13 @@ We use the following set of twelve variables to train a Boosted Decision Tree (B
 \end{itemize}
 
 %We define the helicity angle $\theta^{*}_{\ell1}$ as the angle between (a) the trajectory of the lepton in the Z mother rest frame, and (b) the trajectory of the Z mother in the rest frame of the grandmother system Z+H. Since the longitudinal missing energy is not known, we can only approximately know the grandmother rest frame using $\met$.
-We define the Collins-Soper angle $\theta^{CS}_{\ell1}$ as the angle between the leading lepton trajectory and the Z mother trajectory, in the rest frame of the Z mother \cite{Collins:1984kg}.
+The Collins-Soper angle $\theta^{CS}_{\ell1}$ is defined as the angle between
+the leading lepton trajectory and the Z mother trajectory, 
+in the rest frame of the Z mother \cite{Collins:1984kg}.
 This allows some access to the spin information of the invisible particle and adds a small amount of discrimination power between the diboson processes and the invisible Higgs(125) hypothesis.
 
 The best performance for this analysis was found in a multiclass BDT with the following parameters: 400 trees, gradient boosting with learning rate 0.5, bagging with fraction 0.5, and tree depth of 4.
+For a discussion of gradient boosted decision trees, see Appendix~\ref{app:mva}.
 The multiple classes are: invisible Higgs(125) (Signal); ZZ; WZ; Drell-Yan (Z+jets); and flavor-symmetric or non-resonant backgrounds (Non-prompt).
 The signal likelihood which is used as the final discriminator is the likelihood assigned to the quark- and gluon- induced invisible Higgs(125) process, normalized to the sum of the likelihoods of all processes.
 The analysis criteria involving jet counting, jet kinematics, or jet vetoes are not considered as input variables, so that the classifier remains unbiased toward selecting events with 0 jets.
@@ -677,10 +676,11 @@ The training preselection is as follows:
 \item $\Delta \phi_{{\rm jet},\met} >$ 0.5 (in events with a jet)
 \item $\met >$ 130 $\GeV$
 \end{itemize}
-We comment that the high training requirement for the $\met$ was found via a stepwise optimization procedure.
+The high training requirement for the $\met$ was found via a stepwise optimization procedure.
 This helps us train the best against the difficult events which are not handled well by the standard analysis.
 It also happens to be compatible with the $125~\GeV$ Higgs mass.
-However, events with less $\met$ can still be classified as highly signal-like, so we apply a looser criterion for the signal region.
+However, events with less $\met$ can still be classified as highly signal-like,
+so a looser criterion is applied for the signal region.
 
 The pairwise mutual information between the input variables for the different physics process classes can be found in Figure~\ref{fig:bdt_mutual_information}.
 The comparison of data and simulation for these variables after applying the training preselection can be found in Figures~\ref{fig:bdt_inputvar_histos}, and~\ref{fig:bdt_inputvar_histos2}.
@@ -717,7 +717,9 @@ The signal hypothesis is considered in a shape analysis of the BDT classifier sp
 \begin{center}
 \includegraphics[width=0.48\textwidth]{figures/fullsel_bdt_wz_postfit.pdf}
 \includegraphics[width=0.48\textwidth]{figures/fullsel_bdt_zz_postfit.pdf}
-\caption{Distribution of the BDT classifier in the diboson control regions: WZ three-lepton region at left, ZZ four-lepton region at right. Uncertainty bands correspond to both statistical and systematic uncertainty. These are the same events as shown earlier in Chapter~\ref{chap:dibosons}, Figure \ref{fig:histo_fakemet}.}
+\caption{Distribution of the BDT classifier in the diboson control regions: WZ three-lepton region at left, ZZ four-lepton region at right. Uncertainty bands correspond to both statistical and systematic uncertainty. 
+%These are the same events as shown earlier in Chapter~\ref{chap:dibosons}, Figure \ref{fig:histo_fakemet}.}
+These are the same events as in Figure \ref{fig:histo_fakemet}.}
 \label{fig:bdt_vv}
 \end{center}
 \end{figure}
@@ -1285,10 +1287,10 @@ Unparticle, $\dU=2.20$, $\LU=15\TeV$ &  5.2e+3 &   2.3e+3 &   1.5e+3 & 5.0e+3   
 \clearpage
 
  \subsection{ADD Interpretation}
-In the framework of the ADD model of extra dimensions, we calculate limits depending on the number of extra dimensions $n$ and $M_{D}$.
+In the framework of the ADD model of extra dimensions, limits are calculated depending on the number of extra dimensions $n$ and $M_{D}$.
 For each value of $d$, cross-section limits are calculated as a function of $M_{D}$ (fig.~\ref{fig:limits_add_xs}).
 By finding the intersection between the theory cross-section line with the observed and expected excluded cross-sections,
-and projecting that point onto the $M_{D}$ axis, we find limits on $M_{D}$ as a function of $n$ (fig.~\ref{fig:limits_add_md}).
+and projecting that point onto the $M_{D}$ axis, limits on $M_{D}$ are found as a function of $n$ (fig.~\ref{fig:limits_add_md}).
 The used theoretical cross sections are given in appendix~\ref{app:add_xs} and shown graphically in fig.~\ref{fig:xs_add_md}.
 
 The observed (expected) exclusion of $M_{D}$ ranges between $2.1$ and $2.4$ \TeV ($2.3$ and $2.6$ \TeV) for $n$ between 2 and 7.

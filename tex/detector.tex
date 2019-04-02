@@ -1,4 +1,4 @@
-\chapter{Experimental Apparatus}
+\chapter{Experimental apparatus}
 
 The data studied in this work were collected at the Compact Muon Solenoid (CMS) Experiment.
 The CMS detector is a multi-purpose apparatus which operates at the Large Hadron Collider. 
@@ -7,13 +7,6 @@ between Lake Geneva and the Jura mountains.
 
 
 \section{The Large Hadron Collider}
-
-\begin{figure}[hb]
-\centering
-\includegraphics[width=0.9\textwidth]{figures/lhc_protons.pdf}
-\caption{Schematic of the CERN accelerator complex.}
-\label{fig:lhc}
-\end{figure}
 
 The LHC is a two-ring superconducting hadron accelerator \cite{lhcmachine}.
 It is designed to collide counter-rotating proton beams with a center-of-mass energy of 14 TeV
@@ -56,6 +49,14 @@ The LHCb experiment has only forward coverage and specializes in heavy flavor ph
 The ALICE experiment studies heavy ion collisions.
 
 In 2016, the LHC delivered around 36 inverse femtobarns worth of data which was recorded by CMS.
+
+\begin{figure}[hbtp]
+\centering
+\includegraphics[width=0.9\textwidth]{figures/lhc_protons.pdf}
+\caption{Schematic of the CERN accelerator complex.}
+\label{fig:lhc}
+\end{figure}
+
 
 \section{The CMS detector}
 
@@ -305,6 +306,7 @@ Only light that hits the core-cladding interface at an angle larger than the cri
 After the quoted 10 MGy dose has accumulated over the HF lifetime, the optical transmission of the fibers is reduced just by a factor of 2.
 
 \subsection{Muon system}
+\label{ss:muonsystem}
 The CMS muon system is capable of reconstructing the momentum and charge of muons over the entire
 kinematic range of the LHC. 
 Due to the shape of the CMS solenoid magnet, the muon system has a barrel section and 2 endcap sections.
@@ -451,7 +453,39 @@ From \cite{Chatrchyan:2008aa}.
 }
 \label{fig:cms_rpc_barrel}
 \end{figure}
-
 \clearpage
 
+\subsection{Level-1 Trigger}
+Triggering algorithms decide which data are recorded in the experiment.
+The trigger decision process begins with the Level-1 Trigger (L1T) \cite{Khachatryan:2016bia}.  
+The hardware implementation of the Level-1 Trigger is in the form of application-specific
+integrated circuits (ASICs), field-programmable gate arrays (FPGAs), 
+programmable logic devices (PLDs), and random access memory used for memory look-up tables (LUTs).
+The FPGAs and LUTs may be reprogrammed, allowing for the algorithms to be revised.
 
+The Level-1 Trigger is subject to a large data flow carried on optical fibers, 
+copper cables, and backplanes within hardware crates. 
+The data is transmitted in parallel at frequencies which are integer multiples of 40 MHz.
+Data events passing the Level-1 Trigger are then transmitted to the so-called ``high-level trigger,'' described next.
+
+\subsection{High-Level Trigger}
+Data events accepted by the Level-1 Trigger are next processed by the High-Level Trigger (HLT).
+Unlike the L1T's readout boards, the HLT is implemented on a commercial Linux computing cluster
+called the File-based Filter Farm (F\textsuperscript{3}). There are three types of computing units in the F\textsuperscript{3}:
+\begin{itemize}
+\item The Readout Units take the information from the readout boards and assemble event fragments from a given detector partition.
+\item The Builder Units take the event fragments and assemble full events. The full events are buffered here during the next step.
+\item The Filter Units apply the final event selection of the HLT algorithms.
+\end{itemize}
+The HLT algorithms running on the FUs operate on full-granularity event data
+from all subdetector systems. They accept between 1-10\% of events accepted by the L1T.
+The algorithms make use of the CMS offline reconstruction framework called CMSSW.
+
+\subsection{Offline world}
+Events accepted by the HLT are merged into larger agglomerate files which are stored
+locally in a Lustre parallel distributed file system.
+Then, they are transferred from the ``online'' CMS experimental site to the
+``offline'' CERN Tier-0 computing center at the main CERN campus in Meyrin for processing.
+This transfer system is a multithreaded software,
+optimized to handle rates of several gigabytes per second during data taking.
+Finally, data are distributed worldwide from Tier-0 to the global CMS computing grid for physics studies.
