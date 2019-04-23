@@ -1,25 +1,36 @@
 \chapter{Search for dark matter produced in association with a boosted Z boson}
 \label{chap:zlldm}
+
+In this chapter, I will describe the analysis for the dark matter search from start to finish.
+The final state in this search is a Z boson candidate decaying to charged leptons, recoiling against a lot of missing energy from the undetectable particles.
+Suppose that significantly more of these events were to be observed compared to the Standard Model prediction.
+Then we could interpret that result under a variety of theoretical models (described in Section~\ref{sec:bsmtheory}.
+
+An event selection is constructed to analyze the events collected using the leptonic triggers.
+Next, I consider the relevant background processes and discuss strategies to estimate them using data and simulated events.
+After assessing the systematic uncertainties in the methodology, a maximum likelihood fit is performed to test the Standard Model versus the exotic predictions.
+I will discuss the pursuit of a multivariate analysis to maximize our sensititivity to the invisible Higgs model.
+Finally, the results are quoted for the search.
+
 \section{Event selection}
 \label{sec:zlldmsel}
 %\fixme{MISSING THE ACTUAL CUTS}
 Here, I describe the criteria applied to events in order to select and extract a possible dark matter signature from the data.
-The final state in this search is a Z boson candidate decaying to charged leptons, recoiling against a lot of
-missing energy from the undetectable particles.
+First, a preselection is applied to attest to the veracity of the Drell-Yan simulation.
+Then, the full selection is applied, to kill off the reducible backgrounds and enhance the purity of the dark matter signal as much as possible.
 
 \subsection{Preselection}
 \label{ss:zlldmpresel}
 First, events are selected which have exactly two electrons or muons.
-They must be opposite-charged electrons (muons) with $\pt > 25 (20)~\GeV$ each.
-The mass of the dilepton system ($\mll$) is required to be $\left|\mll-m_{\Z}\right| < 15\GeV$, consistent with the decay of a $\Z$ boson.
+They must be opposite-charged electrons (muons) each with $\pt > 25~(20)~\GeV$.
+The mass of the dilepton system ($\mll$) is required to be $\left|\mll-m_{\Z}\right| < 15\GeV$, consistent with the decay of a $\Z$ boson of mass 91.1876 \GeV.
 The $\met$ must be larger than 40~$\GeV$ and the dilepton 
 $\pt$ ($\pt^{\ell\ell}$) must be larger than 60~$\GeV$ to reject the bulk of the background from the Drell-Yan process.
 
 A few distributions for each flavor channel after this preselection are shown in 
 Figures~\ref{fig:distributions_zsel_nlep} to~~\ref{fig:distributions_presel_met}.
 
-
-\begin{figure}[hbtp]
+\begin{figure}[!hbtp]
 \begin{center}
 \includegraphics[width=\cmsFigWidth]{figures/zsel_nlep_ee.pdf}
 \includegraphics[width=\cmsFigWidth]{figures/zsel_nlep_mm.pdf}
@@ -30,7 +41,7 @@ Figures~\ref{fig:distributions_zsel_nlep} to~~\ref{fig:distributions_presel_met}
 \label{fig:distributions_zsel_nlep}
 \end{center}
 \end{figure}
-\begin{figure}[hbtp]
+\begin{figure}[!hbtp]
 \begin{center}
 \includegraphics[width=\cmsFigWidth]{figures/zsel_njets_ee.pdf}
 \includegraphics[width=\cmsFigWidth]{figures/zsel_njets_mm.pdf}
@@ -41,7 +52,7 @@ Figures~\ref{fig:distributions_zsel_nlep} to~~\ref{fig:distributions_presel_met}
 \label{fig:distributions_zsel_njets}
 \end{center}
 \end{figure}
-\begin{figure}[hbtp]
+\begin{figure}[!hbtp]
 \begin{center}
 \includegraphics[width=\cmsFigWidth]{figures/zsel_bjets_ee.pdf}
 \includegraphics[width=\cmsFigWidth]{figures/zsel_bjets_mm.pdf}
@@ -52,7 +63,7 @@ Figures~\ref{fig:distributions_zsel_nlep} to~~\ref{fig:distributions_presel_met}
 \label{fig:distributions_zsel_bjets}
 \end{center}
 \end{figure}
-\begin{figure}[hbtp]
+\begin{figure}[!hbtp]
 \begin{center}
 \includegraphics[width=\cmsFigWidth]{figures/zsel_dphiZMET_ee.pdf}
 \includegraphics[width=\cmsFigWidth]{figures/zsel_dphiZMET_mm.pdf}
@@ -64,7 +75,7 @@ Figures~\ref{fig:distributions_zsel_nlep} to~~\ref{fig:distributions_presel_met}
 \end{center}
 \end{figure}
 
-\begin{figure}[hbtp]
+\begin{figure}[!hbtp]
 \begin{center}
 \includegraphics[width=\cmsFigWidth]{figures/presel_ptll_ee.pdf}
 \includegraphics[width=\cmsFigWidth]{figures/presel_ptll_mm.pdf}
@@ -75,7 +86,7 @@ Figures~\ref{fig:distributions_zsel_nlep} to~~\ref{fig:distributions_presel_met}
 \label{fig:distributions_presel_ptll}
 \end{center}
 \end{figure}
-\begin{figure}[hbtp]
+\begin{figure}[!hbtp]
 \begin{center}
 \includegraphics[width=\cmsFigWidth]{figures/presel_balance_ee.pdf}
 \includegraphics[width=\cmsFigWidth]{figures/presel_balance_mm.pdf}
@@ -86,7 +97,9 @@ Figures~\ref{fig:distributions_zsel_nlep} to~~\ref{fig:distributions_presel_met}
 \label{fig:distributions_presel_balance}
 \end{center}
 \end{figure}
-\begin{figure}[hbtp]
+\clearpage
+
+\begin{figure}[!hbtp]
 \begin{center}
 \includegraphics[width=\cmsFigWidth]{figures/presel_met_ee.pdf}
 \includegraphics[width=\cmsFigWidth]{figures/presel_met_mm.pdf}
@@ -98,9 +111,10 @@ Figures~\ref{fig:distributions_zsel_nlep} to~~\ref{fig:distributions_presel_met}
 \end{center}
 \end{figure}
 
-\clearpage
 \subsection{Signal selection}
 \label{ss:zlldmsigsel}
+After the preselection, more stringent criteria are applied to enhance the significance of a dark matter signal.
+
 There are nonresonant background processes which do not have anything to do with a Z boson,
 but they can end up looking like a signal event by way of combinatorics.
 A great example of this is two independent objects each eventually producing a charged lepton and missing energy, such as leptonic WW decays.
@@ -119,30 +133,8 @@ They are easily reduced by requiring that events have no more than one jet with 
 Furthermore, a b-jet veto is imposed.
 Events are rejected if a central jet is found which passes the ``Medium'' working point of the CSVv2 b-tagging algorithm ($>0.8484$).
 
-Events are rejected if a third, additional electron or muon is reconstructed with $\pt > 10~\GeV$ using a loose selection; 
-or if they contain a reconstructed hadronically decaying $\tau$ lepton with $\pt>18\GeV$.
-These criteria reduce the background contribution from $\W\Z$ events
-where the lepton originating from the $\W$ boson decay is not reconstructed.
 
-Last but not least, the Drell-Yan process must still be dealt with.
-It is important to note that the Drell-Yan process cannot generate real missing energy.
-It can only look like a signal event due to detector acceptance effects and mismeasurement of jets.
-This is handled in the signal selection in several ways.
-The Z candidate and the missing transverse energy are required to be back-to-back in the transverse plane: $\Delta \phi_{\ell\ell,\met} > 2.6$.
-Their momenta in the transverse plane must also be balanced\footnote{This is frequently referred to as ``the balance.''}: $|\met-\pt^{\ell\ell}|/\pt^{\ell\ell} < 0.4$.
-A mismeasurement of an energetic jet will induce missing energy in the same angular direction of the jet.
-So if there is a jet in the event, it must not be in the same azimuthal direction as the jet: $\Delta \phi_{{\rm jet},\met} > 0.5~ \mathrm{Rad}$.
-This also helps deal with the aforementioned lost WZ, in the case that the lepton is
-mistakenly reconstructed as a jet or the $\tau$ lepton reconstruction fails.
-Finally, since the missing energy distribution of the Drell-Yan background is a sharply falling spectrum,
-events must have $\met$ larger than 100 \GeV.
-
-A summary of the criteria for the signal region are given in Table~\ref{tab:zlldmsigsel}.
-Following this selection, a dark matter signature could, in principle, appear prominently in the spectrum of missing transverse energy.
-A maximum likelihood fit is performed to test the compatibility of the observed spectrum with signal+background and background-only hypotheses.
-The likelihood is described below in Section~\ref{sec:likelihood}.
-
-\begin{figure}[hbtp]
+\begin{figure}[!thbp]
  \centering
  \begin{tikzpicture}
   \begin{feynman}
@@ -214,6 +206,29 @@ The likelihood is described below in Section~\ref{sec:likelihood}.
  \label{fig:dmnrb}
 \end{figure}
 
+Events are rejected if a third, additional electron or muon is reconstructed with $\pt > 10~\GeV$ using a loose selection; 
+or if they contain a reconstructed hadronically decaying $\tau$ lepton with $\pt>18\GeV$.
+These criteria reduce the background contribution from $\W\Z$ events
+where the lepton originating from the $\W$ boson decay is not reconstructed.
+
+Last but not least, the Drell-Yan process must still be dealt with.
+It is important to note that the Drell-Yan process cannot generate real missing energy.
+It can only look like a signal event due to detector acceptance effects and mismeasurement of jets.
+This is handled in the signal selection in several ways.
+The Z candidate and the missing transverse energy are required to be back-to-back in the transverse plane: $\Delta \phi_{\ell\ell,\met} > 2.6$.
+Their momenta in the transverse plane must also be balanced\footnote{This is frequently referred to as ``the balance.''}: $|\met-\pt^{\ell\ell}|/\pt^{\ell\ell} < 0.4$.
+A mismeasurement of an energetic jet will induce missing energy in the same angular direction of the jet.
+So if there is a jet in the event, it must not be in the same azimuthal direction as the jet: $\Delta \phi_{{\rm jet},\met} > 0.5~ \mathrm{Rad}$.
+This also helps deal with the aforementioned lost WZ, in the case that the lepton is
+mistakenly reconstructed as a jet or the $\tau$ lepton reconstruction fails.
+Finally, since the missing energy distribution of the Drell-Yan background is a sharply falling spectrum,
+events must have $\met$ larger than 100 \GeV.
+
+A summary of the criteria for the signal region are given in Table~\ref{tab:zlldmsigsel}.
+Following this selection, a dark matter signature could, in principle, appear prominently in the spectrum of missing transverse energy.
+A maximum likelihood fit is performed to test the compatibility of the observed spectrum with signal+background and background-only hypotheses.
+The likelihood is described below in Section~\ref{sec:likelihood}.
+
 \begin{table}[hbtp]
   \begin{center}
  {\scriptsize
@@ -243,10 +258,29 @@ $\Delta R_{\ell\ell}$                     & $<$ 1.8                             
 \end{table}
 
 \clearpage
+\begin{figure}[!htb]
+\centering
+\setlength{\fboxsep}{0pt}
+\setlength{\fboxrule}{1pt}
+\fbox{\includegraphics[width=1.0\textwidth]{figures/cmsShow_ZeeMET_MET300-281707_1721423933_1040_3DTower.png}}\vspace{1cm}
+
+\fbox{\includegraphics[width=1.0\textwidth]{figures/cmsShow_ZmmMET_MET300-283043_473634957_254_3DTower.png}}\vspace{1cm}
+
+\caption{3D event displays of Z($\ell\ell$) events with $\met > 300 \GeV$.
+\eventDisplayCaption
+\label{fig:zllmet_eventdisplay}}
+\end{figure}
+\clearpage
+
+%\clearpage
 \section{Background estimation}
 \label{sec:dmbkg}
 A combination of data-driven methods and detailed simulated studies is used to
 estimate background contributions.
+The spectra of diboson processes are taken from simulation with conservative systematic uncertainties, but the ratio of ZZ/WZ is measured from data.
+The nonresonant background processes may just as well produce different-flavor lepton pairs, so we extrapolate from those data events to estimate the yield of same-flavor lepton pairs.
+The Drell-Yan yield is estimated from a sideband of low $\met$. Its contribution for higher values of $\met$ is very small, but the extrapolation is dubious. Thus, several cross-checks are performed.
+
 
 %%%%%%%%%%%
 
@@ -274,7 +308,8 @@ as $\mathrm{Z}_2$ in Section~\ref{sec:zz4l}.
 The choice of which Z candidate to use for the fake $\met$ is arbitrary,
 and has almost no effect on the resulting distribution.
 
-After the emulated \met procedure, the selection in Section~\ref{sec:zlldmsel} is applied.
+After the emulated \met procedure, the kinematic criteria of the selection in
+Section~\ref{sec:zlldmsel} are applied.
 The resulting emulated \met spectra are shown in Fig.~\ref{fig:histo_fakemet}.
 
 \begin{figure}[htbp]
@@ -539,18 +574,18 @@ NNPDF3.0 parton distribution set~\cite{nnpdf}.
 The samples for the signals and leading backgrounds were generated at NLO in QCD,
 and the scale uncertainties are estimated using the weights
 stored in the respective samples. For the ZZ process, this procedure is rather conservative
-in the sense that the prediction is corrected to NNLO in QCD, but the assumed uncertainty reflect
-the NLO generator precision.
-The PDF4LHC pdf sets are used with the MC method. As a start, the
-event selection is performed. The final distribution for the variable
-of interest is then reweighted bin-by-bin using the PDF4LHC pdf
-sets. This way, one obtains $1+N_{\textrm{mem}}$ histograms, whereby
-$N_{\textrm{mem}}$ denotes the number of pdf error sets used. One
-calculates the uncertainty $\delta^{\textrm{pdf}}\sigma$ on the cross
+in the sense that the prediction is corrected to NNLO in QCD, but the assumed uncertainty reflects
+the precision of the NLO generator.
+The PDF4LHC PDF sets are used with the MC method.
+The final distribution for the variable of interest is 
+reweighted bin-by-bin using the PDF4LHC PDF sets.
+This way, one obtains $1+N_{\textrm{mem}}$ histograms, whereby
+$N_{\textrm{mem}}$ denotes the number of PDF error sets used. One
+calculates the uncertainty $\delta^{\textrm{PDF}}\sigma$ on the cross
 section $\sigma$ in a bin-by-bin approach via 
 %%%%%%%%%%%%%%%%%%
 \begin{equation}
-\delta^{\textrm{pdf}} \sigma= \sqrt{ \frac{1}{N_{\textrm{mem}} - 1} \sum_{k=1}^{N_{\textrm{mem}}} \left(\sigma^{(k)} - \langle \sigma \rangle\right)^2 }\,,
+\delta^{\textrm{PDF}} \sigma= \sqrt{ \frac{1}{N_{\textrm{mem}} - 1} \sum_{k=1}^{N_{\textrm{mem}}} \left(\sigma^{(k)} - \langle \sigma \rangle\right)^2 }\,,
 \end{equation}
 %%%%%%%%%%%%%%%%%%
 whereby the mean value of the cross section $\sigma$ is given by
@@ -561,50 +596,10 @@ whereby the mean value of the cross section $\sigma$ is given by
 %%%%%%%%%%%%%%%%%%
 
 Now, let us return to the discussion of diboson theory introduced in Chapter~\ref{chap:dibosons}, Section~\ref{sec:vvtheo}.
-Another source of uncertainty is constituted by the missing
-higher-order EW terms in the event generation for the VV processes.
-As discussed in Refs.~\cite{Bierweiler:2013dja,Gieseke:2014gka}, terms purely of higher
-order in $\alpha_{\mathrm{EW}}$ are expected to be negligible.
-A significant uncertainty, instead, stems from missing
-QCD-EW combined corrections, \eg involving two-loop terms of order
-$\alpha_{\mathrm{S}}\alpha_{\mathrm{EW}}$.
-
-For ZZ events with little hadronic activity---\ie most of our selected events---, the
-uncertainty from such missing QCD-EW combined corrections is
-estimated from the product of the NLO QCD corrections 
-($1+\delta_{\mathrm{QCD}}$) and NLO EW corrections
-($1+\delta_{\mathrm{EW}}$), as
-$\delta_{\mathrm{QCD}}\delta_{\mathrm{EW}}$. To compute this 
-uncertainty, a flat $\delta_{\mathrm{QCD}}$ value of
-$0.6$ is considered , while $\delta_{\mathrm{EW}}$ is computed event-by-event as a
-function of the lower-\Z \pt (cf. Sec.~\ref{sec:higher-order-corrections}), then we
-scale the event weight up and down by a factor
-$(1+\delta_{\mathrm{QCD}}\delta_{\mathrm{EW}})$.
-
-Since the EW $k$-factors for the ZZ are strictly valid only when the hadronic
-activity in the event is moderate, a variable $\rho$ is built to estimate the level of
-hadronic activity in the event, following Ref.~\cite{Gieseke:2014gka}.
-$\rho$ is calculated by considering the balance of the generated leptons' transverse momenta: 
-\begin{equation}
-\rho = \frac{\left|\vec{\pt}(\Pl_1)+\vec{\pt}(\Pl_2)+\vec{\pt}(\PGn_1)+\vec{\pt}(\PGn_2)\right|}{\left|\vec{\pt}(\Pl_1)\right|+\left|\vec{\pt}(\Pl_2)\right|+\left|\vec{\pt}(\PGn_1)\right|+\left|\vec{\pt}(\PGn_2)\right|}\,. 
-\end{equation} 
-For events with $\rho>0.3$, \ie with a significant imbalance in the
-transverse momenta of the four leptons due to the presence of jets,
-an increased uncertainty of 100\% on the EW correction for that given
-event is assigned---in other words, the factor 
-$(1+\delta_{\mathrm{QCD}}\delta_{\mathrm{EW}})$ is replaced with 
-$(1+\delta_{\mathrm{EW}})$ when computing the up and down
-variations. Less than 1\% of the ZZ events in our signal region have
-$\rho>0.3$.
-
-For the WZ process, both the correction and uncertainty follows the prescription of~\cite{HZZ2l2v2018}.
-\fixme{Add more details based on AN-16-325}
-
-The EWK correction is small~\cite{Bierweiler:2013dja,Gieseke:2014gka,Baglio:113005}
-and uncertainties can be estimated from considering QCD-EWK cross-terms~\cite{Manohar:2016nzj,Alwall:2014hca,Frixione:2014qaa,Frixione:2015zaa}.
-
-The resulting variations in the \ETm distribution are used as a shape uncertainty in 
-the limit computation.
+The uncertainties from the higher order theoretical calculations are propagated to the \ETm distribution.
+The NLO electroweak and NNLO QCD corrections each carry a ``shape uncertainty,''
+meaning the corresponding nuisance parameters in each bin of \ETm are fully correlated for the
+purposes of the maximum likelihood fit.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{MC statistics}

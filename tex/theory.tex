@@ -162,12 +162,20 @@ This $\phi$ field lives in a potential given by
 V(\phi) = \mu^2 \phi^\dagger \phi + \lambda (\phi^\dagger \phi)^2 \label{eq:higgsV}
 \end{equation}
 $\lambda$ must be positive in order for the potential $V$ to have a minimum.
-For negative values of the constant $\mu$, $V$ could be visualized as a sombrero or similar hat with a rounded brim.
+For negative values of the constant $\mu$, $V$ could be visualized as a sombrero or similar hat with a rounded brim. See Figure~\ref{fig:mexican_hat}.
 Since the lowest point is somewhere in the brim, 
 the $\phi$ doublet develops a vacuum expectation value $v/\sqrt{2}$.
 This breaks the SU(2) symmetry, but a new U(1) symmetry is maintained.
 The value of $v$ is experimentally found to be around 246 \GeV,
 providing a basis for the earlier statement about the unification energy.
+
+\begin{figure}
+\centering
+\includegraphics[width=0.5\textwidth]{figures/mexican_hat.png}
+\caption{Visualization of $V(\phi)$ as the so-called "Mexican hat" potential.}
+\label{fig:mexican_hat}
+\end{figure}
+
 
 Undertaking a unitary gauge transformation in SU(2), $\phi^+$ vanishes and $\phi^0$ remains as a physical scalar field.
 Expanding this scalar field around the minimum of the potential in Equation~\ref{eq:higgsV}, $\phi^0 \rightarrow \frac{v+H(x)}{\sqrt{2}}$,
@@ -537,7 +545,7 @@ This quantum field theory permits the quark-quark-gluon vertex, the three-gluon 
 % Diagram
 For experimental physics at the LHC, QCD is important even for studying electroweak processes.
 Since we collide protons, the internal dynamics of the proton are an essential ingredient of Monte Carlo simulations.
-The momentum fractions carried by the quarks and gluons are determined empirically, giving us the proton parton distribution functions.
+The momentum fractions carried by the quarks and gluons are determined empirically as what are called the proton parton distribution functions.
 Internal gluon loop corrections and the possibility of emitting extra gluons before or after the hard process can enhance the total cross section significantly for physics processes.
 QCD activity resulting in charged hadrons may interfere with the ability to identify charged leptons in physics events of interest.
 Lastly, the hadronic radiation from the interaction point irradiates the detector components. This changes their material properties over time.
@@ -590,6 +598,7 @@ An example of the PDF set provided by the NNPDF collaboration at $Q=50 \GeV$ is 
 \end{figure}
 
 \section{New physics}
+\label{sec:bsmtheory}
 %In this work, we consider a scenario in which are produced a pair of charged leptons ($\ell^{+}\ell^{-}$, where $\ell=\Pe$ or $\Pgm$),
 %consistent with the decay of a $\PZ$ boson, together with large missing transverse momentum ($\met$).
 

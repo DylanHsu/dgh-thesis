@@ -276,10 +276,12 @@ lepton identified in that event. A detailed discussion of the methodology to det
 \label{subsec:lepres}
 The lepton momentum scale and resolution are affected by detector misalignment 
 and miscalibration. The calibration procedure includes corrections to both 
-data and simulation. In data momentum corrections are applied differentially 
-in $\pt$, $\eta$, and charge in order to match the value of known resonances. 
-In simulation additional smearing is applied in order to match the observed 
-resolution of the resonance peak.
+data and simulation.
+In data momentum corrections are applied differentially in $\pt$, $\eta$, and charge in order to match the value of known resonances. 
+These corrections are derived using a multivariate regression technique.
+For more details see Ref.~\cite{Chatrchyan:2013dga}. 
+In simulation, additional stochastic smearing is applied to match the observed
+resolution of the Z boson resonance peak.
 
 For muons, these corrections are known as the Rochester corrections.
 The additional effect of uncertainty in the magnetic field is considered.
@@ -289,36 +291,15 @@ The methodology and validation is provided in Ref.~\cite{Bodek:2012id}.
 \label{sec:higher-order-corrections}
 The diboson MC samples, including the invisible Higgs signal, are initially generated at electroweak leading-order.
 
-For the $\Z\Z$ background, a higher order electroweak correction is applied following~\cite{Bierweiler:2013dja,Gieseke:2014gka} (e.g. see
-  Fig~\ref{fig:ewkCorrectionCompare}). An event-by-event reweighting is performed with correction weights binned in the generator-level \pt of the trailing boson.
-This correction results in a net reduction of the overall ZZ yield of about 10\%, although with a strong dependence on the trailing boson $\pt$.
-Overall, the $\met$ spectrum becomes softer, with a correction of down to $-40\%$ for a trailing-$\Z \pt$ of 700~$\GeV$. 
-Moreover, for the $\Pq\Pq \to \Z\Z$ process, a QCD NLO to NNLO (next-to-next-to-leading order) correction factor 
-is applied as a function of generator-level invariant mass of the two $\Z$ bosons.
-The correction is obtained using settings similar to the CMS simulation (dilepton mass requirements, parton distribution function sets) to ensure its accuracy.
-For further details, see Chapter~\ref{chap:dibosons} and consult reference~\cite{Grazzini:2015hta}. 
+The ZZ and WZ processes are corrected to next-to-leading order in electroweak,
+and next-to-next-to-leading order in QCD.
+For further details, see Chapter~\ref{chap:dibosons}. 
 
-In the case of the $\W\Z$ process, a flat correction factor from QCD NLO to NNLO is applied. Its value is 1.109. See reference~\cite{Grazzini:2016swo}.
-Following~\cite{Baglio:113005}, the corresponding NLO EWK correction to WZ production is small, and neglected as a systematic uncertainty.`
+%In the case of the $\W\Z$ process, a flat correction factor from QCD NLO to NNLO is applied. Its value is 1.109. See reference~\cite{Grazzini:2016swo}.
+%Following~\cite{Baglio:113005}, the corresponding NLO EWK correction to WZ production is small, and neglected as a systematic uncertainty.`
 
-Finally, for the invisible Higgs boson signal, we apply a differential NLO electroweak correction as a function of the transverse momentum of the $\Z$ boson.
+For the invisible Higgs boson signal, we apply a differential NLO electroweak correction as a function of the transverse momentum of the $\Z$ boson.
 This correction only concerns the Drell-Yan-like $\Z\Hi$ production via $\Pq\Paq$ annihilation
 as pictured in the upper left of Figure~\ref{fig:BSMdiagrams}.
 The small contributions to the overall $\Z\Hi$ cross section from the gluon-induced, photon-induced, and top-loop production are not corrected in this way.
-
-\begin{figure}[htbp]
-\centering
-\includegraphics[width=0.60\textwidth]{figures/ZZ_ewkCorr.png}
-\caption{Electroweak corrections applied as a function of $\hat{s}$, 
-  $\hat{t}$, and of the quark flavours, provided by the authors of 
-  Ref.~\cite{Bierweiler:2013dja}. The corrections thus computed are
-  plotted as a function of the lower-boson \pt and compared to the
-  average values of the corrections shown in Ref.~\cite{Bierweiler:2013dja} 
-  for the $\ZZ$ process. The cross-shaped markers are obtained by
-  applying the fully differential corrections, whereas the colored
-  lines are taken from Ref.~\cite{Bierweiler:2013dja}.} 
-\label{fig:ewkCorrectionCompare}
-\end{figure}
-
-
 
