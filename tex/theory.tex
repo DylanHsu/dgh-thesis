@@ -162,7 +162,7 @@ This $\phi$ field lives in a potential given by
 V(\phi) = \mu^2 \phi^\dagger \phi + \lambda (\phi^\dagger \phi)^2 \label{eq:higgsV}
 \end{equation}
 $\lambda$ must be positive in order for the potential $V$ to have a minimum.
-For negative values of the constant $\mu$, $V$ could be visualized as a sombrero or similar hat with a rounded brim. See Figure~\ref{fig:mexican_hat}.
+For negative values of $\mu^2$, $V$ could be visualized as a sombrero or similar hat with a rounded brim. See Figure~\ref{fig:mexican_hat}.
 Since the lowest point is somewhere in the brim, 
 the $\phi$ doublet develops a vacuum expectation value $v/\sqrt{2}$.
 This breaks the SU(2) symmetry, but a new U(1) symmetry is maintained.
@@ -227,12 +227,20 @@ From this expression, we can extract expressions for the W and Z bosons' masses 
 m_W = \frac{v g}{2},\:\:\:\:m_Z = \frac{vg}{2\:\mathrm{cos}\:\theta_W}
 \end{equation}
 Lastly, why don't we reframe Equation~\ref{eq:EWpreSSB} in terms of the physical gauge bosons.
-The photon, Z, and W field strength tensors $A_{\mu\nu}$, $A_{\mu\nu}$, $A_{\mu\nu}$, $A_{\mu\nu}$ are provided as
+The antisymmetric photon, Z, and W field strength tensors $A_{\mu\nu}$, $Z_{\mu\nu}$, $W^{\pm}_{\mu\nu}$ are provided as
 \begin{equation}
 \begin{split}
-blah
+A_{\mu\nu} &= \partial_\mu A_\nu - \partial_\nu A_\mu \\
+Z_{\mu\nu} &= \partial_\mu Z_\nu - \partial_\nu Z_\mu \\
+(\vec{\mathbf{W}}^{+}_{\mu\nu})_a &= \partial_\mu (\vec{\mathbf{W}}^{+}_\nu)_a - \partial_\nu (\vec{\mathbf{W}}^{+}_\mu)_a - ig\varepsilon_{abc}(\vec{\mathbf{W}}^{+}_\mu)_b (\vec{\mathbf{W}}^{+}_\nu)_c \\
+\vec{\mathbf{W}}^{-}_{\mu\nu} &= (\vec{\mathbf{W}}^{+}_{\mu\nu})^\dagger
 \end{split}
 \end{equation}
+where the vector notation indicates components in three-dimensional weak isospin space.
+Einstein summation convention is used and $\varepsilon$ is the antisymmetric Levi-Civita symbol.
+
+\fixme{The reframing in terms of physical boson fields is not standard in the literature and non-trivial, so I am worried this is kind of Jackson-esque "left as an exercise." Maybe it is not such a big deal.}
+
 Finally, we can write down the full EW Lagrangian density after symmetry breaking. 
 As before, $\mathcal{L}_\mathrm{EW} = \mathcal{L}_\mathrm{Gauge} + \mathcal{L}_\mathrm{Fermion} + \mathcal{L}_\mathrm{\phi} + \mathcal{L}_\mathrm{Yukawa}$. 
 
@@ -240,7 +248,7 @@ The $\mathcal{L}_\mathrm{Gauge}$ term contains the gauge field tensor dynamic te
 \begin{equation} 
 \begin{split}
 \label{eq:L_Gauge}
-\mathcal{L}_\mathrm{Gauge} & = -\frac{1}{4} \termLB A^{\mu\nu} A_{\mu\nu} - 2  W^+_{\mu\nu} W^{{-}\mu\nu} - Z_{\mu\nu} Z^{\mu\nu} \termRB  \\ 
+\mathcal{L}_\mathrm{Gauge} & = -\frac{1}{4} \termLB A^{\mu\nu} A_{\mu\nu} + 2  W^+_{\mu\nu} W^{{-}\mu\nu} + Z_{\mu\nu} Z^{\mu\nu} \termRB  \\ 
  & - ig \termLB (W^+_{\mu\nu} W^{{-}\mu} - W^{+\mu} W^{{-}}_{\mu\nu})(A^\nu\mathrm{sin}\:\theta_W - Z^\nu \mathrm{cos}\:\theta_W)  \\
  & \qquad\qquad\qquad\qquad\qquad\qquad + W^{{-}}_{\nu} W^+_{\mu} (A^{\mu\nu} \mathrm{sin}\:\theta_W - Z^{\mu\nu} \mathrm{cos} \theta_W ) \termRB  \\
  & + \frac{g^2}{4} \termLB {-}\big( 2 W^+_\mu W^{{-}\mu} + (A_\mu \mathrm{sin}\:\theta_W - Z_\mu \mathrm{cos}\:\theta_W)^2 \big)^2 \\

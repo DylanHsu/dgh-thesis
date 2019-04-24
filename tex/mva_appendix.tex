@@ -67,6 +67,12 @@ The bagging fraction is the fraction of training data randomly chosen for the it
 
 \section{Choice of input variables}
 
+The final set of twelve variables was determined using correlation coefficients and the mutual information between the input variables.
+See Figure~\ref{fig:bdt_mutual_information}.
+The classifier performance was unchanged by the removal of the least consequential variables.
+Plots of the variable distributions comparing simulation and data at the training preselection level is shown in Figures~\ref{fig:bdt_inputvar_histos} and~\ref{fig:bdt_inputvar_histos2}.
+In these plots, the invisible Higgs signal is magnified to illustrate the discriminating power of the variables.
+
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.48\textwidth]{figures/mutual_information_MVAvars_Signal.pdf}

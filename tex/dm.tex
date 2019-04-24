@@ -261,7 +261,7 @@ $\Delta R_{\ell\ell}$                     & $<$ 1.8                             
 \begin{figure}[!htb]
 \centering
 \setlength{\fboxsep}{0pt}
-\setlength{\fboxrule}{1pt}
+\setlength{\fboxrule}{0.3pt}
 \fbox{\includegraphics[width=1.0\textwidth]{figures/cmsShow_ZeeMET_MET300-281707_1721423933_1040_3DTower.png}}\vspace{1cm}
 
 \fbox{\includegraphics[width=1.0\textwidth]{figures/cmsShow_ZmmMET_MET300-283043_473634957_254_3DTower.png}}\vspace{1cm}
@@ -340,18 +340,17 @@ The method assumes the lepton flavor symmetry in the final states of these proce
 Since the leptonic decay branching ratios for the $ee$, $\mu\mu$ and $e\mu$ final states from NRB are 1:1:2,
 the $e\mu$ events selected inside the $\Z$-mass window can be extrapolated to the $ee$ and $\mu\mu$ channels.
 To account for differences in efficiency for electrons and muons, a correction factor $k_{ee}$ can be derived
-by comparing the NRB yields in the $ee$ and $\mu\mu$ channels:
+by comparing the NRB yields in the $ee$ and $\mu\mu$ channels,
+exactly as is done in Formulas~\ref{eq:kee} and~\ref{eq:nrb_xfer} from Section~\ref{sec:zptbkg}:
 
 \begin{equation}
-\label{eq:kee}
 k_{ee} = \frac{\epsilon_e}{\epsilon_{\mu}} \approx \sqrt{\frac{N^{ee}_{NRB}}{N^{\mu\mu}_{NRB}}}
 \end{equation}
-under the assumption is that each lepton leg acts independently.
+once again under the assumption is that each lepton leg acts independently.
 In simulation, $k_{ee}$ is found to be about $0.88$ at final selection.
 With this correction factor, the relation between the NRB yields in the signal and control region is:
 
 \begin{equation}
-\label{eq:nrb_xfer}
 \begin{split}
   N^{ee}_{NRB}     &= \frac{1}{2} k_{ee} N^{e\mu}_{NRB} \\
   N^{\mu\mu}_{NRB} &= \frac{1}{2} \frac{1}{k_{ee}} N^{e\mu}_{NRB} \\
@@ -993,19 +992,19 @@ The uncertainty band corresponds to the statistical uncertainty only.}
 \clearpage
 \subsection{Invisible Higgs interpretation} 
 
- No significant excess of events is observed over the SM expectation.
- Upper limits are derived for the Higgs boson production cross section.
- For  $\mHi = 125~\GeV$, this can be interpreted as the upper limit on the
- branching ratio of the Higgs boson to invisible particles,
- assuming the SM production rate. 
- To compute the upper limits, the modified frequentist construction 
- $\CLs$ is used (see ~\cite{Read1,junkcls,ATLAS:2011tau}).
- The number of events are modeled as a Poisson random variable, 
- where the mean value is the sum of the contributions from signal and background processes. 
- The 95\% observed and median expected CL upper limits on the production cross section times branching ratio, 
- $\sigma_{\Z \Hi(\to \rm invisible)} \times \mathrm{BR}(\Hi \to {\rm invisible})$, computed with the asymptotic $\CLs$
- method are shown in Figure~\ref{fig:xsLim} for the rectangular analysis in $\met$.
- Assuming the SM production rate, the 95\% observed (expected) CL upper limit on $\mathrm{BR}(\Hi \to {\rm invisible})$ is
+No significant excess of events is observed over the SM expectation.
+Upper limits are derived for the Higgs boson production cross section.
+For  $\mHi = 125~\GeV$, this can be interpreted as the upper limit on the
+branching ratio of the Higgs boson to invisible particles,
+assuming the SM production rate. 
+To compute the upper limits, the modified frequentist construction 
+$\CLs$ is used (see ~\cite{Read1,junkcls,ATLAS:2011tau}).
+The number of events are modeled as a Poisson random variable, 
+where the mean value is the sum of the contributions from signal and background processes. 
+The 95\% observed and median expected CL upper limits on the production cross section times branching ratio, 
+$\sigma_{qq \to \Z \Hi} \times \mathrm{B}(\Hi \to {\rm invisible})$, computed with the asymptotic $\CLs$
+method are shown in Figure~\ref{fig:xsLim} for the rectangular analysis in $\met$.
+Assuming the SM production rate, the 95\% observed (expected) CL upper limit on $\mathrm{B}(\Hi \to {\rm invisible})$ is
 0.45 (0.44) using the rectangular analysis in \met, and 0.40 (0.42) using the multivariate analysis. 
 The $gg \to \Z(\ell\ell)\Hi$ process has also been considered for the 125 GeV mass point. 
 

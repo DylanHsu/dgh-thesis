@@ -1,10 +1,11 @@
 \chapter{Measurements of differential Z boson production cross sections}
-
+In this chapter I present the measurements of the differential Z boson production cross section
+in three observables: Z boson transverse momentum, Z boson rapidity, and the $\phi^*$ observable.
 The rapidity of the $\cPZ$ boson in $\Pp\Pp$ collisions is strongly correlated 
 with the Bjorken-x of the initial partons and provides constraints on the PDFs 
-of the proton. The precision of the $\cPZ$ boson $\pt$ measurements is 
-limited by by the uncertainties in the measurements of the transverse momenta of 
-charged leptons from $\cPZ$ boson decays. The observable $\phi^*$~\cite{Banfi:2010cf,Banfi:2012du,Marzani:2013nza}, defined by the expression
+of the proton.
+The precision of the $\cPZ$ boson $\pt$ measurements is limited by by the uncertainties in the measurements of the transverse momenta of charged leptons from $\cPZ$ boson decays.
+The observable $\phi^*$~\cite{Banfi:2010cf,Banfi:2012du,Marzani:2013nza}, defined by the expression
 \begin{align}
 \label{eq0}
 \phi^*  &= \tan \left( \frac{\pi -\Delta\phi}{2} \right) \, \sin(\theta^*_\eta) \\
@@ -20,13 +21,15 @@ with respect to the beam in the boosted frame where the leptons are aligned.
 The observable $\phi^*$ follows the approximate relationship 
 $\phi^* \sim \pt^{\PZ} / m_{\ell\ell}$ that the range $\phi^* \le 1$ 
 corresponds to $\pt^{\PZ}$ up to about 100\GeV for a lepton-pair mass close 
-to the nominal \cPZ{} boson mass. The measurement resolution of $\phi^*$ is 
-better than that of $\pt$ since it depends only on the angular variables of 
+to the nominal \cPZ{} boson mass.
+
+The measurement resolution of $\phi^*$ is better than that of $\pt$ since it depends only on the angular variables of 
 the leptons and benefits from the  excellent spatial resolution of the CMS 
 inner tracking system. The $\cPZ$ boson $\phi^*$ distribution has been 
 previously measured by the D0, ATLAS, CMS, and LHCb 
 collaborations~\cite{TevatronWZ:D0PhysRevLett2011_106,Aad:2015auj,Sirunyan:2017igm,Aaij:2016mgv}.     
-Next I will show inclusive fiducial and differential production cross sections of 
+
+In all, I will show inclusive fiducial and differential production cross sections of 
 the $\cPZ$ boson as functions of $\pt$, $\phi^*$, and rapidity. 
 %$\cPZ$ bosons are identified via their decays to pairs of electrons and muons.
 
@@ -107,6 +110,7 @@ $\Delta R = \sqrt{ \Delta\phi^{2} + \Delta\eta^{2} }$.
 \end{figure}
 
 \section{Background estimation}
+\label{sec:zptbkg}
 After the full selection, the amount of background processes in the data sample is 
 rather small thanks to the clean signature and the relatively tight selection. 
 The background processes can be split in two components:
@@ -129,17 +133,18 @@ The method has been previously used in many analyses and assumes the lepton flav
 Since the leptonic decay branching ratios for the $ee$, $\mu\mu$ and $e\mu$ final states from NRB are 1:1:2,
 the $e\mu$ events selected inside the $\Z$-mass window can be extrapolated to the $ee$ and $\mu\mu$ channels.
 To account for differences in efficiency for electrons and muons, 
-a correction factor $k_{\mu\mu}$ can be derived by comparing the NRB yields in the $ee$ and $\mu\mu$ channels,
-exactly as is done in Formulas~\ref{eq:kee} and~\ref{eq:nrb_xfer} from Section~\ref{ss:dm_nrb}:
+a correction factor $k_{\mu\mu}$ can be derived by comparing the NRB yields in the $ee$ and $\mu\mu$ channels:
 
 \begin{equation}
+\label{eq:kee}
 k_{\mu\mu} = \frac{\epsilon_\mu}{\epsilon_{\Pe}} \approx \sqrt{\frac{N^{\mu\mu}_{NRB}}{N^{\Pe\Pe}_{NRB}}}
 \end{equation}
-once again under the assumption is that each lepton leg acts independently.
+under the assumption is that each lepton leg acts independently.
 The factor $k_{\mu\mu}$ is found to be about $1.3$ at the final selection, 
 consistent between data and simulation. 
 With this correction factor, the relation between the NRB yields in the signal and control region is:
 \begin{equation}
+\label{eq:nrb_xfer}
 \begin{split}
   N^{\mu\mu}_{NRB}     &= \frac{1}{2} k_{\mu\mu} N^{e\mu}_{NRB} \\
   N^{\Pe\Pe}_{NRB} &= \frac{1}{2} \frac{1}{k_{\mu\mu}} N^{e\mu}_{NRB} \\
