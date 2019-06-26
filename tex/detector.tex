@@ -471,8 +471,11 @@ From \cite{Chatrchyan:2008aa}.
 \end{figure}
 \clearpage
 
-\subsection{Level-1 Trigger}
+\subsection{Trigger system}
 Triggering algorithms decide which data are recorded in the experiment.
+They are implemented in two stages via a combination of hardware and software.
+
+\subsubsection{Level-1 trigger}
 The trigger decision process begins with the Level-1 Trigger (L1T) \cite{Khachatryan:2016bia}.  
 The hardware implementation of the Level-1 Trigger is in the form of application-specific
 integrated circuits (ASICs), field-programmable gate arrays (FPGAs), 
@@ -484,7 +487,7 @@ copper cables, and backplanes within hardware crates.
 The data is transmitted in parallel at frequencies which are integer multiples of 40 MHz.
 Data events passing the Level-1 Trigger are then transmitted to the so-called ``high-level trigger,'' described next.
 
-\subsection{High-Level Trigger}
+\subsubsection{High-Level Trigger}
 Data events accepted by the Level-1 Trigger are next processed by the High-Level Trigger (HLT).
 Unlike the L1T's readout boards, the HLT is implemented on a commercial Linux computing cluster
 called the File-based Filter Farm (F\textsuperscript{3}). There are three types of computing units in the F\textsuperscript{3}:
