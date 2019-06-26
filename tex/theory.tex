@@ -58,18 +58,18 @@ The Standard Model of particle physics was built up over a century of arduous an
 
 \section{Standard Model}
 %\setlength{\mathindent}{12pt}
-Now I will present the individual interactions and their unification in the theory.
+Here, I will present the individual interactions and their unification in the theory.
 Beyond the scope of this work are discussions of gravitation, general relativity, and
-previous theories of yore.
+previous outdated theories.
 
 The internal symmetries of the Standard Model are represented by the unitary product group 
 $\mathrm{SU}(3) \times \mathrm{SU}(2) \times \mathrm{U}(1)$.
 
-The Lagrangian density of the Standard Model can be deconstructed as
+The Lagrangian density of the Standard Model is
 \begin{equation}
 \mathcal{L}_\mathrm{SM} = \mathcal{L}_\mathrm{EW} + \mathcal{L}_\mathrm{QCD}
 \end{equation}
-I will describe each of the components below.
+The components are described below.
 
 \subsection{Electromagnetic force}
 \label{qed}
@@ -143,7 +143,7 @@ Breaking it down piece by piece,
 \begin{itemize}
   \setlength\itemsep{0em}
   \item $\mathcal{L}_\mathrm{Gauge}$ is the interaction among the gauge fields, described by the field strength tensors $A_{1,2,3}^{\mu\nu}$ and $B^{\mu\nu}$ for the weak isospin and weak hypercharge gauge fields.
-  \item $\mathcal{L}_\mathrm{Fermion}$ is the interaction of the gauge bosons and the fermions. $f$ represents the left-handed doublet quark fields, the right-handed singlet up-type quark fields, the right-handed singlet down-type quark fields, the left-handed doublet lepton fields, and the right-handed singlet lepton fields. 
+  \item $\mathcal{L}_\mathrm{Fermion}$ is the interaction of the gauge bosons and the fermions. The symbol $f$ represents the left-handed doublet quark fields, the right-handed singlet up-type quark fields, the right-handed singlet down-type quark fields, the left-handed doublet lepton fields, and the right-handed singlet lepton fields. 
   \item $D_\mu$ is the electroweak gauge covariant derivative, defined as 
     $\partial_\mu - i\frac{g}{2} \hat{T}^j A^{j}_{\mu} - i \frac{g'}{2} Y B_\mu $ where $\hat{T}^{j=1,2,3}$ are the weak isospin operators and $\hat{Y}$ is the weak hypercharge operator. 
   \item $\mathcal{L}_\mathrm{\phi}$ is the scalar field's interaction with itself and the gauge bosons.
@@ -161,8 +161,8 @@ This $\phi$ field lives in a potential given by
 \begin{equation}
 V(\phi) = \mu^2 \phi^\dagger \phi + \lambda (\phi^\dagger \phi)^2 \label{eq:higgsV}
 \end{equation}
-$\lambda$ must be positive in order for the potential $V$ to have a minimum.
-For negative values of $\mu^2$, $V$ could be visualized as a sombrero or similar hat with a rounded brim. See Figure~\ref{fig:mexican_hat}.
+The constant $\lambda$ must be positive in order for the potential $V$ to have a minimum.
+For negative values of $\mu^2$, $V$ could be visualized as a sombrero or similar hat with a rounded brim; see Figure~\ref{fig:mexican_hat}.
 Since the lowest point is somewhere in the brim, 
 the $\phi$ doublet develops a vacuum expectation value $v/\sqrt{2}$.
 This breaks the SU(2) symmetry, but a new U(1) symmetry is maintained.
@@ -226,7 +226,7 @@ From this expression, we can extract expressions for the W and Z bosons' masses 
 \label{eq:WZmass}
 m_W = \frac{v g}{2},\:\:\:\:m_Z = \frac{vg}{2\:\mathrm{cos}\:\theta_W}
 \end{equation}
-Lastly, why don't we reframe Equation~\ref{eq:EWpreSSB} in terms of the physical gauge bosons.
+Lastly, let us we reframe Equation~\ref{eq:EWpreSSB} in terms of the physical gauge bosons.
 The antisymmetric photon, Z, and W field strength tensors $A_{\mu\nu}$, $Z_{\mu\nu}$, $W^{\pm}_{\mu\nu}$ are provided as
 \begin{equation}
 \begin{split}
@@ -239,7 +239,7 @@ Z_{\mu\nu} &= \partial_\mu Z_\nu - \partial_\nu Z_\mu \\
 where the vector notation indicates components in three-dimensional weak isospin space.
 Einstein summation convention is used and $\varepsilon$ is the antisymmetric Levi-Civita symbol.
 
-\fixme{The reframing in terms of physical boson fields is not standard in the literature and non-trivial, so I am worried this is kind of Jackson-esque "left as an exercise." Maybe it is not such a big deal.}
+%\fixme{The reframing in terms of physical boson fields is not standard in the literature and non-trivial, so I am worried this is kind of Jackson-esque "left as an exercise." Maybe it is not such a big deal.}
 
 Finally, we can write down the full EW Lagrangian density after symmetry breaking. 
 As before, $\mathcal{L}_\mathrm{EW} = \mathcal{L}_\mathrm{Gauge} + \mathcal{L}_\mathrm{Fermion} + \mathcal{L}_\mathrm{\phi} + \mathcal{L}_\mathrm{Yukawa}$. 
