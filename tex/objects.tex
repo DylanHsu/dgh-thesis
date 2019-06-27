@@ -12,7 +12,7 @@ The second step forms a supercluster (SC) comprising the energy of constituent c
 The supercluster position and energy, along with the GSF track, reconstruct the electron in the detector.\cite{ElectronReco2015}
 The reconstruction procedure is also informed by the Particle-Flow algorithm, described later in Section \ref{sec:pf}.
 
-The final electron momentum is found using a multivariate regression tuned on simulation to give better energy resolution.
+The final reconstructed electron momentum is found using a multivariate regression tuned on simulation to give better energy resolution.
 A residual energy scale correction is applied to the reconstructed electrons based on time, electron $\eta$, and shower shape variables
 such that the Z mass peak resolution is enhanced.  In addition, a smearing is applied to simulation such that the energy resolution in data and simulation match.
 
@@ -20,7 +20,7 @@ such that the Z mass peak resolution is enhanced.  In addition, a smearing is ap
 \subsection{Electron identification variables}
 
 The shower shape of the hits in the ECAL provides discriminating variables for identifying electrons.
-One such variable used for Electron ID is $\sigma_{i\eta i\eta}$.
+One such variable is $\sigma_{i\eta i\eta}$.
 To understand $\sigma_{i\eta i\eta}$, we first discuss its predecessor, $\sigma_{\eta\eta}$,
 which is a weighted second moment of the energies deposited in the 5x5 crystals
 centered on the ECAL supercluster seed crystal. Here, $\eta_i$ is the pseudorapidity
@@ -75,6 +75,19 @@ I^{e}_{\rm rel}=\frac{1}{p_{\rm T}}  \left[ I_{\rm ch}+\max(I_{\rm nh}+I_{\rm g}
 \end{equation}
 
 \subsection{Electron identification working points}
+
+After the electron reconstruction procedure, there are still fake electrons from 
+other objects such as charged pions which can be mistaken for electrons.
+The purpose of electron identification is to improve the purity of electrons used in a physics analysis while maintaining a high efficiency.
+Different use cases require differing amounts of stringency.
+An extreme example would be a resonant final state with four electrons.
+Due to the combinatorics, and the rarity of three-electron final state processes, it will be very difficult to have a false positive.
+In such a case it is best to maximize the identification efficiency.
+On the other extreme end, consider the final state with only a single electron,
+as seen in W boson production. There, due to the huge fake rate, it is best to maximize the purity at the cost of efficiency by using tighter identification criteria.
+The different working points for electron identification are standardized in the CMS experiment.
+Those relevant to this work are described below.
+
 For the purpose of vetoing events with more than two leptons, the electrons are required to fulfill the so-called {\em ``Veto''} working point. It consists of a series of requirements
 on the supercluster shape, impact parameter,
 and geometric distance between the electron track and the supercluster.
