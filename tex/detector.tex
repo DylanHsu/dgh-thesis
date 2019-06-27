@@ -344,7 +344,7 @@ The DTs and CSCs are each capable of triggering on muon $p_T$ independently of t
 The $p_T$ resolution of this triggering muon object is 15\% in the barrel and 25\% in the endcap.
 For muon $p_T$ up to $200 \GeV$, the DTs and CSCs together can give a standalone momentum resolution of 9\%.
 Approaching muon momenta of $1 \TeV$, the standalone momentum resolution is 5\%.
-The muon resolution is improved when combined with the tracker information in the Particle Flow algorithm.
+The muon resolution is improved when combined with the tracker information.
 
 Lastly, an alignment system measures the relative positions of the muon detectors amidst the inner tracker to optimize the momentum resolution of muons.
 
@@ -364,7 +364,8 @@ There are 4 stations forming concentric cylinders around the beam line.
 The 3 inner cylinders have 60 drift chambers each and the outer cylinder has 70.
 There are about 172,000 sensitive wires of about 2.4m in length.
 The maximum drift path length is 21 mm. In a gaseous admixture of 85\% Ar and 15\% $\mathrm{CO}_2$ the maximum drift time is 380 ns.
-This produces a negligible occupancy and permits the use of single-hit electronics.
+For the LHC design luminosity, this produces a negligible occupancy
+and permits the use of single-hit electronics.
 Meanwhile, the cell size is sufficiently large to keep the number of electronic channels low and affordable.
 
 Each DT chamber is made of 2 or 3 superlayers (SL).
@@ -404,10 +405,10 @@ The chambers are perpendicular to the beamline and interspersed between the magn
 The cathode strips point radially outward from the beamline and provide a precision measurement in the $r-\phi$ bending plane.
 
 The CSCs are multiwire proportional chambers comprised of 6 anode wire planes interleaved
-among 7 cathode panels. Wires run azimuthally and define a track’s radial coordinate.
+among 7 cathode panels. Wires run azimuthally and define a track's radial coordinate.
 Strips are milled on cathode panels and run lengthwise at constant $\Delta\phi$ width. 
 The muon coordinate along the wires is obtained by interpolating between charges induced on strips.
-The largest chambers, ME2/2 and ME3/2, are about 3.4 × 1.5 m\textsuperscript{2} in size.
+The largest chambers, ME2/2 and ME3/2, are about $3.4 \times 1.5$ m\textsuperscript{2} in size.
 The overall area covered by the sensitive planes of all chambers is about 5,000 m\textsuperscript{2},
 the gas volume is over 50 m\textsuperscript{3}, and there are about 2 million wires.
 There are about 9000 high-voltage channels in the system, 
@@ -415,7 +416,8 @@ about 220,000 cathode strip read-out channels with 12-bit signal digitization,
 and about 180 000 anode wire read-out channels.
 
 An avalanche on a wire induces charge on a cathode plane.
-The charge shape can be approximately parameterized by the Gatti function~\cite{GATTI197983}.
+The charge shape can be approximately parameterized by the Gatti function;
+see Equation 15 in Ref.~\cite{GATTI197983}.
 Given the CSC geometry, most of the induced charge is shared among three or four strips.
 A strip signal waveform is sampled and digitized every 50 ns.
 The overal pulse duration is about 300 ns.
