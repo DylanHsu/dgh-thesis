@@ -60,11 +60,12 @@ inner tracker due to this particle which were missed. A conversion veto is appli
 also accounts for missing hits, along with the minimum distance between conversion tracks
 and the difference in $\mathrm{cot} \theta$ between the partner tracks.
 
-Lastly, we apply a combined isolation requirement from the Particle Flow algorithm,
+Lastly, we apply a combined isolation requirement, 
 $I_{rel}^{e}$, relative to the electron transverse momentum and corrected for
 effective area. This bounds the amount of hadronic activity and other EM activity
 arriving near the electron.
-The isolation of the lepton candidates is computed from the flux of particle flow candidates
+The computation of the isolation relies on information from the Particle Flow algorithm, described further below in Section~\ref{sec:pf}.
+The isolation of the lepton candidates is computed from the flux of particle candidates
 found within a cone of $\Delta R = 0.4$ built around the lepton direction~\cite{CMS-PAS-PFT-10-002}.
 The flux of particles is computed independently for the charged hadrons, neutral hadrons and photon candidates.
 The contribution from neutral hadron candidates is corrected for the influence of pileup by using the \textit{effective area} approach.  
