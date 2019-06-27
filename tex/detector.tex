@@ -478,15 +478,26 @@ Triggering algorithms decide which data are recorded in the experiment.
 They are implemented in two stages via a combination of hardware and software.
 
 \subsubsection{Level-1 trigger}
-The trigger decision process begins with the Level-1 Trigger (L1T) \cite{Khachatryan:2016bia}.  
+The trigger decision process begins with the Level-1 Trigger (L1T) \cite{Khachatryan:2016bia}~\cite{Foudas:2008dt}.  
 The hardware implementation of the Level-1 Trigger is in the form of application-specific
 integrated circuits (ASICs), field-programmable gate arrays (FPGAs), 
 programmable logic devices (PLDs), and random access memory used for memory look-up tables (LUTs).
 The FPGAs and LUTs may be reprogrammed, allowing for the algorithms to be revised.
-
 The Level-1 Trigger is subject to a large data flow carried on optical fibers, 
 copper cables, and backplanes within hardware crates. 
 The data is transmitted in parallel at frequencies which are integer multiples of 40 MHz.
+
+Data from calorimeters and the muon system are used by the L1T
+to perform the first level of online event selection using custom electronic systems.
+The algorithms process data in pipeline fashion, using pattern recognition and fast summing techniques, without introducing dead-time.
+Pipeline memories of depth equal to the trigger latency store the data on the detector until the L1T decision arrives.
+The algorithms use input data of reduced granularity and resolution.
+The calorimeters transmit energy sums along with data that carry information
+to characterize the energy deposition (electron/photon, tau, narrow jet, muon).
+The muon system hits are summarized in terms of track stubs.
+The L1T output quantities are muon, electron, photon, tau and jet candidates,
+along with jet counts and global transverse and missing transverse energy sums.
+
 Data events passing the Level-1 Trigger are then transmitted to the so-called ``high-level trigger,'' described next.
 
 \subsubsection{High-Level Trigger}
