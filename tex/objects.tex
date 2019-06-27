@@ -164,34 +164,38 @@ Subsequently, these tracks inform two reconstruction approaches:
 
 The majority of muons from collisions (with sufficient momentum) are reconstructed either 
 as a Global Muon or a Tracker Muon, or very often as both.
-A third, rare case is excluded from this note, where both approaches fail and only a {\em standalone-muon track} is found~\cite{CMS-PAS-MUO-10-004}.
+A third, rare case is where both approaches fail and only a {\em standalone-muon track} is found~\cite{CMS-PAS-MUO-10-004}.
+Standalone muons suffer from low purity and poor momentum resolution, so they are not used in this work.
 
 \subsection{Muon identification variables}
 
-There are several sources of muons in CMS:
+There are several sources of real or fake reconstructed muons in CMS:
 \begin{enumerate}
 \item Primary Interaction
 \item Decay-in-Flight (Kaon, Pion)
 \item Cosmic Muon
 \item Hadronic Punch-Through
 \end{enumerate}
-The chance that a kaon or pion is reconstructed as a muon increases as the transverse momentum, ranging from
-less than one percent, to ten percent. Cosmic muons come from the atmosphere, not the interaction point,
+For the purposes of this work, we are interested in identifying real muons
+from a hard primary interaction, and rejecting the nonprompt or fake reconstructed muons.
+The chance that a kaon or pion is reconstructed as a muon increases along with its transverse momentum. It goes from from less than one percent at low momentum, to ten percent at high momentum.
+Cosmic muons come from the atmosphere, not the interaction point,
 and are in general easy to deal with using vertexing. Hadronic punch-through results from imperfect absorption
 of hadronic cascades in the hadron calorimeter, which reach the muon stations.
 
-Track-related quality cuts are effective against these backgrounds. We can place requirements on
+Track-related quality cuts are effective against these backgrounds. We place requirements on
 the fraction of valid tracker hits, the number of valid pixel hits, and the number of
-tracker layers with measurement. For Global-reconstructed muons, we can also compute the
+tracker layers with measurement. For Global-reconstructed muons, we also compute the
 normalized global track $\chi^2$ and compare the position match of the tracker and the standalone muon
 reconstruction algorithms.
 
-Decays in flight can introduce a kink in the muon candidate track.
+Decays in flight introduce a kink in the muon candidate track.
 We use a kink-finding algorithm to reject such candidates, operating as follows.
 At each tracker layer, the extrapolated states from the two halves of the tracker tracks are compared
 to get a $\chi^2$. The maximum $\chi^2$ across all layers is used as the per-track discriminator.
 This is effective even at low $p_{T}$, allowing rejection of 10-20\% of such background while
 maintaining greater than 98\% efficiency for real muons.
+% DGH: Yes this is accurate and the numbers are from slides by Giovanni Petrucciani.
 
 The segment compatibility is another useful discrimination quantity for the muons.
 It is computed by evaluating which crossed stations have matching muon statements,
