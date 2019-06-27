@@ -22,25 +22,28 @@ such that the Z mass peak resolution is enhanced.  In addition, a smearing is ap
 The shower shape of the hits in the ECAL provides discriminating variables for identifying electrons.
 One such variable is $\sigma_{i\eta i\eta}$.
 To understand $\sigma_{i\eta i\eta}$, we first discuss its predecessor, $\sigma_{\eta\eta}$,
-which is a weighted second moment of the energies deposited in the 5x5 crystals
+which is a weighted second moment of the energies deposited in the $5\times5$ crystals
 centered on the ECAL supercluster seed crystal. Here, $\eta_i$ is the pseudorapidity
 coordinate of the $i^{\mathrm{th}}$ ECAL crystal. The formula for $\sigma_{\eta\eta}$ is:
 \begin{equation}
-  \sigma_{\eta\eta} = \sqrt{\frac{\sum_{i}^{\mathrm{5x5}}w_{i}(\eta_{i}-\bar{\eta}_{\mathrm{5x5}})^{2}}{\sum_{i}^{\mathrm{5x5}}w_{i}}}
-  \quad\mathrm{with}\quad w_{i} = 4.2 + \mathrm{ln} \frac{E_i}{E_{\mathrm{5x5}}}
+  \sigma_{\eta\eta} = \sqrt{\frac{\sum_{i}^{\mathrm{5\times5}}w_{i}(\eta_{i}-\bar{\eta}_{\mathrm{5\times5}})^{2}}{\sum_{i}^{\mathrm{5\times5}}w_{i}}}
+  \quad\mathrm{with}\quad w_{i} = 4.2 + \mathrm{ln} \frac{E_i}{E_{\mathrm{5\times5}}}
 \end{equation}
 
-This variable does not perform well near cracks in the ECAL, so with a simple correction
-to count the $i^{\mathrm{th}}$ crystal ordering in the $\eta$ direction, $N(i)$, we derive the variable $\sigma_{i\eta i\eta}$ (using the same weights $w_{i}$:
+This variable does not perform well near cracks in the ECAL, where there is a gap in $eta$.
+A $\mathrm{5\times5}$ supercluster containing this gap will arbitrarily have a higher value of $\sigma_{\eta\eta}$.
+For this reason, a simple correction is made where we consider instead the crystal index instead of absolute $\eta$, and multiply it by the average crystal $\eta$ size of 0.0175.
+Counting the $i^{\mathrm{th}}$ crystal ordering in the $\eta$ direction, $N(i)$, we derive the variable $\sigma_{i\eta i\eta}$ (using the same weights $w_{i}$:
 
 \begin{equation}
-  \sigma_{i\eta i\eta} = \sqrt{\frac{\sum_{i}^{\mathrm{5x5}}w_{i}(0.0175 N(i) + \eta_{\mathrm{Seed}} - \bar{\eta}_{\mathrm{5x5}})^{2}}{\sum_{i}^{\mathrm{5x5}}w_{i}}}
+  \sigma_{i\eta i\eta} = \sqrt{\frac{\sum_{i}^{\mathrm{5\times5}}w_{i}(0.0175 N(i) + \eta_{\mathrm{Seed}} - \bar{\eta}_{\mathrm{5\times5}})^{2}}{\sum_{i}^{\mathrm{5\times5}}w_{i}}}
 \end{equation}
 
 Other ECAL-related variables are:
 $H/E_{\rm SC}$, the ratio of HCAL to ECAL energy deposition associated
 with a supercluster seed; and $|1/E_{\rm SC} - 1/p|$,
 which is technically computed as $|(1 - E_{SC}/p_{\mathrm{Track}})/E_{\mathrm{ECAL}}|$.
+Compared to charged hadron fakes, the true electron will deposit all or most of its energy in the ECAL.
 
 Another class of useful variables are related to matching attributes of the ECAL supercluster
 and the tracker track. $\Delta\eta(SC,trk)$ is the difference in $\eta$ between the 
