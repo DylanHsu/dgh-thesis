@@ -360,20 +360,52 @@ Conversion safe electron veto              & Yes & Yes           \\
 
 \section{Particle-flow reconstruction}
 \label{sec:pf}
+
 The particle-flow (PF) event reconstruction algorithm~\cite{CMS-PRF-14-001} is used.
 It is designed to leverage information from all CMS detector components to reconstruct
 and identify individual particles, namely: electrons, muons, photons, and charged and neutral hadrons.
-The reconstructed vertex with the largest value of summed physics-object $\pt^2$ is taken to be the primary proton-proton interaction vertex.
-The physics objects are the track-jets, clustered using the jet finding algorithm~\cite{Cacciari:2008gp,Cacciari:2011ma} with the 
-tracks assigned to the vertex as inputs, and the associated missing transverse momentum, taken as the negative vector sum of the $\pt$ of those jets.
+This collection of individual particles is used for reconstructing jets,
+determining the missing transverse energy, reconstructing tau leptons from their decay products,
+identifying b-jets, and more.
+
+The CMS detector is well suited for this reconstruction algorithm. 
+The strong magnetic field and large silicon tracker allow us to reconstruct charged particle tracks
+with high efficiency and low fake rate at transverse momenta as low as 150 MeV, at pseudorapidities as large as $|\eta|=2.6$.
+The reconstructed vertex of origin with the largest value of summed track $\pt^2$ is taken to be the primary proton-proton interaction vertex.
+
+Electrons are reconstructed by a combination of a track and of several energy deposits in the
+ECAL, from the electron itself and from possible bremsstrahlung photons radiated by the elec-
+tron in the tracker material on its way to the ECAL.
+Muons are reconstructed and identified inside and outside of jets with very large efficiency and
+purity from a combination of the tracker and muon chamber information.
+Photons are reconstructed with an excellent energy resolution by the hermetic electromagnetic
+calorimeter at pseudorapidities as large as $|\eta|=3.0$.
+Together with the magnetic field, the ECAL granularity allows photons to be separated from charged-particle energy deposits by way of shower shape discrimination.
+It is functional even in jets with transverse momenta of several hundred GeV.
+
+Charged and neutral hadrons deposit their energy in the HCAL.
+The granularity of the HCAL is 25 times coarser than that of the ECAL.
+This does not allow charged and neutral hadrons to be spatially separated in
+jets with transverse momentum above 100 GeV.
+But the combined ECAL-HCAL system has hadron energy resolution of around 10\% at 100 GeV.
+This allows neutral hadrons to be detected as an energy excess on top of the energy deposited
+by the charged hadrons pointing to the same calorimeter cells. 
+Charged hadrons are reconstructed with the superior angular and energy resolution of the tracker.
+Particles with pseudorapidities in the range $3<|\eta|<5$ are more coarsely measured with the HF forward calorimeter.
+
+The presence of neutrinos and other weakly-interacting particles can be detected by formulating
+the missing transverse energy, described below.
 
 \section{Missing transverse energy}
 The missing transverse momentum vector, $\vec{\mathbf{p}}_\mathrm{T}^\mathrm{miss}$, is defined as the projection
 of the negative vector sum of the momenta of all reconstructed PF candidates in an event
 onto the plane perpendicular to the beams.
-Its magnitude is referred to as $\met$.  Several event-level filters are applied
-to discard events with anomalous $\met$ arising from specific well-understood issues 
-with the detector components or event reconstruction~\cite{CMS-PAS-JME-16-004}.
+Its magnitude is referred to as $\met$.
+Since all visible objects contribute to this quantity, the mismeasurement or failed reconstruction
+of any object adversely affects its accuracy.
+Several event-level filters are applied to discard events with anomalous $\met$ arising from specific well-understood issues with the detector components or event reconstruction~\cite{CMS-PAS-JME-16-004}.
 Jet energy corrections are propagated to the missing transverse momentum by
 adjusting the momentum vector of the PF candidate constituents of each reconstructed jet.
+Any particle which is produced outside the acceptance of the relevant detector subsystems will also be counted towards missing energy, limiting the resolution.
+
 
