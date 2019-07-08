@@ -228,20 +228,33 @@ additional requirements such as isolation in the HLT.
 \subsection{Pileup reweighting}
 \label{subsec:puweights}
 
-To match the expected number of pileup interactions in simulation with data,
-the reweighting is performed using the minimum bias cross section of 69mb with an uncertainty of 5\%. 
-The number of vertices distribution in data and simulation in an inclusive $\Z \to \ell\ell$ sample after the pileup reweighting 
-is shown in Figure~\ref{fig:pileup_distribution}.
+Besides the main hard process in a proton collision, secondary interactions from the other protons in the bunches are also relevant.
+These are called pileup interactions. 
+The particles produced from pileup interactions are observed in the detector.
+Accurate tracking allows us to associate their final products with distinct interaction vertices.
+This is particularly important for jets and missing energy, since additional jets can be observed in a physics event originating from a pileup interaction.
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.48\textwidth]{figures/zll_nvtx_met40_zpt60.pdf}
-  \caption{
-    Number of reconstructed vertices
-    for $\Z \to \ell\ell$ events with $\pt^{\ell\ell} > 60~\GeV$ and $\met > 40~\GeV$.
-  }
-  \label{fig:pileup_distribution}
-\end{figure}
+Pileup concerns the simulated samples in the following way.
+The pileup distribution is the distribution of the number of pileup interactions in physics events.
+The simulated samples are generated with a pileup distribution close to what is expected in the experimental data.
+Meanwhile, the actual pileup distribution in the collected data sample is measured.
+To match the expected number of pileup interactions in simulation with data,
+the number of reconstructed vertices is reweighted to match the distribution in data.
+This carries an inherent uncertainty due to the estimation of the minimum bias cross section.
+A cross section of  69 millibarns with an uncertainty of 5\% is used.
+
+%The number of vertices distribution in data and simulation in an inclusive $\Z \to \ell\ell$ sample after the pileup reweighting 
+%is shown in Figure~\ref{fig:pileup_distribution}.
+
+%\begin{figure}[htbp]
+%  \centering
+%  \includegraphics[width=0.48\textwidth]{figures/zll_nvtx_met40_zpt60.pdf}
+%  \caption{
+%    Number of reconstructed vertices
+%    for $\Z \to \ell\ell$ events with $\pt^{\ell\ell} > 60~\GeV$ and $\met > 40~\GeV$.
+%  }
+%  \label{fig:pileup_distribution}
+%\end{figure}
 
 The lepton efficiency studies shown in Chapter~\ref{chap:efficiency} split the data sample in two,
 at the point where the HIP effect discussed in Section~\ref{ss:hips} was mitigated.
