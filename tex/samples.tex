@@ -79,13 +79,23 @@ for parton showering, hadronization, and the underlying event simulation,
 with tune CUETP8M1.
 The NNPDF 3.0~\cite{nnpdf} set is used as the default set of parton distribution 
 functions (PDFs). 
+Simulated datasets from the RunIISummer16MiniAODv2 campaign are used.
+
 The processed dataset names and cross sections for the Standard Model processes considered 
 in the analysis are shown in Table~\ref{tab:mcprocess}.
-Simulated datasets from the RunIISummer16MiniAODv2 campaign are used.
+The table is categorized in the following way: Resonant Diboson, Triboson, Nonresonant, and Drell-Yan.
+In general, the cross sections are calculated using a small sample of generated events.
+A notable exception is the $\ttbar \to 2\ell 2\nu 2b$ process, where the state-of-the-art NNLO calculation is used~\ref{Czakon:2013goa}.
+The factors coming after the first cross section number represent either higher order corrections or branching ratios and combinatorics.
+For example, the factor of 1.109 applied to the WZ process is the aforementioned electroweak NLO correction factor.
+The factor of 2.3 applied to the gluon-induced ZZ processes is a QCD NLO correction factor.
+The extra factors on the $\ttbar \to 2\ell 2\nu 2b$ process represent the
+leptonic decay ratio of the W boson (0.1086) and the $3\times3=9$ possible lepton flavor combinations.
+
 \clearpage
 \begin{sidewaystable}[hbtp]
   \caption{Processed dataset names and cross sections for the Standard Model processes considered in the analysis.
-           The processes are grouped in the following way: Resonant Diboson, Triboson, Nonresonant, and Drell-Yan.\label{tab:mcprocess}}
+\label{tab:mcprocess}}
     \begin{center}
     {\scriptsize
       \begin{tabular}{|p{3.0cm}|p{13cm}|p{3.5cm}|}
