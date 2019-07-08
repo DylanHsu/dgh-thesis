@@ -178,9 +178,9 @@ Uncertainties do not only influence the overall normalization
 (\eg the uncertainty in the luminosity measurement), but also the
 distribution of relevant kinematic observables (\eg the uncertainty in
 the lepton momentum scale), are treated as shape uncertainties. Their
-impact is evaluated by performing the full analysis not only for the
-central value of the relevant parameter, but also with its value
-shifted up and down by one standard deviation. For
+impact is evaluated by performing the full analysis 
+%not only for the central value of the relevant parameter, but also
+with its value shifted up and down by one standard deviation. For
 each source of uncertainty, the impact in different bins of the final 
 distribution is thus considered fully correlated, while
 independent sources of uncertainty are treated as uncorrelated.
@@ -230,29 +230,36 @@ on the analysis is rather small, except for very low or very high dilepton
 $\pt$.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsubsection{L1 pre-firing trigger inneficiency}
+\subsubsection{L1 pre-firing trigger inefficiency}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-The L1 pre-firing trigger inefficiency is an experimental issue in 2016 which
-reduces the number of selected events. In addition, it introduces 
-a sizable uncertainty since it is not easy to precisely measure this effect.
+The L1 pre-firing trigger inefficiency is an experimental issue in the data recorded in 2016
+which reduces the number of selected events.
+In addition, it introduces  a sizable uncertainty
+since it is not easy to precisely measure this effect.
 
-There are a few aspects to take into accout. The rate of un-prefirable events 
-is rather small compared to the total data sample, about $0.1\%$, and therefore 
-the statistical precision of that effect is a concern. When an ECAL TP pre-fires, 
-its entire energy is assigned to bunch crossing 1 (BX-1).
-If the energy of the TP is large enough to pre-fire of a L1 trigger, the event is lost. 
-In contrast, if the BX-1 is not accepted, 
-a residual effect on BX0 is present because a null energy is associated to the 
+The root of the problem is the ECAL trigger primitive (TP) timing.
+When an ECAL TP pre-fires, its entire energy is assigned to the bunch crossing numbered -1 (BX-1).
+The trigger rules dictate that after a L1 trigger firing, the next 2 bunch crossings are not available for firing.
+Thus, if the energy of the TP is large enough to pre-fire a L1 trigger in BX-1,
+any physics event in BX0 or BX1 is lost. 
+In contrast, if the BX-1 is not accepted,
+a residual effect on BX0 is present because a null energy is associated with the 
 early TP. Finally, the TP inputs are used by the ECAL selective readout units 
 (SRPs) to decide whether a certain region of the detector needs to be fully 
-readout or zero-suppressed. Crystals associated to the early TP will be readout 
+readout or zero-suppressed. Crystals associated with the early TP will be readout 
 in zero-suppression mode, injecting a bias in the HLT/offline energy measurement.
 
-Overall, the recommended uncertainty is about 20\% of the correction. This translates 
-to a rather small impact in the inclusive analysis, but it leads to a sizable impact 
-in the $\Z$ boson rapidity measurement, and this is all which can be done.
+The effect can be measured in data by selecting un-prefirable events at BX0, where the L1 trigger fired in BX-3.
+In that case, by the trigger rules BX-2 and BX-1 cannot possibly have fired the L1 trigger, so BX0 is a clean slate.
+Unfortunately, the rate of un-prefirable events 
+is rather small compared to the total data sample, about $0.1\%$, and therefore 
+the statistical precision of that effect is a concern. 
 
-Since this effect directly affects the lepton and event reconstruction, the
+Overall, the recommended uncertainty is about 20\% of the correction. This translates 
+to a rather small impact on the inclusive analysis, but it leads to a sizable impact 
+on the $\Z$ boson rapidity measurement.
+
+Because this effect directly affects the lepton and event reconstruction, the
 corresponding uncertainty has been merged together with the standard lepton
 reconstruction efficiency uncertainties.
 
