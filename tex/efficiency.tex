@@ -299,14 +299,14 @@ see Figures~\ref{fig:ZmmSystSigRes} and~\ref{fig:ZeeSystSigRes}.
 The reconstructed dilepton mass shape has a fat tail on the left side because of the effect of final state radiation (FSR).
 In these tail events, at least one of the final state leptons radiates a photon,
 reducing the energy of the dilepton system and changing the momentum of the emitting lepton.
-It is more prevalent for electrons than for muons since bremsstrahlung is suppressed as the fourth power of lepton mass.
+It is more prevalent for electrons than for muons because bremsstrahlung is suppressed as the fourth power of lepton mass.
 
 Simulation addresses the phenomenon of FSR well in Z boson reconstruction, but we must assess the uncertainty on
 how FSR is modeled in the MC generator, which is only an approximation.
 To do this, we consider an alternative showering program called PHOTOS. See Ref.~\cite{Golonka:2005pn}.
 The goal is to compare the efficiencies obtained from fitting templates with different showering algorithm provenances.
 Due to technical reasons, our NLO QCD generator of choice for the nominal fit model (aMC@NLO) could not be made to work with the PHOTOS showering algorithm.
-Instead, we decided to use POWHEG then pursue a reweighting procedure to capture the effect.
+Instead, we decided to use POWHEG and then pursue a reweighting procedure to capture the effect.
 
 First, we generated Monte Carlo events using POWHEG+PYTHIA8 (the nominal showering algorithm) and POWHEG+PHOTOS (the alternative showering algorithm).
 In carrying out a private production only up to the GEN-SIM data tier, we were able to generate order of 10 million events for each showering choice.
