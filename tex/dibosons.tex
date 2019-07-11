@@ -272,22 +272,21 @@ lab frame, the momenta of the incident quarks are computed as the
 fraction of momentum of the incident protons.
 
 In this work, an event-by-event reweighting is performed with correction weights
-binned in the generator-level \pt of the trailing boson.
+binned in the generator-level \pt of the trailing boson. See Figure~\ref{fig:ewkCorrectionCompare}.
 This correction results in a net reduction of the overall ZZ yield of about 10\%,
 although with a strong dependence on the trailing boson $\pt$.
 For the $\mathrm{ZZ}\rightarrow 2\ell 2 \nu$ decay channel, the $\met$ spectrum becomes softer,
 with a correction of down to $-40\%$ for a trailing-$\Z$ boson $\pt$ of 700~$\GeV$. 
 
-\begin{figure}[!htbp]
+\begin{figure}[!thbp]
 \centering
-\includegraphics[width=0.90\textwidth]{figures/ZZ_ewkCorr.png}
+\includegraphics[width=0.60\textwidth]{figures/ZZ_ewkCorr.png}
 \caption{Electroweak corrections to the ZZ process, provided by the authors of Ref.~\cite{Bierweiler:2013dja}.
 The cross-shaped markers are the corrections applied as a function of $\hat{s}$, $\hat{t}$, and the quark flavours.
 The colored lines are the corrections applied as a function of trailing boson \pt.
 Since they agree, it is sufficient for our purposes to apply the corrections based on trailing boson \pt.}
 \label{fig:ewkCorrectionCompare}
 \end{figure}
-\clearpage
 
 Electroweak corrections to the WZ process are also considered. 
 These come in two different contributions: virtual and photon-induced. See Figure~\ref{fig:WZNLO}. 
@@ -307,9 +306,9 @@ K^\mathrm{NLO}_\mathrm{EW} = (1 + \delta_{\gamma - \mathrm{induced}}) \times (1 
 The distribution of $K^\mathrm{NLO}_\mathrm{EW}$ as well as $(1 + \delta_\mathrm{virtual})$ are shown
 in Figure~\ref{fig:gammaInduced_WZ} as a function of $m_\mathrm{WZ}$ and $p_\mathrm{T}^\W$.
 The virtual part $\delta_\mathrm{virtual}$ is taken from a table as a function of the Mandelstam variables $\hat{s}$ and $\hat{t}$, computed in the rest frame of the two incoming partons which initiate the interaction.
+\clearpage
 
-
-\begin{figure}[!bh] % WZ NLO EW
+\begin{figure}[!th] % WZ NLO EW
  \centering
  \begin{tikzpicture} % WZ at NLO EW (s-channel) internal loop
   \begin{feynman}
@@ -452,6 +451,15 @@ The virtual part $\delta_\mathrm{virtual}$ is taken from a table as a function o
  \caption{WZ production at NLO in EW by internal loop processes (upper row) and photon-quark induced processes (lower row).} \label{fig:WZNLO}
 \end{figure}
 
+\begin{figure}[!bhtp]
+  \centering
+  \includegraphics[width=0.49\textwidth]{figures/WZ_NLOEW_mWZ_ULB.pdf}
+  \includegraphics[width=0.49\textwidth]{figures/WZ_NLOEW_pTW_ULB.pdf}
+  \caption{Evolution of the NLO electroweak corrections K-factor on $pp \to W^+Z$ as a function of $m_{WZ}$ (left) and $p_{T,W}$ (right), using only virtual corrections (blue) or using both virtual and photon-induced corrections (brown).
+  \label{fig:gammaInduced_WZ}}
+\end{figure}
+
+\clearpage
 \subsection{QCD corrections}
 For quark-induced ZZ production, a QCD NLO to NNLO (next-to-next-to-leading order)
 correction factor is applied as a function of the invariant mass of the two $\Z$ bosons,
@@ -462,13 +470,6 @@ parton distribution function sets) to ensure its accuracy. See Ref.~\cite{Grazzi
 In the case of the $\W\Z$ process, a flat correction factor from QCD NLO to NNLO is applied.
 Its value is $\mathbf{1.109}$; for details see Reference~\cite{Grazzini:2016swo}.
 
-\begin{figure}[htbp]
-  \centering
-  \includegraphics[width=0.49\textwidth]{figures/WZ_NLOEW_mWZ_ULB.pdf}
-  \includegraphics[width=0.49\textwidth]{figures/WZ_NLOEW_pTW_ULB.pdf}
-  \caption{Evolution of the NLO electroweak corrections K-factor on $pp \to W^+Z$ as a function of $m_{WZ}$ (left) and $p_{T,W}$ (right), using only virtual corrections (blue) or using both virtual and photon-induced corrections (brown).
-  \label{fig:gammaInduced_WZ}}
-\end{figure}
 
 \begin{figure}[htp]
   \centering
@@ -476,8 +477,6 @@ Its value is $\mathbf{1.109}$; for details see Reference~\cite{Grazzini:2016swo}
   \caption{Evolution of the NNLO QCD corrections K-factor for $pp \to ZZ \to 2\ell2\nu$ as a function of $m_\mathrm{ZZ}$ at generator-level.} 
   \label{fig:NNLO_QCD_corrections}
 \end{figure} 
-
-\clearpage
 
 \subsection{Cross terms}
 
