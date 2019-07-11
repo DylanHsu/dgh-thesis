@@ -7,7 +7,7 @@ Suppose that significantly more of these events were to be observed compared to 
 Then we could interpret that result under a variety of theoretical models (described in Section~\ref{sec:bsmtheory}.
 
 An event selection is constructed to analyze the events collected using the leptonic triggers.
-Next, I consider the relevant background processes and discuss strategies to estimate them using data and simulated events.
+The relevant background processes are estimated using either real data or simulated events.
 After assessing the systematic uncertainties in the methodology, a maximum likelihood fit is performed to test the Standard Model versus the exotic predictions.
 I will discuss the pursuit of a multivariate analysis to maximize our sensititivity to the invisible Higgs model.
 Finally, the results are quoted for the search.
@@ -15,13 +15,13 @@ Finally, the results are quoted for the search.
 \section{Event selection}
 \label{sec:zlldmsel}
 %\fixme{MISSING THE ACTUAL CUTS}
-Here, I describe the criteria applied to events in order to select and extract a possible dark matter signature from the data.
-First, a preselection is applied to attest to the veracity of the Drell-Yan simulation.
+In this section, I describe the criteria applied to events in order to select and extract a possible dark matter signature from the data.
+A preselection is applied to attest to the veracity of the Drell-Yan simulation.
 Then, the full selection is applied, to kill off the reducible backgrounds and enhance the purity of the dark matter signal as much as possible.
 
 \subsection{Preselection}
 \label{ss:zlldmpresel}
-First, events are selected which have exactly two electrons or muons.
+Events are selected which have exactly two electrons or muons.
 They must be opposite-charged electrons (muons) each with $\pt > 25~(20)~\GeV$.
 The mass of the dilepton system ($\mll$) is required to be $\left|\mll-m_{\Z}\right| < 15\GeV$, consistent with the decay of a $\Z$ boson of mass 91.1876 \GeV.
 The $\met$ must be larger than 40~$\GeV$ and the dilepton 
@@ -114,20 +114,18 @@ Figures~\ref{fig:distributions_zsel_nlep} to~~\ref{fig:distributions_presel_met}
 \subsection{Signal selection}
 \label{ss:zlldmsigsel}
 After the preselection, more stringent criteria are applied to enhance the significance of a dark matter signal.
-
 There are nonresonant background processes which do not have anything to do with a Z boson,
 but they can end up looking like a signal event by way of combinatorics.
 A great example of this is two independent objects each eventually producing a charged lepton and missing energy, such as leptonic WW decays.
 Another example is top-quark backgrounds such as the ubiquitous ditop production.
-There, each top-quark decays to a b-quark and a W boson. Then, each W boson decays leptonically.
+There, each top-quark decays to a b-quark and a W boson, which decays leptonically.
 These nonresonant backgrounds are already partially mitigated by the Z candidate mass window requirement in the preselection.
 It can be further reduced by requiring a small angular separation of the leptons, $\Delta R < 1.8$.
 
 All of the dark matter models considered are quark-induced processes 
 with no extra quarks or gluons produced in the final state.
 Refer to the diagrams in Figure~\ref{fig:BSMdiagrams}.
-Hadronic activity in a dark matter signal event could only arise 
-from initial-state radiation of a gluon. Therefore, it is minimal.
+Hadronic activity in a dark matter signal event is minimal and only arises from the initial-state radiation of a gluon or secondary pileup interactions.
 Top-quark backgrounds are not quark-induced, and produce b-jets from the top-quark decays as well as extra jets in general.
 They are easily reduced by requiring that events have no more than one jet with $\pt^{j} > 30~\GeV$ and $|\eta|<2.4$.
 Furthermore, a b-jet veto is imposed.
@@ -234,7 +232,7 @@ The likelihood is described below in Section~\ref{sec:likelihood}.
  {\scriptsize
   \begin{tabular} {lcc}
 \hline
-  Variable & Selection  & Reject \\
+  Variable & Selection  & Rejection Target \\
 \hline
 $N_{\ell}$                                & == 2                                         & $\W\Z$, $\V\V\V$      \\
 \multirow{2}{*}{$\pt^{\ell}$}             & $>$25/20\GeV (electrons)                     & QCD \\
@@ -279,7 +277,7 @@ A combination of data-driven methods and detailed simulated studies is used to
 estimate background contributions.
 The spectra of diboson processes are taken from simulation with conservative systematic uncertainties, but the ratio of ZZ/WZ is measured from data.
 The nonresonant background processes may just as well produce different-flavor lepton pairs, so we extrapolate from those data events to estimate the yield of same-flavor lepton pairs.
-The Drell-Yan yield is estimated from a sideband of low $\met$. Its contribution for higher values of $\met$ is very small, but the extrapolation is dubious. Thus, several cross-checks are performed.
+The Drell-Yan process is estimated from a sideband of low $\met$. Its contribution for higher values of $\met$ is very small, but in order to verify the accurate simulation of the $\met$ spectrum, several cross-checks are performed.
 
 
 %%%%%%%%%%%
@@ -291,14 +289,14 @@ These processes contribute to the signal region via the
 $\ZZ\rightarrow\Lep\Lep\nu\nu$ and $\WZ\rightarrow\Lep\Lep\Lep\nu$ decay modes, respectively.
 In both cases, the observed $\met$ corresponds to the \pt of one of the bosons.
 The processes are estimated from the control samples described in Chapter~\ref{chap:dibosons}, Sections~\ref{sec:wz3l} and~\ref{sec:zz4l}. 
-The alternative decay modes allow us to probe the boson \pt distribution, which is expected to be independent of the decay mode.
+The visible decay modes allow us to probe the boson \pt distribution, which is expected to be independent of the decay mode.
 
 Using the pure control samples with three or four leptons, an extrapolation is performed
 to the missing energy spectra for $\Z\Z$ and $\W\Z$ events 
 with only two reconstructed leptons and missing energy in the final state
 \footnote{The $\W\Z$ process can appear this way due to a lost lepton, either from inefficiency in the reconstruction and identification or the non-hermetic tracking acceptance}.
 Extrapolation to the $2\ell+\met$ final state is accomplished by furnishing a quantity
-known as the emulated $\met$ or so-called ``fake $\met$.''
+known as the emulated $\met$.
 For the $\WZ$ process, the fake $\met$ is the true $\W$ boson $\pt$.
 It is estimated by calculating the vectorial sum of the $\met$ vector and the transverse momentum vector of the third lepton.
 For the $\Z\Z$ process, the fake $\met$ comes from taking the sum of any nominal true $\met$ and one of the leptonically-decaying $\Z$ bosons.
@@ -320,14 +318,15 @@ The resulting emulated \met spectra are shown in Fig.~\ref{fig:histo_fakemet}.
 \caption{Emulated $\met$
 distribution for  the $\W\Z \to 3\Lep\nu$(top left) and $\Z\Z \to 4\Lep$ (top right)
 control regions, and the ratio between both distributions in data and simulation (bottom).
+Simulated distributions correspond to the result of the maximum likelihood fit described in Section~\ref{sec:likelihood}.
  Uncertainty bands correspond to both statistical and systematic uncertainty.}
 \label{fig:histo_fakemet}
 \end{figure}
 
 \subsection{Nonresonant backgrounds}
 \label{ss:dm_nrb}
-The contribution of the non-resonant flavor symmetric backgrounds is estimated from a control
-sample of events with dilepton of different flavor
+The contribution of the nonresonant flavor symmetric backgrounds is estimated from a control
+sample of events with dilepton of different flavors
 ($\Pe^{\pm}\Pgm^{\mp}$) that pass all analysis selections.
 Nonresonant backgrounds (NRB) consists mainly of leptonic \PW\ decays in
 $\ttbar$, $\cPqt\PW$ decays and 
@@ -346,8 +345,8 @@ exactly as is done in Formulas~\ref{eq:kee} and~\ref{eq:nrb_xfer} from Section~\
 \begin{equation}
 k_{ee} = \frac{\epsilon_e}{\epsilon_{\mu}} \approx \sqrt{\frac{N^{ee}_{NRB}}{N^{\mu\mu}_{NRB}}}
 \end{equation}
-once again under the assumption is that each lepton leg acts independently.
-In simulation, $k_{ee}$ is found to be about $0.88$ at final selection.
+once again under the assumption that each lepton leg acts independently.
+In simulation, $k_{ee}$ is found to be about $0.88$ after all selection criteria are applied.
 With this correction factor, the relation between the NRB yields in the signal and control region is:
 
 \begin{equation}
@@ -359,7 +358,7 @@ With this correction factor, the relation between the NRB yields in the signal a
 \end{split}
 \end{equation}
 This transfer factor $f_{NRB}$ is implied by the MC estimates in the likelihood (Sec.~\ref{sec:likelihood}),
-and the MC yields are found to be consistent (within the statistical uncertainty) with the derived relation.
+and the MC yields are found to be consistent with the derived relation within the statistical uncertainty.
 Perturbations in the predicted transfer factor are suppressed upon summing the $ee+\mu\mu$ channels, as shown:
 \begin{equation}
 \begin{split}
@@ -368,7 +367,7 @@ Perturbations in the predicted transfer factor are suppressed upon summing the $
   &= f + \mathcal{O}(\delta^2) \quad \text{for } k \approx 1
 \end{split}
 \end{equation}
-such that the extrapolation uncertainty, taken as a conservative 20\%, easily covers any data-MC discrepancy
+such that the extrapolation uncertainty, taken as a conservative 20\%, covers any data-MC discrepancy
 in the transfer factor.
 
 Note that the $e\mu$ control sample contains a small contribution from
@@ -378,8 +377,8 @@ properly for the $\PW+{\mathrm{jets}}$ contribution, leading to an
 underestimation of $\PW+{\mathrm{jets}}\to ee+X$, and an
 overestimation of $\PW+{\mathrm{jets}}\to \mu\mu+X$. Given the very 
 small yield expected for such process in the signal region, well below
-the systematic uncertainty, the effect can be safely
-neglected. Moreover, the small biases resulting in the $ee$ and
+the systematic uncertainty, the effect is neglected.
+Moreover, the small biases resulting in the $ee$ and
 $\mu\mu$ channels partially cancel out, so the overall effect on the
 $\Lep\Lep$ channel is even smaller. 
 
@@ -387,7 +386,7 @@ As shown in Fig.~\ref{fig:m_em},
 the $e\mu$ invariant mass, transverse momentum distributions and the \met\ distribution in
 the $e\mu$ channel, the dominant sources in the $e\mu$ channel within
 the Z mass window and in large $\ETm$ (or $p_{T}^{\Lep\Lep}$) region are
-$t\bar t, \ tW, \ WW $, $\tau\tau$, and $\PW+{\mathrm{jets}}$ events. Contributions from the $t\bar t Z$ process
+$\mathrm{t\bar{t}, \ \mathrm{tW}, \ \mathrm{WW}, \ \mathrm{\tau\tau}$, and $\PW+{\mathrm{jets}}$ events. Contributions from the $\mathrm{t\bar{t}Z}$ process
 are deemed negligible.
 As shown in Fig.~\ref{fig:met_tt_ww}, the shape of the $\met$ spectrum is identical in the $e\mu$ control region
 and the $\ell\ell$ signal region.
@@ -424,18 +423,19 @@ The estimation of this background uses simulated DY events, which are normalized
 A scale factor is obtained by measuring the number of DY events in a $\met$ sideband of $[50, 100]\GeV$,
 and is included in the maximum likelihood fit, as shown in Sec.~\ref{sec:likelihood}.
 
-A $100\%$ (i.e. factor of two) uncertainty is assigned to the DY estimate in order to cover the extrapolation from the low-\met region to the higher-\met signal region.
+A $100\%$ uncertainty is assigned to the DY estimate in order to cover the extrapolation from the low-\met region to the higher-\met signal region.
 This uncertainty has little effect on the results due to the small overall contribution from the DY process.
-Extensive checks have been performed to ensure that the estimation method is sensible.
+Extensive checks are performed to ensure that the estimation method is sensible.
 By defining control regions where $\met$ mismodeling issues are expected to have a large impact, and confirming that the 
 estimate from simulation for these regions still holds within the uncertainties, it is shown in Fig.~\ref{fig:met_control} that $\met$ mismodeling is under control.
+
 For example, it is possible to calculate missing energy multiple ways and assess how well they corroborate one another.
 The nominal \met quantity used in this work uses all the information from the Particle Flow reconstruction, and is called PF \met.
 The so-called ``Calo \met'' is the calculation of missing energy only using the calorimeter deposits.
 A large difference between the two indicates fake missing energy e.g. from mismeasurement of a jet.
 The focus is how well the simulation describes the distribution in data of that disagreement, especially at high values.
 
-Additionally, an independent estimation method using a $\gamma+\met$ control region was implemented, and the results were 
+Additionally, an independent estimation method using a $\gamma+\met$ control region is implemented, and the results are
 confirmed to be consistent between the two methods, further increasing confidence in the approach chosen here.
 %Detailed information regarding the $\gamma+\met$ studies can be found in~\cite{CMS-AN-2016-199}.
 
@@ -492,7 +492,7 @@ independent sources of uncertainty are treated as uncorrelated.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 The assigned uncertainty to the integrated luminosity measurement for
-the data set used in this analysis is 2.5\%.
+the data set used in this analysis is 2.5\%~\cite{CMS:2017sdi}.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Trigger, lepton reconstruction and identification efficiencies}
@@ -530,7 +530,8 @@ $\delta\pt^{JES}$ is the absolute uncertainty on the jet energy scale
 which is parametrized as function of the $\pt$ and $\eta$ of the jet. 
 For more details on the jet energy scale prescription, see Ref.~\cite{JES2011}. 
 
-In order to account for the systematic uncertainty jet resolution smearing procedure, the resolution scale factors are varied up and down within their uncertainty.
+In order to account for the systematic uncertainty of the jet resolution smearing procedure,
+the resolution scale factors are varied up and down within their uncertainty.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{B-tagging efficiency}
@@ -538,7 +539,7 @@ In order to account for the systematic uncertainty jet resolution smearing proce
 
 In this analysis, b-tagging is used to reject events with real b-jets in 
 the final state since the signal events have little b-jet content. 
-A recommended provided by the collaboration's b-tagging working group is used
+A recommendation provided by the collaboration's B-Tagging and Vertexing Group is used
 to reweight the b-tagging (in)efficiencies of the selected jets.
 This comes with an associated uncertainty.
 
