@@ -490,8 +490,6 @@ This is the source of the so-called ``QCD-electroweak cross-term.''
 
 The electroweak and QCD corrections are both large in magnitude, for the ZZ process, 
 so the QCD-electroweak cross-term cannot be neglected.
-It is only understood to the level of $25\%$.
-
 For the majority of ZZ events which have little hadronic activity, the
 uncertainty from such missing QCD-EW combined corrections is
 estimated from the product of the NLO QCD corrections 
@@ -507,18 +505,17 @@ $(1+\delta_{\mathrm{QCD}}\delta_{\mathrm{EW}})$.
 Since the EW $k$-factors for the ZZ are strictly valid only when the hadronic
 activity in the event is moderate, a variable $\rho$ is built to estimate the level of
 hadronic activity in the event, following Ref.~\cite{Gieseke:2014gka}.
-$\rho$ is calculated by considering the balance of the generated leptons' transverse momenta: 
+It is calculated by considering the balance of the generated leptons' transverse momenta: 
 \begin{equation}
 \label{eq:the_rho}
 \rho = \frac{\left|\vec{\pt}(\ell_1)+\vec{\pt}(\ell_2)+\vec{\pt}(\ell_3)+\vec{\pt}(\ell_4)\right|}{\left|\vec{\pt}(\ell_1)\right|+\left|\vec{\pt}(\ell_2)\right|+\left|\vec{\pt}(\ell_3)\right|+\left|\vec{\pt}(\ell_4)\right|}
 \end{equation} 
-For events with $\rho>0.3$, \ie with a significant imbalance in the
-transverse momenta of the four leptons due to the presence of jets,
-an increased uncertainty of 100\% on the EW correction for that given
-event is assigned---in other words, the factor 
-$(1+\delta_{\mathrm{QCD}}\delta_{\mathrm{EW}})$ is replaced with 
-$(1+\delta_{\mathrm{EW}})$ when computing the variations of the weights.
 At high boson momentum, less than 1\% of the ZZ events have $\rho>0.3$.
+For these events, there is a significant imbalance in the
+transverse momenta of the four leptons due to the presence of jets.
+Here, the QCD contribution to the uncertainty is poorly understood, so $\delta_{\mathrm{QCD}}$ is taken as 1.
+The factor used for computing the variations of the event weights is then $(1+\delta_{\mathrm{EW}})$.
+The total impact of this uncertainty across the whole spectrum of $\rho$ is at the level of $25\%$.
 
 The overall electroweak NLO correction to the $\W\Z$ process is relatively small~\cite{Bierweiler:2013dja,Gieseke:2014gka,Baglio:113005}.
 This is because the virtual corrections and photon-induced corrections partially cancel.
