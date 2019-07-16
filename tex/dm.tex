@@ -540,9 +540,24 @@ the resolution scale factors are varied up and down within their uncertainty.
 
 In this analysis, b-tagging is used to reject events with real b-jets in 
 the final state since the signal events have little b-jet content. 
-A recommendation provided by the collaboration's B-Tagging and Vertexing Group is used
-to reweight the b-tagging (in)efficiencies of the selected jets.
-This comes with an associated uncertainty.
+For numerous reasons, the b-tagging efficiency of light flavor, c-quark, and b-quark jets varies between data and simulation.
+To account for this, a recommendation provided by the collaboration's B-Tagging and Vertexing Group is used to reweight the b-tagging (in)efficiencies of the selected jets~\cite{Sirunyan:2017ezt}.
+
+The b-tagging efficiency determination relies on a data sample of jets enriched in heavy flavor content.
+This is obtained by requiring a primary AK4 jet containing a soft muon, along with a secondary "away-jet" having separation $\DeltaR>1.5$ with respect to the first jet.
+Fit templates for the different jet flavors are built from muon-enriched simulated samples of QCD processes.
+Various systematic uncertainties are considered for this method:
+\begin{itemize}
+\item Relative contribution of gluon splitting 
+\item Modelling of b-quark fragmentation
+\item Relative contribution of light jets and c-quark jets
+\item Pileup
+\item Muon selection
+\item Away-jet selection
+\item Jet energy scale
+\end{itemize}
+
+The impact of these systematic uncertainties on the sensitivity of this analysis is only 0.1\%.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Pileup}
