@@ -830,7 +830,7 @@ between data and simulation in Figures~\ref{fig:bdt_inputvar_histos}, and~\ref{f
 \subsection{Analysis selection} 
 
 The signal region in the multivariate analysis is defined using the training preselection cuts except $\met >$ 100 $\GeV$ and classifier value $>$ 0.2. 
-The Drell-Yan normalization is taken from a control selection similar to the rectangular analysis, admitting events which otherwise pass the signal region selectiont with $\met <$ 100 $\GeV$ or classifier value $<$ 0.2.
+The Drell-Yan normalization is taken from a control selection similar to the rectangular analysis, admitting events which otherwise pass the signal region selection with $\met <$ 100 $\GeV$ or classifier value $<$ 0.2.
 The non-resonant background normalization is taken from a control sample applying the signal region selection 
 described in this section, but requiring opposite-flavor events. The diboson control region 
 selections are unchanged from the rectangular analysis. See Figures~\ref{fig:bdt_zh} 
@@ -841,7 +841,9 @@ The signal hypothesis is considered in a shape analysis of the BDT classifier sp
 \begin{figure}[htbp]
 \begin{center}
 \includegraphics[width=0.48\textwidth]{figures/bdt_zh_prefit.pdf}
-\caption{Distribution of the BDT classifier in the multivariate analysis before the likelihood fit. The first bin contains the nonresonant background sideband of opposite-flavor events. The second bin contains the Drell-Yan sideband of events failing the BDT or $\met$ requirement. The rest of the bins are the signal region BDT bins. Uncertainty bands represent only the statistical uncertainty.}
+\caption{Distribution of the BDT classifier in the multivariate analysis before the likelihood fit.
+The first two bins $[-2,\ -1]$ and $[-1,\ 0]$ are a technical artifact of the control region implementation and do not correspond to a BDT score.
+The first bin contains the nonresonant background sideband of opposite-flavor events. The second bin contains the Drell-Yan sideband of events failing the BDT or $\met$ requirement. The rest of the bins are the signal region BDT bins. Uncertainty bands represent only the statistical uncertainty.}
 \label{fig:bdt_zh_prefit}
 \end{center}
 \end{figure}
@@ -871,13 +873,13 @@ the corresponding uncertainties on the output distribution of BDT scores in a ro
 For a discussion of it, see Section \ref{sec:bdt_toys}.
 
 \subsection{Improvement in sensitivity} 
-A maximum likelihood fit is performed in the distribution of BDT scores, akin to the \met analysis prescription described in Section~\ref{sec:likelihood}.
+A maximum likelihood fit is performed in the distribution of BDT scores, akin to the $\met$ analysis prescription described in Section~\ref{sec:likelihood}.
 The ZZ/WZ ratio is handled in the same way, but the bin-dependent electroweak uncertainty on the ratio of ZZ/WZ
-is described in bins of BDT score instead of (emulated) \met.
+is described in bins of BDT score instead of (emulated) $\met$.
 Altogether, the BDT analysis improves the invisible Higgs sensitivity by 10\%,
 where the metric is the expected limit on the branching ratio of Higgs boson to invisible particles.
 
-Taking this approach is not nearly as rewarding for the higher mass simplified-model DM signals, where \met is a more powerful discriminant variable.
+Taking this approach is not nearly as rewarding for the higher mass simplified-model DM signals, where $\met$ is a more powerful discriminant variable.
 Furthermore, the multivariate analysis strategy described above is dependent on the mediator mass.
 This would necessitate training and evaluating a different classifier for every mass scenario, which is very cumbersome.
 These cases require further study before multivariate techniques can be exploited there.
