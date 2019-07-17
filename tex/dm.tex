@@ -592,13 +592,11 @@ and the scale uncertainties are estimated using the weights
 stored in the respective samples. For the ZZ process, this procedure is rather conservative
 in the sense that the prediction is corrected to NNLO in QCD, but the assumed uncertainty reflects
 the precision of the NLO generator.
-The PDF4LHC PDF sets are used with the MC method.
-The final distribution for the variable of interest is 
-reweighted bin-by-bin using the PDF4LHC PDF sets.
-This way, one obtains $1+N_{\textrm{mem}}$ histograms, whereby
-$N_{\textrm{mem}}$ denotes the number of PDF error sets used. One
-calculates the uncertainty $\delta^{\textrm{PDF}}\sigma$ on the cross
-section $\sigma$ in a bin-by-bin approach via 
+
+The PDF uncertainties for the PDF4LHC PDF sets are assessed in the following way.
+The final distribution for the variable of interest is reweighted bin-by-bin using the PDF4LHC PDF sets.
+This produces $1+N_{\textrm{mem}}$ distributions, where $N_{\textrm{mem}}$ is the number of alternative PDF sets used.
+The uncertainty $\delta^{\textrm{PDF}}\sigma$ on the cross section $\sigma$ is calculated in a bin-by-bin approach via
 %%%%%%%%%%%%%%%%%%
 \begin{equation}
 \delta^{\textrm{PDF}} \sigma= \sqrt{ \frac{1}{N_{\textrm{mem}} - 1} \sum_{k=1}^{N_{\textrm{mem}}} \left(\sigma^{(k)} - \langle \sigma \rangle\right)^2 }\,,
@@ -618,16 +616,15 @@ meaning the corresponding nuisance parameters in each bin of \ETm are fully corr
 purposes of the maximum likelihood fit.
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{MC statistics}
+\subsection{MC statistical uncertainty}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 All background estimation procedures in this analysis rely on some degree
 of simulation shape information.
 For the DY and NRB processes, the final shape is taken directly from simulation, 
 while the WZ and ZZ estimates only depend on the ratio of the MC expectations for the processes.
-In any case, the limited number of simulated events in any given bin gives rise to a systematic uncertainty.
-For each bin and process, this uncertainty is treated as fully uncorrelated and taken into account as a shape uncertainty.
-
+In any case, the limited number of simulated events gives rise to a statistical uncertainty.
+This uncertainty is treated as fully uncorrelated for each process classification and distribution bin.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Summary}
 \label{sec:syst_summary}
