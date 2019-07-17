@@ -801,14 +801,13 @@ The following set of twelve variables is used to train a Boosted Decision Tree (
 The Collins-Soper angle $\theta^{CS}_{\ell1}$ is defined as the angle between
 the leading lepton trajectory and the Z mother trajectory, 
 in the rest frame of the Z mother \cite{Collins:1984kg}.
-This allows some access to the spin information of the invisible particle and adds a small amount of discrimination power between the diboson processes and the invisible Higgs hypothesis.
+This allows some access to the spin information of the invisible particle and adds discrimination power between the diboson processes and the invisible Higgs hypothesis.
 
 The best performance for this analysis was found in a multiclass BDT with the following parameters: 400 trees, gradient boosting with learning rate 0.5, bagging with fraction 0.5, and tree depth of 4.
 For a discussion of gradient boosted decision trees, see Appendix~\ref{app:mva}.
 The multiple classes are: invisible Higgs (Signal); ZZ; WZ; Drell-Yan (Z+jets); and flavor-symmetric or non-resonant backgrounds (Non-prompt).
 The signal likelihood which is used as the final discriminator is the likelihood assigned to the quark- and gluon- induced invisible Higgs process, normalized to the sum of the likelihoods of all processes.
 The analysis criteria involving jet counting, jet kinematics, or jet vetoes are not considered as input variables, so that the classifier remains unbiased toward selecting events with 0 jets.
-
 The training preselection is as follows:
 \begin{itemize}
 \item B-tagging veto
@@ -818,15 +817,15 @@ The training preselection is as follows:
 \item $\Delta \phi_{{\rm jet},\met} >$ 0.5 (in events with a jet)
 \item $\met >$ 130 $\GeV$
 \end{itemize}
-The high training requirement for the $\met$ was found via a stepwise optimization procedure.
-This helps us train the best against the difficult events which are not handled well by the standard analysis.
+The training requirement for the $\met$ was found via a stepwise optimization procedure.
+Because events with less $\met$ can still be classified as highly signal-like,
+a looser criterion of $\met >$ 100 $\GeV$ is applied for the MVA signal region.
+The higher training requirement helps to learn about difficult events which are not handled well by the standard analysis.
 It also happens to be compatible with the $125~\GeV$ Higgs mass.
-However, events with less $\met$ can still be classified as highly signal-like,
-so a looser criterion is applied for the signal region.
 
-The pairwise mutual information between the input variables for the different physics process classes can be found in Figure~\ref{fig:bdt_mutual_information}.
-The comparison of data and simulation for these variables after applying the training preselection can be found in Figures~\ref{fig:bdt_inputvar_histos}, and~\ref{fig:bdt_inputvar_histos2}.
-
+The pairwise mutual information between the input variables for the different physics process classes is shown in Figure~\ref{fig:bdt_mutual_information}.
+After applying the training preselection, distributions of these variables are compared
+between data and simulation in Figures~\ref{fig:bdt_inputvar_histos}, and~\ref{fig:bdt_inputvar_histos2}.
 
 \subsection{Analysis selection} 
 
