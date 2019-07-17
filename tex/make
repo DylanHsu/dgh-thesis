@@ -1,3 +1,5 @@
+rm main.bbl 2>/dev/null
+latexmk -c &> /dev/null
 #latexmk -pdf main -f &> the.log
 latexmk -pdf main -f 2>&1 | tee the.log
 #latexmk -pdflatex=lualatex -pdf main -f
