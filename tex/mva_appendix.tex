@@ -31,7 +31,7 @@ For the BDT classifier, the binomial log-likelihood loss function is used for th
 \begin{equation}
 L(F,y) = \mathrm{ln}\left(1+e^{-2F(\vec{\mathbf{x}}) y}\right)
 \end{equation}
-The minimization is achbieved using an iterative gradient-descent approach.
+The minimization is achieved using an iterative gradient-descent approach.
 The gradient of the loss function for the current forest, $F_{m-1}(\vec{\mathbf{x}})$, is calculated.
 Then, a new decision tree $h_m(\vec{\mathbf{x}})$ is grown to match
 the mean value of the gradient in each region defined by the tree structure.
@@ -122,18 +122,18 @@ The nuisances considered to be relevant are the uncertainty of the lepton moment
 
 The number of random toys used for the uncertainty propagation was 50 due to the high computing cost of many classifier evaluations. 
 The lepton scale variations were sampled from a normal distribution with standard deviation of 0.01.
-The \met variations were sampled from a normal distribution with standard deviation of 1, then multiplied by the relative size of the jet energy scale effect (this quantity varies per event).
+The $\met$ variations were sampled from a normal distribution with standard deviation of 1, then multiplied by the relative size of the jet energy scale effect (this quantity varies per event).
 Variations in the lepton scale affected the missing energy which was adjusted; variations in the missing energy affected many of the other variables, which were subsequently adjusted. 
 
 After performing this procedure for all simulated events, we take the uncertainty bands from the non-normal toy distributions as the distance between the 15.9\% and 84.1\% quantiles.
 These are the so-called $\pm1\sigma$ quantiles of a normal distribution.
 
 Figures~\ref{fig:bdt_toy_envelopes_electron},~\ref{fig:bdt_toy_envelopes_muon}, and~\ref{fig:bdt_toy_envelopes_MET} show 2D maps of the nuisance variations with the BDT value on the horizontal axis and the relative variation from the nominal BDT bin yield on the vertical axis.
-Figures~\ref{fig:bdt_electron_scale},~\ref{fig:bdt_muon_scale}, and~\ref{fig:bdt_MET_scale} show the resulting uncertainty shapes that enter the likelihood fit, for the electron scale, muon scale, and MET scale nuisances respectively. 
-In most combinations of background process and nuisance parameter, the propagated uncertainty is irrelevant compared to the statistical uncertainty from the number of simulated events.
+Figures~\ref{fig:bdt_electron_scale},~\ref{fig:bdt_muon_scale}, and~\ref{fig:bdt_MET_scale} show the resulting uncertainty shapes that enter the likelihood fit, for the electron scale, muon scale, and $\met$ scale nuisances respectively. 
+%In most combinations of background process and nuisance parameter, the propagated uncertainty is irrelevant compared to the statistical uncertainty from the number of simulated events.
 
 We do not propagate this uncertainty for the non-resonant backgrounds or the Drell-Yan process, 
-since they are not highly signal-like and the other extrapolation uncertainties are sufficiently conservative.
+because they are not highly signal-like and the other extrapolation uncertainties are sufficiently conservative.
 Furthermore, when performing the likelihood fit to determine the exclusion limits, 
 we ignore these propagated uncertainties in the ratio of the diboson control regions, 
 and fully correlate them across the shape bins in the signal region. 
