@@ -294,7 +294,7 @@ The virtual part, leading to a negative correction, is computed in the same way 
 The photon-induced part, leading to a positive correction, 
 is estimated by generating events with MadGraph5\_aMC@NLO 
 using the LUXqed photon PDF \cite{Manohar:2016nzj}.
-This correction is applied as a function of the invariant mass $m_\mathrm{WZ}$ computed at generator-level.
+This correction is applied as a function of the diboson mass $m_\mathrm{WZ}$ computed at generator-level.
 The focus of this work is on the high-momentum signature of the dibosons,
 so a cut of 100 \GeV on the transverse momentum of the $W$ and the $Z$ is applied
 when computing the photon induced contribution.
@@ -462,7 +462,7 @@ The virtual part $\delta_\mathrm{virtual}$ is taken from a table as a function o
 \clearpage
 \subsection{QCD corrections}
 For quark-induced ZZ production, a QCD NLO to NNLO (next-to-next-to-leading order)
-correction factor is applied as a function of the invariant mass of the two $\Z$ bosons,
+correction factor is applied as a function of the mass of the two $\Z$ bosons,
 $m_\mathrm{ZZ}$, at generator-level.
 Figure~\ref{fig:NNLO_QCD_corrections} shows the differential cross section.
 The correction is obtained using settings similar to the CMS simulation (dilepton mass requirements,
@@ -532,11 +532,11 @@ even though the final distributions are corrected to NNLO in QCD.
 \section{Visible ZZ process}
 \label{sec:zz4l}
 Here, I will describe how events are selected to observe the fully visible ZZ process.
-Two Z boson candidates are each formed from a pair of opposite-charge electrons or muons having invariant mass within 15 \GeV of the Z boson mass resonance (91.1876 \GeV).
-The Z candidate whose invariant mass is closer to the Z mass is denoted as $\mathrm{Z}_1$; the other, as $\mathrm{Z}_2$.
+Two Z boson candidates are each formed from a pair of opposite-charge electrons or muons, where the mass of each dilepton system lies within 15 \GeV of the Z boson mass resonance (91.1876 \GeV).
+The Z candidate whose reconstructed mass is closer to the Z mass is denoted as $\mathrm{Z}_1$; the other, as $\mathrm{Z}_2$.
 In total, there are four well-identified leptons, giving a very high purity selection.
 Neither hadronic $\tau$ nor b-jet vetoes are applied.
-The minimum dilepton invariant mass, considering all pairs, must be greater than 4 \GeV.
+The minimum dilepton mass, considering all pairs, must be greater than 4 \GeV.
 The purpose of this requirement is to reject the so-called ``nonprompt'' backgrounds, which I will explain next.
 
 There is triboson contamination which is the resonant contribution from three bosons (WWZ, WZZ, ZZZ), or two top quarks and a Z boson.
@@ -555,7 +555,7 @@ Distributions of illustrative variables after the selection are shown in Figures
 \centering
 \includegraphics[width=0.48\textwidth]{figures/dibosons/zz4l/mZ1.pdf}
 \includegraphics[width=0.48\textwidth]{figures/dibosons/zz4l/mZ2.pdf}
-\caption{The invariant masses of the two Z candidates. 
+\caption{The dilepton masses of the two Z candidates. 
 In the right plot, the distribution of $\mathrm{Z}_{2}$ has a cavity close to the Z mass pole because of how $\mathrm{Z}_{1,2}$ are defined.
 \label{fig:zz4l_mll}}
 \end{figure}
@@ -612,7 +612,7 @@ Data                  &   81              &  175              &  224            
 \includegraphics[width=0.48\textwidth]{figures/dibosons/zz4l/bDiscrMax.pdf}
 \includegraphics[width=0.48\textwidth]{figures/dibosons/zz4l/dRZ1Z2.pdf}
 \caption{More plots of the ZZ data sample.
-Clockwise from upper left: diboson invariant mass; azimuthal separation between bosons; the maximum b-tag score of any jet in the event; angular separation between bosons.
+Clockwise from upper left: diboson mass; azimuthal separation between bosons; the maximum b-tag score of any jet in the event; angular separation between bosons.
 The last bin includes the overflow events.
 \label{fig:zz4l_moreplots}}
 \end{figure}
@@ -637,19 +637,19 @@ The last bin includes the overflow events.
 \label{sec:wz3l}
 Below, I describe how events are selected to observe fully visible WZ production. 
 The events must have three well-reconstructed leptons and a nominal amount of $\met$.
-A single Z boson candidate is formed from a pair of opposite-charge electrons or muons having invariant mass within 15 \GeV of the Z boson mass.
+A single Z boson candidate is formed from a pair of opposite-charge electrons or muons, the mass of which must lie within 15 \GeV of the Z boson mass.
 Additionally, a third well-identified electron or muon is required, representing the W boson.
 In the case where there are three electrons or muons,
-the Z candidate is chosen unambiguously as the opposite-sign pair whose invariant mass is closest to the Z boson mass.
+the Z candidate is chosen unambiguously as the opposite-sign dilepton pair whose mass is closest to the Z boson mass.
 
 True WZ events are expected to have an undetectable neutrino in the final state, thus $\met$ of at least 30\GeV is required.
-To exclude a region where production of Z bosons with final-state radiation may contribute, the trilepton invariant mass is required to be more than 100 \GeV.
-Due to theoretical problems with collinear emission of same-flavor opposite-sign dilepton pairs, the invariant mass of any opposite-sign lepton pair ($m_{2\Lep}$) is required to be larger than $4\GeV$.
+To exclude a region where production of Z bosons with final-state radiation may contribute, the trilepton mass is required to be more than 100 \GeV.
+Due to theoretical problems with collinear emission of same-flavor opposite-sign dilepton pairs, the mass of any opposite-sign lepton pair ($m_{2\Lep}$) is required to be larger than $4\GeV$.
 These requirements follow precedent for the measurement of the $\WZ$ production cross section with CMS~\cite{Khachatryan:2016tgp}.
 
 Since there is no danger of contamination, no veto on additional hadronically-decaying $\tau$ leptons is applied.
 A relaxed b-jet veto is applied, only rejecting events where a jet passes the Tight CSVv2 working point (0.9535) previously discussed in Section~\ref{ss:btagging}.
-This, along with the Z candidate invariant mass requirement, is useful for rejecting ditop background.
+This, along with the Z candidate mass requirement, is useful for rejecting ditop background.
 The Medium CSVv2 working point (0.8484) was not used to maximize efficiency of selecting real WZ events.
 
 The selection yields in simulation and data for the WZ analysis are shown in Table~\ref{tab:wz3lyields}.
@@ -671,7 +671,7 @@ where $\Delta\phi$ is the azimuthal separation between those vectors.
 \centering
 \includegraphics[width=0.48\textwidth]{figures/dibosons/wz3l/pTZ.pdf}
 \includegraphics[width=0.48\textwidth]{figures/dibosons/wz3l/minMassZ_Nminus1.pdf}
-\caption{The transverse momentum and invariant mass of the reconstructed Z boson candidates.
+\caption{The transverse momentum and mass of the reconstructed Z boson candidates.
 The last bin includes the overflow events.
 \label{fig:wz3l_z}}
 \end{figure}
@@ -680,7 +680,7 @@ The last bin includes the overflow events.
 \centering
 \includegraphics[width=0.48\textwidth]{figures/dibosons/wz3l/m3l_Nminus1.pdf}
 \includegraphics[width=0.48\textwidth]{figures/dibosons/wz3l/bDiscrMax_Nminus1.pdf}
-\caption{Trilepton invariant mass and the maximum b-tag score of any jet in the event
+\caption{Trilepton mass and the maximum b-tag score of any jet in the event
 at final selection level.
 The last bin includes the overflow events. Events with a well b-tagged jet ($>0.9535$) are rejected.
 \label{fig:wz3l_purity}}
