@@ -14,28 +14,29 @@ Finally, the results are quoted for the search.
 
 \section{Event selection}
 \label{sec:zlldmsel}
-%\fixme{MISSING THE ACTUAL CUTS}
 In this section, I describe the criteria applied to events in order to select and extract a possible dark matter signature from the data.
 A preselection is applied to attest to the veracity of the Drell-Yan simulation.
 Then, the full selection is applied, to kill off the reducible backgrounds and enhance the purity of the dark matter signal as much as possible.
 
 \subsection{Preselection}
 \label{ss:zlldmpresel}
-Events are selected which have exactly two electrons or muons.
+First, Z candidates are selected by choosing events with at least two electrons or muons.
 They must be opposite-charged electrons (muons) each with $\pt > 25~(20)~\GeV$.
 The mass of the dilepton system ($\mll$) is required to be $\left|\mll-m_{\Z}\right| < 15\GeV$, consistent with the decay of a $\Z$ boson of mass 91.1876 \GeV.
-The $\met$ must be larger than 40~$\GeV$ and the dilepton 
-$\pt$ ($\pt^{\ell\ell}$) must be larger than 60~$\GeV$ to reject the bulk of the background from the Drell-Yan process.
+Plots showing basic event-level variables such as the number of jets or leptons after the Z candidate selection stage are shown in Figures~\ref{fig:distributions_zsel_nlep}-\ref{fig:distributions_zsel_dphiZMET}.
 
-A few distributions for each flavor channel after this preselection are shown in 
-Figures~\ref{fig:distributions_zsel_nlep} to~~\ref{fig:distributions_presel_met}.
+Next, topological criteria are imposed to move closer to the dark matter signature.
+The $\met$ is required to be larger than 40~$\GeV$ and the dilepton $\pt$ ($\pt^{\ell\ell}$) is required to be larger than 60~$\GeV$,
+in order to reject the bulk of the background from the Drell-Yan process.
+A few distributions for each flavor channel after this stage are shown in 
+Figures~\ref{fig:distributions_presel_ptll} to~~\ref{fig:distributions_presel_met}.
 
 \begin{figure}[!hbtp]
 \begin{center}
 \includegraphics[width=\cmsFigWidth]{figures/zsel_nlep_ee.pdf}
 \includegraphics[width=\cmsFigWidth]{figures/zsel_nlep_mm.pdf}
 \caption{
-  Lepton multiplicity for each flavor channel in $\zll$ events with $\pt^{\ell\ell} > 60~\GeV$ and $\met > 40~\GeV$. 
+  Lepton multiplicity for each flavor channel in $\zll$ candidate events.
   The uncertainty band corresponds to the statistical uncertainty only. Left: dielectron channel. Right: dimuon channel.
 }
 \label{fig:distributions_zsel_nlep}
@@ -46,7 +47,7 @@ Figures~\ref{fig:distributions_zsel_nlep} to~~\ref{fig:distributions_presel_met}
 \includegraphics[width=\cmsFigWidth]{figures/zsel_njets_ee.pdf}
 \includegraphics[width=\cmsFigWidth]{figures/zsel_njets_mm.pdf}
 \caption{
-  Jet multiplicity for each flavor channel in $\zll$ events with $\pt^{\ell\ell} > 60~\GeV$ and $\met > 40~\GeV$. 
+  Jet multiplicity for each flavor channel in $\zll$ candidate events.
   The uncertainty band corresponds to the statistical uncertainty only. Left: dielectron channel. Right: dimuon channel.
 }
 \label{fig:distributions_zsel_njets}
@@ -57,7 +58,7 @@ Figures~\ref{fig:distributions_zsel_nlep} to~~\ref{fig:distributions_presel_met}
 \includegraphics[width=\cmsFigWidth]{figures/zsel_bjets_ee.pdf}
 \includegraphics[width=\cmsFigWidth]{figures/zsel_bjets_mm.pdf}
 \caption{
-  Number of jets passing the requirements for b-tagging for each flavor channel in $\zll$ events with $\pt^{\ell\ell} > 60~\GeV$ and $\met > 40~\GeV$. 
+  Number of jets passing the requirements for b-tagging for each flavor channel in $\zll$ candidate events.
   The uncertainty band corresponds to the statistical uncertainty only. Left: dielectron channel. Right: dimuon channel.
 }
 \label{fig:distributions_zsel_bjets}
@@ -68,7 +69,7 @@ Figures~\ref{fig:distributions_zsel_nlep} to~~\ref{fig:distributions_presel_met}
 \includegraphics[width=\cmsFigWidth]{figures/zsel_dphiZMET_ee.pdf}
 \includegraphics[width=\cmsFigWidth]{figures/zsel_dphiZMET_mm.pdf}
 \caption{
-  Azimuthal separation between the dilepton system and the missing transverse energy for each flavor channel in $\zll$ events with $\pt^{\ell\ell} > 60~\GeV$ and $\met > 40~\GeV$. 
+  Azimuthal separation between the dilepton system and the missing transverse energy for each flavor channel in $\zll$ candidate events.
   The uncertainty band corresponds to the statistical uncertainty only. Left: dielectron channel. Right: dimuon channel.
 }
 \label{fig:distributions_zsel_dphiZMET}
@@ -114,6 +115,7 @@ Figures~\ref{fig:distributions_zsel_nlep} to~~\ref{fig:distributions_presel_met}
 \subsection{Signal selection}
 \label{ss:zlldmsigsel}
 After the preselection, more stringent criteria are applied to enhance the significance of a dark matter signal.
+Firstly, events with more than two well-identified charged leptons are rejected.
 There are nonresonant background processes which do not have anything to do with a Z boson,
 but they can end up looking like a signal event by way of combinatorics.
 A great example of this is two independent objects each eventually producing a charged lepton and missing energy, such as leptonic WW decays.
