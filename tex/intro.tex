@@ -34,7 +34,7 @@ Today, their construction and operation are directed by international organizati
 Meanwhile, to observe those interactions, detector systems such as the CMS Detector are built to capture and measure most of the interaction products.
 These function as very fast and detailed cameras which provide a detailed picture of what particles came out of a particular proton collision event.
 
-To date, this work contains the most precise measurement of the production of Z bosons via proton collisions at the LHC, and its dependence on the boson's momentum.
+To date, this work contains the most precise measurement of the production of Z bosons via proton collisions at center-of-mass energy 13 TeV.
 Also presented is a search for the production of invisible particles at the LHC, which could
 point to dark matter, extra spacetime dimensions, or some other new phenomenon.
 Both results make use of the experimentally clean signature where a Z boson decays leptonically into an electron-positron or muon-antimuon pair\footnote{Strictly speaking, the term "lepton" refers to electrons, muons, taus, and neutrinos. In experimental high-energy physics, it is frequently used to refer to only electrons or muons.}.
@@ -96,7 +96,23 @@ inside the proton as well as the initial-state radiation of gluons and quarks.
 Measurements of the $\pt$ distributions of the $\Wpm$ and $\cPZ$ bosons probe 
 various aspects of the strong interaction. In addition, accurate theoretical 
 prediction of the $\pt$ distribution is a key ingredient for a precise 
-measurement of the $\Wpm$ boson mass at the Tevatron and the LHC.  
+measurement of the $\Wpm$ boson mass at the LHC.
+
+The measurement of the W boson mass relies on a fit to the experimental data, with the
+target distribution being either the $\pt$ of the visible charged lepton daughter
+or the transverse mass of the system of this lepton and the missing energy.
+Both of these methods depend on the modeling of the W boson $\pt$ distribution,
+which suffers from uncertainties in the QCD renormalization and factorization scale and the proton parton distribution functions.
+To mitigate this, it is possible to extrapolate from a measured Z boson $\pt$ distribution, using
+the \textit{ratio} of theoretical predictions for W and Z $\pt$ distributions:
+\begin{equation}
+\frac{\mathrm{d}\sigma(W)}{\mathrm{d} \pt} = \left[ \frac{\mathrm{d}\sigma(W)/\mathrm{d}\pt }{\mathrm{d}\sigma(Z)/\mathrm{d} \pt } \right]_\mathrm{theory} \times \left[ \frac{\mathrm{d}\sigma(Z)}{\mathrm{d} \pt} \right]_\mathrm{measured}
+\end{equation}
+This strategy was previously employed for the W mass measurements at the Tevatron~\cite{Abazov:2012bv}-\cite{Aaltonen:2012bp} and in a previous Run-I ATLAS LHC result~\cite{Aaboud:2017svj}.
+One benefit is that some uncertainties in the "theory" term partially cancel.
+The price is that the Z differential $\pt$ spectrum must be measured experimentally.
+Therefore, it is essential to do this using the LHC Run-II data at center-of-mass energy 13 TeV,
+on the path toward a future W mass measurement using those data.
       
 Theoretical predictions of both the DY production total cross section and 
 differential distributions are available up to next-to-next-to-leading order 
@@ -143,6 +159,9 @@ If these particles exist, they can possibly be produced directly from, annihilat
 Recent dark matter searches have exploited various methods including direct~\cite{Cushman:2013zza} and indirect~\cite{Buckley:2013bha} detection.
 If dark matter can be observed in direct detection experiments,
 it must have substantial couplings to quarks and/or gluons, and could also be produced at the LHC~\cite{Beltran:2010ww,Goodman:2010yf,Bai:2010hh,Goodman:2010ku,Fox:2011pm,Rajaraman:2011wf}.
+
 In this work we search for such a mechanism producing a Z boson recoiling against a pair of dark matter particles.
 This final state is well-suited to probe such beyond-the-Standard Model scenarios, as
 it has relatively small and precisely known Standard Model backgrounds.
+
+
