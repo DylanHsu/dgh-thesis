@@ -271,13 +271,6 @@ $i$th quark/$Z$ boson after the Lorentz boost. Notice that in the
 lab frame, the momenta of the incident quarks are computed as the
 fraction of momentum of the incident protons.
 
-In this work, an event-by-event reweighting is performed with correction weights
-binned in the generator-level \pt of the trailing boson. See Figure~\ref{fig:ewkCorrectionCompare}.
-This correction results in a net reduction of the overall ZZ yield of about 10\%,
-although with a strong dependence on the trailing boson $\pt$.
-For the $\mathrm{ZZ}\rightarrow 2\ell 2 \nu$ decay channel, the $\met$ spectrum becomes softer,
-with a correction of down to $-40\%$ for a trailing-$\Z$ boson $\pt$ of 700~$\GeV$. 
-
 \begin{figure}[!thbp]
 \centering
 \includegraphics[width=0.60\textwidth]{figures/ZZ_ewkCorr.png}
@@ -287,6 +280,13 @@ The colored lines are the corrections applied as a function of trailing boson \p
 Since they agree, it is sufficient for our purposes to apply the corrections based on trailing boson \pt.}
 \label{fig:ewkCorrectionCompare}
 \end{figure}
+
+In this work, an event-by-event reweighting is performed with correction weights
+binned in the generator-level \pt of the trailing boson. See Figure~\ref{fig:ewkCorrectionCompare}.
+This correction results in a net reduction of the overall ZZ yield of about 10\%,
+although with a strong dependence on the trailing boson $\pt$.
+For the $\mathrm{ZZ}\rightarrow 2\ell 2 \nu$ decay channel, the $\met$ spectrum becomes softer,
+with a correction of down to $-40\%$ for a trailing-$\Z$ boson $\pt$ of 700~$\GeV$. 
 
 Electroweak corrections to the WZ process are also considered. 
 These come in two different contributions: virtual and photon-induced. See Figure~\ref{fig:WZNLO}. 
@@ -299,14 +299,13 @@ The focus of this work is on the high-momentum signature of the dibosons,
 so a cut of 100 \GeV on the transverse momentum of the $W$ and the $Z$ is applied
 when computing the photon induced contribution.
 The correction factors for the virtual and the photon induced part are combined to give the total electroweak correction factor:
-
 \begin{equation}
 K^\mathrm{NLO}_\mathrm{EW} = (1 + \delta_{\gamma - \mathrm{induced}}) \times (1 + \delta_\mathrm{virtual})
 \end{equation}
 The distribution of $K^\mathrm{NLO}_\mathrm{EW}$ as well as $(1 + \delta_\mathrm{virtual})$ are shown
 in Figure~\ref{fig:gammaInduced_WZ} as a function of $m_\mathrm{WZ}$ and $p_\mathrm{T}^\W$.
 The virtual part $\delta_\mathrm{virtual}$ is taken from a table as a function of the Mandelstam variables $\hat{s}$ and $\hat{t}$, computed in the rest frame of the two incoming partons which initiate the interaction.
-\clearpage
+%\clearpage
 
 \begin{figure}[!th] % WZ NLO EW
  \centering
@@ -451,7 +450,7 @@ The virtual part $\delta_\mathrm{virtual}$ is taken from a table as a function o
  \caption{WZ production at NLO in EW by internal loop processes (upper row) and photon-quark induced processes (lower row).} \label{fig:WZNLO}
 \end{figure}
 
-\begin{figure}[!bhtp]
+\begin{figure}[!hbtp]
   \centering
   \includegraphics[width=0.49\textwidth]{figures/WZ_NLOEW_mWZ_ULB.pdf}
   \includegraphics[width=0.49\textwidth]{figures/WZ_NLOEW_pTW_ULB.pdf}
@@ -459,7 +458,7 @@ The virtual part $\delta_\mathrm{virtual}$ is taken from a table as a function o
   \label{fig:gammaInduced_WZ}}
 \end{figure}
 
-\clearpage
+%\clearpage
 \subsection{QCD corrections}
 For quark-induced ZZ production, a QCD NLO to NNLO (next-to-next-to-leading order)
 correction factor is applied as a function of the mass of the two $\Z$ bosons,
