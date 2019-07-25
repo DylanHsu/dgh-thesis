@@ -306,13 +306,14 @@ this analysis.
 \subsubsection{Model dependence in unfolding}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Model dependence of unfolding is due to the folding of the detector resolution 
-with the expected spectra. Unfolding is expected to work properly if these 
-differences are small and the predicted migration relative contribution between 
-the bins close to the correct value. In order to keep this effect under control 
-a different matrix can be constructed starting from a different \MC{} generator; 
-this generator should be full reconstructed in order to correctly account for 
-the bin-migrations. Alternatively, one could try to reweight the \MC{} to 
+The model dependence of unfolding is due to the convolution of the detector resolution effects with the
+with the expected spectra.
+Unfolding is expected to work properly if these differences are small.
+The predicted amount by which events migrate between bins in the observed distribution must be close to the actual amount of migration.
+In order to quantify the uncertainty from this effect,
+a different matrix can be constructed starting from a different \MC{} generator,
+using fully reconstructed events in order to correctly account for 
+the bin migrations. Alternatively, one could try to reweight the \MC{} to 
 match other predicted spectra. 
 Model dependence is evaluated unfolding the data with the different models and 
 symmetrizing the uncertainties.
@@ -327,7 +328,7 @@ of doing this step is not fully established from the statistical point of view,
 making this an active field of research \cite{Prosper:2011zz,kuusela}.
 Different toys and resampling techniques are available in order to perform such 
 operation, that usually provide a better coverage with respect to the analytical 
-error propagation. The toy generation is performed by \RooUnfold{} smearing the 
+error propagation. The toy generation is performed by \RooUnfold{}, smearing the 
 data distribution using Gaussian uncertainties corresponding to the histogram 
 errors.
 
